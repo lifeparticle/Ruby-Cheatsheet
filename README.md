@@ -49,6 +49,7 @@ Check instance type
 > car.instance_of? Audi
 > false
 
+> a = 7
 > a.instance_of? Integer
 > true
 > a.instance_of? Numeric
