@@ -2,7 +2,6 @@
 
 Table of Contents
 ============
-  * [Ruby-Cheatsheet](#ruby-cheatsheet)
    * [Installation](#installation)
    * [Data types](#data-types)
       * [Check data type](#check-data-type)
