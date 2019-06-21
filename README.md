@@ -68,3 +68,7 @@ Check instance type
 > a.instance_of? Numeric
 > false
 ```
+
+Books
+============
+TODO
