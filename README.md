@@ -2,10 +2,15 @@
 
 Table of Contents
 ============
-   * [Installation](#installation)
+* [Installation](#installation)
    * [Data types](#data-types)
       * [Check data type](#check-data-type)
       * [Check instance type](#check-instance-type)
+   * [Array](#array)
+      * [How to iterate an Array](#how-to-iterate-an-array)
+      * [How to break out from loop](#how-to-break-out-from-loop)
+      * [How to skip inside loop](#how-to-skip-inside-loop)
+   * [Books](#books))
       
 Installation
 ============
@@ -38,11 +43,11 @@ Check data type
 ```
 # both are synonymous
 
-> a = 37
-> a.kind_of? Integer 
-> true
-> a.is_a? Integer
-> true
+a = 37
+a.kind_of? Integer 
+true
+a.is_a? Integer
+true
 ```
 
 Check instance type
@@ -50,23 +55,70 @@ Check instance type
 ```
 # Returns true if the object is an instance of the given class, not a subclass or superclass
 
-> class Vehicle; end
-> class Car < Vehicle; end
-> class Audi < Car; end
+class Vehicle; end
+class Car < Vehicle; end
+class Audi < Car; end
 
-> car = Car.new
-> car.instance_of? Vehicle
-> false
-> car.instance_of? Car
-> true
-> car.instance_of? Audi
-> false
+car = Car.new
+car.instance_of? Vehicle
+false
+car.instance_of? Car
+true
+car.instance_of? Audi
+false
 
-> a = 7
-> a.instance_of? Integer
-> true
-> a.instance_of? Numeric
-> false
+a = 7
+a.instance_of? Integer
+true
+a.instance_of? Numeric
+false
+```
+
+Array
+============
+How to iterate an Array
+-----
+```
+salary = [399, 234, 566, 533, 233]
+salary.each { |x| puts x }
+# output
+399
+234
+566
+533
+233
+
+# when you have multiline logic
+salary.each do |s|
+  a = 10
+  res = a * s
+  puts res
+end
+# output
+3990
+2340
+5660
+5330
+2330
+```
+How to break out from loop
+-----
+```
+salary = [399, 234, 566, 533, 233]
+salary.each do |s|
+  break if s == 566
+  puts s
+end
+```
+
+How to skip inside loop
+-----
+```
+salary = [399, 234, 566, 533, 233]
+salary.each do |s|
+  next if s == 533
+  puts s
+end
 ```
 
 Books
