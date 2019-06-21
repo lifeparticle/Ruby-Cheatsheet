@@ -87,7 +87,8 @@ salary.each { |x| puts x }
 566
 533
 233
-
+```
+```
 # when you have multiline logic
 salary.each do |s|
   a = 10
@@ -109,6 +110,9 @@ salary.each do |s|
   break if s == 566
   puts s
 end
+#output
+399
+234
 ```
 
 How to skip inside loop
@@ -119,6 +123,11 @@ salary.each do |s|
   next if s == 533
   puts s
 end
+# output
+399
+234
+566
+233
 ```
 
 Books
