@@ -44,7 +44,7 @@ Check instance type
 
 > car = Car.new
 > car.instance_of? Vehicle
-> flase
+> false
 > car.instance_of? Car
 > true
 > car.instance_of? Audi
