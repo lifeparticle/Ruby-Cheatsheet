@@ -1,5 +1,7 @@
 # Ruby-Cheatsheet
 
+## Installation
+
 If you don't want to install ruby natively you can use docker.
 
 ```
