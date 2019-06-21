@@ -1,5 +1,11 @@
 # Ruby-Cheatsheet
 
+  * [Ruby-Cheatsheet](#ruby-cheatsheet)
+   * [Installation](#installation)
+   * [Data types](#data-types)
+      * [Check data type](#check-data-type)
+      * [Check instance type](#check-instance-type)
+      
 Installation
 ============
 
