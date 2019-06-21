@@ -9,7 +9,7 @@ Table of Contents
    * [Array](#array)
       * [How to iterate an Array](#how-to-iterate-an-array)
          * [each](#each)
-         * [each_ with_index](#each_-with_index)
+         * [each_with_index](#each_-with_index)
          * [each_index](#each_index)
          * [map](#map)
          * [select](#select)
@@ -129,7 +129,7 @@ end
 2330
 ```
 
-### each_ with_index
+### each_with_index
 ```
 salary = [399, 234, 566, 533, 233]
 salary.each_with_index { |value, index| puts "#{index} #{value}" }
