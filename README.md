@@ -2,12 +2,21 @@
 
 Table of Contents
 ============
-* [Installation](#installation)
+   * [Installation](#installation)
    * [Data types](#data-types)
       * [Check data type](#check-data-type)
       * [Check instance type](#check-instance-type)
    * [Array](#array)
       * [How to iterate an Array](#how-to-iterate-an-array)
+         * [each](#each)
+         * [each_ with_index](#each_-with_index)
+         * [each_index](#each_index)
+         * [map](#map)
+         * [select](#select)
+         * [reject](#reject)
+         * [inject](#inject)
+         * [collect](#collect)
+         * [detect](#detect)
       * [How to break out from loop](#how-to-break-out-from-loop)
       * [How to skip inside loop](#how-to-skip-inside-loop)
    * [Books](#books)
@@ -78,6 +87,21 @@ Array
 ============
 How to iterate an Array
 -----
+There are multiple ways you can iterate an. 
+
+| No | Name | When to use |
+|---|---|---|
+| 1 | each             | when you want to just iterate           |
+| 2 | each_with_index  | when you want the both index and value  |
+| 3 | each_index       | when you want just the indexes          |
+| 4 | map              | todo                                    |
+| 5 | select           | todo                                    |
+| 6 | reject           | todo                                    |
+| 7 | inject           | todo                                    |
+| 8 | collect          | todo                                    |
+| 9 | detect           | todo                                    |
+
+### each
 ```
 salary = [399, 234, 566, 533, 233]
 salary.each { |x| puts x }
@@ -88,6 +112,7 @@ salary.each { |x| puts x }
 533
 233
 ```
+
 ```
 # when you have multiline logic
 salary.each do |s|
@@ -102,9 +127,63 @@ end
 5330
 2330
 ```
+
+### each_ with_index
+```
+salary = [399, 234, 566, 533, 233]
+salary.each_with_index { |value, index| puts "#{index} #{value}" }
+# output
+0 399
+1 234
+2 566
+3 533
+4 233
+```
+
+### each_index
+```
+salary = [399, 234, 566, 533, 233]
+salary.each_index { |i| puts i}
+# output
+0
+1
+2
+3
+4
+```
+
+### map
+```
+salary = [399, 234, 566, 533, 233]
+```
+
+### select
+```
+salary = [399, 234, 566, 533, 233]
+```
+
+### reject
+```
+salary = [399, 234, 566, 533, 233]
+```
+### inject
+```
+salary = [399, 234, 566, 533, 233]
+```
+### collect
+```
+salary = [399, 234, 566, 533, 233]
+```
+
+### detect
+```
+salary = [399, 234, 566, 533, 233]
+```
+
 How to break out from loop
 -----
 ```
+# by using break keyword
 salary = [399, 234, 566, 533, 233]
 salary.each do |s|
   break if s == 566
@@ -118,6 +197,7 @@ end
 How to skip inside loop
 -----
 ```
+# by using next keyword
 salary = [399, 234, 566, 533, 233]
 salary.each do |s|
   next if s == 533
