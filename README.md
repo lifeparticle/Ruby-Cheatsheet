@@ -10,7 +10,7 @@ Table of Contents
 Installation
 ============
 
-If you don't want to install ruby natively you can use docker.
+If you don't want to install ruby natively you can use [docker](https://www.docker.com/).
 
 ```
 docker run -it --rm ruby:latest
