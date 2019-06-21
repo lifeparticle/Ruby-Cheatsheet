@@ -4,8 +4,8 @@ Table of Contents
 ============
    * [Installation](#installation)
    * [Data types](#data-types)
-      * [Check data type](#check-data-type)
-      * [Check instance type](#check-instance-type)
+      * [How to check data type](#how-to-check-data-type)
+      * [How to check instance type](#how-to-check-instance-type)
    * [Array](#array)
       * [How to iterate an Array](#how-to-iterate-an-array)
          * [each](#each)
@@ -48,7 +48,7 @@ Data types
 | 8 | Range    | > a = 1..3                     |> a.class <br> > Range                                            | [link](https://ruby-doc.org/core-2.6.3/Range.html)    |
 | 9 | Nill     | > a = nil                      |> a.class <br> > NilClass                                         | [link](https://ruby-doc.org/core-2.6.3/NilClass.html) |
 
-Check data type
+How to check data type
 -----
 ```
 # both are synonymous
@@ -60,7 +60,7 @@ a.is_a? Integer
 true
 ```
 
-Check instance type
+How to check instance type
 -----
 ```
 # Returns true if the object is an instance of the given class, not a subclass or superclass
