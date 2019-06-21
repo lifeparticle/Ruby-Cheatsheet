@@ -26,6 +26,7 @@ RUBY_VERSION
 Check data type
 ```
 # both are synonymous
+
 > a = 37
 > a.kind_of? Integer 
 > true
