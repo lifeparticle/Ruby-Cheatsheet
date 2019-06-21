@@ -1,5 +1,6 @@
 # Ruby-Cheatsheet
 
+## Table of Contents
   * [Ruby-Cheatsheet](#ruby-cheatsheet)
    * [Installation](#installation)
    * [Data types](#data-types)
