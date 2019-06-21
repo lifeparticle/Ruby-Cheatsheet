@@ -1,5 +1,4 @@
 # Ruby-Cheatsheet
-# Ruby
 
 If you don't want to install ruby natively you can use docker.
 
@@ -23,7 +22,7 @@ RUBY_VERSION
 | 8 | Range    | > a = 1..3                     |> a.class <br> > Range                                            | [link](https://ruby-doc.org/core-2.6.3/Range.html)    |
 | 9 | Nill     | > a = nil                      |> a.class <br> > NilClass                                         | [link](https://ruby-doc.org/core-2.6.3/NilClass.html) |
 
-Check data type
+### Check data type
 ```
 # both are synonymous
 
@@ -34,7 +33,7 @@ Check data type
 > true
 ```
 
-Check instance type
+### Check instance type
 ```
 # Returns true if the object is an instance of the given class, not a subclass or superclass
 
