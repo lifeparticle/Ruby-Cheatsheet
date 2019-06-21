@@ -88,7 +88,7 @@ Array
 ============
 How to iterate an Array
 -----
-There are multiple ways you can iterate an. 
+There are multiple ways you can iterate an Array. 
 
 | No | Name | When to use |
 |---|---|---|
