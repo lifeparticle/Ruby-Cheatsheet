@@ -10,7 +10,7 @@ Table of Contents
       * [How to iterate an Array](#how-to-iterate-an-array)
       * [How to break out from loop](#how-to-break-out-from-loop)
       * [How to skip inside loop](#how-to-skip-inside-loop)
-   * [Books](#books))
+   * [Books](#books)
       
 Installation
 ============
