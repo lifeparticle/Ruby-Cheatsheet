@@ -17,6 +17,7 @@ Table of Contents
          * [inject](#inject)
          * [collect](#collect)
          * [detect](#detect)
+   * [Loop](#loop)
       * [How to break out from loop](#how-to-break-out-from-loop)
       * [How to skip inside loop](#how-to-skip-inside-loop)
    * [Books](#books)
@@ -179,7 +180,8 @@ salary = [399, 234, 566, 533, 233]
 ```
 salary = [399, 234, 566, 533, 233]
 ```
-
+Loop
+============
 How to break out from loop
 -----
 ```
