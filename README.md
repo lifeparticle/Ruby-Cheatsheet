@@ -97,13 +97,13 @@ There are multiple ways you can iterate an Array.
 | 1  | each             | when you want to just iterate                                                                                                                                     |
 | 2  | each_with_index  | when you want the both index and value                                                                                                                            |
 | 3  | each_index       | when you want just the indexes                                                                                                                                    |
-| 4  | map              | creates a new array containing the values returned by the block                                                                                                   |
-| 5  | select           | adds a value to a new array if your block returns true, returns [] otherwise. helpful when you are looking for a subset                                           |
-| 6  | reject           | removes a value from a new array if your block returns true, returns [] otherwise. helpful when you are looking for a subset                                      |
-| 7  | inject           | when you want a single value. helpful when you want to accumulate, concatenate                                                                                     |
+| 4  | map              | returns array containing the values returned by the block                                                                                                         |
+| 5  | select           | adds a value to a new array if your block returns true, returns ```[]``` otherwise. helpful when you are looking for a subset                                     |
+| 6  | reject           | removes a value from a new array if your block returns true, returns ```[]``` otherwise. helpful when you are looking for a subset                                |
+| 7  | inject           | when you want a single value. helpful when you want to accumulate, concatenate                                                                                    |
 | 8  | reduce           | reduce and inject methods are aliases                                                                                                                             |
 | 9  | collect          | same as map                                                                                                                                                       | 
-| 10 | detect           | returns the first item in the array if your block returns true, returns nil otherwise. helpful when you are looking for something based on a business logic |
+| 10 | detect           | returns the first item in the array if your block returns true, returns ```nil``` otherwise. helpful when you are looking for something based on a business logic |
 
 ### each
 ```
