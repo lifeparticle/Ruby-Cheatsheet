@@ -227,6 +227,9 @@ numbers.reduce(11, :+)
 ### collect
 ```
 salary = [399, 234, 566, 533, 233]
+salary.collect { |s| s > 400 }
+# output
+[false, false, true, true, false]
 ```
 
 ### detect
@@ -235,6 +238,11 @@ planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "
 planets.detect { |name| name.start_with?("E") and name.end_with?("h") }
 # output
 Earth
+
+salary = [399, 234, 566, 533, 233]
+salary.detect { |s| s > 1000 }
+# output
+nil
 ```
 
 How to clear an Array
