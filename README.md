@@ -9,14 +9,16 @@ Table of Contents
    * [Array](#array)
       * [How to iterate an Array](#how-to-iterate-an-array)
          * [each](#each)
-         * [each_with_index](#each_-with_index)
+         * [each_with_index](#each_with_index)
          * [each_index](#each_index)
          * [map](#map)
          * [select](#select)
          * [reject](#reject)
          * [inject](#inject)
+         * [reduce](#reduce)
          * [collect](#collect)
          * [detect](#detect)
+      * [How to clear an Array](#how-to-clear-an-array)
    * [Loop](#loop)
       * [How to break out from loop](#how-to-break-out-from-loop)
       * [How to skip inside loop](#how-to-skip-inside-loop)
@@ -92,20 +94,21 @@ There are multiple ways you can iterate an Array.
 
 | No | Name | When to use |
 |---|---|---|
-| 1 | each             | when you want to just iterate           |
-| 2 | each_with_index  | when you want the both index and value  |
-| 3 | each_index       | when you want just the indexes          |
-| 4 | map              | todo                                    |
-| 5 | select           | todo                                    |
-| 6 | reject           | todo                                    |
-| 7 | inject           | todo                                    |
-| 8 | collect          | todo                                    |
-| 9 | detect           | todo                                    |
+| 1  | each             | when you want to just iterate                                                                                                                                     |
+| 2  | each_with_index  | when you want the both index and value                                                                                                                            |
+| 3  | each_index       | when you want just the indexes                                                                                                                                    |
+| 4  | map              | creates a new array containing the values returned by the block                                                                                                   |
+| 5  | select           | adds a value to a new array if your block returns true, returns [] otherwise. helpful when you are looking for a subset                                           |
+| 6  | reject           | removes a value from a new array if your block returns true, returns [] otherwise. helpful when you are looking for a subset                                      |
+| 7  | inject           | when you want a single value. helful when you want to accumulate, concatenate                                                                                     |
+| 8  | reduce           | reduce and inject methods are aliases                                                                                                                             |
+| 9  | collect          | same as map                                                                                                                                                       | 
+| 10 | detect           | returns the first item in the array if your block returns true, returns nil otherwise. helpful when you are looking for something based on a business logic |
 
 ### each
 ```
 salary = [399, 234, 566, 533, 233]
-salary.each { |x| puts x }
+salary.each { |s| puts s }
 # output
 399
 234
@@ -156,21 +159,71 @@ salary.each_index { |i| puts i}
 ### map
 ```
 salary = [399, 234, 566, 533, 233]
+salary.map { |s|  s * 10  }
+# returns
+[3990, 2340, 5660, 5330, 2330]
+
+# on the other hand each returns the originl values
+salary = [399, 234, 566, 533, 233]
+# returns
+[399, 234, 566, 533, 233]
 ```
 
 ### select
 ```
-salary = [399, 234, 566, 533, 233]
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers.select { |n| n % 2 == 0 }
+# now you have an array of even numbers, how cool is that
+[2, 4, 6, 8, 10]
+# returns an empty array if there is no value that satisfy your logic
+[1, 1, 1].select { |n| n % 2 == 0 }
+# no even numbers
+[]
 ```
 
 ### reject
 ```
-salary = [399, 234, 566, 533, 233]
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers.reject { |n| n % 2 == 0 }
+# reject if the number is even, so now we have an array of odd numbers
+[1, 3, 5, 7, 9]
 ```
+
 ### inject
 ```
-salary = [399, 234, 566, 533, 233]
+numbers = [2, 2, 2, 2, 2]
+numbers.inject{ |res, n| res + n }
+# output is the result of sum of all numbers
+# if you do not set an initial value for res, then the first element of the array is used as the initial value of res
+10
+
+# now set the value of res with 11
+numbers = [2, 2, 2, 2, 2]
+numbers.inject(11) { |res, n| res + n }
+# so 11 + 2, 13 + 2, 15 + 2, 17 + 2 and 19 + 2
+# 21
+
+# using symbol
+numbers = [2, 2, 2, 2, 2]
+numbers.inject(:+)
+# output
+10
+
+# using initial value and a symbol
+numbers = [2, 2, 2, 2, 2]
+numbers.inject(11, :+)
+# output
+21
 ```
+
+### reduce
+```
+numbers = [2, 2, 2, 2, 2]
+numbers.reduce(11, :+)
+# output
+21
+```
+
 ### collect
 ```
 salary = [399, 234, 566, 533, 233]
@@ -178,8 +231,21 @@ salary = [399, 234, 566, 533, 233]
 
 ### detect
 ```
-salary = [399, 234, 566, 533, 233]
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+planets.detect { |name| name.start_with?("E") and name.end_with?("h") }
+# output
+Earth
 ```
+
+How to clear an Array
+-----
+```
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers.clear
+# output
+[]
+```
+
 Loop
 ============
 How to break out from loop
