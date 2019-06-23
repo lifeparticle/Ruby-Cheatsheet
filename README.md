@@ -467,7 +467,7 @@ begin
     if rand(1..10) == 5
         puts "hi 5, let's do it again!"
         sum = 0
-        res = 10 / 0
+        raise "hi 5"
     end
     puts s
     sum += s
