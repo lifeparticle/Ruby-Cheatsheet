@@ -25,11 +25,17 @@ Table of Contents
          * [reduce](#reduce)
          * [collect](#collect)
          * [detect](#detect)
+         * [while](#while)
+         * [until](#until)
+         * [for](#for)
       * [How to check if a value exist in an Array](#how-to-check-if-a-value-exist-in-an-array)
       * [How to clear an Array](#how-to-clear-an-array)
    * [Loop](#loop)
       * [How to break out from loop](#how-to-break-out-from-loop)
       * [How to skip inside loop](#how-to-skip-inside-loop)
+      * [How to repeat the current iteration](#how-to-repeat-the-current-iteration)
+      * [How to restart a loop](#how-to-restart-a-loop)
+   * [Case Expressions](#case-expressions)
    * [Books](#books)
       
 Installation
@@ -196,6 +202,9 @@ There are multiple ways you can iterate an Array.
 | 8  | reduce           | reduce and inject methods are aliases                                                                                                                             |
 | 9  | collect          | same as map                                                                                                                                                       | 
 | 10 | detect           | returns the first item in the array if your block returns true, returns ```nil``` otherwise. helpful when you are looking for something based on a business logic |
+| 11 | while            | when you want to iterate for certain number of times                                                                                                              |
+| 12 | until            | when you want to iterate until something happens                                                                                                                  |
+| 13 | for              | similar to each                                                                                                                                                   |
 
 ### each
 ```ruby
@@ -337,6 +346,36 @@ salary.detect { |s| s > 1000 }
 nil
 ```
 
+### while
+```ruby
+a = 1
+star = '*'
+while a <= 10
+  puts star
+  star += '*'
+  a += 1
+end
+```
+
+### until
+```ruby
+a = 1
+star = '*'
+
+until star.length > 10
+  puts star
+    star += '*'
+    a += 1
+end
+```
+
+### for
+```ruby
+for value in [2, 3, 5, 7]
+  puts value
+end
+```
+
 How to check if a value exist in an Array
 -----
 ```ruby
@@ -389,6 +428,114 @@ end
 234
 566
 233
+```
+
+How to repeat the current iteration
+-----
+```ruby
+data = [456, 3000]
+retry_count = 0
+status = "network failure"
+sum = 0
+data.each do |d|
+  if retry_count == 3
+    status = "connection established"
+    retry_count = 0
+    redo
+  elsif status == "network failure" and retry_count < 5
+    puts "network failure #{retry_count}"
+    retry_count += 1
+    redo
+  elsif status == "connection established"
+    puts d
+    sum += d
+  end
+end
+
+# output of sum
+3456
+```
+
+How to restart a loop
+-----
+
+```ruby
+numbers = [2, 2, 44, 44]
+sum = 0
+begin
+  numbers.each do |s|
+    if rand(1..10) == 5
+        puts "hi 5, let's do it again!"
+        sum = 0
+        res = 10 / 0
+    end
+    puts s
+    sum += s
+  end
+rescue
+    retry
+end
+```
+
+Case Expressions
+============
+
+```ruby
+# case returns the value of the last expression executed
+
+case input
+# check an integer, 19
+when 19
+puts "It's 19"
+# check a float number, 33.3
+when 33.3
+puts "It's 33.3"
+# check an exact string, "Zaman"
+when "Zaman"
+puts "Hi Zaman"
+when 10
+puts "It's 10"
+# check against a range
+when 7..11
+puts "It's between 7 and 11"
+# check against multiple values, "coffee"
+when "tea", "coffee"
+puts "Happy days"
+# check against a regular expression, "aA6"
+when /^a[A-Z]+[0-6]+$/
+puts "It's a valid match"
+# check any string by comparing against the String class, "any string"
+when String
+puts "It's a String"
+end
+
+# using short syntax
+case input
+when 19 then puts "It's 19"
+end
+
+# optional fallthrough
+case input
+when 19 then puts "It's 19"
+else
+puts "It's not 19"
+end
+
+# get the return value
+marks = 86
+
+result = case marks
+   when 0..49 then "Fail"
+   when 50..64 then "Pass"
+   when 65..74 then "Credit"
+   when 75..84 then "Distinction"
+   when 85..100 then "High Distinction"
+   else "Invalid marks"
+end
+
+puts marks
+# output
+86
 ```
 
 Books
