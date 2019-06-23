@@ -37,6 +37,9 @@ Table of Contents
       * [How to restart a loop](#how-to-restart-a-loop)
    * [Case Expressions](#case-expressions)
    * [Books](#books)
+   * [Bug Reports and Feature Requests](#bug-reports-and-feature-requests)
+   * [Author](#author)
+   * [License](#license)
       
 Installation
 ============
@@ -541,3 +544,12 @@ puts marks
 Books
 ============
 TODO
+
+## Bug Reports and Feature Requests
+Please create an issue with as much information you can. Thank you.
+
+## Author
+Mahbub Zaman (https://mahbub.ninja)
+
+## License
+MIT License
