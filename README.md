@@ -3,9 +3,16 @@
 Table of Contents
 ============
    * [Installation](#installation)
+   * [Methods](#methods)
+      * [How to declare a method](#how-to-declare-a-method)
+      * [How to call a method](#how-to-call-a-method)
+      * [How to define default value for a method parameter](#how-to-define-default-value-for-a-method-parameter)
+      * [How to pass variable length argument to a method parameter](#how-to-pass-variable-length-argument-to-a-method-parameter)
    * [Data types](#data-types)
       * [How to check data type](#how-to-check-data-type)
       * [How to check instance type](#how-to-check-instance-type)
+   * [String](#string)
+      * [How to convert string to lower or upper case](#how-to-convert-string-to-lower-or-upper-case)
    * [Array](#array)
       * [How to iterate an Array](#how-to-iterate-an-array)
          * [each](#each)
@@ -18,6 +25,7 @@ Table of Contents
          * [reduce](#reduce)
          * [collect](#collect)
          * [detect](#detect)
+      * [How to check if a value exist in an Array](#how-to-check-if-a-value-exist-in-an-array)
       * [How to clear an Array](#how-to-clear-an-array)
    * [Loop](#loop)
       * [How to break out from loop](#how-to-break-out-from-loop)
@@ -33,6 +41,79 @@ If you don't want to install ruby natively you can use [docker](https://www.dock
 docker run -it --rm ruby:latest
 # check which version of ruby you're running
 RUBY_VERSION
+```
+
+Methods
+============
+
+How to declare a method
+-----
+```ruby
+# In Ruby last statement evaluated is the return value of that method
+# both methods does the same thing, depend on your preference you can choose either of them
+def method_name(parameter1, parameter2)
+   puts "#{parameter1} #{parameter2}" 
+   parameter1 + parameter2
+end
+
+res = method_name(20, 10)
+# output
+30
+```
+
+```ruby
+def method_name(parameter1, parameter2)
+   puts "#{parameter1} #{parameter2}" 
+   return parameter1 + parameter2
+end
+# output
+30
+```
+
+How to call a method
+-----
+```ruby
+res = method_name(parameter1, parameter2)
+# In Ruby you can call methods without parentheses
+res = method_name parameter1, parameter2
+```
+
+How to define default value for a method parameter
+-----
+```ruby
+def method_name(parameter1, parameter2, type = "ADD")
+   puts "#{parameter1} #{parameter2}" 
+   return parameter1 + parameter2 if type == "ADD"
+   return parameter1 - parameter2 if type == "SUB"
+end
+
+res = method_name(parameter1, parameter2)
+# output
+30
+```
+
+How to pass variable length argument to a method parameter
+-----
+```ruby
+def method_name(type, *values)
+   return values.reduce(:+) if type == "ADD"
+   return values.reduce(:-) if type == "SUB"
+end
+
+numbers = [2, 2, 2, 3, 3, 3]
+
+res = method_name("ADD", *numbers)
+# output
+15
+
+res = method_name("SUB", *numbers)
+# output
+-11
+
+# or you can provide the values like this
+res = method_name("ADD", 2, 2, 2, 3, 3, 3)
+# output
+15
 ```
 
 Data types
@@ -52,7 +133,7 @@ Data types
 
 How to check data type
 -----
-```
+```ruby
 # both are synonymous
 
 a = 37
@@ -64,7 +145,7 @@ true
 
 How to check instance type
 -----
-```
+```ruby
 # Returns true if the object is an instance of the given class, not a subclass or superclass
 
 class Vehicle; end
@@ -86,8 +167,21 @@ a.instance_of? Numeric
 false
 ```
 
+String
+============
+
+How to convert string to lower or upper case
+-----
+| No | Method name | output |
+|---|---|---|
+| 1 | "HELLO World".downcase   | "hello world" |
+| 2 | "hello worlD".upcase     | "HELLO WORLD" |
+| 3 | "hEllo wOrlD".capitalize | "Hello world" |
+| 4 | "hEllo WOrlD".swapcase   | "HeLLO woRLd" |
+
 Array
 ============
+
 How to iterate an Array
 -----
 There are multiple ways you can iterate an Array. 
@@ -106,7 +200,7 @@ There are multiple ways you can iterate an Array.
 | 10 | detect           | returns the first item in the array if your block returns true, returns ```nil``` otherwise. helpful when you are looking for something based on a business logic |
 
 ### each
-```
+```ruby
 salary = [399, 234, 566, 533, 233]
 salary.each { |s| puts s }
 # output
@@ -117,7 +211,7 @@ salary.each { |s| puts s }
 233
 ```
 
-```
+```ruby
 # when you have multiline logic
 salary.each do |s|
   a = 10
@@ -133,7 +227,7 @@ end
 ```
 
 ### each_with_index
-```
+```ruby
 salary = [399, 234, 566, 533, 233]
 salary.each_with_index { |value, index| puts "#{index} #{value}" }
 # output
@@ -145,7 +239,7 @@ salary.each_with_index { |value, index| puts "#{index} #{value}" }
 ```
 
 ### each_index
-```
+```ruby
 salary = [399, 234, 566, 533, 233]
 salary.each_index { |i| puts i}
 # output
@@ -157,7 +251,7 @@ salary.each_index { |i| puts i}
 ```
 
 ### map
-```
+```ruby
 salary = [399, 234, 566, 533, 233]
 salary.map { |s|  s * 10  }
 # returns
@@ -170,7 +264,7 @@ salary = [399, 234, 566, 533, 233]
 ```
 
 ### select
-```
+```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers.select { |n| n % 2 == 0 }
 # now you have an array of even numbers, how cool is that
@@ -182,7 +276,7 @@ numbers.select { |n| n % 2 == 0 }
 ```
 
 ### reject
-```
+```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers.reject { |n| n % 2 == 0 }
 # reject if the number is even, so now we have an array of odd numbers
@@ -190,7 +284,7 @@ numbers.reject { |n| n % 2 == 0 }
 ```
 
 ### inject
-```
+```ruby
 numbers = [2, 2, 2, 2, 2]
 numbers.inject{ |res, n| res + n }
 # output is the result of sum of all numbers
@@ -217,7 +311,7 @@ numbers.inject(11, :+)
 ```
 
 ### reduce
-```
+```ruby
 numbers = [2, 2, 2, 2, 2]
 numbers.reduce(11, :+)
 # output
@@ -225,7 +319,7 @@ numbers.reduce(11, :+)
 ```
 
 ### collect
-```
+```ruby
 salary = [399, 234, 566, 533, 233]
 salary.collect { |s| s > 400 }
 # output
@@ -233,7 +327,7 @@ salary.collect { |s| s > 400 }
 ```
 
 ### detect
-```
+```ruby
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 planets.detect { |name| name.start_with?("E") and name.end_with?("h") }
 # output
@@ -245,9 +339,22 @@ salary.detect { |s| s > 1000 }
 nil
 ```
 
+How to check if a value exist in an Array
+-----
+```ruby
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+planets.include? "Mars"
+# output
+true
+
+planets.include? "Pluto"
+# output
+false
+```
+
 How to clear an Array
 -----
-```
+```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers.clear
 # output
@@ -258,7 +365,7 @@ Loop
 ============
 How to break out from loop
 -----
-```
+```ruby
 # by using break keyword
 salary = [399, 234, 566, 533, 233]
 salary.each do |s|
@@ -272,7 +379,7 @@ end
 
 How to skip inside loop
 -----
-```
+```ruby
 # by using next keyword
 salary = [399, 234, 566, 533, 233]
 salary.each do |s|
