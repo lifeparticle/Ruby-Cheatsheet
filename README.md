@@ -135,7 +135,6 @@ How to check data type
 -----
 ```ruby
 # both are synonymous
-
 a = 37
 a.kind_of? Integer 
 true
@@ -147,7 +146,6 @@ How to check instance type
 -----
 ```ruby
 # Returns true if the object is an instance of the given class, not a subclass or superclass
-
 class Vehicle; end
 class Car < Vehicle; end
 class Audi < Car; end
