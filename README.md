@@ -264,9 +264,9 @@ salary.each_with_index { |value, index| puts "#{index} #{value}" }
 ### each_with_object
 ```ruby
 colors = [{color: "red", count: 3}, {color: "red", count: 5}, {color: "black", count: 4}]
-colors.each_with_object({}) { |color, hash| hash[:color] = color[:color].upcase; hash[:count] = color[:count] }
+colors.each_with_object(Hash.new(0)) { |color, hash| hash["color_"+color[:color]] = color[:color].upcase; hash["count_"+color[:color]] += color[:count] }
 # output
-{:color=>"BLACK", :count=>4}
+{"color_red"=>"RED", "count_red"=>8, "color_black"=>"BLACK", "count_black"=>4}
 
 [1, 2, 3].each_with_object(0) { |number, sum| sum += number}
 # output
