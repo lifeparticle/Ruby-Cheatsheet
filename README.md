@@ -17,6 +17,7 @@ Table of Contents
       * [How to iterate an Array](#how-to-iterate-an-array)
          * [each](#each)
          * [each_with_index](#each_with_index)
+         * [each_with_object](#each_with_object)
          * [each_index](#each_index)
          * [map](#map)
          * [select](#select)
@@ -30,13 +31,20 @@ Table of Contents
          * [for](#for)
       * [How to check if a value exist in an Array](#how-to-check-if-a-value-exist-in-an-array)
       * [How to clear an Array](#how-to-clear-an-array)
+      * [How to get the last element of an Array](#how-to-get-the-last-element-of-an-array)
+   * [Hash](#hash)
+      * [What's the difference between Hash.new(0) and {}](#whats-the-difference-between-hashnew0-and-)
    * [Loop](#loop)
       * [How to break out from loop](#how-to-break-out-from-loop)
       * [How to skip inside loop](#how-to-skip-inside-loop)
       * [How to repeat the current iteration](#how-to-repeat-the-current-iteration)
       * [How to restart a loop](#how-to-restart-a-loop)
-   * [Case Expressions](#case-expressions)
-   * [Books](#books)
+      * [How to group by count](#how-to-group-by-count)
+   * [Conditional structures](#conditional-structures)
+      * [If elsif else expression](#if-elsif-else-expression)
+      * [unless expression](#unless-expression)
+      * [Case Expressions](#case-expressions)
+   * [Books and other resources](#books-and-other-resources)
    * [Bug Reports and Feature Requests](#bug-reports-and-feature-requests)
    * [Author](#author)
    * [License](#license)
@@ -135,7 +143,7 @@ Data types
 | 3 | String   | > a = "Hello universe"         |> a.class <br> > String                                           | [link](https://ruby-doc.org/core-2.6.3/String.html)   |
 | 4 | Array    | > a = [12, 34]                 |> a.class <br> > Array                                            | [link](https://ruby-doc.org/core-2.6.3/Array.html)    |
 | 5 | Hash     | > a = {type: "tea", count: 10} |> a.class <br> > Hash                                             | [link](https://ruby-doc.org/core-2.6.3/Hash.html)     |
-| 6 | Boolean  | > a = false<br>> a = true        |> a.class <br> > FalseClass <br> > a.class <br> > TrueClass       | [TrueClass](https://ruby-doc.org/core-2.6.3/TrueClass.html) <br> [FalseClass](https://ruby-doc.org/core-2.6.3/FalseClass.html)  |
+| 6 | Boolean  | > a = false<br>> a = true      |> a.class <br> > FalseClass <br> > a.class <br> > TrueClass       | [TrueClass](https://ruby-doc.org/core-2.6.3/TrueClass.html) <br> [FalseClass](https://ruby-doc.org/core-2.6.3/FalseClass.html)  |
 | 7 | Symbol   | > a = :status                  |> a.class <br> > Symbol                                           | [link](https://ruby-doc.org/core-2.6.3/Symbol.html)   |
 | 8 | Range    | > a = 1..3                     |> a.class <br> > Range                                            | [link](https://ruby-doc.org/core-2.6.3/Range.html)    |
 | 9 | Nill     | > a = nil                      |> a.class <br> > NilClass                                         | [link](https://ruby-doc.org/core-2.6.3/NilClass.html) |
@@ -195,22 +203,24 @@ There are multiple ways you can iterate an Array.
 
 | No | Name | When to use |
 |---|---|---|
-| 1  | each             | when you want to just iterate                                                                                                                                     |
-| 2  | each_with_index  | when you want the both index and value                                                                                                                            |
-| 3  | each_index       | when you want just the indexes                                                                                                                                    |
-| 4  | map              | returns array containing the values returned by the block                                                                                                         |
-| 5  | select           | adds a value to a new array if your block returns true, returns ```[]``` otherwise. helpful when you are looking for a subset                                     |
-| 6  | reject           | removes a value from a new array if your block returns true, returns ```[]``` otherwise. helpful when you are looking for a subset                                |
-| 7  | inject           | when you want a single value. helpful when you want to accumulate, concatenate                                                                                    |
-| 8  | reduce           | reduce and inject methods are aliases                                                                                                                             |
-| 9  | collect          | same as map                                                                                                                                                       | 
-| 10 | detect           | returns the first item in the array if your block returns true, returns ```nil``` otherwise. helpful when you are looking for something based on a business logic |
-| 11 | while            | when you want to iterate for certain number of times                                                                                                              |
-| 12 | until            | when you want to iterate until something happens                                                                                                                  |
-| 13 | for              | similar to each                                                                                                                                                   |
+| 1  | each             | when you want to just iterate                                                                                                                                                                                                                                        | 
+| 2  | each_with_index  | when you want the both index and value                                                                                                                                                                                                                               | 
+| 3  | each_with_object | when you want to build a hash or reduce a collection to one object. Iterates the given block for each element with an arbitrary object given and returns the initial given object. It only works with mutable object like hash but not immutable object like integer |
+| 4  | each_index       | when you want just the indexes                                                                                                                                                                                                                                       |
+| 5  | map              | returns array containing the values returned by the block                                                                                                                                                                                                            |
+| 6  | select           | adds a value to a new array if your block returns true, returns ```[]``` otherwise. helpful when you are looking for a subset                                                                                                                                        |
+| 7  | reject           | removes a value from a new array if your block returns true, returns ```[]``` otherwise. helpful when you are looking for a subset                                                                                                                                   |
+| 8  | inject           | when you want a single value. helpful when you want to accumulate, concatenate                                                                                                                                                                                       |
+| 9  | reduce           | reduce and inject methods are aliases                                                                                                                                                                                                                                |
+| 10 | collect          | same as map                                                                                                                                                                                                                                                          | 
+| 11 | detect           | returns the first item in the array if your block returns true, returns ```nil``` otherwise. helpful when you are looking for something based on a business logic                                                                                                    |
+| 12 | while            | when you want to iterate for certain number of times                                                                                                                                                                                                                 |
+| 13 | until            | when you want to iterate until something happens                                                                                                                                                                                                                     |
+| 14 | for              | similar to each                                                                                                                                                                                                                                                      |
 
 ### each
 ```ruby
+# when you have singleline block
 salary = [399, 234, 566, 533, 233]
 salary.each { |s| puts s }
 # output
@@ -222,7 +232,7 @@ salary.each { |s| puts s }
 ```
 
 ```ruby
-# when you have multiline logic
+# when you have multiline block, you can replace the curly brackets {} with do and end
 salary.each do |s|
   a = 10
   res = a * s
@@ -234,6 +244,9 @@ end
 5660
 5330
 2330
+
+# or you can do the same thing just using curly brackets {} and semicolons as separators
+salary.each { |s| a = 10 ; res = a * s ; puts res }
 ```
 
 ### each_with_index
@@ -246,6 +259,19 @@ salary.each_with_index { |value, index| puts "#{index} #{value}" }
 2 566
 3 533
 4 233
+```
+
+### each_with_object
+```ruby
+colors = [{color: "red", count: 3}, {color: "red", count: 5}, {color: "black", count: 4}]
+colors.each_with_object({}) { |color, hash| hash[:color] = color[:color].upcase; hash[:count] = color[:count] }
+# output
+{:color=>"BLACK", :count=>4}
+
+[1, 2, 3].each_with_object(0) { |number, sum| sum += number}
+# output
+0
+# beacuse 0 is immutable, since the initial object is 0, the method returns 0
 ```
 
 ### each_index
@@ -401,6 +427,39 @@ numbers.clear
 []
 ```
 
+How to get the last element of an Array
+-----
+```ruby
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers[-1]
+# or
+numbers.last
+# output
+10
+```
+
+Hash
+============
+TODO
+
+What's the difference between Hash.new(0) and {}
+-----
+```ruby
+Hash.new(0) sets a default value of 0 for every key that do not exist in the hash.
+{} or Hash.new() sets nil for every key
+
+h1 = Hash.new(0)
+h1[:count] += 1
+puts "#{h1[:count]}"
+# output
+1
+
+h2 = {}
+h2[:count] += 1
+# error
+undefined method `+' for nil:NilClass
+```
+
 Loop
 ============
 How to break out from loop
@@ -480,8 +539,29 @@ rescue
 end
 ```
 
-Case Expressions
+How to group by count
+-----
+
+```ruby
+numbers = [1, 1, 1, 2, 4, 65, 55, 54, 55]
+freq_array = numbers.each_with_object(Hash.new(0)) { |number, hash| hash[number] += 1 }
+puts "#{freq_array}"
+# output
+{1=>3, 2=>1, 4=>1, 65=>1, 55=>2, 54=>1}
+```
+Conditional structures
 ============
+
+If elsif else expression
+-----
+TODO
+
+unless expression
+-----
+TODO
+
+Case Expressions
+-----
 
 ```ruby
 # case returns the value of the last expression executed
@@ -541,15 +621,18 @@ puts marks
 86
 ```
 
-Books
+Books and other resources
 ============
-TODO
+1. [Ruby doc](https://ruby-doc.org/)
 
-## Bug Reports and Feature Requests
+Bug Reports and Feature Requests
+============
 Please create an issue with as much information you can. Thank you.
 
-## Author
+Author
+============
 Mahbub Zaman (https://mahbub.ninja)
 
-## License
+License
+============
 MIT License
