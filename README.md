@@ -445,8 +445,8 @@ TODO
 What's the difference between Hash.new(0) and {}
 -----
 ```ruby
-Hash.new(0) sets a default value of 0 for every key that do not exist in the hash.
-{} or Hash.new() sets nil for every key
+# Hash.new(0) sets a default value of 0 for every key that do not exist in the hash.
+# {} or Hash.new() sets nil for every key
 
 h1 = Hash.new(0)
 h1[:count] += 1
