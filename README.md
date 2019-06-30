@@ -650,11 +650,15 @@ Shorthand
 ```ruby
 count = 1
 puts "hello world" if count == 1
+#output
+hello world
 
 count = 2
 puts "hello universe" if count != 1
 # or using unless
 puts "hello universe" unless count == 1
+#output
+hello universe
 ```
 
 Case Expressions
