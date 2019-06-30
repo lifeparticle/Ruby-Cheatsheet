@@ -750,7 +750,7 @@ TODO
 Books and other resources
 ============
 1. [Ruby doc](https://ruby-doc.org/)
-2 [How to use Ruby’s English and/or operators without going nuts](http://www.virtuouscode.com/2014/08/26/how-to-use-rubys-english-andor-operators-without-going-nuts/)
+2. [How to use Ruby’s English and/or operators without going nuts](http://www.virtuouscode.com/2014/08/26/how-to-use-rubys-english-andor-operators-without-going-nuts/)
 
 Bug Reports and Feature Requests
 ============
