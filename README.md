@@ -630,7 +630,7 @@ unless expression
 -----
 
 ```ruby
-# unless is opposite of if, evaluates if the statement is false
+# unless is opposite of if, evaluates when the statement is false
 
 name = "rob"
 
@@ -639,6 +639,9 @@ unless name == "bob"
 else
   puts "hello bob"
 end
+
+#output
+hello stranger
 ```
 
 Shorthand
