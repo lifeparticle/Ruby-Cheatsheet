@@ -3,6 +3,13 @@
 Table of Contents
 ============
    * [Installation](#installation)
+   * [Comment](#comment)
+   * [Operators](#operators)
+      * [Logical operators](#logical-operators)
+      * [Bitwise operators](#bitwise-operators)
+      * [Arithmetic operators](#arithmetic-operators)
+      * [Comparison operators](#comparison-operators)
+      * [Assignment operators](#assignment-operators)
    * [Methods](#methods)
       * [How to declare a method](#how-to-declare-a-method)
       * [How to call a method](#how-to-call-a-method)
@@ -10,9 +17,9 @@ Table of Contents
       * [How to pass variable length argument to a method parameter](#how-to-pass-variable-length-argument-to-a-method-parameter)
    * [Data types](#data-types)
       * [How to check data type](#how-to-check-data-type)
-      * [How to check instance type](#how-to-check-instance-type)
    * [String](#string)
       * [How to convert string to lower or upper case](#how-to-convert-string-to-lower-or-upper-case)
+      * [Helpful methods](#helpful-methods)
    * [Array](#array)
       * [How to iterate an Array](#how-to-iterate-an-array)
          * [each](#each)
@@ -43,7 +50,11 @@ Table of Contents
    * [Conditional structures](#conditional-structures)
       * [If elsif else expression](#if-elsif-else-expression)
       * [unless expression](#unless-expression)
+      * [Shorthand](#shorthand)
       * [Case Expressions](#case-expressions)
+   * [Classes](#classes)
+      * [How to check instance type](#how-to-check-instance-type)
+   * [Modules](#modules)
    * [Books and other resources](#books-and-other-resources)
    * [Bug Reports and Feature Requests](#bug-reports-and-feature-requests)
    * [Author](#author)
@@ -51,7 +62,6 @@ Table of Contents
       
 Installation
 ============
-
 If you don't want to install ruby natively you can use [docker](https://www.docker.com/).
 
 ```
@@ -60,11 +70,47 @@ docker run -it --rm ruby:latest
 RUBY_VERSION
 ```
 
+Comment
+============
+
+```ruby
+# single line comment
+
+=begin
+multiline
+comment
+=end
+```
+
+Operators
+============
+Logical operators
+-----
+TODO
+
+Bitwise operators
+-----
+TODO
+
+Arithmetic operators
+-----
+TODO
+
+Comparison operators
+-----
+TODO
+
+Assignment operators
+-----
+TODO
+
+
 Methods
 ============
 
 How to declare a method
 -----
+
 ```ruby
 # In Ruby last statement evaluated is the return value of that method
 # both methods does the same thing, depend on your preference you can choose either of them
@@ -89,6 +135,7 @@ end
 
 How to call a method
 -----
+
 ```ruby
 res = method_name(parameter1, parameter2)
 # In Ruby you can call methods without parentheses
@@ -97,6 +144,7 @@ res = method_name parameter1, parameter2
 
 How to define default value for a method parameter
 -----
+
 ```ruby
 def method_name(parameter1, parameter2, type = "ADD")
    puts "#{parameter1} #{parameter2}" 
@@ -150,6 +198,7 @@ Data types
 
 How to check data type
 -----
+
 ```ruby
 # both are synonymous
 a = 37
@@ -157,29 +206,6 @@ a.kind_of? Integer
 true
 a.is_a? Integer
 true
-```
-
-How to check instance type
------
-```ruby
-# Returns true if the object is an instance of the given class, not a subclass or superclass
-class Vehicle; end
-class Car < Vehicle; end
-class Audi < Car; end
-
-car = Car.new
-car.instance_of? Vehicle
-false
-car.instance_of? Car
-true
-car.instance_of? Audi
-false
-
-a = 7
-a.instance_of? Integer
-true
-a.instance_of? Numeric
-false
 ```
 
 String
@@ -193,6 +219,15 @@ How to convert string to lower or upper case
 | 2 | "hello worlD".upcase     | "HELLO WORLD" |
 | 3 | "hEllo wOrlD".capitalize | "Hello world" |
 | 4 | "hEllo WOrlD".swapcase   | "HeLLO woRLd" |
+
+Helpful methods
+-----
+
+| No | Method name | output |
+|---|---|---|
+| 1 | "HELLO World".length       | 11            |
+| 2 | "hello worlD".reverse      | "Dlrow olleh" |
+| 3 | "hEllo wOrlD".include? "w" | true          |
 
 Array
 ============
@@ -219,6 +254,7 @@ There are multiple ways you can iterate an Array.
 | 14 | for              | similar to each                                                                                                                                                                                                                                                      |
 
 ### each
+
 ```ruby
 # when you have singleline block
 salary = [399, 234, 566, 533, 233]
@@ -245,11 +281,12 @@ end
 5330
 2330
 
-# or you can do the same thing just using curly brackets {} and semicolons as separators
+# or you can do the same thing just using curly brackets {} and semicolons as separators instead of new lines
 salary.each { |s| a = 10 ; res = a * s ; puts res }
 ```
 
 ### each_with_index
+
 ```ruby
 salary = [399, 234, 566, 533, 233]
 salary.each_with_index { |value, index| puts "#{index} #{value}" }
@@ -262,6 +299,7 @@ salary.each_with_index { |value, index| puts "#{index} #{value}" }
 ```
 
 ### each_with_object
+
 ```ruby
 colors = [{color: "red", count: 3}, {color: "red", count: 5}, {color: "black", count: 4}]
 colors.each_with_object(Hash.new(0)) { |color, hash| hash["color_"+color[:color]] = color[:color].upcase; hash["count_"+color[:color]] += color[:count] }
@@ -275,6 +313,7 @@ colors.each_with_object(Hash.new(0)) { |color, hash| hash["color_"+color[:color]
 ```
 
 ### each_index
+
 ```ruby
 salary = [399, 234, 566, 533, 233]
 salary.each_index { |i| puts i}
@@ -287,6 +326,7 @@ salary.each_index { |i| puts i}
 ```
 
 ### map
+
 ```ruby
 salary = [399, 234, 566, 533, 233]
 salary.map { |s|  s * 10  }
@@ -300,6 +340,7 @@ salary = [399, 234, 566, 533, 233]
 ```
 
 ### select
+
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers.select { |n| n % 2 == 0 }
@@ -312,6 +353,7 @@ numbers.select { |n| n % 2 == 0 }
 ```
 
 ### reject
+
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers.reject { |n| n % 2 == 0 }
@@ -320,6 +362,7 @@ numbers.reject { |n| n % 2 == 0 }
 ```
 
 ### inject
+
 ```ruby
 numbers = [2, 2, 2, 2, 2]
 numbers.inject{ |res, n| res + n }
@@ -347,6 +390,7 @@ numbers.inject(11, :+)
 ```
 
 ### reduce
+
 ```ruby
 numbers = [2, 2, 2, 2, 2]
 numbers.reduce(11, :+)
@@ -355,6 +399,7 @@ numbers.reduce(11, :+)
 ```
 
 ### collect
+
 ```ruby
 salary = [399, 234, 566, 533, 233]
 salary.collect { |s| s > 400 }
@@ -363,6 +408,7 @@ salary.collect { |s| s > 400 }
 ```
 
 ### detect
+
 ```ruby
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 planets.detect { |name| name.start_with?("E") and name.end_with?("h") }
@@ -376,6 +422,7 @@ nil
 ```
 
 ### while
+
 ```ruby
 a = 1
 star = '*'
@@ -387,6 +434,7 @@ end
 ```
 
 ### until
+
 ```ruby
 a = 1
 star = '*'
@@ -399,6 +447,7 @@ end
 ```
 
 ### for
+
 ```ruby
 for value in [2, 3, 5, 7]
   puts value
@@ -407,6 +456,7 @@ end
 
 How to check if a value exist in an Array
 -----
+
 ```ruby
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 planets.include? "Mars"
@@ -420,6 +470,7 @@ false
 
 How to clear an Array
 -----
+
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers.clear
@@ -429,6 +480,7 @@ numbers.clear
 
 How to get the last element of an Array
 -----
+
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers[-1]
@@ -444,6 +496,7 @@ TODO
 
 What's the difference between Hash.new(0) and {}
 -----
+
 ```ruby
 # Hash.new(0) sets a default value of 0 for every key that do not exist in the hash.
 # {} or Hash.new() sets nil for every key
@@ -464,6 +517,7 @@ Loop
 ============
 How to break out from loop
 -----
+
 ```ruby
 # by using break keyword
 salary = [399, 234, 566, 533, 233]
@@ -478,6 +532,7 @@ end
 
 How to skip inside loop
 -----
+
 ```ruby
 # by using next keyword
 salary = [399, 234, 566, 533, 233]
@@ -494,6 +549,7 @@ end
 
 How to repeat the current iteration
 -----
+
 ```ruby
 data = [456, 3000]
 retry_count = 0
@@ -554,11 +610,49 @@ Conditional structures
 
 If elsif else expression
 -----
-TODO
+
+```ruby
+temp = 19
+
+if temp >= 25
+  puts "hot"
+elsif temp < 25 && temp >= 18
+  puts "normal"
+else
+  puts "cold"
+end
+
+#output
+normal
+```
 
 unless expression
 -----
-TODO
+
+```ruby
+# unless is opposite of if, evaluates if the statement is false
+
+name = "rob"
+
+unless name == "bob"
+  puts "hello stranger"
+else
+  puts "hello bob"
+end
+```
+
+Shorthand
+-----
+
+```ruby
+count = 1
+puts "hello world" if count == 1
+
+count = 2
+puts "hello universe" if count != 1
+# or using unless
+puts "hello universe" unless count == 1
+```
 
 Case Expressions
 -----
@@ -621,9 +715,42 @@ puts marks
 86
 ```
 
+Classes
+============
+TODO
+
+How to check instance type
+-----
+```ruby
+# Returns true if the object is an instance of the given class, not a subclass or superclass
+class Vehicle; end
+class Car < Vehicle; end
+class Audi < Car; end
+
+car = Car.new
+car.instance_of? Vehicle
+false
+car.instance_of? Car
+true
+car.instance_of? Audi
+false
+
+a = 7
+a.instance_of? Integer
+true
+a.instance_of? Numeric
+false
+```
+
+Modules
+============
+TODO
+
+
 Books and other resources
 ============
 1. [Ruby doc](https://ruby-doc.org/)
+2 [How to use Ruby’s English and/or operators without going nuts](http://www.virtuouscode.com/2014/08/26/how-to-use-rubys-english-andor-operators-without-going-nuts/)
 
 Bug Reports and Feature Requests
 ============
