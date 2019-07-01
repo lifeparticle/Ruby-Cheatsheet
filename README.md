@@ -225,12 +225,12 @@ Helpful methods
 
 | No | Method name | output |
 |---|---|---|
-| 1 | ```"HELLO World".length```          | ```11```                                                                                                     |
-| 2 | ```"hello worlD".reverse```         | ```"Dlrow olleh"```                                                                                          |
-| 3 | ```"hEllo wOrlD".include? "w"```    | ```true```                                                                                                   |
-| 4 | ```gsub(pattern, replacement)```    | ```"hEllo wOrlD".gsub(" ", "_")``` <br>```"hEllo_wOrlD"```                                                   |
-| 5 | ```gsub(pattern, hash)```           | ```"organization".gsub("z", 'z' => 's')``` <br>```"organisation"```                                          |
-| 6 | ```gsub(pattern) {|match| block }```| ```"Price of the phone is 1000 AUD".gsub(/\d+/) { |s| '$'+s }``` <br>```"Price of the phone is $1000 AUD"``` |
+| 1 | "HELLO World".length             | 11                                                                                                 |
+| 2 | "hello worlD".reverse            | "Dlrow olleh"                                                                                      |
+| 3 | "hEllo wOrlD".include? "w"       | true                                                                                               |
+| 4 | gsub(pattern, replacement)       | "hEllo wOrlD".gsub(" ", "_") <br> "hEllo_wOrlD"                                                    |
+| 5 | gsub(pattern, hash)              | "organization".gsub("z", 'z' => 's') <br>"organisation"                                            |
+| 6 | gsub(pattern) { \|match\| block} | "Price of the phone is 1000 AUD".gsub(/\d+/) { \|s\| '$'+s } <br>"Price of the phone is $1000 AUD" |
 
 
 Array
