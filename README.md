@@ -213,21 +213,22 @@ String
 
 How to convert string to lower or upper case
 -----
+
 | No | Method name | output |
 |---|---|---|
-| 1 | "HELLO World".downcase   | "hello world" |
-| 2 | "hello worlD".upcase     | "HELLO WORLD" |
-| 3 | "hEllo wOrlD".capitalize | "Hello world" |
-| 4 | "hEllo WOrlD".swapcase   | "HeLLO woRLd" |
+| 1 | downcase   | "HELLO World".downcase <br> "hello world"   |
+| 2 | upcase     | "hello worlD".upcase <br> "HELLO WORLD"     |
+| 3 | capitalize | "hEllo wOrlD".capitalize <br> "Hello world" |
+| 4 | swapcase   | "hEllo WOrlD".swapcase <br> "HeLLO woRLd"   |
 
 Helpful methods
 -----
 
 | No | Method name | output |
 |---|---|---|
-| 1 | "HELLO World".length             | 11                                                                                                 |
-| 2 | "hello worlD".reverse            | "Dlrow olleh"                                                                                      |
-| 3 | "hEllo wOrlD".include? "w"       | true                                                                                               |
+| 1 | length                           | "HELLO World".length <br> 11                                                                                                 |
+| 2 | reverse                          | "hello worlD".reverse <br> "Dlrow olleh"                                                                                      |
+| 3 | include? other_str               | "hEllo wOrlD".include? "w" <br> true                                                                                               |
 | 4 | gsub(pattern, replacement)       | "hEllo wOrlD".gsub(" ", "_") <br> "hEllo_wOrlD"                                                    |
 | 5 | gsub(pattern, hash)              | "organization".gsub("z", 'z' => 's') <br>"organisation"                                            |
 | 6 | gsub(pattern) { \|match\| block} | "Price of the phone is 1000 AUD".gsub(/\d+/) { \|s\| '$'+s } <br>"Price of the phone is $1000 AUD" |
