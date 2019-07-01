@@ -1,4 +1,5 @@
 # Ruby-Cheatsheet
+The missing Cheatsheet for Ruby.
 
 Table of Contents
 ============
