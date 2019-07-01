@@ -15,16 +15,16 @@ Table of Contents
       * [unless expression](#unless-expression)
       * [Shorthand](#shorthand)
       * [Case Expressions](#case-expressions)
-   * [Methods](#methods)
-      * [How to declare a method](#how-to-declare-a-method)
-      * [How to call a method](#how-to-call-a-method)
-      * [How to define default value for a method parameter](#how-to-define-default-value-for-a-method-parameter)
-      * [How to pass variable length argument to a method parameter](#how-to-pass-variable-length-argument-to-a-method-parameter)
    * [Data types](#data-types)
       * [How to check data type](#how-to-check-data-type)
    * [String](#string)
       * [How to convert string to lower or upper case](#how-to-convert-string-to-lower-or-upper-case)
       * [Helpful methods](#helpful-methods)
+   * [Methods](#methods)
+      * [How to declare a method](#how-to-declare-a-method)
+      * [How to call a method](#how-to-call-a-method)
+      * [How to define default value for a method parameter](#how-to-define-default-value-for-a-method-parameter)
+      * [How to pass variable length argument to a method parameter](#how-to-pass-variable-length-argument-to-a-method-parameter)
    * [Array](#array)
       * [How to iterate an Array](#how-to-iterate-an-array)
          * [each](#each)
@@ -220,6 +220,57 @@ puts marks
 # output
 86
 ```
+Data types
+============
+
+| No | Type  | Example  | Class  | Doc  |
+|---|---|---|---|---|
+| 1 | Integer  | > a = 17                       |> a.class <br> > Integer <br> > a.class.superclass <br> > Numeric | [link](https://ruby-doc.org/core-2.6.3/Integer.html)  |
+| 2 | Float    | > a = 87.23                    |> a.class <br> > Float <br> > a.class.superclass <br> > Numeric   | [link](https://ruby-doc.org/core-2.6.3/Float.html)    |
+| 3 | String   | > a = "Hello universe"         |> a.class <br> > String                                           | [link](https://ruby-doc.org/core-2.6.3/String.html)   |
+| 4 | Array    | > a = [12, 34]                 |> a.class <br> > Array                                            | [link](https://ruby-doc.org/core-2.6.3/Array.html)    |
+| 5 | Hash     | > a = {type: "tea", count: 10} |> a.class <br> > Hash                                             | [link](https://ruby-doc.org/core-2.6.3/Hash.html)     |
+| 6 | Boolean  | > a = false<br>> a = true      |> a.class <br> > FalseClass <br> > a.class <br> > TrueClass       | [TrueClass](https://ruby-doc.org/core-2.6.3/TrueClass.html) <br> [FalseClass](https://ruby-doc.org/core-2.6.3/FalseClass.html)  |
+| 7 | Symbol   | > a = :status                  |> a.class <br> > Symbol                                           | [link](https://ruby-doc.org/core-2.6.3/Symbol.html)   |
+| 8 | Range    | > a = 1..3                     |> a.class <br> > Range                                            | [link](https://ruby-doc.org/core-2.6.3/Range.html)    |
+| 9 | Nill     | > a = nil                      |> a.class <br> > NilClass                                         | [link](https://ruby-doc.org/core-2.6.3/NilClass.html) |
+
+How to check data type
+-----
+
+```ruby
+# both are synonymous
+a = 37
+a.kind_of? Integer 
+true
+a.is_a? Integer
+true
+```
+
+String
+============
+
+How to convert string to lower or upper case
+-----
+
+| No | Method name | output |
+|---|---|---|
+| 1 | downcase   | "HELLO World".downcase <br> "hello world"   |
+| 2 | upcase     | "hello worlD".upcase <br> "HELLO WORLD"     |
+| 3 | capitalize | "hEllo wOrlD".capitalize <br> "Hello world" |
+| 4 | swapcase   | "hEllo WOrlD".swapcase <br> "HeLLO woRLd"   |
+
+Helpful methods
+-----
+
+| No | Method name | output |
+|---|---|---|
+| 1 | length                           | "HELLO World".length <br> 11                                                                                                 |
+| 2 | reverse                          | "hello worlD".reverse <br> "Dlrow olleh"                                                                                      |
+| 3 | include? other_str               | "hEllo wOrlD".include? "w" <br> true                                                                                               |
+| 4 | gsub(pattern, replacement)       | "hEllo wOrlD".gsub(" ", "_") <br> "hEllo_wOrlD"                                                    |
+| 5 | gsub(pattern, hash)              | "organization".gsub("z", 'z' => 's') <br>"organisation"                                            |
+| 6 | gsub(pattern) { \|match\| block} | "Price of the phone is 1000 AUD".gsub(/\d+/) { \|s\| '$'+s } <br>"Price of the phone is $1000 AUD" |
 
 Methods
 ============
@@ -296,59 +347,6 @@ res = method_name("ADD", 2, 2, 2, 3, 3, 3)
 # output
 15
 ```
-
-Data types
-============
-
-| No | Type  | Example  | Class  | Doc  |
-|---|---|---|---|---|
-| 1 | Integer  | > a = 17                       |> a.class <br> > Integer <br> > a.class.superclass <br> > Numeric | [link](https://ruby-doc.org/core-2.6.3/Integer.html)  |
-| 2 | Float    | > a = 87.23                    |> a.class <br> > Float <br> > a.class.superclass <br> > Numeric   | [link](https://ruby-doc.org/core-2.6.3/Float.html)    |
-| 3 | String   | > a = "Hello universe"         |> a.class <br> > String                                           | [link](https://ruby-doc.org/core-2.6.3/String.html)   |
-| 4 | Array    | > a = [12, 34]                 |> a.class <br> > Array                                            | [link](https://ruby-doc.org/core-2.6.3/Array.html)    |
-| 5 | Hash     | > a = {type: "tea", count: 10} |> a.class <br> > Hash                                             | [link](https://ruby-doc.org/core-2.6.3/Hash.html)     |
-| 6 | Boolean  | > a = false<br>> a = true      |> a.class <br> > FalseClass <br> > a.class <br> > TrueClass       | [TrueClass](https://ruby-doc.org/core-2.6.3/TrueClass.html) <br> [FalseClass](https://ruby-doc.org/core-2.6.3/FalseClass.html)  |
-| 7 | Symbol   | > a = :status                  |> a.class <br> > Symbol                                           | [link](https://ruby-doc.org/core-2.6.3/Symbol.html)   |
-| 8 | Range    | > a = 1..3                     |> a.class <br> > Range                                            | [link](https://ruby-doc.org/core-2.6.3/Range.html)    |
-| 9 | Nill     | > a = nil                      |> a.class <br> > NilClass                                         | [link](https://ruby-doc.org/core-2.6.3/NilClass.html) |
-
-How to check data type
------
-
-```ruby
-# both are synonymous
-a = 37
-a.kind_of? Integer 
-true
-a.is_a? Integer
-true
-```
-
-String
-============
-
-How to convert string to lower or upper case
------
-
-| No | Method name | output |
-|---|---|---|
-| 1 | downcase   | "HELLO World".downcase <br> "hello world"   |
-| 2 | upcase     | "hello worlD".upcase <br> "HELLO WORLD"     |
-| 3 | capitalize | "hEllo wOrlD".capitalize <br> "Hello world" |
-| 4 | swapcase   | "hEllo WOrlD".swapcase <br> "HeLLO woRLd"   |
-
-Helpful methods
------
-
-| No | Method name | output |
-|---|---|---|
-| 1 | length                           | "HELLO World".length <br> 11                                                                                                 |
-| 2 | reverse                          | "hello worlD".reverse <br> "Dlrow olleh"                                                                                      |
-| 3 | include? other_str               | "hEllo wOrlD".include? "w" <br> true                                                                                               |
-| 4 | gsub(pattern, replacement)       | "hEllo wOrlD".gsub(" ", "_") <br> "hEllo_wOrlD"                                                    |
-| 5 | gsub(pattern, hash)              | "organization".gsub("z", 'z' => 's') <br>"organisation"                                            |
-| 6 | gsub(pattern) { \|match\| block} | "Price of the phone is 1000 AUD".gsub(/\d+/) { \|s\| '$'+s } <br>"Price of the phone is $1000 AUD" |
-
 
 Array
 ============
