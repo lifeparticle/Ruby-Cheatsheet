@@ -10,6 +10,11 @@ Table of Contents
       * [Arithmetic operators](#arithmetic-operators)
       * [Comparison operators](#comparison-operators)
       * [Assignment operators](#assignment-operators)
+   * [Conditional structures](#conditional-structures)
+      * [If elsif else expression](#if-elsif-else-expression)
+      * [unless expression](#unless-expression)
+      * [Shorthand](#shorthand)
+      * [Case Expressions](#case-expressions)
    * [Methods](#methods)
       * [How to declare a method](#how-to-declare-a-method)
       * [How to call a method](#how-to-call-a-method)
@@ -47,11 +52,6 @@ Table of Contents
       * [How to repeat the current iteration](#how-to-repeat-the-current-iteration)
       * [How to restart a loop](#how-to-restart-a-loop)
       * [How to group by count](#how-to-group-by-count)
-   * [Conditional structures](#conditional-structures)
-      * [If elsif else expression](#if-elsif-else-expression)
-      * [unless expression](#unless-expression)
-      * [Shorthand](#shorthand)
-      * [Case Expressions](#case-expressions)
    * [Classes](#classes)
       * [How to check instance type](#how-to-check-instance-type)
    * [Modules](#modules)
@@ -104,6 +104,122 @@ Assignment operators
 -----
 TODO
 
+Conditional structures
+============
+
+If elsif else expression
+-----
+
+```ruby
+temp = 19
+
+if temp >= 25
+  puts "hot"
+elsif temp < 25 && temp >= 18
+  puts "normal"
+else
+  puts "cold"
+end
+
+#output
+normal
+```
+
+unless expression
+-----
+
+```ruby
+# unless is opposite of if, evaluates when the statement is false
+
+name = "rob"
+
+unless name == "bob"
+  puts "hello stranger"
+else
+  puts "hello bob"
+end
+
+#output
+hello stranger
+```
+
+Shorthand
+-----
+
+```ruby
+count = 1
+puts "hello world" if count == 1
+#output
+hello world
+
+count = 2
+puts "hello universe" if count != 1
+# or using unless
+puts "hello universe" unless count == 1
+#output
+hello universe
+```
+
+Case Expressions
+-----
+
+```ruby
+# case returns the value of the last expression executed
+
+case input
+# check an integer, 19
+when 19
+puts "It's 19"
+# check a float number, 33.3
+when 33.3
+puts "It's 33.3"
+# check an exact string, "Zaman"
+when "Zaman"
+puts "Hi Zaman"
+when 10
+puts "It's 10"
+# check against a range
+when 7..11
+puts "It's between 7 and 11"
+# check against multiple values, "coffee"
+when "tea", "coffee"
+puts "Happy days"
+# check against a regular expression, "aA6"
+when /^a[A-Z]+[0-6]+$/
+puts "It's a valid match"
+# check any string by comparing against the String class, "any string"
+when String
+puts "It's a String"
+end
+
+# using short syntax
+case input
+when 19 then puts "It's 19"
+end
+
+# optional fallthrough
+case input
+when 19 then puts "It's 19"
+else
+puts "It's not 19"
+end
+
+# get the return value
+marks = 86
+
+result = case marks
+   when 0..49 then "Fail"
+   when 50..64 then "Pass"
+   when 65..74 then "Credit"
+   when 75..84 then "Distinction"
+   when 85..100 then "High Distinction"
+   else "Invalid marks"
+end
+
+puts marks
+# output
+86
+```
 
 Methods
 ============
@@ -609,122 +725,6 @@ freq_array = numbers.each_with_object(Hash.new(0)) { |number, hash| hash[number]
 puts "#{freq_array}"
 # output
 {1=>3, 2=>1, 4=>1, 65=>1, 55=>2, 54=>1}
-```
-Conditional structures
-============
-
-If elsif else expression
------
-
-```ruby
-temp = 19
-
-if temp >= 25
-  puts "hot"
-elsif temp < 25 && temp >= 18
-  puts "normal"
-else
-  puts "cold"
-end
-
-#output
-normal
-```
-
-unless expression
------
-
-```ruby
-# unless is opposite of if, evaluates when the statement is false
-
-name = "rob"
-
-unless name == "bob"
-  puts "hello stranger"
-else
-  puts "hello bob"
-end
-
-#output
-hello stranger
-```
-
-Shorthand
------
-
-```ruby
-count = 1
-puts "hello world" if count == 1
-#output
-hello world
-
-count = 2
-puts "hello universe" if count != 1
-# or using unless
-puts "hello universe" unless count == 1
-#output
-hello universe
-```
-
-Case Expressions
------
-
-```ruby
-# case returns the value of the last expression executed
-
-case input
-# check an integer, 19
-when 19
-puts "It's 19"
-# check a float number, 33.3
-when 33.3
-puts "It's 33.3"
-# check an exact string, "Zaman"
-when "Zaman"
-puts "Hi Zaman"
-when 10
-puts "It's 10"
-# check against a range
-when 7..11
-puts "It's between 7 and 11"
-# check against multiple values, "coffee"
-when "tea", "coffee"
-puts "Happy days"
-# check against a regular expression, "aA6"
-when /^a[A-Z]+[0-6]+$/
-puts "It's a valid match"
-# check any string by comparing against the String class, "any string"
-when String
-puts "It's a String"
-end
-
-# using short syntax
-case input
-when 19 then puts "It's 19"
-end
-
-# optional fallthrough
-case input
-when 19 then puts "It's 19"
-else
-puts "It's not 19"
-end
-
-# get the return value
-marks = 86
-
-result = case marks
-   when 0..49 then "Fail"
-   when 50..64 then "Pass"
-   when 65..74 then "Credit"
-   when 75..84 then "Distinction"
-   when 85..100 then "High Distinction"
-   else "Invalid marks"
-end
-
-puts marks
-# output
-86
 ```
 
 Classes
