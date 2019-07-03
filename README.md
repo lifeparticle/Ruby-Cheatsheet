@@ -88,21 +88,21 @@ Operators
 Logical operators
 -----
 | No | operator |
-|---|---|---|
+|---|---|
 | 1 | and   | 
 | 2 | or    |
 | 3 | not   |
 | 4 | &&    |
-| 5 | ||    |
+| 5 | \|\|  |
 | 6 | !     |
 
 
 Bitwise operators
 -----
 | No | operator |
-|---|---|---|
+|---|---|
 | 1 | &     | 
-| 2 | |     |
+| 2 | \|    |
 | 3 | ^     |
 | 4 | ~     |
 | 5 | <<    |
@@ -111,7 +111,7 @@ Bitwise operators
 Arithmetic operators
 -----
 | No | operator |
-|---|---|---|
+|---|---|
 | 1 | +     | 
 | 2 | -     |
 | 3 | *     |
@@ -122,7 +122,7 @@ Arithmetic operators
 Comparison operators
 -----
 | No | operator |
-|---|---|---|
+|---|---|
 | 1  | ==     | 
 | 2  | !=     |
 | 3  | >      |
@@ -137,7 +137,7 @@ Comparison operators
 Assignment operators
 -----
 | No | operator |
-|---|---|---|
+|---|---|
 | 1 | =     | 
 | 2 | +=    |
 | 3 | -=    |
