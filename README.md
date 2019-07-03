@@ -87,23 +87,64 @@ Operators
 ============
 Logical operators
 -----
-TODO
+| No | operator |
+|---|---|---|
+| 1 | and   | 
+| 2 | or    |
+| 3 | not   |
+| 4 | &&    |
+| 5 | ||    |
+| 6 | !     |
+
 
 Bitwise operators
 -----
-TODO
+| No | operator |
+|---|---|---|
+| 1 | &     | 
+| 2 | |     |
+| 3 | ^     |
+| 4 | ~     |
+| 5 | <<    |
+| 6 | >>    |
 
 Arithmetic operators
 -----
-TODO
+| No | operator |
+|---|---|---|
+| 1 | +     | 
+| 2 | -     |
+| 3 | *     |
+| 4 | /     |
+| 5 | %     |
+| 6 | **    |
 
 Comparison operators
 -----
-TODO
+| No | operator |
+|---|---|---|
+| 1  | ==     | 
+| 2  | !=     |
+| 3  | >      |
+| 4  | <      |
+| 5  | >=     |
+| 6  | <=     |
+| 7  | <=>    |
+| 8  | ===    |
+| 9  | eql?   |
+| 10 | equal? |
 
 Assignment operators
 -----
-TODO
+| No | operator |
+|---|---|---|
+| 1 | =     | 
+| 2 | +=    |
+| 3 | -=    |
+| 4 | *=    |
+| 5 | /=    |
+| 6 | %=    |
+| 7 | **=   |
 
 Conditional structures
 ============
