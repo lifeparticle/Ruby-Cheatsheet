@@ -618,7 +618,6 @@ end
 ```ruby
 a = 1
 star = '*'
-
 until star.length > 10
   puts star
   star += '*'
