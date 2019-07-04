@@ -642,6 +642,10 @@ planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "
 planets.size
 # output
 8
+
+planets.length
+# output
+8
 ```
 
 How to check if a value exist in an Array
