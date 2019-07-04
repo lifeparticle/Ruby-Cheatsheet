@@ -42,6 +42,7 @@ Table of Contents
          * [while](#while)
          * [until](#until)
          * [for](#for)
+      * [How to get array size](#how-to-get-array-size)
       * [How to check if a value exist in an Array](#how-to-check-if-a-value-exist-in-an-array)
       * [How to clear an Array](#how-to-clear-an-array)
       * [How to get the last element of an Array](#how-to-get-the-last-element-of-an-array)
@@ -585,6 +586,15 @@ nil
 ### while
 
 ```ruby
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+index = 0
+while index < planets.size
+  puts "#{planets[index]}"
+  index += 1
+end
+```
+
+```ruby
 a = 1
 star = '*'
 while a <= 10
@@ -597,13 +607,22 @@ end
 ### until
 
 ```ruby
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+index = planets.size - 1
+until index < 0
+  puts "#{planets[index]}"
+  index -= 1
+end
+```
+
+```ruby
 a = 1
 star = '*'
 
 until star.length > 10
   puts star
-    star += '*'
-    a += 1
+  star += '*'
+  a += 1
 end
 ```
 
@@ -613,6 +632,17 @@ end
 for value in [2, 3, 5, 7]
   puts value
 end
+```
+
+How to get array size
+-----
+
+```ruby
+# you can either use size or length, both are synonymous
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+planets.size
+# output
+8
 ```
 
 How to check if a value exist in an Array
