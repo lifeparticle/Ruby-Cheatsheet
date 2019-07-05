@@ -21,6 +21,8 @@ Table of Contents
    * [String](#string)
       * [How to convert string to lower or upper case](#how-to-convert-string-to-lower-or-upper-case)
       * [Helpful methods](#helpful-methods)
+   * [Range](#range)
+      * [How to use step with Range](#how-to-use-step-with-range)
    * [Methods](#methods)
       * [How to declare a method](#how-to-declare-a-method)
       * [How to call a method](#how-to-call-a-method)
@@ -42,6 +44,10 @@ Table of Contents
          * [while](#while)
          * [until](#until)
          * [for](#for)
+         * [times](#times)
+         * [upto](#upto)
+         * [downto](#downto)
+         * [step](#step)
       * [How to get array size](#how-to-get-array-size)
       * [How to check if a value exist in an Array](#how-to-check-if-a-value-exist-in-an-array)
       * [How to clear an Array](#how-to-clear-an-array)
@@ -54,6 +60,8 @@ Table of Contents
       * [How to repeat the current iteration](#how-to-repeat-the-current-iteration)
       * [How to restart a loop](#how-to-restart-a-loop)
       * [How to group by count](#how-to-group-by-count)
+   * [Miscellaneous](#miscellaneous)
+      * [How to generate random number](#how-to-generate-random-number)
    * [Classes](#classes)
       * [How to check instance type](#how-to-check-instance-type)
    * [Modules](#modules)
@@ -315,6 +323,28 @@ Helpful methods
 | 5 | gsub(pattern, hash)              | "organization".gsub("z", 'z' => 's') <br>"organisation"                                            |
 | 6 | gsub(pattern) { \|match\| block} | "Price of the phone is 1000 AUD".gsub(/\d+/) { \|s\| '$'+s } <br>"Price of the phone is $1000 AUD" |
 
+Range
+============
+TODO
+
+How to use step with Range
+-----
+```ruby
+(1..20).step(2) { |number| puts "#{number}"}
+# output
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+```
+
+
 Methods
 ============
 
@@ -414,6 +444,10 @@ There are multiple ways you can iterate an Array.
 | 12 | while            | when you want to iterate for certain number of times                                                                                                                                                                                                                 |
 | 13 | until            | when you want to iterate until something happens                                                                                                                                                                                                                     |
 | 14 | for              | similar to each                                                                                                                                                                                                                                                      |
+| 15 | times            | when you want to iterate n number of times                                                                                                                                                                                                                           |
+| 16 | upto             | when you want to iterate upto ```n```, starting from ```m```, both inclusive, where ```n >= m```. when ```n < m``` it will run zero times                                                                                                                            |
+| 17 | downto           | when you want to iterate downto ```n```, starting from ```m```, both inclusive, where ```n <= m```. when ```n > m``` it will run zero times                                                                                                                          |
+| 17 | step             | when you want to iterate upto or downto ```n``` by incrementing or decrementing ```x``` steps starting from ```m```, both inclusive. default value of step is ```1``` and for ```n``` it's infinity                                                                  |
 
 ### each
 
@@ -632,6 +666,76 @@ for value in [2, 3, 5, 7]
   puts value
 end
 ```
+### times
+
+```ruby
+10.times { puts "#{rand(1..100)}"}
+# output
+# will print 10 random numbers
+```
+
+```ruby
+# just because you can doesn't mean you should iterate an array like this
+data_sample = [2, 3, 5, 7]
+data_sample.size.times { |index| puts "#{data_sample[index]}" }
+# output
+2
+3
+5
+7
+```
+
+### upto
+
+```ruby
+data_sample = [2, 3, 5, 7]
+0.upto((data_sample.size - 1) / 2) { |index| puts "#{data_sample[index]}" }
+# output
+2
+3
+```
+
+### downto
+
+```ruby
+data_sample = [2, 3, 5, 7]
+(data_sample.size - 1).downto(data_sample.size / 2) { |index| puts "#{data_sample[index]}" }
+# output
+7
+5
+```
+
+### step
+
+```ruby
+1.step(20, 2) { |number| puts "#{number}"}
+#output
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+```
+
+```ruby
+19.step(1, -2) { |number| puts "#{number}"}
+#output
+19
+17
+15
+13
+11
+9
+7
+5
+3
+1
+```
 
 How to get array size
 -----
@@ -799,6 +903,12 @@ puts "#{freq_array}"
 # output
 {1=>3, 2=>1, 4=>1, 65=>1, 55=>2, 54=>1}
 ```
+
+Miscellaneous
+============
+How to generate random number
+-----
+TODO
 
 Classes
 ============
