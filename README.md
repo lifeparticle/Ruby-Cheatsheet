@@ -32,6 +32,7 @@ Table of Contents
       * [How to convert string to lower or upper case](#how-to-convert-string-to-lower-or-upper-case)
       * [Helpful methods](#helpful-methods)
    * [Range](#range)
+      * [Helpful methods](#helpful-methods-1)
       * [How to use step with Range](#how-to-use-step-with-range)
    * [Methods](#methods)
       * [How to declare a method](#how-to-declare-a-method)
@@ -335,7 +336,37 @@ Helpful methods
 
 Range
 ============
-TODO
+
+Ranges allow to declare data with a beginning and an end, it has two operators to generate ranges.
+
+```ruby
+# .. for creating inclusive ranges
+
+range = 1..10
+range.to_a
+# output
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+```ruby
+# ... for creating exclusive ranges
+
+range = 1...10
+range.to_a
+# output
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+Helpful methods
+-----
+| No | Method name | output |
+|---|---|---|
+| 1 | cover?   | (1..5).cover?(5) <br> true          |
+| 2 | end      | ('a'..'z').end <br> "z"             |
+| 3 | first    | (1..5).first <br> 1                 |
+| 4 | first(3) | ('A'..'Z').first(2) <br> ["A", "B"] |
+| 5 | eql?     | ((0..2).eql?(0..5) <br> false       |
+
 
 How to use step with Range
 -----
