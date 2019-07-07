@@ -39,6 +39,7 @@ Table of Contents
       * [How to call a method](#how-to-call-a-method)
       * [How to define default value for a method parameter](#how-to-define-default-value-for-a-method-parameter)
       * [How to pass variable length argument to a method parameter](#how-to-pass-variable-length-argument-to-a-method-parameter)
+   * [Blocks](#blocks)
    * [Lambdas](#lambdas)
    * [Procs](#procs)
    * [Array](#array)
@@ -463,6 +464,10 @@ res = method_name("ADD", 2, 2, 2, 3, 3, 3)
 # output
 15
 ```
+
+Blocks
+============
+TODO
 
 Lambdas
 ============
