@@ -39,6 +39,8 @@ Table of Contents
       * [How to call a method](#how-to-call-a-method)
       * [How to define default value for a method parameter](#how-to-define-default-value-for-a-method-parameter)
       * [How to pass variable length argument to a method parameter](#how-to-pass-variable-length-argument-to-a-method-parameter)
+   * [Lambdas](#lambdas)
+   * [Procs](#procs)
    * [Array](#array)
       * [How to iterate an Array](#how-to-iterate-an-array)
          * [each](#each)
@@ -461,6 +463,14 @@ res = method_name("ADD", 2, 2, 2, 3, 3, 3)
 # output
 15
 ```
+
+Lambdas
+============
+TODO
+
+Procs
+============
+TODO
 
 Array
 ============
