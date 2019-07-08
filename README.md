@@ -21,6 +21,7 @@ Table of Contents
       * [Arithmetic operators](#arithmetic-operators)
       * [Comparison operators](#comparison-operators)
       * [Assignment operators](#assignment-operators)
+   * [Variables and Scope](#variables-and-scope)
    * [Conditional structures](#conditional-structures)
       * [If elsif else expression](#if-elsif-else-expression)
       * [unless expression](#unless-expression)
@@ -67,18 +68,18 @@ Table of Contents
       * [How to clear an Array](#how-to-clear-an-array)
       * [How to get the last element of an Array](#how-to-get-the-last-element-of-an-array)
    * [Hash](#hash)
+      * [How to group by count](#how-to-group-by-count)
       * [What's the difference between Hash.new(0) and {}](#whats-the-difference-between-hashnew0-and-)
    * [Loop](#loop)
       * [How to break out from loop](#how-to-break-out-from-loop)
       * [How to skip inside loop](#how-to-skip-inside-loop)
       * [How to repeat the current iteration](#how-to-repeat-the-current-iteration)
       * [How to restart a loop](#how-to-restart-a-loop)
-      * [How to group by count](#how-to-group-by-count)
-   * [Miscellaneous](#miscellaneous)
-      * [How to generate random number](#how-to-generate-random-number)
    * [Classes](#classes)
       * [How to check instance type](#how-to-check-instance-type)
    * [Modules](#modules)
+   * [Miscellaneous](#miscellaneous)
+      * [How to generate random number](#how-to-generate-random-number)
    * [Books and other resources](#books-and-other-resources)
    * [Bug Reports and Feature Requests](#bug-reports-and-feature-requests)
    * [Author](#author)
@@ -168,6 +169,19 @@ Assignment operators
 | 5 | /=    |
 | 6 | %=    |
 | 7 | **=   |
+
+
+Variables and Scope
+============
+The first character determines the scope.
+
+| No | name | scope | example | scope detection | note | 
+|---|---|---|---|---|---|
+| 1 | [a-z] or _  | local             | count = 10 or _count = 10 | defined? count <br> "local-variable"     | TODO                                                    |
+| 2 | @           | instance variable | @id                       | defined? @id <br> "instance-variable"    | TODO                                                    |
+| 3 | @@          | class variable    | @@name                    | defined? @@name <br> "class variable"    | TODO                                                    |
+| 4 | $           | global variable   | $version                  | defined? $version <br> "global-variable" | TODO                                                    |
+| 5 | [A-Z]       | constant          | PI = 3.14                 | defined? PI <br> "constant"              | you can change the constant but you will get a warining |
 
 Conditional structures
 ============
@@ -500,7 +514,7 @@ There are multiple ways you can iterate an Array.
 | 12 | while            | when you want to iterate for certain number of times                                                                                                                                                                                                                 |
 | 13 | until            | when you want to iterate until something happens                                                                                                                                                                                                                     |
 | 14 | for              | similar to each                                                                                                                                                                                                                                                      |
-| 15 | times            | when you want to iterate n number of times                                                                                                                                                                                                                           |
+| 15 | times            | when you want to iterate ```n``` number of times                                                                                                                                                                                                                     |
 | 16 | upto             | when you want to iterate upto ```n```, starting from ```m```, both inclusive, where ```n >= m```. when ```n < m``` it will run zero times                                                                                                                            |
 | 17 | downto           | when you want to iterate downto ```n```, starting from ```m```, both inclusive, where ```n <= m```. when ```n > m``` it will run zero times                                                                                                                          |
 | 18 | step             | when you want to iterate upto or downto ```n``` by incrementing or decrementing ```x``` steps starting from ```m```, both inclusive. default value of step is ```1``` and for ```n``` it's infinity                                                                  |
@@ -848,6 +862,17 @@ Hash
 ============
 TODO
 
+How to group by count
+-----
+
+```ruby
+numbers = [1, 1, 1, 2, 4, 65, 55, 54, 55]
+freq_hash = numbers.each_with_object(Hash.new(0)) { |number, hash| hash[number] += 1 }
+puts "#{freq_hash}"
+# output
+{1=>3, 2=>1, 4=>1, 65=>1, 55=>2, 54=>1}
+```
+
 What's the difference between Hash.new(0) and {}
 -----
 
@@ -949,23 +974,6 @@ rescue
 end
 ```
 
-How to group by count
------
-
-```ruby
-numbers = [1, 1, 1, 2, 4, 65, 55, 54, 55]
-freq_array = numbers.each_with_object(Hash.new(0)) { |number, hash| hash[number] += 1 }
-puts "#{freq_array}"
-# output
-{1=>3, 2=>1, 4=>1, 65=>1, 55=>2, 54=>1}
-```
-
-Miscellaneous
-============
-How to generate random number
------
-TODO
-
 Classes
 ============
 TODO
@@ -995,6 +1003,12 @@ false
 
 Modules
 ============
+TODO
+
+Miscellaneous
+============
+How to generate random number
+-----
 TODO
 
 
