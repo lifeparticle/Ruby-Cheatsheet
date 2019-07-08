@@ -178,9 +178,9 @@ The first character determines the scope.
 | No | name | scope | example | scope detection | note | 
 |---|---|---|---|---|---|
 | 1 | [a-z] or _  | local             | count = 10 or _count = 10 | defined? count <br> "local-variable"     | TODO                                                    |
-| 2 | @           | instance variable | @id                       | defined? @id <br> "instance-variable"    | TODO                                                    |
-| 3 | @@          | class variable    | @@name                    | defined? @@name <br> "class variable"    | TODO                                                    |
-| 4 | $           | global variable   | $version                  | defined? $version <br> "global-variable" | TODO                                                    |
+| 2 | @           | instance variable | @id = []                  | defined? @id <br> "instance-variable"    | TODO                                                    |
+| 3 | @@          | class variable    | @@name = []               | defined? @@name <br> "class variable"    | TODO                                                    |
+| 4 | $           | global variable   | $version = "0.8.9"        | defined? $version <br> "global-variable" | TODO                                                    |
 | 5 | [A-Z]       | constant          | PI = 3.14                 | defined? PI <br> "constant"              | you can change the constant but you will get a warining |
 
 Conditional structures
