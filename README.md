@@ -1099,7 +1099,31 @@ false
 
 Modules
 ============
-TODO
+modules are used for combining similar methods, so that other classes or modules can use it. You can not instantiate a module (like abstract classes in Java)
+
+```ruby
+module MyRandomHelper
+	def roll_dice
+		rand(1..6)
+	end
+end
+
+class Person
+	attr_accessor :name, :number
+end
+
+class Player < Person
+	include MyRandomHelper
+	attr_accessor :score
+end
+
+p = Player.new
+p.roll_dice
+```
+
+```ruby
+TODO 
+```
 
 Miscellaneous
 ============
