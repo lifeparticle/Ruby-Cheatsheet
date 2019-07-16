@@ -14,6 +14,7 @@ The missing Cheatsheet for Ruby.
 Table of Contents
 ============
    * [Installation](#installation)
+      * [How to install ruby gem manager, bundler gem](#how-to-install-ruby-gem-manager-bundler-gem)
    * [Comment](#comment)
    * [Operators](#operators)
       * [Logical operators](#logical-operators)
@@ -96,6 +97,33 @@ docker run -it --rm ruby:latest
 # check which version of ruby you're running
 RUBY_VERSION
 ```
+
+How to install ruby gem manager, bundler gem
+-----
+
+```
+# access the bash for executing the following commands
+docker run -it --rm ruby:latest bash
+```
+
+```
+gem install bundler
+```
+
+```
+# specify your gems in a Gemfile in your project’s root
+
+source 'https://rubygems.org'
+gem 'nokogiri'
+gem 'rack', '~>1.1'
+gem 'rspec', :require => 'spec'
+```
+
+```
+# install all the gems in the Gemfile
+bundle install
+```
+
 
 Comment
 ============
