@@ -1050,12 +1050,12 @@ How to inherit a class
 ```ruby
 # create a class
 class Person
-	attr_accessor :name, :number
+    attr_accessor :name, :number
 end
 
 # use < symbol to inherit methods and attributes from parent class
 class Student < Person
-	attr_accessor :id
+    attr_accessor :id
 end
 
 s = Student.new
@@ -1103,18 +1103,18 @@ modules are used for combining similar methods, so that other classes or modules
 
 ```ruby
 module MyRandomHelper
-	def roll_dice
-		rand(1..6)
-	end
+    def roll_dice
+      rand(1..6)
+    end
 end
 
 class Person
-	attr_accessor :name, :number
+    attr_accessor :name, :number
 end
 
 class Player < Person
-	include MyRandomHelper
-	attr_accessor :score
+    include MyRandomHelper
+    attr_accessor :score
 end
 
 p = Player.new
