@@ -1025,8 +1025,8 @@ Classes
 ```ruby
 # create a class
 class Person
-	# attr_accessor acts as a getter and setter for following attributes
-	attr_accessor :name, :number
+    # attr_accessor acts as a getter and setter for following attributes
+    attr_accessor :name, :number
 end
 
 # create an instance of the Person class
