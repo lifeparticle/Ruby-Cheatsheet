@@ -77,6 +77,7 @@ Table of Contents
       * [How to repeat the current iteration](#how-to-repeat-the-current-iteration)
       * [How to restart a loop](#how-to-restart-a-loop)
    * [Classes](#classes)
+      * [How to inherit a class](#how-to-inherit-a-class)
       * [How to check instance type](#how-to-check-instance-type)
    * [Modules](#modules)
    * [Miscellaneous](#miscellaneous)
@@ -994,19 +995,55 @@ Classes
 ============
 
 ```ruby
+# create a class
 class Person
+	# attr_accessor acts as a getter and setter for following attributes
 	attr_accessor :name, :number
 end
 
+# create an instance of the Person class
 p = Person.new
+
+# set attributes of the Person class
 p.name = "Yukihiro Matsumoto"
 p.number = 9999999999
 
+# get attributes of the Person class
 puts "#{p.name}"
 Yukihiro Matsumoto
 
 puts "#{p.number}"
 9999999999
+```
+
+How to inherit a class
+-----
+
+```ruby
+# create a class
+class Person
+	attr_accessor :name, :number
+end
+
+# use < symbol to inherit methods and attributes from parent class
+class Student < Person
+	attr_accessor :id
+end
+
+s = Student.new
+
+s.name = "James Bond"
+s.number = 700
+s.id = 678
+
+puts "#{p.name}"
+James Bond
+
+puts "#{p.number}"
+700
+
+puts "#{p.id}"
+678
 ```
 
 How to check instance type
