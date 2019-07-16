@@ -992,7 +992,22 @@ end
 
 Classes
 ============
-TODO
+
+```ruby
+class Person
+	attr_accessor :name, :number
+end
+
+p = Person.new
+p.name = "Yukihiro Matsumoto"
+p.number = 9999999999
+
+puts "#{p.name}"
+Yukihiro Matsumoto
+
+puts "#{p.number}"
+9999999999
+```
 
 How to check instance type
 -----
@@ -1025,13 +1040,34 @@ Miscellaneous
 ============
 How to generate random number
 -----
-TODO
 
+```ruby
+rand(max=0) 
+
+# when calling it without an argument, rand returns a floating point number between 0.0 (including) and 1.0 (excluding), under the hood max.to_i.abs == 0
+rand
+
+# output
+0.055758056734957595
+
+# when the argument value is greater than or equal to 1, rand returns a integer between 0 (including) and that number (excluding), under the hood max.to_i.abs >= 1
+rand(100)
+
+# output
+7
+
+# generating number between 2 numbers both inclusive
+rand(150..170)
+
+# output
+167
+```
 
 Books and other resources
 ============
 1. [Ruby doc](https://ruby-doc.org/)
 2. [How to use Ruby’s English and/or operators without going nuts](http://www.virtuouscode.com/2014/08/26/how-to-use-rubys-english-andor-operators-without-going-nuts/)
+3. [What is attr_accessor in Ruby?]https://stackoverflow.com/questions/4370960/what-is-attr-accessor-in-ruby
 
 Bug Reports and Feature Requests
 ============
