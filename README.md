@@ -1491,7 +1491,7 @@ Books and other resources
 1. [Ruby doc](https://ruby-doc.org/)
 2. [How to use Ruby’s English and/or operators without going nuts](http://www.virtuouscode.com/2014/08/26/how-to-use-rubys-english-andor-operators-without-going-nuts/)
 3. [What is attr_accessor in Ruby?](https://stackoverflow.com/questions/4370960/what-is-attr-accessor-in-ruby)
-4. https://johnmcaliley.wordpress.com/2010/04/20/ruby-cattr_accessor-vs-attr_accessor/?fbclid=IwAR1oE-lS27JRHl6ymzrEB-S8dXhN9Uwl4u9oiv7eHoXYhJbZv3oyaGEw2XI
+4. https://johnmcaliley.wordpress.com/2010/04/20/ruby-cattr_accessor-vs-attr_accessor/
 
 Bug Reports and Feature Requests
 ============
