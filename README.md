@@ -1313,30 +1313,76 @@ Classes
 ```ruby
 # create a class
 class Person
-    # attr_accessor acts as a getter and setter for following attributes
+    # when you create a new object, it looks for a method named initialize and executes it, like a constructor in java
+    # def initialize(name, number)
+    #    @name = name
+    #    @number = number
+    # end
+    
+    # instance variable
+    # @name
+    
+    # class variable 
+    # @@count
+    
+    # attr_accessor acts as a getter and setter for following instance attributes
     attr_accessor :name, :number
+    
+    # class variable must be initialized
+    @@count = 0
+    
+    def self.count
+        @@count
+    end
+    
+    def self.count=(count)
+        @@count = count
+    end
+    
+    def initialize
+        @@count += 1
+    end
 end
 
 # create an instance of the Person class
-p = Person.new
+p1 = Person.new
 
 # set attributes of the Person class
-p.name = "Yukihiro Matsumoto"
-p.number = 9999999999
+p1.name = "Yukihiro Matsumoto"
+p1.number = 9999999999
 
 # get attributes of the Person class
-puts "#{p.name}"
-Yukihiro Matsumoto
+puts "#{p1.name}"
+puts "#{p1.number}"
+puts "#{Person.count}"
 
-puts "#{p.number}"
+Yukihiro Matsumoto
 9999999999
+1
+
+p2 = Person.new
+p2.name = "Yukihiro Matsumoto"
+p2.number = 9999999999
+
+# get attributes of the Person class
+puts "#{p2.name}"
+puts "#{p2.number}"
+puts "#{Person.count}"
+
+Yukihiro Matsumoto
+9999999999
+2
+
+# set class variable
+Person.count = 3
+puts "#{Person.count}"
+3
 ```
 
 How to inherit a class
 -----
 
 ```ruby
-# create a class
 class Person
     attr_accessor :name, :number
 end
@@ -1445,6 +1491,7 @@ Books and other resources
 1. [Ruby doc](https://ruby-doc.org/)
 2. [How to use Ruby’s English and/or operators without going nuts](http://www.virtuouscode.com/2014/08/26/how-to-use-rubys-english-andor-operators-without-going-nuts/)
 3. [What is attr_accessor in Ruby?](https://stackoverflow.com/questions/4370960/what-is-attr-accessor-in-ruby)
+4. https://johnmcaliley.wordpress.com/2010/04/20/ruby-cattr_accessor-vs-attr_accessor/?fbclid=IwAR1oE-lS27JRHl6ymzrEB-S8dXhN9Uwl4u9oiv7eHoXYhJbZv3oyaGEw2XI
 
 Bug Reports and Feature Requests
 ============
