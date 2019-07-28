@@ -43,8 +43,10 @@ Table of Contents
       * [How to define default value for a method parameter](#how-to-define-default-value-for-a-method-parameter)
       * [How to pass variable length argument to a method parameter](#how-to-pass-variable-length-argument-to-a-method-parameter)
    * [Blocks](#blocks)
-   * [Lambdas](#lambdas)
+      * [How to check if a block is given](#how-to-check-if-a-block-is-given)
    * [Procs](#procs)
+   * [Lambdas](#lambdas)
+   * [Blocks VS Procs VS Lambdas](#blocks-vs-procs-vs-lambdas)
    * [Array](#array)
       * [How to iterate an Array](#how-to-iterate-an-array)
          * [each](#each)
@@ -456,6 +458,7 @@ How to declare a method
 
 ```ruby
 # In Ruby last statement evaluated is the return value of that method
+
 # both methods does the same thing, depend on your preference you can choose either of them
 def method_name(parameter1, parameter2)
    puts "#{parameter1} #{parameter2}" 
@@ -526,15 +529,299 @@ res = method_name("ADD", 2, 2, 2, 3, 3, 3)
 
 Blocks
 ============
-TODO
+Codes between ```do and end``` (for multiline) or curly brackets ```{ and }``` (for single line) are called blocks, they can have multiple arugments defined between two pipe ```(|arg1, arg2|)```.
+A block can be passed as a method parameter or can be associated with a method call. block returns the last evaluated statement.
 
-Lambdas
-============
-TODO
+```ruby
+# return value
+def give_me_data
+   data = yield
+   puts "data = #{data}"
+end
+
+give_me_data { "Big data" }
+
+# output
+data = Big data
+```
+
+```ruby
+# single line block
+salary = [399, 234, 566, 533, 233]
+salary.each { |s| puts s }
+
+# puts s = block body
+# |s| = block arugments
+```
+
+```ruby
+# multiline block
+salary.each do |s|
+  a = 10
+  res = a * s
+  puts res
+end
+
+# block body
+# a = 10
+# res = a * s
+# puts res
+
+# block arugments
+# |s|
+```
+
+methods can take blocks implicitly and explicitly, yield is used when you want to call a block implicitly. yield finds the block and calls the passed block. Since you can pass implicit blocks, you don't have to call yield and the block will be ignored. 
+
+```ruby
+# passing a block implicitly
+def give_me_data
+   puts "I am inside give_me_data method"
+   yield
+   puts "I am back in give_me_data method"
+end
+
+give_me_data { puts "Big data" }
+
+# output
+I am inside give_me_data method
+Big data
+I am back in give_me_data method
+
+# call multiple times
+def give_me_data
+   yield
+   yield
+   yield
+end
+
+give_me_data { puts "Big data" }
+
+# output
+Big data
+Big data
+Big data
+
+# call with block arguments
+
+def give_me_data
+   yield 10
+   yield 100
+   yield 30
+end
+
+give_me_data { |data| puts "Big data #{data} TB" }
+
+# output
+Big data 10 TB
+Big data 100 TB
+Big data 30 TB
+
+# call with mutilpe block arguments
+
+def give_me_data
+   yield "Big data", 10, "TB"
+   yield "Big data", 100, "GB"
+   yield "Big data", 30, "MB"
+end
+
+give_me_data { |text, data, unit| puts "#{text} #{data} #{unit}" }
+
+# output
+Big data 10 TB
+Big data 100 GB
+Big data 30 MB
+
+#  block will try to return from the current context
+give_me_data
+   puts "I am inside give_me_data method"
+end
+
+def test
+   puts "I am inside test method"
+   give_me_data { return 10 } # code returns from here
+   puts "I am back in test method"
+end
+
+return_value = test
+
+# output
+I am inside test method
+I am inside give_me_data method
+10
+```
+
+```ruby
+# passing a block explicitly by using an ampersand parameter, here we are explicitly defining the method with block paramater and calling it
+def give_me_data(&block)
+  block.call
+  block.call
+end
+
+give_me_data { puts "Big data" }
+
+# output
+Big data
+Big data
+```
+
+How to check if a block is given
+-----
+block parameter is mandatory, when you call yield inside a method, otherwise it will raise an exception
+
+```ruby
+def give_me_data
+   yield
+end
+
+give_me_data
+
+# output
+# LocalJumpError: no block given (yield)
+
+# you can use block_given? method to handle the exception and make the block optional
+
+def give_me_data
+   return "no block" unless block_given?
+   yield
+end
+
+give_me_data { puts "Big data" }
+give_me_data
+
+# output
+Big data
+
+def give_me_data(&block)
+  block.call if block
+end
+
+give_me_data { puts "Big data" }
+give_me_data
+
+# output
+Big data
+```
 
 Procs
 ============
-TODO
+A proc is like a block which can be stored in a variable
+
+```ruby
+p = Proc.new { puts "Hello World" }
+
+def give_me_data(proc)
+  proc.call
+end
+
+give_me_data p
+
+# output
+Hello World
+
+# arbitrary arguments
+p = Proc.new { |count| "Hello World " * count }
+
+def give_me_data(proc)
+  proc.call 5, 2
+end
+
+give_me_data p
+
+# output
+"Hello World Hello World Hello World Hello World Hello World "
+
+#  proc will try to return from the current context
+p = Proc.new { return 10 }
+p.call
+
+# output
+LocalJumpError: unexpected return
+
+# beause you can’t return from the top-level context
+
+def give_me_data
+   puts "I am inside give_me_data method"
+   p = Proc.new { return 10 }
+   p.call # code returns from here
+   puts "I am back in give_me_data method"
+end
+
+return_value = give_me_data
+puts return_value
+
+# output
+I am inside give_me_data method
+10
+```
+
+Lambdas
+============
+lambda is a anonymous function, wrap the lambda with ```do and end``` (for multiline) or curly brackets ```{ and }``` (for single line). lambda returns the last evaluated statement.
+
+
+```ruby
+# there are multiple ways to declare a lambda
+l = lambda { puts "Hello World" }
+# shorthand
+l = -> { puts "Hello World" }
+
+# call the lambda
+l.call
+
+# output
+Hello World
+
+# there are multiple ways you can call a lambda
+l.()
+l[]
+
+# strict arguments
+l = -> (count) { "Hello World " * count }
+l.call 5
+
+# output
+"Hello World Hello World Hello World Hello World Hello World "
+
+l.call 5, 2
+
+# output
+wrong number of arguments (given 2, expected 1)
+
+# lambdas return from the lambda itself, like a regular method
+l = -> { return 10 }
+l.call
+
+# output
+10
+
+def give_me_data
+   puts "I am inside give_me_data method"
+   l = -> { return 10 }
+   l.call
+   puts "I am back in give_me_data method"
+end
+
+return_value = give_me_data
+puts return_value
+
+# output
+I am inside give_me_data method
+I am back in give_me_data method
+nil # because puts returns nil
+```
+
+Blocks VS Procs VS Lambdas
+============
+
+All of them are used for executing single line or multiline codes
+
+| Name | Object | Example | Object type | when to use |
+|---|---|---|---|---|
+| Blocks  | No  | { puts "Hello World" }              | -                                           | 1. when you want to pass blocks of code to a methods                <br> 2. arbitrary arguments <br> 3. blocks return from the current method |
+| Procs   | Yes | l = lambda { puts "Hello World" }   | l.class <br> Proc <br> l.lambda? <br> false | 1. similar to blocks but can store in variables                     <br> 2. arbitrary arguments <br> 3. Procs return from the current method  |
+| Lambdas | Yes | p = Proc.new { puts "Hello World" } | p.class <br> Proc <br> l.lambda? <br> true  | 1. it's a proc but acts like methods and can be stored in variables <br> 2. strict arguments    <br> 3. lambdas return from the lambda itself |
+
 
 Array
 ============
@@ -567,7 +854,7 @@ There are multiple ways you can iterate an Array.
 ### each
 
 ```ruby
-# when you have singleline block
+# when you have single line block
 salary = [399, 234, 566, 533, 233]
 salary.each { |s| puts s }
 # output
@@ -646,6 +933,7 @@ salary.map { |s|  s * 10  }
 
 # on the other hand each returns the originl values
 salary = [399, 234, 566, 533, 233]
+salary.each { |s|  s * 10  }
 # returns
 [399, 234, 566, 533, 233]
 ```
