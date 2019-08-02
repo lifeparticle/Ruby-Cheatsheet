@@ -42,6 +42,7 @@ Table of Contents
       * [How to call a method](#how-to-call-a-method)
       * [How to define default value for a method parameter](#how-to-define-default-value-for-a-method-parameter)
       * [How to pass variable length argument to a method parameter](#how-to-pass-variable-length-argument-to-a-method-parameter)
+      * [Boolean method](#boolean-method)
    * [Blocks](#blocks)
       * [How to check if a block is given](#how-to-check-if-a-block-is-given)
    * [Procs](#procs)
@@ -67,8 +68,13 @@ Table of Contents
          * [upto](#upto)
          * [downto](#downto)
          * [step](#step)
+      * [Boolean Enumerable methods](#boolean-enumerable-methods)
+         * [all?](#all)
+         * [any?](#any)
+         * [one?](#one)
+         * [none?](#none)
+      * [How to check if a value exist in an Array (include?)](#how-to-check-if-a-value-exist-in-an-array-include)
       * [How to get array size](#how-to-get-array-size)
-      * [How to check if a value exist in an Array](#how-to-check-if-a-value-exist-in-an-array)
       * [How to clear an Array](#how-to-clear-an-array)
       * [How to get the last element of an Array](#how-to-get-the-last-element-of-an-array)
    * [Hash](#hash)
@@ -83,6 +89,8 @@ Table of Contents
       * [How to inherit a class](#how-to-inherit-a-class)
       * [How to check instance type](#how-to-check-instance-type)
    * [Modules](#modules)
+   * [Operator Overloading](#operator-overloading)
+   * [Exception Handling](#exception-handling)
    * [Miscellaneous](#miscellaneous)
       * [How to generate random number](#how-to-generate-random-number)
    * [Books and other resources](#books-and-other-resources)
@@ -525,6 +533,30 @@ res = method_name("SUB", *numbers)
 res = method_name("ADD", 2, 2, 2, 3, 3, 3)
 # output
 15
+```
+
+Boolean method
+-----
+In ruby methods that ends with question mark (?) are called boolean methods which either returns true or false.
+
+```ruby
+"some text".nil?
+false
+nil.nil?
+true
+```
+
+You can have your own boolean methods
+
+```ruby
+def is_vowel?(char)
+    ['a','e','i','o','u'].include? char
+end
+
+is_vowel? 'a'
+true
+is_vowel? 'b'
+false
 ```
 
 Blocks
@@ -1140,6 +1172,67 @@ data_sample = [2, 3, 5, 7]
 1
 ```
 
+Boolean Enumerable methods
+-----
+
+| No | Name | When to use |
+|---|---|---|
+| 1  | all?     | when you want check if all the elements satisfy your condition                       |
+| 2  | any?     | when you want check if at least one element satisfy your condition                   |
+| 3  | one?     | when you want check if exactly one element satisfy your condition                    |
+| 4  | none?    | when you want check if none of the elements satisfy your condition, opposite of all? |
+| 5  | include? | when you want check if the element exists in the object                              |
+
+### all?
+
+```ruby
+[2, 4, 6, 8, 10].all? { |num| num % 2 == 0 }
+true
+[1, 4, 6, 8, 10].all? { |num| num % 2 == 0 }
+false
+```
+
+### any?
+
+```ruby
+[1, 3, 5, 7, 10].any? { |num| num % 2 == 0 }
+true
+[1, 3, 5, 7, 19].any? { |num| num % 2 == 0 }
+false
+```
+
+### one?
+
+```ruby
+[1, 3, 2, 5, 7].one? { |num| num % 2 == 0 }
+true
+[1, 3, 2, 5, 4].one? { |num| num % 2 == 0 }
+false
+```
+
+### none?
+
+```ruby
+[1, 3, 5, 7, 9].none? { |num| num % 2 == 0 }
+true
+[2, 3, 5, 7, 9].none? { |num| num % 2 == 0 }
+false
+```
+
+How to check if a value exist in an Array (```include?```)
+-----
+
+```ruby
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+planets.include? "Mars"
+# output
+true
+
+planets.include? "Pluto"
+# output
+false
+```
+
 How to get array size
 -----
 
@@ -1153,20 +1246,6 @@ planets.size
 planets.length
 # output
 8
-```
-
-How to check if a value exist in an Array
------
-
-```ruby
-planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
-planets.include? "Mars"
-# output
-true
-
-planets.include? "Pluto"
-# output
-false
 ```
 
 How to clear an Array
@@ -1458,6 +1537,14 @@ p.roll_dice
 ```ruby
 TODO 
 ```
+
+Operator Overloading
+============
+TODO
+
+Exception Handling
+============
+TODO
 
 Miscellaneous
 ============
