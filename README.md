@@ -1272,7 +1272,15 @@ numbers.last
 
 Hash
 ============
-TODO
+
+```ruby
+students = {name: 'John', email: 'john@col.com'}
+# or
+students = Hash.new
+students = {name: 'John', email: 'john@col.com'}
+
+puts "#{students[:name]}"
+```
 
 How to group by count
 -----
@@ -1297,6 +1305,10 @@ h1[:count] += 1
 puts "#{h1[:count]}"
 # output
 1
+
+puts "#{h1[:new_key]}"
+# output
+0
 
 h2 = {}
 h2[:count] += 1
