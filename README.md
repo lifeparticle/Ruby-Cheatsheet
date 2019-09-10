@@ -369,6 +369,8 @@ Data types
 | 8 | Range    | > a = 1..3                     |> a.class <br> > Range                                            | [link](https://ruby-doc.org/core-2.6.3/Range.html)    |
 | 9 | Nill     | > a = nil                      |> a.class <br> > NilClass                                         | [link](https://ruby-doc.org/core-2.6.3/NilClass.html) |
 
+[Further readings](https://www.digitalocean.com/community/tutorials/understanding-data-types-in-ruby)
+
 How to check data type
 -----
 
@@ -1181,7 +1183,8 @@ Boolean Enumerable methods
 | 2  | any?     | when you want check if at least one element satisfy your condition                   |
 | 3  | one?     | when you want check if exactly one element satisfy your condition                    |
 | 4  | none?    | when you want check if none of the elements satisfy your condition, opposite of all? |
-| 5  | include? | when you want check if the element exists in the object                              |
+| 5  | empty?   | when you want to check if the object is empty or not                                 |
+| 6  | include? | when you want check if the element exists in the object                              |
 
 ### all?
 
@@ -1216,6 +1219,15 @@ false
 [1, 3, 5, 7, 9].none? { |num| num % 2 == 0 }
 true
 [2, 3, 5, 7, 9].none? { |num| num % 2 == 0 }
+false
+```
+
+### empty?
+
+```ruby
+[].empty?
+true
+[1, 3, 5, 7, 9].empty?
 false
 ```
 
@@ -1552,11 +1564,122 @@ TODO
 
 Operator Overloading
 ============
-TODO
+```ruby
+class Vector
+    attr_accessor :x, :y
+    
+     def initialize(x, y)
+        @x = x
+        @y = y
+    end
+    
+    def +(second)
+        Vector.new(@x + second.x, @y + second.y)
+    end
+    
+    def -(second)
+        Vector.new(@x - second.x, @y - second.y)
+    end
+
+    def *(second)
+        Vector.new(@x * second.x, @y * second.y)
+    end
+
+    def /(second)
+        Vector.new(@x / second.x, @y / second.y)
+    end
+    
+    def to_s
+        return "(#{@x}, #{@y})"
+    end
+    
+end
+```
+
+```ruby
+v1 = Vector.new(5, 10)
+v2 = Vector.new(4, 9)
+
+puts v1 + v2
+puts v1 - v2
+puts v1 * v2
+puts v1 / v2
+```
 
 Exception Handling
 ============
-TODO
+```ruby
+begin  
+    puts 'before the raise'  
+    raise 'raise an exception'  
+    puts 'after the raise'  
+rescue  
+    puts 'rescued'  
+end
+```
+```ruby
+begin  
+    raise StandardError, 'standard error occurred'
+rescue StandardError => e
+    puts "#{e.class}: #{e.message}"  
+    puts e.backtrace.inspect  
+end 
+```
+
+```$! ``` contains the raised exception
+```$@ ``` contains the exception backtrace
+
+```ruby
+begin  
+    raise StandardError, 'standard error occurred'
+rescue StandardError
+    puts "#{$!.class}: #{$!.message}"  
+    puts "#{$@}"  
+end 
+```
+
+```retry``` re-executes the code inside begin end block
+
+```ruby
+retry_count = 1
+
+begin
+    puts "retry count: #{retry_count}"
+    retry_count += 1
+    raise 'raise an exception'
+rescue
+    retry if retry_count <= 5
+end
+```
+
+Custom exception
+
+```ruby
+class MyException < Exception
+end
+
+begin  
+    raise MyException, 'my exception occurred'
+rescue MyException
+    puts "#{$!.class}: #{$!.message}"  
+    puts "#{$@}"  
+end 
+```
+
+```ruby
+Catch multiple exceptions
+
+begin
+  raise 'i am a string'.call
+rescue NoMethodError => e
+    puts "#{$!.class}: #{$!.message}"  
+rescue ZeroDivisionError => e
+    puts "#{$!.class}: #{$!.message}"  
+end
+
+```
+
+[Further readings](https://ruby-doc.org/core-2.6.4/Exception.html)
 
 Miscellaneous
 ============
@@ -1591,6 +1714,7 @@ Books and other resources
 2. [How to use Ruby’s English and/or operators without going nuts](http://www.virtuouscode.com/2014/08/26/how-to-use-rubys-english-andor-operators-without-going-nuts/)
 3. [What is attr_accessor in Ruby?](https://stackoverflow.com/questions/4370960/what-is-attr-accessor-in-ruby)
 4. [Ruby Module Mixin Awesomeness](https://johnmcaliley.wordpress.com/2010/03/10/ruby-module-mixin-awesomeness/)
+5. [Tutorials](https://www.cosmiclearn.com/ruby/index.php)
 
 Bug Reports and Feature Requests
 ============
