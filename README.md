@@ -1626,8 +1626,8 @@ rescue StandardError => e
 end 
 ```
 
-```$! ``` contains the raised exception
-```$@ ``` contains the exception backtrace
+```$!``` contains the raised exception
+```$@``` contains the exception backtrace
 
 ```ruby
 begin  
@@ -1666,9 +1666,9 @@ rescue MyException
 end 
 ```
 
-```ruby
 Catch multiple exceptions
 
+```ruby
 begin
   raise 'i am a string'.call
 rescue NoMethodError => e
