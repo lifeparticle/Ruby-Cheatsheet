@@ -12,7 +12,8 @@ The missing Cheatsheet for Ruby.
 </div>
 
 Table of Contents
-============
+=================
+
    * [Installation](#installation)
       * [How to install ruby gem manager, bundler gem](#how-to-install-ruby-gem-manager-bundler-gem)
    * [Comment](#comment)
@@ -73,6 +74,7 @@ Table of Contents
          * [any?](#any)
          * [one?](#one)
          * [none?](#none)
+         * [empty?](#empty)
       * [How to check if a value exist in an Array (include?)](#how-to-check-if-a-value-exist-in-an-array-include)
       * [How to get array size](#how-to-get-array-size)
       * [How to clear an Array](#how-to-clear-an-array)
