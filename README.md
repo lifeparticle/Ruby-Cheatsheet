@@ -165,12 +165,14 @@ bundle install
 Reserved Words
 ============
 
-```__ENCODING__ , __LINE__ , __FILE__ , BEGIN , END , alias ,
+```
+__ENCODING__ , __LINE__ , __FILE__ , BEGIN , END , alias ,
 and , begin , break , case , class , def , defined? ,
 do , else , elsif , end , ensure , false , for , if ,
 in , module , next , nil , not , or , redo, rescue ,
 retry , return , self , super , then , true , undef , 
-unless , until , when , while , yield```
+unless , until , when , while , yield
+```
 
 [Further reading](https://ruby-doc.org/core-2.6.4/doc/keywords_rdoc.html)
 
