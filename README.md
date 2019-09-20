@@ -15,7 +15,11 @@ Table of Contents
 =================
 
    * [Installation](#installation)
-      * [How to install ruby gem manager, bundler gem](#how-to-install-ruby-gem-manager-bundler-gem)
+      * [How to install ruby](#how-to-install-ruby)
+      * [How to install a specific version of a ruby gem?](#how-to-install-a-specific-version-of-a-ruby-gem)
+      * [How to install ruby gem manager, bundler gem?](#how-to-install-ruby-gem-manager-bundler-gem)
+      * [What is a Gemfile and Gemfile.lock](#what-is-a-gemfile-and-gemfilelock)
+   * [Reserved Words](#reserved-words)
    * [Comment](#comment)
    * [Operators](#operators)
       * [Logical operators](#logical-operators)
@@ -24,6 +28,9 @@ Table of Contents
       * [Comparison operators](#comparison-operators)
       * [Assignment operators](#assignment-operators)
    * [Variables and Scope](#variables-and-scope)
+      * [Pseudo variables](#pseudo-variables)
+      * [Pre-defined variables](#pre-defined-variables)
+      * [Pre-defined global constants](#pre-defined-global-constants)
       * [How to check scope of variables](#how-to-check-scope-of-variables)
    * [Conditional structures](#conditional-structures)
       * [If elsif else expression](#if-elsif-else-expression)
@@ -102,15 +109,23 @@ Table of Contents
       
 Installation
 ============
-If you don't want to install ruby natively you can use [docker](https://www.docker.com/).
 
+How to install ruby
+-----
+If you don't want to install ruby natively you can use [docker](https://www.docker.com/).
 ```
 docker run -it --rm ruby:latest
 # check which version of ruby you're running
 RUBY_VERSION
 ```
 
-How to install ruby gem manager, bundler gem
+How to install a specific version of a ruby gem?
+-----
+```
+gem install bundler -v 1.17
+```
+
+How to install ruby gem manager, bundler gem?
 -----
 
 ```
@@ -120,7 +135,18 @@ docker run -it --rm ruby:latest bash
 
 ```
 gem install bundler
+bundle -v
+gem update bundler
+gem uninstall bundler
 ```
+
+[Further reading](https://bundler.io/)
+
+What is a Gemfile and Gemfile.lock
+----- 
+Gemfile is a configuration file for Bundler (also a gem), which contains a list of gems for your project (dependencies).
+
+[Further reading](https://bundler.io/v2.0/man/gemfile.5.html)
 
 ```
 # specify your gems in a Gemfile in your project’s root
@@ -136,6 +162,17 @@ gem 'rspec', :require => 'spec'
 bundle install
 ```
 
+Reserved Words
+============
+
+```__ENCODING__ , __LINE__ , __FILE__ , BEGIN , END , alias ,
+and , begin , break , case , class , def , defined? ,
+do , else , elsif , end , ensure , false , for , if ,
+in , module , next , nil , not , or , redo, rescue ,
+retry , return , self , super , then , true , undef , 
+unless , until , when , while , yield```
+
+[Further reading](https://ruby-doc.org/core-2.6.4/doc/keywords_rdoc.html)
 
 Comment
 ============
@@ -224,6 +261,45 @@ The first character determines the scope.
 | 3 | @@          | class variable    | @@name = []               | TODO                                                    |
 | 4 | $           | global variable   | $version = "0.8.9"        | TODO                                                    |
 | 5 | [A-Z]       | constant          | PI = 3.14                 | you can change the constant but you will get a warining |
+
+
+Pseudo variables
+-----
+
+| No | name | note |
+|---|---|---|
+| 1  | self      | The receiver object of the current method  |
+| 2  | true      | Instance of the TrueClass  |
+| 3  | false     | Instance of the FalseClass  |
+| 4  | nil       | Instance of the NilClass   |
+| 5  | __FILE__  | The name of current source file name  |
+| 6  | __LINE__  | The current line number of current source file |
+
+
+Pre-defined variables
+-----
+
+| No | name | note |
+|---|---|---|
+| 1  |   |   |
+| 2  |   |   |
+| 3  |   |   |
+| 4  |   |   |
+| 5  |   |   |
+| 6  |   |   |
+
+Pre-defined global constants
+-----
+
+| No | name | note |
+|---|---|---|
+| 1  |   |   |
+| 2  |   |   |
+| 3  |   |   |
+| 4  |   |   |
+| 5  |   |   |
+| 6  |   |   |
+
 
 How to check scope of variables 
 -----
