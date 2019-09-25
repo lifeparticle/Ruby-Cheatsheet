@@ -270,12 +270,12 @@ Pseudo variables
 
 | No | name | note |
 |---|---|---|
-| 1  | self      | The receiver object of the current method  |
-| 2  | true      | Instance of the TrueClass  |
-| 3  | false     | Instance of the FalseClass  |
-| 4  | nil       | Instance of the NilClass   |
-| 5  | __FILE__  | The name of current source file name  |
-| 6  | __LINE__  | The current line number of current source file |
+| 1  | self        | The receiver object of the current method  |
+| 2  | true        | Instance of the TrueClass  |
+| 3  | false       | Instance of the FalseClass  |
+| 4  | nil         | Instance of the NilClass   |
+| 5  | `__FILE__`  | The name of current source file name  |
+| 6  | `__LINE__`  | The current line number of current source file |
 
 
 Pre-defined variables
