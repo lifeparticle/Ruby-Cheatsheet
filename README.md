@@ -150,6 +150,7 @@ Gemfile is a configuration file for Bundler (also a gem), which contains a list 
 
 ```
 # specify your gems in a Gemfile in your project’s root
+ruby '2.5.6'
 
 source 'https://rubygems.org'
 gem 'nokogiri'
