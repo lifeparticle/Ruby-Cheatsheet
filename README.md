@@ -16,9 +16,9 @@ Table of Contents
 
    * [Installation](#installation)
       * [How to install ruby](#how-to-install-ruby)
-      * [How to install a specific version of a specific ruby gem](#how-to-install-a-specific-version-of-a-specific-ruby-gem)
       * [How to install ruby gem manager, bundler gem](#how-to-install-ruby-gem-manager-bundler-gem)
       * [What is a Gemfile and Gemfile.lock](#what-is-a-gemfile-and-gemfilelock)
+      * [How to install a specific version of a specific ruby gem](#how-to-install-a-specific-version-of-a-specific-ruby-gem)
       * [How to update a single gem using Bundler](#how-to-update-a-single-gem-using-bundler)
       * [How to update every gem in the Gemfile using Bundler](#how-to-update-every-gem-in-the-gemfile-using-bundler)
    * [Reserved Words](#reserved-words)
@@ -121,12 +121,6 @@ docker run -it --rm ruby:latest
 RUBY_VERSION
 ```
 
-How to install a specific version of a specific ruby gem
------
-```
-gem install bundler -v 1.17
-```
-
 How to install ruby gem manager, bundler gem
 -----
 
@@ -163,6 +157,12 @@ gem 'rspec', :require => 'spec'
 ```
 # install all the gems in the Gemfile
 bundle install
+```
+
+How to install a specific version of a specific ruby gem
+-----
+```
+gem install bundler -v 1.17
 ```
 
 How to update a single gem using Bundler
