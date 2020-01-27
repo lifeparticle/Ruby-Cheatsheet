@@ -350,13 +350,21 @@ Pre-defined global constants
 
 | No | name | note |
 |---|---|---|
-| 1  |   |   |
-| 2  |   |   |
-| 3  |   |   |
-| 4  |   |   |
-| 5  |   |   |
-| 6  |   |   |
+| 1 | TRUE | The typcal true value. All non-false values (everything except nil and false) is true in Ruby. |
+| 2 | FALSE | The false itself. |
+| 3 | NIL | The nil itself. |
+| 4 | STDIN | The standard input. The default value for $stdin. |
+| 5 | STDOUT | The standard output. The default value for $stdout. |
+| 6 | STDERR | The standard error output. The default value for $stderr. |
+| 7 | ENV | The hash-like object contains current environment variables. Setting a value in ENV changes the environment for child processes. |
+| 8 | ARGF | The alias to the $<. |
+| 9 | ARGV | The alias to the $*. |
+| 10 | DATA | The file object of the script, pointing just after the __END__. Not defined unless the script is not read from the file. |
+| 11 | VERSION | The Ruby version string. |
+| 12 | RUBY_RELEASE_DATE | The relase date string. |
+| 13 | RUBY_PLATFORM | The platform identifier. |
 
+[Source] (https://ruby-doc.org/docs/ruby-doc-bundle/Manual/man-1.4/variable.html#constants)
 
 How to check scope of variables 
 -----
