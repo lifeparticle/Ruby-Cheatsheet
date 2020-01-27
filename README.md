@@ -41,6 +41,7 @@ Table of Contents
       * [Case Expressions](#case-expressions)
    * [Data types](#data-types)
       * [How to check data type](#how-to-check-data-type)
+   * [Symbol](#symbol)
    * [String](#string)
       * [How to convert string to lower or upper case](#how-to-convert-string-to-lower-or-upper-case)
       * [Helpful methods](#helpful-methods)
@@ -525,6 +526,16 @@ a.kind_of? Integer
 true
 a.is_a? Integer
 true
+```
+
+Symbol
+============
+
+Symbol objects represent names. Symbols are immutable, which means every symbol is unique and it can’t be changed. Referencing the same symbol multiple times means referencing the same object everywhere in your program, which means referencing the same memory location, it can save both time and memory.
+
+Symbols as hash keys.
+```
+week_days = {sunday: 11, monday: 222}
 ```
 
 String
