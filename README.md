@@ -104,6 +104,7 @@ Table of Contents
    * [Exception Handling](#exception-handling)
    * [Miscellaneous](#miscellaneous)
       * [How to generate random number](#how-to-generate-random-number)
+      * [Check the syntax of a Ruby file](#check-the-syntax-of-a-ruby-file)
    * [Books and other resources](#books-and-other-resources)
    * [Bug Reports and Feature Requests](#bug-reports-and-feature-requests)
    * [Author](#author)
@@ -364,7 +365,7 @@ Pre-defined global constants
 | 12 | RUBY_RELEASE_DATE | The relase date string. |
 | 13 | RUBY_PLATFORM | The platform identifier. |
 
-[Source] (https://ruby-doc.org/docs/ruby-doc-bundle/Manual/man-1.4/variable.html#constants)
+[Source](https://ruby-doc.org/docs/ruby-doc-bundle/Manual/man-1.4/variable.html#constants)
 
 How to check scope of variables 
 -----
@@ -1849,6 +1850,12 @@ rand(150..170)
 
 # output
 167
+```
+
+Check the syntax of a Ruby file
+-----
+```
+ruby -c filename.rb
 ```
 
 Books and other resources
