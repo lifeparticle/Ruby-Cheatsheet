@@ -106,6 +106,8 @@ Table of Contents
    * [Miscellaneous](#miscellaneous)
       * [How to generate random number](#how-to-generate-random-number)
       * [Check the syntax of a Ruby file](#check-the-syntax-of-a-ruby-file)
+      * [Concatenate String in loop](#concatenate-string-in-loop)
+      * [CamelCase String split](#camelcase-string-split)
    * [Books and other resources](#books-and-other-resources)
    * [Bug Reports and Feature Requests](#bug-reports-and-feature-requests)
    * [Author](#author)
@@ -1865,8 +1867,30 @@ rand(150..170)
 
 Check the syntax of a Ruby file
 -----
-```
+```ruby
 ruby -c filename.rb
+```
+
+Concatenate String in loop
+-----
+
+```ruby
+words = ["Lorem", "ipsum", "dolor", "sit", "amet"]
+words.map { |word| word.downcase }.join(' ')
+
+# output
+"lorem ipsum dolor sit amet"
+```
+
+CamelCase String split
+-----
+
+```ruby
+sentence = "ThereIsNoSpoon"
+words = sentence.split(/(?=[A-Z])/)
+
+# output
+["There", "Is", "No", "Spoon"]
 ```
 
 Books and other resources
