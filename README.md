@@ -11,6 +11,9 @@ The missing Cheatsheet for Ruby.
 </pre>
 </div>
 
+
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/lifeparticle/Ruby-Cheatsheet/issues)
+
 Table of Contents
 =================
 
