@@ -1,16 +1,4 @@
-<div align="center">
-<pre>
-    ____        __                ________               __       __              __ 
-   / __ \__  __/ /_  __  __      / ____/ /_  ___  ____ _/ /______/ /_  ___  ___  / /_
-  / /_/ / / / / __ \/ / / /_____/ /   / __ \/ _ \/ __ `/ __/ ___/ __ \/ _ \/ _ \/ __/
- / _, _/ /_/ / /_/ / /_/ /_____/ /___/ / / /  __/ /_/ / /_(__  ) / / /  __/  __/ /_  
-/_/ |_|\__,_/_.___/\__, /      \____/_/ /_/\___/\__,_/\__/____/_/ /_/\___/\___/\__/  
-                  /____/                                                             
-
-The missing Cheatsheet for Ruby.
-</pre>
-</div>
-
+![ruby](https://user-images.githubusercontent.com/1612112/74440957-14a26e00-4ec3-11ea-9cf8-5d9ccb5693f8.png)
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/lifeparticle/Ruby-Cheatsheet/issues)
 
