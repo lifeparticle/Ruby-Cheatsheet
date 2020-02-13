@@ -1,4 +1,4 @@
-![ruby](https://user-images.githubusercontent.com/1612112/74440957-14a26e00-4ec3-11ea-9cf8-5d9ccb5693f8.png)
+![ruby](https://user-images.githubusercontent.com/1612112/74456048-5d195600-4eda-11ea-8ae5-8f1437d541f4.png)
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/lifeparticle/Ruby-Cheatsheet/issues)
 
