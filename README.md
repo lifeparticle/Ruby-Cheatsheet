@@ -4,7 +4,8 @@
 
 Table of Contents
 =================
-
+   * [Troubleshooting](#troubleshooting)
+      * [macOS](#macos)
    * [Installation](#installation)
       * [How to install ruby](#how-to-install-ruby)
       * [How to install ruby gem manager, bundler gem](#how-to-install-ruby-gem-manager-bundler-gem)
@@ -103,7 +104,25 @@ Table of Contents
    * [Bug Reports and Feature Requests](#bug-reports-and-feature-requests)
    * [Author](#author)
    * [License](#license)
-      
+
+
+Troubleshooting
+============
+
+macOS
+-----
+
+List all the installed Ruby versions
+```
+which -a ruby
+```
+
+Get information about currenlty using Ruby
+```
+ruby -v
+gem env
+```
+
 Installation
 ============
 
