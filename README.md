@@ -117,7 +117,7 @@ List all the installed Ruby versions
 which -a ruby
 ```
 
-Get information about currenlty using Ruby
+Get information about currently used Ruby
 ```
 ruby -v
 gem env
