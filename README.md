@@ -576,7 +576,7 @@ Helpful methods
 | 6 | gsub(pattern) { \|match\| block} | "Price of the phone is 1000 AUD".gsub(/\d+/) { \|s\| '$'+s } <br>"Price of the phone is $1000 AUD" |
 | 7 | strip                            | "  hEllo WOrlD  ".strip <br> "hEllo WOrlD"                                                         |
 
-`strip` method will remove any of the following characters: null("\x00"), horizontal tab("\t"), line feed(\n), vertical tab("\v"), form feed(f), carriage return(\r), space(" ")
+`strip` method will remove any of the following leading and trailing characters: null("\x00"), horizontal tab("\t"), line feed(\n), vertical tab("\v"), form feed(f), carriage return(\r), space(" ") 
 
 
 Range
