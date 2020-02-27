@@ -568,12 +568,16 @@ Helpful methods
 
 | No | Method name | output |
 |---|---|---|
-| 1 | length                           | "HELLO World".length <br> 11                                                                                                 |
-| 2 | reverse                          | "hello worlD".reverse <br> "Dlrow olleh"                                                                                      |
-| 3 | include? other_str               | "hEllo wOrlD".include? "w" <br> true                                                                                               |
+| 1 | length                           | "HELLO World".length <br> 11                                                                       |
+| 2 | reverse                          | "hello worlD".reverse <br> "Dlrow olleh"                                                           |
+| 3 | include? other_str               | "hEllo wOrlD".include? "w" <br> true                                                               |
 | 4 | gsub(pattern, replacement)       | "hEllo wOrlD".gsub(" ", "_") <br> "hEllo_wOrlD"                                                    |
 | 5 | gsub(pattern, hash)              | "organization".gsub("z", 'z' => 's') <br>"organisation"                                            |
 | 6 | gsub(pattern) { \|match\| block} | "Price of the phone is 1000 AUD".gsub(/\d+/) { \|s\| '$'+s } <br>"Price of the phone is $1000 AUD" |
+| 7 | strip                            | "  hEllo WOrlD  ".strip <br> "hEllo WOrlD"                                                         |
+
+`strip` method will remove any of the following characters: null("\x00"), horizontal tab("\t"), line feed(\n), vertical tab("\v"), form feed(f), carriage return(\r), space(" ")
+
 
 Range
 ============
@@ -607,10 +611,6 @@ Helpful methods
 | 3 | first    | (1..5).first <br> 1                        |
 | 4 | first(3) | ('A'..'Z').first(2) <br> ["A", "B"]        |
 | 5 | eql?     | ((0..2).eql?(0..5) <br> false              |
-| 6 | strip    | "  hEllo WOrlD  ".strip <br> "hEllo WOrlD" |
-
-`strip` method will remove any of the following characters: null("\x00"), horizontal tab("\t"), line feed(\n), vertical tab("\v"), form feed(f), carriage return(\r), space(" ")
-
 
 How to use step with Range
 -----
