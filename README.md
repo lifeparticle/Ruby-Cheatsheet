@@ -562,6 +562,9 @@ How to convert string to lower or upper case
 | 2 | upcase     | "hello worlD".upcase <br> "HELLO WORLD"     |
 | 3 | capitalize | "hEllo wOrlD".capitalize <br> "Hello world" |
 | 4 | swapcase   | "hEllo WOrlD".swapcase <br> "HeLLO woRLd"   |
+| 5 | strip      | "  hEllo WOrlD  ".strip <br> "hEllo WOrlD"  |
+
+`strip` method will remove any of the following characters: null("\x00"), horizontal tab("\t"), line feed(\n), vertical tab("\v"), form feed(f), carriage return(\r), space(" ")
 
 Helpful methods
 -----
