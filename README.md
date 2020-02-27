@@ -562,9 +562,6 @@ How to convert string to lower or upper case
 | 2 | upcase     | "hello worlD".upcase <br> "HELLO WORLD"     |
 | 3 | capitalize | "hEllo wOrlD".capitalize <br> "Hello world" |
 | 4 | swapcase   | "hEllo WOrlD".swapcase <br> "HeLLO woRLd"   |
-| 5 | strip      | "  hEllo WOrlD  ".strip <br> "hEllo WOrlD"  |
-
-`strip` method will remove any of the following characters: null("\x00"), horizontal tab("\t"), line feed(\n), vertical tab("\v"), form feed(f), carriage return(\r), space(" ")
 
 Helpful methods
 -----
@@ -605,11 +602,14 @@ Helpful methods
 -----
 | No | Method name | output |
 |---|---|---|
-| 1 | cover?   | (1..5).cover?(5) <br> true          |
-| 2 | end      | ('a'..'z').end <br> "z"             |
-| 3 | first    | (1..5).first <br> 1                 |
-| 4 | first(3) | ('A'..'Z').first(2) <br> ["A", "B"] |
-| 5 | eql?     | ((0..2).eql?(0..5) <br> false       |
+| 1 | cover?   | (1..5).cover?(5) <br> true                 |
+| 2 | end      | ('a'..'z').end <br> "z"                    |
+| 3 | first    | (1..5).first <br> 1                        |
+| 4 | first(3) | ('A'..'Z').first(2) <br> ["A", "B"]        |
+| 5 | eql?     | ((0..2).eql?(0..5) <br> false              |
+| 6 | strip    | "  hEllo WOrlD  ".strip <br> "hEllo WOrlD" |
+
+`strip` method will remove any of the following characters: null("\x00"), horizontal tab("\t"), line feed(\n), vertical tab("\v"), form feed(f), carriage return(\r), space(" ")
 
 
 How to use step with Range
