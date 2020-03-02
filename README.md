@@ -81,6 +81,7 @@ Table of Contents
       * [How to get array size](#how-to-get-array-size)
       * [How to clear an Array](#how-to-clear-an-array)
       * [How to get the last element of an Array](#how-to-get-the-last-element-of-an-array)
+      * [How to merge two Arrays](#how-to-merge-two-arrays)
    * [Hash](#hash)
       * [How to group by count](#how-to-group-by-count)
       * [What's the difference between Hash.new(0) and {}](#whats-the-difference-between-hashnew0-and-)
@@ -1450,6 +1451,19 @@ numbers[-1]
 numbers.last
 # output
 10
+```
+
+How to merge two Arrays
+-----
+
+```ruby
+a = ["tom", "mot", "otm"]
+b = [2, 3, 5]
+
+a.zip(b)
+
+# outout
+[["tom", 2], ["mot", 3], ["otm", 5]]
 ```
 
 Hash
