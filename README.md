@@ -1876,6 +1876,12 @@ rand(150..170)
 
 # output
 167
+
+# generating number between 2 numbers, last number is not inclusive
+rand(1...10)
+
+# output
+4
 ```
 
 Check the syntax of a Ruby file
