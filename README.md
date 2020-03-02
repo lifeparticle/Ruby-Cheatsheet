@@ -96,6 +96,7 @@ Table of Contents
    * [Modules](#modules)
    * [Operator Overloading](#operator-overloading)
    * [Exception Handling](#exception-handling)
+   * [Regular expression](#regular-expression)
    * [Miscellaneous](#miscellaneous)
       * [How to generate random number](#how-to-generate-random-number)
       * [Check the syntax of a Ruby file](#check-the-syntax-of-a-ruby-file)
@@ -1878,6 +1879,27 @@ end
 ```
 
 [Further readings](https://ruby-doc.org/core-2.6.4/Exception.html)
+
+
+Regular expression
+============
+
+```ruby
+a = "Better a diamond with a flaw than a pebble without"
+a[/(\w+)/]
+
+# output
+"Better"
+
+a[/(\w+) (\w+)/]
+
+# output
+"Better a"
+
+a[/(?<one>\w+) (?<two>\w+)/, :two]
+# output
+"a"
+```
 
 Miscellaneous
 ============
