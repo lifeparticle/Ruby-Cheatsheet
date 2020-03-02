@@ -679,9 +679,21 @@ def method_name(parameter1, parameter2, type = "ADD")
    return parameter1 - parameter2 if type == "SUB"
 end
 
-res = method_name(parameter1, parameter2)
+res = method_name(20, 10)
 # output
 30
+```
+
+# or use other parameter for default value
+
+```ruby
+def method_name(num1, num2 = num1)
+   return num1 + num2
+end
+
+res = method_name(10)
+# output
+20
 ```
 
 How to pass variable length argument to a method parameter
