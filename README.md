@@ -576,6 +576,8 @@ Helpful methods
 | 5 | gsub(pattern, hash)              | "organization".gsub("z", 'z' => 's') <br>"organisation"                                            |
 | 6 | gsub(pattern) { \|match\| block} | "Price of the phone is 1000 AUD".gsub(/\d+/) { \|s\| '$'+s } <br>"Price of the phone is $1000 AUD" |
 | 7 | strip                            | "  hEllo WOrlD  ".strip <br> "hEllo WOrlD"                                                         |
+| 8 | prepend                          | a = "world" <br> a.prepend("hello ") <br> "hello world"                                            |
+| 9 | insert                           | a = "hello" <br> a.insert(a.length, " world") <br> "hello world"                                   |
 
 `strip` method will remove any of the following leading and trailing characters: null("\x00"), horizontal tab("\t"), line feed(\n), vertical tab("\v"), form feed(f), carriage return(\r), space(" ") 
 
