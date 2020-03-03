@@ -4,9 +4,9 @@
 
 Table of Contents
 =================
-   * [Troubleshooting](#troubleshooting)
-      * [macOS](#macos)
    * [Installation](#installation)
+      * [Troubleshooting](#troubleshooting)
+         * [macOS](#macos)
       * [How to install ruby](#how-to-install-ruby)
       * [How to install ruby gem manager, bundler gem](#how-to-install-ruby-gem-manager-bundler-gem)
       * [What is a Gemfile and Gemfile.lock](#what-is-a-gemfile-and-gemfilelock)
@@ -108,23 +108,6 @@ Table of Contents
    * [License](#license)
 
 
-Troubleshooting
-============
-
-macOS
------
-
-List all the installed Ruby versions
-```
-which -a ruby
-```
-
-Get information about currently used Ruby
-```
-ruby -v
-gem env
-```
-
 Installation
 ============
 
@@ -135,6 +118,22 @@ If you don't want to install ruby natively you can use [docker](https://www.dock
 docker run -it --rm ruby:latest
 # check which version of ruby you're running
 RUBY_VERSION
+```
+
+Troubleshooting
+-----
+
+### macOS
+
+List all the installed Ruby versions
+```
+which -a ruby
+```
+
+Get information about currently used Ruby
+```
+ruby -v
+gem env
 ```
 
 How to install ruby gem manager, bundler gem
