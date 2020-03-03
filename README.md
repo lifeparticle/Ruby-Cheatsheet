@@ -111,15 +111,6 @@ Table of Contents
 Installation
 ============
 
-How to install ruby
------
-If you don't want to install ruby natively you can use [docker](https://www.docker.com/).
-```
-docker run -it --rm ruby:latest
-# check which version of ruby you're running
-RUBY_VERSION
-```
-
 Troubleshooting
 -----
 
@@ -134,6 +125,15 @@ Get information about currently used Ruby
 ```
 ruby -v
 gem env
+```
+
+How to install ruby
+-----
+If you don't want to install ruby natively you can use [docker](https://www.docker.com/).
+```
+docker run -it --rm ruby:latest
+# check which version of ruby you're running
+RUBY_VERSION
 ```
 
 How to install ruby gem manager, bundler gem
