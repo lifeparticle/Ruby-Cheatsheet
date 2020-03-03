@@ -186,6 +186,14 @@ How to update a single gem using Bundler
 bundle update nokogiri
 ```
 
+Bundler attempted to update `gem_name` but its version stayed the same
+
+1. Another gem depends on the `gem_name`
+2. Version number is specified in your Gemfile for `gem_name`
+```
+'gem_name', '~> 2.0.5'
+```
+
 How to update every gem in the Gemfile using Bundler
 ----- 
 ```
