@@ -93,6 +93,7 @@ Table of Contents
    * [Classes](#classes)
       * [How to inherit a class](#how-to-inherit-a-class)
       * [How to check instance type](#how-to-check-instance-type)
+      * [Print all method names of a class](#print-all-method-names-of-a-class)
    * [Modules](#modules)
    * [Operator Overloading](#operator-overloading)
    * [Exception Handling](#exception-handling)
@@ -1738,6 +1739,14 @@ a.instance_of? Integer
 true
 a.instance_of? Numeric
 false
+```
+Print all method names of a class
+-----
+
+```ruby
+puts (String.methods).sort
+# Exclude methods that are inherited from Object class
+puts (String.methods - Object.public_instance_methods).sort
 ```
 
 Modules
