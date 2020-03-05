@@ -576,19 +576,17 @@ How to convert string to lower or upper case
 Helpful methods
 -----
 
-| No | Method name | output |
+| No | Method name | output | note |
 |---|---|---|
-| 1 | length                           | "HELLO World".length <br> 11                                                                       |
-| 2 | reverse                          | "hello worlD".reverse <br> "Dlrow olleh"                                                           |
-| 3 | include? other_str               | "hEllo wOrlD".include? "w" <br> true                                                               |
-| 4 | gsub(pattern, replacement)       | "hEllo wOrlD".gsub(" ", "_") <br> "hEllo_wOrlD"                                                    |
-| 5 | gsub(pattern, hash)              | "organization".gsub("z", 'z' => 's') <br>"organisation"                                            |
-| 6 | gsub(pattern) { \|match\| block} | "Price of the phone is 1000 AUD".gsub(/\d+/) { \|s\| '$'+s } <br>"Price of the phone is $1000 AUD" |
-| 7 | strip                            | "  hEllo WOrlD  ".strip <br> "hEllo WOrlD"                                                         |
-| 8 | prepend                          | a = "world" <br> a.prepend("hello ") <br> "hello world"                                            |
-| 9 | insert                           | a = "hello" <br> a.insert(a.length, " world") <br> "hello world"                                   |
-
-`strip` method will remove any of the following leading and trailing characters: null("\x00"), horizontal tab("\t"), line feed(\n), vertical tab("\v"), form feed(f), carriage return(\r), space(" ") 
+| 1 | length                           | "HELLO World".length <br> 11                                                                       | TODO |
+| 2 | reverse                          | "hello worlD".reverse <br> "Dlrow olleh"                                                           | TODO |
+| 3 | include? other_str               | "hEllo wOrlD".include? "w" <br> true                                                               | TODO |
+| 4 | gsub(pattern, replacement)       | "hEllo wOrlD".gsub(" ", "_") <br> "hEllo_wOrlD"                                                    | TODO |
+| 5 | gsub(pattern, hash)              | "organization".gsub("z", 'z' => 's') <br>"organisation"                                            | TODO |
+| 6 | gsub(pattern) { \|match\| block} | "Price of the phone is 1000 AUD".gsub(/\d+/) { \|s\| '$'+s } <br>"Price of the phone is $1000 AUD" | TODO |
+| 7 | strip                            | "  hEllo WOrlD  ".strip <br> "hEllo WOrlD"                                                         | TODO |
+| 8 | prepend                          | a = "world" <br> a.prepend("hello ") <br> "hello world"                                            | TODO |
+| 9 | insert                           | a = "hello" <br> a.insert(a.length, " world") <br> "hello world"                                   | `strip` method will remove any of the following leading and trailing characters: null("\x00"), horizontal tab("\t"), line feed(\n), vertical tab("\v"), form feed(f), carriage return(\r), space(" ") |
 
 
 Range
