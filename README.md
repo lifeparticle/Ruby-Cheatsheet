@@ -584,9 +584,9 @@ Helpful methods
 | 4 | gsub(pattern, replacement)       | "hEllo wOrlD".gsub(" ", "_") <br> "hEllo_wOrlD"                                                    | TODO |
 | 5 | gsub(pattern, hash)              | "organization".gsub("z", 'z' => 's') <br>"organisation"                                            | TODO |
 | 6 | gsub(pattern) { \|match\| block} | "Price of the phone is 1000 AUD".gsub(/\d+/) { \|s\| '$'+s } <br>"Price of the phone is $1000 AUD" | TODO |
-| 7 | strip                            | "  hEllo WOrlD  ".strip <br> "hEllo WOrlD"                                                         | TODO |
+| 7 | strip                            | "  hEllo WOrlD  ".strip <br> "hEllo WOrlD"                                                         | It will remove any of the following leading and trailing characters: null("\x00"), horizontal tab("\t"), line feed(\n), vertical tab("\v"), form feed(f), carriage return(\r), space(" ") |
 | 8 | prepend                          | a = "world" <br> a.prepend("hello ") <br> "hello world"                                            | TODO |
-| 9 | insert                           | a = "hello" <br> a.insert(a.length, " world") <br> "hello world"                                   | `strip` method will remove any of the following leading and trailing characters: null("\x00"), horizontal tab("\t"), line feed(\n), vertical tab("\v"), form feed(f), carriage return(\r), space(" ") |
+| 9 | insert                           | a = "hello" <br> a.insert(a.length, " world") <br> "hello world"                                   | TODO |
 
 
 Range
