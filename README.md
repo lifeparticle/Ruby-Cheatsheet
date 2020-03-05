@@ -577,7 +577,7 @@ Helpful methods
 -----
 
 | No | Method name | output | note |
-|---|---|---|
+|---|---|---|---|
 | 1 | length                           | "HELLO World".length <br> 11                                                                       | TODO |
 | 2 | reverse                          | "hello worlD".reverse <br> "Dlrow olleh"                                                           | TODO |
 | 3 | include? other_str               | "hEllo wOrlD".include? "w" <br> true                                                               | TODO |
