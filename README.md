@@ -94,6 +94,7 @@ Table of Contents
       * [How to inherit a class](#how-to-inherit-a-class)
       * [How to check instance type](#how-to-check-instance-type)
       * [Print all method names of a class](#print-all-method-names-of-a-class)
+      * [Check if a Class has a particular method](#check-if-a-Class-has-a-particular-method)
    * [Modules](#modules)
    * [Operator Overloading](#operator-overloading)
    * [Exception Handling](#exception-handling)
@@ -1745,6 +1746,16 @@ Print all method names of a class
 puts (String.methods).sort
 # Exclude methods that are inherited from Object class
 puts (String.methods - Object.public_instance_methods).sort
+```
+
+Check if a Class has a particular method
+-----
+
+```ruby
+String.respond_to?(:prepend)
+true
+String.respond_to?(:append)
+false
 ```
 
 Modules
