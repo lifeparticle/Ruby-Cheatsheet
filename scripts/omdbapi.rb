@@ -1,6 +1,8 @@
 require 'net/http'
 require 'json'
 
+# http://www.omdbapi.com/
+
 secret = ""
 movie_list = [
 "127 Hours",
