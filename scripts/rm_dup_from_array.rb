@@ -7,7 +7,9 @@ a = [
 "Mystery",
 "Drama",
 "Crime",
+"Sci-FI",
 "Sci-fi",
+"Sci-Fi",
 "Disaster",
 "Thriller",
 "Action",
@@ -20,5 +22,11 @@ a = [
 "Drama"
 ]
 
-a = a.uniq
-puts a
+case_sensitive = a.uniq
+puts case_sensitive
+
+puts "\n"
+
+# Sci-FI will be in the case_insensitive array, since it's the first occurance
+case_insensitive = a.uniq { |elem| elem.downcase }
+puts case_insensitive
