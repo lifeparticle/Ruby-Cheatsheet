@@ -1,6 +1,9 @@
 ![ruby](https://user-images.githubusercontent.com/1612112/74456286-b1bcd100-4eda-11ea-9738-7e0a27199021.png)
 
-[![Ruby](https://cdn.emojidex.com/emoji/mdpi/Ruby.png "Ruby") ](https://www.ruby-lang.org) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/lifeparticle/Ruby-Cheatsheet/issues)
+<p align="center">
+<a href="https://www.ruby-lang.org"><img alt="Ruby" src="https://cdn.emojidex.com/emoji/mdpi/Ruby.png"/></a>
+<a href="https://github.com/lifeparticle/Ruby-Cheatsheet/issues"><img alt="contributions welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/></a>
+</p>
 
 Table of Contents
 =================
