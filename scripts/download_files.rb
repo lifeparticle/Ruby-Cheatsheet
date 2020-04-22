@@ -21,7 +21,8 @@ fonts = [
 "https://www.omicronlab.com/download/fonts/sagarnormal.ttf",
 "https://www.omicronlab.com/download/fonts/muktinarrow.ttf",
 "https://www.omicronlab.com/download/fonts/Mukti_1.99_PR.ttf",
-"https://www.omicronlab.com/download/fonts/Lohit_14-04-2007.ttf"
+"https://www.omicronlab.com/download/fonts/Lohit_14-04-2007.ttf",
+"https://www.bd.undp.org/content/dam/bangladesh/img/News/news2018/UN%20bangla.ttf"
 ]
 
 begin
