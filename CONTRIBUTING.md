@@ -15,6 +15,7 @@ git push
 ```
 5. Create a pull request
   5.1 Use the url from the terminal
+  
       ```
       remote: Create a pull request for 'issue-2' on GitHub by visiting:
       remote:      https://github.com/........................
