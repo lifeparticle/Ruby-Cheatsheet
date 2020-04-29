@@ -60,12 +60,16 @@ movie_list = [
 "Body of Lies"]
 
 movie_list.each do |name|
-	url = URI.parse(URI.escape(("http://www.omdbapi.com/?apikey=#{secret}&t=#{name}")))
-	res = Net::HTTP.get_response(url)
-	if res.is_a?(Net::HTTPSuccess)
-		parsed = JSON.parse(res.body)
-		runtime_h = parsed["Runtime"].gsub(" min","/").to_i / 60
-		runtime_m = parsed["Runtime"].gsub(" min","/").to_i % 60
-		puts "#{parsed["Title"]}\t#{parsed["Year"]}\t#{runtime_h}:#{runtime_m.to_s.rjust(2, "0")}\t#{parsed["Genre"].gsub(", ","/")}"
+	begin
+		url = URI.parse(URI.escape(("http://www.omdbapi.com/?apikey=#{secret}&t=#{name}")))
+		res = Net::HTTP.get_response(url)
+		if res.is_a?(Net::HTTPSuccess)
+			parsed = JSON.parse(res.body)
+			runtime_h = parsed["Runtime"].gsub(" min","/").to_i / 60
+			runtime_m = parsed["Runtime"].gsub(" min","/").to_i % 60
+			puts "#{parsed["Title"]}\t#{parsed["Year"]}\t#{runtime_h}:#{runtime_m.to_s.rjust(2, "0")}\t#{parsed["Genre"].gsub(", ","/")}"
+		end
+	rescue Exception => e
+		puts "#{"something bad happened"} #{e}"
 	end
 end
