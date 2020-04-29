@@ -21,6 +21,12 @@ git push
       remote:      https://github.com/........................
       ```
    5.2 If are haveing problem finding the url
+   a) https://github.com/lifeparticle/Ruby-Cheatsheet/pulls
+   b) Click the button 'New pull request'
+   c) Click the link 'compare acorss forks'
+   d) Change head repository to your fork
+   e) Change the branch to your branch
+   f) Create pull request
 6. ```
    git checkout master
    git pull
