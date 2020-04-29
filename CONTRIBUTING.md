@@ -10,7 +10,7 @@ git checkout issue-2
 4. Push your changes to your fork with git push
 ```
 git add .
-git commit -m"Write a meaning full commit message"
+git commit -m"Write a meaningfull commit message"
 git push
 ```
 5. Create a pull request
