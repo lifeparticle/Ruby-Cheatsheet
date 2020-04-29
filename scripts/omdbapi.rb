@@ -60,7 +60,7 @@ movie_list = [
 "Body of Lies"]
 
 movie_list.each do |name|
-	url = URI("http://www.omdbapi.com/?apikey=#{secret}&t=#{name}")
+	url = URI.parse(URI.escape(("http://www.omdbapi.com/?apikey=#{secret}&t=#{name}")))
 	res = Net::HTTP.get_response(url)
 	if res.is_a?(Net::HTTPSuccess)
 		parsed = JSON.parse(res.body)
