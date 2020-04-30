@@ -791,7 +791,7 @@ false
 
 Class method
 -----
-There are multiple ways for defining a class method.
+Class method is class level method. There are multiple ways for defining a class method.
 
 ```ruby
 class Mobile
