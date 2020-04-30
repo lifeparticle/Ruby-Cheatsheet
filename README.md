@@ -793,7 +793,7 @@ Class method
 -----
 There are multiple ways for defining a class method.
 
-```
+```ruby
 class Mobile
 	def self.ring
 		"ring ring ring..."
@@ -803,7 +803,7 @@ end
 Mobile.ring
 ```
 
-```
+```ruby
 class Mobile
 	def Mobile.ring
 		"ring ring ring..."
@@ -813,7 +813,7 @@ end
 Mobile.ring
 ```
 
-```
+```ruby
 class Mobile
 	class << self
 		def ring
