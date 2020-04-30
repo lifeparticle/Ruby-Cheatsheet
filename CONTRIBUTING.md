@@ -31,6 +31,7 @@
     remote: Create a pull request for 'issue-2' on GitHub by visiting:
     remote:      https://github.com/........................
     ```
+    
    5.2 If are haveing problem finding the url
    
        a) https://github.com/lifeparticle/Ruby-Cheatsheet/pulls
