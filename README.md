@@ -833,7 +833,7 @@ Mobile.ring
 A class method is an instance method of the class object. When a new class is created, an object of type `Class` is initialized and assigned to a global constant (Mobile in this case).
 
 
-```
+```ruby
 Mobile = Class.new do
     def self.ring
         "ring ring ring..."
