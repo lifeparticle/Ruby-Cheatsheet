@@ -799,7 +799,6 @@ class Mobile
 		"ring ring ring..."
 	end
 end
-
 Mobile.ring
 ```
 
