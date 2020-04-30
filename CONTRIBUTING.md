@@ -3,6 +3,7 @@
 1. Fork the repo
 2. Clone your fork
 3. Sync your local master
+
     3.1. ```git remote add upstream git@github.com:lifeparticle/Ruby-Cheatsheet.git```
     
     3.2. ```git fetch upstream```
