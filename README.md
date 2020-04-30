@@ -111,6 +111,7 @@ Table of Contents
       * [CamelCase String split](#camelcase-string-split)
    * [Books and other resources](#books-and-other-resources)
    * [Bug Reports and Feature Requests](#bug-reports-and-feature-requests)
+   * [Contributing guidelines](#contributing-guidelines)
    * [Author](#author)
    * [License](#license)
 
@@ -2099,6 +2100,10 @@ Books and other resources
 Bug Reports and Feature Requests
 ============
 Please create an issue with as much information you can. Thank you.
+
+Contributing guidelines
+============
+<a href="https://github.com/lifeparticle/Ruby-Cheatsheet/blob/master/CONTRIBUTING.md"><img alt="contributing guidelines" src="https://img.shields.io/badge/contributing-guidelines-brightgreen.svg?style=flat"/></a>
 
 Author
 ============
