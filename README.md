@@ -235,7 +235,7 @@ Operators
 ============
 Logical operators
 -----
-| No | operator |
+| No | Operator |
 |---|---|
 | 1 | and   | 
 | 2 | or    |
@@ -247,7 +247,7 @@ Logical operators
 
 Bitwise operators
 -----
-| No | operator |
+| No | Operator |
 |---|---|
 | 1 | &     | 
 | 2 | \|    |
@@ -258,7 +258,7 @@ Bitwise operators
 
 Arithmetic operators
 -----
-| No | operator |
+| No | Operator |
 |---|---|
 | 1 | +     | 
 | 2 | -     |
@@ -269,7 +269,7 @@ Arithmetic operators
 
 Comparison operators
 -----
-| No | operator |
+| No | Operator |
 |---|---|
 | 1  | ==     | 
 | 2  | !=     |
@@ -284,7 +284,7 @@ Comparison operators
 
 Assignment operators
 -----
-| No | operator |
+| No | Operator |
 |---|---|
 | 1 | =     | 
 | 2 | +=    |
@@ -326,7 +326,7 @@ Instance variables cannot be altered except some methods and it's distinct to ea
 
 3. Scope of a class variable is one of
 ```
-Can be called from a class by caliing `ClassName.class_variable` and it's independent of any object of a class
+Can be called from a class by caliing ClassName.class_variable and it's independent of any object of a class
 ```
 
 4. Scope of a global variable is
@@ -601,7 +601,7 @@ String
 How to convert string to lower or upper case
 -----
 
-| No | Method name | output |
+| No | Method name | Output |
 |---|---|---|
 | 1 | downcase   | "HELLO World".downcase <br> "hello world"   |
 | 2 | upcase     | "hello worlD".upcase <br> "HELLO WORLD"     |
@@ -611,7 +611,7 @@ How to convert string to lower or upper case
 Helpful methods
 -----
 
-| No | Method name | output | note |
+| No | Method name | Output | Note |
 |---|---|---|---|
 | 1 | length                           | "HELLO World".length <br> 11                                                                       | TODO |
 | 2 | reverse                          | "hello worlD".reverse <br> "Dlrow olleh"                                                           | TODO |
@@ -649,7 +649,7 @@ range.to_a
 
 Helpful methods
 -----
-| No | Method name | output |
+| No | Method name | Output |
 |---|---|---|
 | 1 | cover?   | (1..5).cover?(5) <br> true                 |
 | 2 | end      | ('a'..'z').end <br> "z"                    |
@@ -1077,7 +1077,7 @@ Blocks VS Procs VS Lambdas
 
 All of them are used for executing single line or multiline codes
 
-| Name | Object | Example | Object type | when to use |
+| Name | Object | Example | Object type | When to use |
 |---|---|---|---|---|
 | Blocks  | No  | { puts "Hello World" }              | -                                           | 1. when you want to pass blocks of code to a methods                <br> 2. arbitrary arguments <br> 3. blocks return from the current method |
 | Procs   | Yes | p = Proc.new { puts "Hello World" } | p.class <br> Proc <br> p.lambda? <br> false | 1. similar to blocks but can store in variables                     <br> 2. arbitrary arguments <br> 3. Procs return from the current method  |
