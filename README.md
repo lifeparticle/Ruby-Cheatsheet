@@ -301,11 +301,11 @@ There are five different types of variables. The first character determines the 
 
 | No | Name | Scope | Example | Note | 
 |---|---|---|---|---|
-| 1 | [a-z] or _  | local             | count = 10 or _count = 10 | Local variables do not have the value nil before initialization. |
-| 2 | @           | instance variable | @id = []                  | Instance variables have the nil value until they are initialized.|
-| 3 | @@          | class variable    | @@name = []               | Class variable must be initialized                               |
-| 4 | $           | global variable   | $version = "0.8.9"        | Global variables have the nil value until they are initialized.  |
-| 5 | [A-Z]       | constant          | PI = 3.14                 | You can change the constant but you will get a warining.         |
+| 1 | [a-z] or _  | local             | count = 10 or _count = 10 | Local variables must be initialized.                                                                |
+| 2 | @           | instance variable | @id = []                  | Instance variables have the `nil` value until they are initialized.                                 |
+| 3 | @@          | class variable    | @@name = []               | Class variable must be initialized.                                                                 |
+| 4 | $           | global variable   | $version = "0.8.9"        | Global variables have the `nil` value until they are initialized.                                   |
+| 5 | [A-Z]       | constant          | PI = 3.14                 | Constant variables must be initialized and you can change the constant but you will get a warining. |
 
 
 1. Scope of a local variable is one of
@@ -326,7 +326,7 @@ Instance variables cannot be altered except some methods and it's distinct to ea
 
 3. Scope of a class variable is one of
 ```
-Can be called from a class by caliing ClassName.class_variable and it's independent of any object of a class
+Can be called from a class by caliing `ClassName.class_variable` and it's independent of any object of a class
 ```
 
 4. Scope of a global variable is
