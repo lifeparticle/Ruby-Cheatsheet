@@ -25,25 +25,25 @@
     ```
 6. Create a pull request
   
-  5.1 Use the url from the terminal
-  
-      ```
-      remote: Create a pull request for 'issue-2' on GitHub by visiting:
-      remote:      https://github.com/........................
-      ```
+    5.1 Use the url from the terminal
+
+    ```
+    remote: Create a pull request for 'issue-2' on GitHub by visiting:
+    remote:      https://github.com/........................
+    ```
    5.2 If are haveing problem finding the url
    
-   a) https://github.com/lifeparticle/Ruby-Cheatsheet/pulls
-   
-   b) Click the button 'New pull request'
-   
-   c) Click the link 'compare acorss forks'
-   
-   d) Change head repository to your fork
-   
-   e) Change the branch to your branch
-   
-   f) Create pull request
+       a) https://github.com/lifeparticle/Ruby-Cheatsheet/pulls
+
+       b) Click the button 'New pull request'
+
+       c) Click the link 'compare acorss forks'
+
+       d) Change head repository to your fork
+
+       e) Change the branch to your branch
+
+       f) Create pull request
 7. Repeat
 
    ```
