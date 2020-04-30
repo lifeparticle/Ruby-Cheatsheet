@@ -796,7 +796,7 @@ Class method is class level method. There are multiple ways for defining a class
 ```ruby
 class Mobile
     def self.ring
-	    "ring ring ring..."
+	"ring ring ring..."
     end
 end
 Mobile.ring
@@ -805,7 +805,7 @@ Mobile.ring
 ```ruby
 class Mobile
     def Mobile.ring
-	    "ring ring ring..."
+      "ring ring ring..."
     end
 end
 
@@ -815,9 +815,9 @@ Mobile.ring
 ```ruby
 class Mobile
     class << self
-	    def ring
-		    "ring ring ring..."
-	   end
+	def ring
+	  "ring ring ring..."
+       end
     end
 end
 
