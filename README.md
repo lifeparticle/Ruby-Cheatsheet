@@ -109,6 +109,7 @@ Table of Contents
       * [Check the syntax of a Ruby file](#check-the-syntax-of-a-ruby-file)
       * [Concatenate String in loop](#concatenate-string-in-loop)
       * [CamelCase String split](#camelcase-string-split)
+      * [Ruby scripts](#ruby-scripts)
    * [Books and other resources](#books-and-other-resources)
    * [Bug Reports and Feature Requests](#bug-reports-and-feature-requests)
    * [Contributing guidelines](#contributing-guidelines)
@@ -2088,6 +2089,10 @@ words = sentence.split(/(?=[A-Z])/)
 # output
 ["There", "Is", "No", "Spoon"]
 ```
+
+Ruby scripts
+-----
+    <a href="https://github.com/lifeparticle/Ruby-Cheatsheet/tree/master/scripts"><img alt="ruby-scripts" src="https://img.shields.io/badge/ruby-scripts-red.svg?style=flat"/></a>
 
 Books and other resources
 ============
