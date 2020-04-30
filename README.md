@@ -805,7 +805,7 @@ Mobile.ring
 ```ruby
 class Mobile
     def Mobile.ring
-      "ring ring ring..."
+        "ring ring ring..."
     end
 end
 
@@ -816,7 +816,7 @@ Mobile.ring
 class Mobile
     class << self
 	def ring
-	  "ring ring ring..."
+	    "ring ring ring..."
        end
     end
 end
