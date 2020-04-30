@@ -24,6 +24,7 @@ git commit -m"Write a meaningfull commit message"
 git push
 ```
 6. Create a pull request
+  
   5.1 Use the url from the terminal
   
       ```
@@ -43,8 +44,9 @@ git push
    e) Change the branch to your branch
    
    f) Create pull request
-7. ```
+7. Repeat
+
+   ```
    git checkout master
    git pull
    ```
-   and repeat
