@@ -3,10 +3,10 @@
 1. Fork the repo
 2. Clone your fork
 3. Sync your local master
-  1. ```git remote add upstream git@github.com:lifeparticle/Ruby-Cheatsheet.git```
-  2. ```git fetch upstream```
-  3. ```git branch --set-upstream-to=upstream/master master```
-  4. ```git pull```
+    3.1. ```git remote add upstream git@github.com:lifeparticle/Ruby-Cheatsheet.git```
+    3.2. ```git fetch upstream```
+    3.3. ```git branch --set-upstream-to=upstream/master master```
+    3.4. ```git pull```
 4. Create a branch
 ```
 git branch issue-2 # use issue_number, replace issue-2 with appropriate branch name 
