@@ -187,6 +187,7 @@ How to install a specific version of a specific ruby gem
 -----
 ```
 gem install bundler -v 1.17
+gem install minitest -v 5.8.4
 ```
 
 How to update a single gem using Bundler
