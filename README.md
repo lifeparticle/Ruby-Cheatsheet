@@ -49,6 +49,7 @@ Table of Contents
       * [How to define default value for a method parameter](#how-to-define-default-value-for-a-method-parameter)
       * [How to pass variable length argument to a method parameter](#how-to-pass-variable-length-argument-to-a-method-parameter)
       * [Boolean method](#boolean-method)
+      * [Class method](#class-method)
    * [Blocks](#blocks)
       * [How to check if a block is given](#how-to-check-if-a-block-is-given)
    * [Procs](#procs)
@@ -787,6 +788,10 @@ true
 is_vowel? 'b'
 false
 ```
+
+Class method
+-----
+TODO
 
 Blocks
 ============
