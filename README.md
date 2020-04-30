@@ -16,6 +16,7 @@ Table of Contents
       * [How to install a specific version of a specific ruby gem](#how-to-install-a-specific-version-of-a-specific-ruby-gem)
       * [How to update a single gem using Bundler](#how-to-update-a-single-gem-using-bundler)
       * [How to update every gem in the Gemfile using Bundler](#how-to-update-every-gem-in-the-gemfile-using-bundler)
+   * [Introduction](#introduction)
    * [Reserved Words](#reserved-words)
    * [Comment](#comment)
    * [Operators](#operators)
@@ -205,6 +206,10 @@ How to update every gem in the Gemfile using Bundler
 ```
 bundle update
 ```
+
+Introduction
+============
+In Ruby everything is an object.
 
 Reserved Words
 ============
@@ -799,6 +804,7 @@ class Mobile
 	"ring ring ring..."
     end
 end
+
 Mobile.ring
 ```
 
@@ -818,6 +824,31 @@ class Mobile
 	def ring
 	    "ring ring ring..."
        end
+    end
+end
+
+Mobile.ring
+```
+
+A class method is an instance method of the class object. When a new class is created, an object of type `Class` is initialized and assigned to a global constant (Mobile in this case).
+
+
+```
+Mobile = Class.new do
+    def self.ring
+        "ring ring ring..."
+    end
+end
+
+Mobile.ring
+```
+
+```ruby
+Mobile = Class.new
+
+class << Mobile
+    def ring
+        "ring ring ring..."
     end
 end
 
