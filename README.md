@@ -2092,7 +2092,7 @@ words = sentence.split(/(?=[A-Z])/)
 
 Ruby scripts
 -----
-    <a href="https://github.com/lifeparticle/Ruby-Cheatsheet/tree/master/scripts"><img alt="ruby-scripts" src="https://img.shields.io/badge/ruby-scripts-red.svg?style=flat"/></a>
+<a href="https://github.com/lifeparticle/Ruby-Cheatsheet/tree/master/scripts"><img alt="ruby-scripts" src="https://img.shields.io/badge/ruby-scripts-red.svg?style=flat"/></a>
 
 Books and other resources
 ============
