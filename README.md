@@ -297,21 +297,52 @@ Assignment operators
 
 Variables and Scope
 ============
-The first character determines the scope.
+There are five different types of variables. The first character determines the scope.
 
-| No | name | scope | example | note | 
+| No | Name | Scope | Example | Note | 
 |---|---|---|---|---|
-| 1 | [a-z] or _  | local             | count = 10 or _count = 10 | TODO                                                    |
-| 2 | @           | instance variable | @id = []                  | TODO                                                    |
-| 3 | @@          | class variable    | @@name = []               | TODO                                                    |
-| 4 | $           | global variable   | $version = "0.8.9"        | TODO                                                    |
-| 5 | [A-Z]       | constant          | PI = 3.14                 | you can change the constant but you will get a warining |
+| 1 | [a-z] or _  | local             | count = 10 or _count = 10 | Local variables do not have the value nil before initialization. |
+| 2 | @           | instance variable | @id = []                  | Instance variables have the nil value until they are initialized.|
+| 3 | @@          | class variable    | @@name = []               | Class variable must be initialized                               |
+| 4 | $           | global variable   | $version = "0.8.9"        | Global variables have the nil value until they are initialized.  |
+| 5 | [A-Z]       | constant          | PI = 3.14                 | You can change the constant but you will get a warining.         |
 
+
+1. Scope of a local variable is one of
+
+```
+proc{ ... }
+loop{ ... }
+def ... end
+class ... end
+module ... end
+the entire program (unless one of the above applies)
+```
+
+2. Scope of a instance variable is
+```
+Instance variables cannot be altered except some methods and it's distinct to each object of a class
+```
+
+3. Scope of a class variable is one of
+```
+Can be called from a class by caliing ClassName.class_variable and it's independent of any object of a class
+```
+
+4. Scope of a global variable is
+```
+It can be referred from anywhere in a program
+```
+
+5. Scope of a constant variable is
+```
+Accessible outside the class
+```
 
 Pseudo variables
 -----
 
-| No | name | note |
+| No | Name | Note |
 |---|---|---|
 | 1  | self        | The receiver object of the current method  |
 | 2  | true        | Instance of the TrueClass  |
@@ -324,7 +355,7 @@ Pseudo variables
 Pre-defined variables
 -----
 
-| No | name | note |
+| No | Name | Note |
 |---|---|---|
 | 1 | $! | The exception information message. raise sets this variable. |
 | 2 | $@ | The backtrace of the last exception, which is the array of the string that indicates the point where methods invoked from. The elements in the format like: "filename:line" or "filename:line:in `methodname'" (Mnemonic: where exception occurred at.) |
@@ -359,7 +390,7 @@ Pre-defined variables
 
 Option variables: The variables which names are in the form of $-?, where ? is the option character, are called option variables and contains the information about interpreter command line options.
 
-| No | name | note |
+| No | Name | Note |
 |---|---|---|
 | 1 | $-0 | The alias to the $/. |
 | 2 | $-a | True if option -a is set. Read-only variable. |
@@ -376,7 +407,7 @@ Option variables: The variables which names are in the form of $-?, where ? is t
 Pre-defined global constants
 -----
 
-| No | name | note |
+| No | Name | Note |
 |---|---|---|
 | 1 | TRUE | The typcal true value. All non-false values (everything except nil and false) is true in Ruby. |
 | 2 | FALSE | The false itself. |
