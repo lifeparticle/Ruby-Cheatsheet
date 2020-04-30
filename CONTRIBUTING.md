@@ -13,16 +13,16 @@
     3.4. ```git pull```
     
 4. Create a branch
-```
-git branch issue-2 # use issue_number, replace issue-2 with appropriate branch name 
-git checkout issue-2
-```
+    ```
+    git branch issue-2 # use issue_number, replace issue-2 with appropriate branch name 
+    git checkout issue-2
+    ```
 5. Push your changes to your fork with git push
-```
-git add .
-git commit -m"Write a meaningfull commit message"
-git push
-```
+    ```
+    git add .
+    git commit -m"Write a meaningfull commit message"
+    git push
+    ```
 6. Create a pull request
   
   5.1 Use the url from the terminal
