@@ -32,7 +32,7 @@
     remote:      https://github.com/........................
     ```
     
-   5.2 If are haveing problem finding the url
+   5.2 If you're haveing problem finding the url
    
        a) https://github.com/lifeparticle/Ruby-Cheatsheet/pulls
 
