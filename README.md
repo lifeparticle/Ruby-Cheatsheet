@@ -35,7 +35,6 @@ Reserved code points are available for use, but are not yet assigned.
 
 Vowels
 ============
-
 There are `11` Vowels
 
 ```
@@ -54,8 +53,7 @@ Unicode range: `U+0985 - U+098B (2437 - 2443)`, `U+098F - U+0990 (2447 - 2448)` 
 
 Consonants
 ============
-
-4. There are `39` Consonants
+There are `39` Consonants
 
 ```
 ক, খ, গ, ঘ, ঙ,
@@ -96,7 +94,6 @@ Unicode range: `U+0995 - U+09A8 (2453 - 2472)`, `U+09AA - U+09B0	(2474 - 2480)`,
 
 Digits
 ============
-
 ```
 ০
 ১
