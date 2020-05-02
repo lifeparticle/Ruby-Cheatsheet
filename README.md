@@ -6,7 +6,6 @@
 
 Table of Contents
 =================
-   * [Bengali-Alphabet](#bengali-alphabet)
    * [Introduction](#introduction)
    * [Vowels](#vowels)
    * [Consonants](#consonants)
