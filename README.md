@@ -622,15 +622,15 @@ Helpful methods
 
 | No | Method name | Output | Note |
 |---|---|---|---|
-| 1 | length                           | "HELLO World".length <br> 11                                                                       | TODO |
-| 2 | reverse                          | "hello worlD".reverse <br> "Dlrow olleh"                                                           | TODO |
-| 3 | include? other_str               | "hEllo wOrlD".include? "w" <br> true                                                               | TODO |
-| 4 | gsub(pattern, replacement)       | "hEllo wOrlD".gsub(" ", "_") <br> "hEllo_wOrlD"                                                    | TODO |
-| 5 | gsub(pattern, hash)              | "organization".gsub("z", 'z' => 's') <br>"organisation"                                            | TODO |
-| 6 | gsub(pattern) { \|match\| block} | "Price of the phone is 1000 AUD".gsub(/\d+/) { \|s\| '$'+s } <br>"Price of the phone is $1000 AUD" | TODO |
+| 1 | length                           | "HELLO World".length <br> 11                                                                       | returns the length of the string  |
+| 2 | reverse                          | "hello worlD".reverse <br> "Dlrow olleh"                                                           | returns the reversed string |
+| 3 | include? other_str               | "hEllo wOrlD".include? "w" <br> true                                                               | returns true if the string or charecter is present or otherwise false |
+| 4 | gsub(pattern, replacement)       | "hEllo wOrlD".gsub(" ", "_") <br> "hEllo_wOrlD"                                                    | gsub or global substitute substitutes one or more string with provided strings |
+| 5 | gsub(pattern, hash)              | "organization".gsub("z", 'z' => 's') <br>"organisation"                                            | gsub or global substitute substitutes one or more string with provided hash |
+| 6 | gsub(pattern) { \|match\| block} | "Price of the phone is 1000 AUD".gsub(/\d+/) { \|s\| '$'+s } <br>"Price of the phone is $1000 AUD" | gsub or global substitute substitutes one or more string with provided block |
 | 7 | strip                            | "  hEllo WOrlD  ".strip <br> "hEllo WOrlD"                                                         | It will remove any of the following leading and trailing characters: null("\x00"), horizontal tab("\t"), line feed(\n), vertical tab("\v"), form feed(f), carriage return(\r), space(" ") |
-| 8 | prepend                          | a = "world" <br> a.prepend("hello ") <br> "hello world"                                            | TODO |
-| 9 | insert                           | a = "hello" <br> a.insert(a.length, " world") <br> "hello world"                                   | TODO |
+| 8 | prepend                          | a = "world" <br> a.prepend("hello ") <br> "hello world"                                            | Add string before another string  |
+| 9 | insert                           | a = "hello" <br> a.insert(a.length, " world") <br> "hello world"                                   | Insert string at a specific position |
 
 
 Range
