@@ -1,4 +1,4 @@
-# Contributing
+# Contribution Guidelines
 
 1. Fork the repo
 2. Clone your fork
