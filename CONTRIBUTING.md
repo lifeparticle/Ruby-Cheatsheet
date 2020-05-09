@@ -4,13 +4,21 @@
 2. Clone your fork
 3. Sync your local master
 
-    3.1. ```bash git remote add upstream git@github.com:lifeparticle/Ruby-Cheatsheet.git```
+    3.1. ```bash 
+         git remote add upstream git@github.com:lifeparticle/Ruby-Cheatsheet.git
+         ```
     
-    3.2. ```bash git fetch upstream```
+    3.2. ```bash
+         git fetch upstream
+         ```
     
-    3.3. ```bash git branch --set-upstream-to=upstream/master master```
+    3.3. ```bash
+         git branch --set-upstream-to=upstream/master master
+         ```
     
-    3.4. ```bash git pull```
+    3.4. ```bash
+         git pull
+         ```
     
 4. Create a branch
     ```bash
