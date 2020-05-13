@@ -478,9 +478,9 @@ unless expression
 name = "rob"
 
 unless name == "bob"
-  puts "hello stranger"
+    puts "hello stranger"
 else
-  puts "hello bob"
+    puts "hello bob"
 end
 
 # output
@@ -552,12 +552,12 @@ end
 marks = 86
 
 result = case marks
-   when 0..49 then "Fail"
-   when 50..64 then "Pass"
-   when 65..74 then "Credit"
-   when 75..84 then "Distinction"
-   when 85..100 then "High Distinction"
-   else "Invalid marks"
+    when 0..49 then "Fail"
+    when 50..64 then "Pass"
+    when 65..74 then "Credit"
+    when 75..84 then "Distinction"
+    when 85..100 then "High Distinction"
+    else "Invalid marks"
 end
 
 puts marks
@@ -694,8 +694,8 @@ How to declare a method
 
 # both methods does the same thing, depend on your preference you can choose either of them
 def method_name(parameter1, parameter2)
-   puts "#{parameter1} #{parameter2}"
-   parameter1 + parameter2
+    puts "#{parameter1} #{parameter2}"
+    parameter1 + parameter2
 end
 
 res = method_name(20, 10)
@@ -705,8 +705,8 @@ res = method_name(20, 10)
 
 ```ruby
 def method_name(parameter1, parameter2)
-   puts "#{parameter1} #{parameter2}"
-   return parameter1 + parameter2
+    puts "#{parameter1} #{parameter2}"
+    return parameter1 + parameter2
 end
 # output
 # 30
@@ -726,9 +726,9 @@ How to define a default value for a method parameter
 
 ```ruby
 def method_name(parameter1, parameter2, type = "ADD")
-   puts "#{parameter1} #{parameter2}"
-   return parameter1 + parameter2 if type == "ADD"
-   return parameter1 - parameter2 if type == "SUB"
+    puts "#{parameter1} #{parameter2}"
+    return parameter1 + parameter2 if type == "ADD"
+    return parameter1 - parameter2 if type == "SUB"
 end
 
 res = method_name(20, 10)
@@ -740,7 +740,7 @@ How to use another parameter for the default value
 -----
 ```ruby
 def method_name(num1, num2 = num1)
-   return num1 + num2
+    return num1 + num2
 end
 
 res = method_name(10)
@@ -752,8 +752,8 @@ How to pass variable length argument to a method parameter
 -----
 ```ruby
 def method_name(type, *values)
-   return values.reduce(:+) if type == "ADD"
-   return values.reduce(:-) if type == "SUB"
+    return values.reduce(:+) if type == "ADD"
+    return values.reduce(:-) if type == "SUB"
 end
 
 numbers = [2, 2, 2, 3, 3, 3]
@@ -803,7 +803,7 @@ A class method is a class-level method. There are multiple ways of defining a cl
 ```ruby
 class Mobile
     def self.ring
-    "ring ring ring..."
+        "ring ring ring..."
     end
 end
 
@@ -865,8 +865,8 @@ A block can be passed as a method parameter or can be associated with a method c
 ```ruby
 # return value
 def give_me_data
-   data = yield
-   puts "data = #{data}"
+    data = yield
+    puts "data = #{data}"
 end
 
 give_me_data { "Big data" }
@@ -887,9 +887,9 @@ salary.each { |s| puts s }
 ```ruby
 # multiline block
 salary.each do |s|
-  a = 10
-  res = a * s
-  puts res
+    a = 10
+    res = a * s
+    puts res
 end
 
 # block body
@@ -906,9 +906,9 @@ Methods can take blocks implicitly, and explicitly, the yield is used when you w
 ```ruby
 # passing a block implicitly
 def give_me_data
-   puts "I am inside give_me_data method"
-   yield
-   puts "I am back in give_me_data method"
+    puts "I am inside give_me_data method"
+    yield
+    puts "I am back in give_me_data method"
 end
 
 give_me_data { puts "Big data" }
@@ -920,9 +920,9 @@ give_me_data { puts "Big data" }
 
 # call multiple times
 def give_me_data
-   yield
-   yield
-   yield
+    yield
+    yield
+    yield
 end
 
 give_me_data { puts "Big data" }
@@ -935,9 +935,9 @@ give_me_data { puts "Big data" }
 # call with block arguments
 
 def give_me_data
-   yield 10
-   yield 100
-   yield 30
+    yield 10
+    yield 100
+    yield 30
 end
 
 give_me_data { |data| puts "Big data #{data} TB" }
@@ -950,9 +950,9 @@ give_me_data { |data| puts "Big data #{data} TB" }
 # call with multiple block arguments
 
 def give_me_data
-   yield "Big data", 10, "TB"
-   yield "Big data", 100, "GB"
-   yield "Big data", 30, "MB"
+    yield "Big data", 10, "TB"
+    yield "Big data", 100, "GB"
+    yield "Big data", 30, "MB"
 end
 
 give_me_data { |text, data, unit| puts "#{text} #{data} #{unit}" }
@@ -964,13 +964,13 @@ give_me_data { |text, data, unit| puts "#{text} #{data} #{unit}" }
 
 #  block will try to return from the current context
 give_me_data
-   puts "I am inside give_me_data method"
+    puts "I am inside give_me_data method"
 end
 
 def test
-   puts "I am inside test method"
-   give_me_data { return 10 } # code returns from here
-   puts "I am back in test method"
+    puts "I am inside test method"
+    give_me_data { return 10 } # code returns from here
+    puts "I am back in test method"
 end
 
 return_value = test
@@ -984,8 +984,8 @@ return_value = test
 ```ruby
 # passing a block explicitly by using an ampersand parameter, here we are explicitly defining the method with block parameter and calling it
 def give_me_data(&block)
-  block.call
-  block.call
+    block.call
+    block.call
 end
 
 give_me_data { puts "Big data" }
@@ -1001,7 +1001,7 @@ block parameter is mandatory when you call yield inside a method; otherwise, it 
 
 ```ruby
 def give_me_data
-   yield
+    yield
 end
 
 give_me_data
@@ -1012,8 +1012,8 @@ give_me_data
 # you can use block_given? method to handle the exception and make the block optional
 
 def give_me_data
-   return "no block" unless block_given?
-   yield
+    return "no block" unless block_given?
+    yield
 end
 
 give_me_data { puts "Big data" }
@@ -1023,7 +1023,7 @@ give_me_data
 # Big data
 
 def give_me_data(&block)
-  block.call if block
+    block.call if block
 end
 
 give_me_data { puts "Big data" }
@@ -1041,7 +1041,7 @@ A proc is like a block which can be stored in a variable
 p = Proc.new { puts "Hello World" }
 
 def give_me_data(proc)
-  proc.call
+    proc.call
 end
 
 give_me_data p
@@ -1053,7 +1053,7 @@ give_me_data p
 p = Proc.new { |count| "Hello World " * count }
 
 def give_me_data(proc)
-  proc.call 5, 2
+    proc.call 5, 2
 end
 
 give_me_data p
@@ -1071,10 +1071,10 @@ LocalJumpError: unexpected return
 # because you can’t return from the top-level context
 
 def give_me_data
-   puts "I am inside give_me_data method"
-   p = Proc.new { return 10 }
-   p.call # code returns from here
-   puts "I am back in give_me_data method"
+    puts "I am inside give_me_data method"
+    p = Proc.new { return 10 }
+    p.call # code returns from here
+    puts "I am back in give_me_data method"
 end
 
 return_value = give_me_data
@@ -1126,10 +1126,10 @@ l.call
 # 10
 
 def give_me_data
-   puts "I am inside give_me_data method"
-   l = -> { return 10 }
-   l.call
-   puts "I am back in give_me_data method"
+    puts "I am inside give_me_data method"
+    l = -> { return 10 }
+    l.call
+    puts "I am back in give_me_data method"
 end
 
 return_value = give_me_data
@@ -1356,8 +1356,8 @@ salary.detect { |s| s > 1000 }
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 index = 0
 while index < planets.size
-  puts "#{planets[index]}"
-  index += 1
+    puts "#{planets[index]}"
+    index += 1
 end
 ```
 
@@ -1365,9 +1365,9 @@ end
 a = 1
 star = '*'
 while a <= 10
-  puts star
-  star += '*'
-  a += 1
+    puts star
+    star += '*'
+    a += 1
 end
 ```
 
@@ -1377,8 +1377,8 @@ end
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 index = planets.size - 1
 until index < 0
-  puts "#{planets[index]}"
-  index -= 1
+    puts "#{planets[index]}"
+    index -= 1
 end
 ```
 
@@ -1386,9 +1386,9 @@ end
 a = 1
 star = '*'
 until star.length > 10
-  puts star
-  star += '*'
-  a += 1
+    puts star
+    star += '*'
+    a += 1
 end
 ```
 
@@ -1396,7 +1396,7 @@ end
 
 ```ruby
 for value in [2, 3, 5, 7]
-  puts value
+    puts value
 end
 ```
 ### times
@@ -1646,8 +1646,8 @@ How to break out from loop
 # by using break keyword
 salary = [399, 234, 566, 533, 233]
 salary.each do |s|
-  break if s == 566
-  puts s
+    break if s == 566
+    puts s
 end
 #output
 # 399
@@ -1661,8 +1661,8 @@ How to skip inside a loop
 # by using next keyword
 salary = [399, 234, 566, 533, 233]
 salary.each do |s|
-  next if s == 533
-  puts s
+    next if s == 533
+    puts s
 end
 # output
 # 399
@@ -1680,18 +1680,18 @@ retry_count = 0
 status = "network failure"
 sum = 0
 data.each do |d|
-  if retry_count == 3
-    status = "connection established"
-    retry_count = 0
-    redo
-  elsif status == "network failure" and retry_count < 5
-    puts "network failure #{retry_count}"
-    retry_count += 1
-    redo
-  elsif status == "connection established"
-    puts d
-    sum += d
-  end
+    if retry_count == 3
+        status = "connection established"
+        retry_count = 0
+        redo
+    elsif status == "network failure" and retry_count < 5
+        puts "network failure #{retry_count}"
+        retry_count += 1
+        redo
+    elsif status == "connection established"
+        puts d
+        sum += d
+    end
 end
 
 # output of sum
@@ -1705,15 +1705,15 @@ How to restart a loop
 numbers = [2, 2, 44, 44]
 sum = 0
 begin
-  numbers.each do |s|
-    if rand(1..10) == 5
-        puts "hi 5, let's do it again!"
-        sum = 0
-        raise "hi 5"
+    numbers.each do |s|
+        if rand(1..10) == 5
+            puts "hi 5, let's do it again!"
+            sum = 0
+            raise "hi 5"
+        end
+        puts s
+        sum += s
     end
-    puts s
-    sum += s
-  end
 rescue
     retry
 end
@@ -1997,7 +1997,7 @@ Catch multiple exceptions
 
 ```ruby
 begin
-  raise 'i am a string'.call
+    raise 'i am a string'.call
 rescue NoMethodError => e
     puts "#{$!.class}: #{$!.message}"
 rescue ZeroDivisionError => e
