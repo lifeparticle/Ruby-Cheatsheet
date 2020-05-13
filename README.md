@@ -90,7 +90,7 @@ Table of Contents
       * [How to merge two Arrays](#how-to-merge-two-arrays)
    * [Hash](#hash)
       * [How to group by count](#how-to-group-by-count)
-      * [What's the difference between Hash .new(0) and {}](#whats-the-difference-between-hash-new0-and-)
+      * [What's the difference between Hash.new(0) and {}](#whats-the-difference-between-hash-new0-and-)
    * [Loop](#loop)
       * [How to break out from loop](#how-to-break-out-from-loop)
       * [How to skip inside a loop](#how-to-skip-inside-a-loop)
@@ -1613,7 +1613,7 @@ puts "#{freq_hash}"
 # {1=>3, 2=>1, 4=>1, 65=>1, 55=>2, 54=>1}
 ```
 
-What's the difference between Hash .new(0) and {}
+What's the difference between Hash.new(0) and {}
 -----
 
 ```ruby
