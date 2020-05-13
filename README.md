@@ -859,7 +859,7 @@ Mobile.ring
 
 Blocks
 ============
-Codes between ```do and end``` (for multiline) or curly brackets ```{ and }``` (for a single line) are called blocks, and they can have multiple arguments defined between two pipes ```(|arg1, arg2|)```.
+Codes between ```do``` and ```end``` (for multiline) or curly brackets ```{``` and ```}``` (for a single line) are called blocks, and they can have multiple arguments defined between two pipes ```(|arg1, arg2|)```.
 A block can be passed as a method parameter or can be associated with a method call. A block returns the last evaluated statement.
 
 ```ruby
