@@ -1,8 +1,8 @@
 ![ruby](https://user-images.githubusercontent.com/1612112/74456286-b1bcd100-4eda-11ea-9738-7e0a27199021.png)
 
 <p align="center">
-	<a href="https://www.ruby-lang.org"><img alt="Ruby" src="https://cdn.emojidex.com/emoji/mdpi/Ruby.png"/></a>
-	<a href="https://github.com/lifeparticle/Ruby-Cheatsheet/issues"><img alt="contributions welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/></a>
+<a href="https://www.ruby-lang.org"><img alt="Ruby" src="https://cdn.emojidex.com/emoji/mdpi/Ruby.png"/></a>
+<a href="https://github.com/lifeparticle/Ruby-Cheatsheet/issues"><img alt="contributions welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/></a>
 </p>
 
 Table of Contents
@@ -460,11 +460,11 @@ If elsif else expression
 temp = 19
 
 if temp >= 25
-	puts "hot"
+  puts "hot"
 elsif temp < 25 && temp >= 18
-	puts "normal"
+  puts "normal"
 else
-	puts "cold"
+  puts "cold"
 end
 
 #output
@@ -480,9 +480,9 @@ unless expression
 name = "rob"
 
 unless name == "bob"
-	puts "hello stranger"
+  puts "hello stranger"
 else
-	puts "hello bob"
+  puts "hello bob"
 end
 
 #output
@@ -515,27 +515,27 @@ Case Expressions
 case input
 # check an integer, 19
 when 19
-	puts "It's 19"
+puts "It's 19"
 # check a float number, 33.3
 when 33.3
-	puts "It's 33.3"
+puts "It's 33.3"
 # check an exact string, "Zaman"
 when "Zaman"
-	puts "Hi Zaman"
+puts "Hi Zaman"
 when 10
-	puts "It's 10"
+puts "It's 10"
 # check against a range
 when 7..11
-	puts "It's between 7 and 11"
+puts "It's between 7 and 11"
 # check against multiple values, "coffee"
 when "tea", "coffee"
-	puts "Happy days"
+puts "Happy days"
 # check against a regular expression, "aA6"
 when /^a[A-Z]+[0-6]+$/
-	puts "It's a valid match"
+puts "It's a valid match"
 # check any string by comparing against the String class, "any string"
 when String
-	puts "It's a String"
+puts "It's a String"
 end
 
 # using short syntax
@@ -547,19 +547,19 @@ end
 case input
 when 19 then puts "It's 19"
 else
-	puts "It's not 19"
+puts "It's not 19"
 end
 
 # get the return value
 marks = 86
 
 result = case marks
-when 0..49 then "Fail"
-when 50..64 then "Pass"
-when 65..74 then "Credit"
-when 75..84 then "Distinction"
-when 85..100 then "High Distinction"
-else "Invalid marks"
+   when 0..49 then "Fail"
+   when 50..64 then "Pass"
+   when 65..74 then "Credit"
+   when 75..84 then "Distinction"
+   when 85..100 then "High Distinction"
+   else "Invalid marks"
 end
 
 puts marks
@@ -696,8 +696,8 @@ How to declare a method
 
 # both methods does the same thing, depend on your preference you can choose either of them
 def method_name(parameter1, parameter2)
-	puts "#{parameter1} #{parameter2}"
-	parameter1 + parameter2
+   puts "#{parameter1} #{parameter2}"
+   parameter1 + parameter2
 end
 
 res = method_name(20, 10)
@@ -707,8 +707,8 @@ res = method_name(20, 10)
 
 ```ruby
 def method_name(parameter1, parameter2)
-	puts "#{parameter1} #{parameter2}"
-	return parameter1 + parameter2
+   puts "#{parameter1} #{parameter2}"
+   return parameter1 + parameter2
 end
 # output
 30
@@ -728,9 +728,9 @@ How to define a default value for a method parameter
 
 ```ruby
 def method_name(parameter1, parameter2, type = "ADD")
-	puts "#{parameter1} #{parameter2}"
-	return parameter1 + parameter2 if type == "ADD"
-	return parameter1 - parameter2 if type == "SUB"
+   puts "#{parameter1} #{parameter2}"
+   return parameter1 + parameter2 if type == "ADD"
+   return parameter1 - parameter2 if type == "SUB"
 end
 
 res = method_name(20, 10)
@@ -742,7 +742,7 @@ How to use another parameter for the default value
 -----
 ```ruby
 def method_name(num1, num2 = num1)
-	return num1 + num2
+   return num1 + num2
 end
 
 res = method_name(10)
@@ -754,8 +754,8 @@ How to pass variable length argument to a method parameter
 -----
 ```ruby
 def method_name(type, *values)
-	return values.reduce(:+) if type == "ADD"
-	return values.reduce(:-) if type == "SUB"
+   return values.reduce(:+) if type == "ADD"
+   return values.reduce(:-) if type == "SUB"
 end
 
 numbers = [2, 2, 2, 3, 3, 3]
@@ -789,7 +789,7 @@ You can have your own boolean methods.
 
 ```ruby
 def is_vowel?(char)
-	['a','e','i','o','u'].include? char
+    ['a','e','i','o','u'].include? char
 end
 
 is_vowel? 'a'
@@ -804,9 +804,9 @@ A class method is a class-level method. There are multiple ways of defining a cl
 
 ```ruby
 class Mobile
-	def self.ring
-		"ring ring ring..."
-	end
+    def self.ring
+    "ring ring ring..."
+    end
 end
 
 Mobile.ring
@@ -814,9 +814,9 @@ Mobile.ring
 
 ```ruby
 class Mobile
-	def Mobile.ring
-		"ring ring ring..."
-	end
+    def Mobile.ring
+        "ring ring ring..."
+    end
 end
 
 Mobile.ring
@@ -824,11 +824,11 @@ Mobile.ring
 
 ```ruby
 class Mobile
-	class << self
-		def ring
-			"ring ring ring..."
-		end
-	end
+    class << self
+    def ring
+        "ring ring ring..."
+       end
+    end
 end
 
 Mobile.ring
@@ -839,9 +839,9 @@ A class method is an instance method of the class object. When a new class is cr
 
 ```ruby
 Mobile = Class.new do
-	def self.ring
-		"ring ring ring..."
-	end
+    def self.ring
+        "ring ring ring..."
+    end
 end
 
 Mobile.ring
@@ -851,9 +851,9 @@ Mobile.ring
 Mobile = Class.new
 
 class << Mobile
-	def ring
-		"ring ring ring..."
-	end
+    def ring
+        "ring ring ring..."
+    end
 end
 
 Mobile.ring
@@ -867,8 +867,8 @@ A block can be passed as a method parameter or can be associated with a method c
 ```ruby
 # return value
 def give_me_data
-	data = yield
-	puts "data = #{data}"
+   data = yield
+   puts "data = #{data}"
 end
 
 give_me_data { "Big data" }
@@ -889,9 +889,9 @@ salary.each { |s| puts s }
 ```ruby
 # multiline block
 salary.each do |s|
-	a = 10
-	res = a * s
-	puts res
+  a = 10
+  res = a * s
+  puts res
 end
 
 # block body
@@ -908,9 +908,9 @@ Methods can take blocks implicitly, and explicitly, the yield is used when you w
 ```ruby
 # passing a block implicitly
 def give_me_data
-	puts "I am inside give_me_data method"
-	yield
-	puts "I am back in give_me_data method"
+   puts "I am inside give_me_data method"
+   yield
+   puts "I am back in give_me_data method"
 end
 
 give_me_data { puts "Big data" }
@@ -922,9 +922,9 @@ I am back in give_me_data method
 
 # call multiple times
 def give_me_data
-	yield
-	yield
-	yield
+   yield
+   yield
+   yield
 end
 
 give_me_data { puts "Big data" }
@@ -937,9 +937,9 @@ Big data
 # call with block arguments
 
 def give_me_data
-	yield 10
-	yield 100
-	yield 30
+   yield 10
+   yield 100
+   yield 30
 end
 
 give_me_data { |data| puts "Big data #{data} TB" }
@@ -952,9 +952,9 @@ Big data 30 TB
 # call with multiple block arguments
 
 def give_me_data
-	yield "Big data", 10, "TB"
-	yield "Big data", 100, "GB"
-	yield "Big data", 30, "MB"
+   yield "Big data", 10, "TB"
+   yield "Big data", 100, "GB"
+   yield "Big data", 30, "MB"
 end
 
 give_me_data { |text, data, unit| puts "#{text} #{data} #{unit}" }
@@ -966,13 +966,13 @@ Big data 30 MB
 
 #  block will try to return from the current context
 give_me_data
-puts "I am inside give_me_data method"
+   puts "I am inside give_me_data method"
 end
 
 def test
-	puts "I am inside test method"
-give_me_data { return 10 } # code returns from here
-puts "I am back in test method"
+   puts "I am inside test method"
+   give_me_data { return 10 } # code returns from here
+   puts "I am back in test method"
 end
 
 return_value = test
@@ -986,8 +986,8 @@ I am inside give_me_data method
 ```ruby
 # passing a block explicitly by using an ampersand parameter, here we are explicitly defining the method with block parameter and calling it
 def give_me_data(&block)
-	block.call
-	block.call
+  block.call
+  block.call
 end
 
 give_me_data { puts "Big data" }
@@ -1003,7 +1003,7 @@ block parameter is mandatory when you call yield inside a method; otherwise, it 
 
 ```ruby
 def give_me_data
-	yield
+   yield
 end
 
 give_me_data
@@ -1014,8 +1014,8 @@ give_me_data
 # you can use block_given? method to handle the exception and make the block optional
 
 def give_me_data
-	return "no block" unless block_given?
-	yield
+   return "no block" unless block_given?
+   yield
 end
 
 give_me_data { puts "Big data" }
@@ -1025,7 +1025,7 @@ give_me_data
 Big data
 
 def give_me_data(&block)
-	block.call if block
+  block.call if block
 end
 
 give_me_data { puts "Big data" }
@@ -1043,7 +1043,7 @@ A proc is like a block which can be stored in a variable
 p = Proc.new { puts "Hello World" }
 
 def give_me_data(proc)
-	proc.call
+  proc.call
 end
 
 give_me_data p
@@ -1055,7 +1055,7 @@ Hello World
 p = Proc.new { |count| "Hello World " * count }
 
 def give_me_data(proc)
-	proc.call 5, 2
+  proc.call 5, 2
 end
 
 give_me_data p
@@ -1073,10 +1073,10 @@ LocalJumpError: unexpected return
 # because you can’t return from the top-level context
 
 def give_me_data
-	puts "I am inside give_me_data method"
-	p = Proc.new { return 10 }
-p.call # code returns from here
-puts "I am back in give_me_data method"
+   puts "I am inside give_me_data method"
+   p = Proc.new { return 10 }
+   p.call # code returns from here
+   puts "I am back in give_me_data method"
 end
 
 return_value = give_me_data
@@ -1128,10 +1128,10 @@ l.call
 10
 
 def give_me_data
-	puts "I am inside give_me_data method"
-	l = -> { return 10 }
-	l.call
-	puts "I am back in give_me_data method"
+   puts "I am inside give_me_data method"
+   l = -> { return 10 }
+   l.call
+   puts "I am back in give_me_data method"
 end
 
 return_value = give_me_data
@@ -1200,9 +1200,9 @@ salary.each { |s| puts s }
 ```ruby
 # when you have a multiline block, you can replace the curly brackets {} with do and end
 salary.each do |s|
-	a = 10
-	res = a * s
-	puts res
+  a = 10
+  res = a * s
+  puts res
 end
 # output
 3990
@@ -1358,8 +1358,8 @@ nil
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 index = 0
 while index < planets.size
-	puts "#{planets[index]}"
-	index += 1
+  puts "#{planets[index]}"
+  index += 1
 end
 ```
 
@@ -1367,9 +1367,9 @@ end
 a = 1
 star = '*'
 while a <= 10
-	puts star
-	star += '*'
-	a += 1
+  puts star
+  star += '*'
+  a += 1
 end
 ```
 
@@ -1379,8 +1379,8 @@ end
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 index = planets.size - 1
 until index < 0
-	puts "#{planets[index]}"
-	index -= 1
+  puts "#{planets[index]}"
+  index -= 1
 end
 ```
 
@@ -1388,9 +1388,9 @@ end
 a = 1
 star = '*'
 until star.length > 10
-	puts star
-	star += '*'
-	a += 1
+  puts star
+  star += '*'
+  a += 1
 end
 ```
 
@@ -1398,7 +1398,7 @@ end
 
 ```ruby
 for value in [2, 3, 5, 7]
-	puts value
+  puts value
 end
 ```
 ### times
@@ -1648,8 +1648,8 @@ How to break out from loop
 # by using break keyword
 salary = [399, 234, 566, 533, 233]
 salary.each do |s|
-	break if s == 566
-	puts s
+  break if s == 566
+  puts s
 end
 #output
 399
@@ -1663,8 +1663,8 @@ How to skip inside a loop
 # by using next keyword
 salary = [399, 234, 566, 533, 233]
 salary.each do |s|
-	next if s == 533
-	puts s
+  next if s == 533
+  puts s
 end
 # output
 399
@@ -1682,18 +1682,18 @@ retry_count = 0
 status = "network failure"
 sum = 0
 data.each do |d|
-	if retry_count == 3
-		status = "connection established"
-		retry_count = 0
-		redo
-	elsif status == "network failure" and retry_count < 5
-		puts "network failure #{retry_count}"
-		retry_count += 1
-		redo
-	elsif status == "connection established"
-		puts d
-		sum += d
-	end
+  if retry_count == 3
+    status = "connection established"
+    retry_count = 0
+    redo
+  elsif status == "network failure" and retry_count < 5
+    puts "network failure #{retry_count}"
+    retry_count += 1
+    redo
+  elsif status == "connection established"
+    puts d
+    sum += d
+  end
 end
 
 # output of sum
@@ -1707,17 +1707,17 @@ How to restart a loop
 numbers = [2, 2, 44, 44]
 sum = 0
 begin
-	numbers.each do |s|
-		if rand(1..10) == 5
-			puts "hi 5, let's do it again!"
-			sum = 0
-			raise "hi 5"
-		end
-		puts s
-		sum += s
-	end
+  numbers.each do |s|
+    if rand(1..10) == 5
+        puts "hi 5, let's do it again!"
+        sum = 0
+        raise "hi 5"
+    end
+    puts s
+    sum += s
+  end
 rescue
-	retry
+    retry
 end
 ```
 
@@ -1727,35 +1727,35 @@ Classes
 ```ruby
 # create a class
 class Person
-# when you create a new object, it looks for a method named initialize and executes it, like a constructor in java
-# def initialize(name, number)
-#    @name = name
-#    @number = number
-# end
+    # when you create a new object, it looks for a method named initialize and executes it, like a constructor in java
+    # def initialize(name, number)
+    #    @name = name
+    #    @number = number
+    # end
 
-# instance variable
-# @name
+    # instance variable
+    # @name
 
-# class variable
-# @@count
+    # class variable
+    # @@count
 
-# attr_accessor acts as a getter and setter for the following instance attributes
-attr_accessor :name, :number
+    # attr_accessor acts as a getter and setter for the following instance attributes
+    attr_accessor :name, :number
 
-# class variable must be initialized
-@@count = 0
+    # class variable must be initialized
+    @@count = 0
 
-def self.count
-	@@count
-end
+    def self.count
+        @@count
+    end
 
-def self.count=(count)
-	@@count = count
-end
+    def self.count=(count)
+        @@count = count
+    end
 
-def initialize
-	@@count += 1
-end
+    def initialize
+        @@count += 1
+    end
 end
 
 # create an instance of the Person class
@@ -1798,12 +1798,12 @@ How to inherit a class
 
 ```ruby
 class Person
-	attr_accessor :name, :number
+    attr_accessor :name, :number
 end
 
 # use < symbol to inherit methods and attributes from the parent class
 class Student < Person
-	attr_accessor :id
+    attr_accessor :id
 end
 
 s = Student.new
@@ -1869,18 +1869,18 @@ Modules are used for combining similar methods, so that other classes or modules
 
 ```ruby
 module MyRandomHelper
-	def roll_dice
-		rand(1..6)
-	end
+    def roll_dice
+      rand(1..6)
+    end
 end
 
 class Person
-	attr_accessor :name, :number
+    attr_accessor :name, :number
 end
 
 class Player < Person
-	include MyRandomHelper
-	attr_accessor :score
+    include MyRandomHelper
+    attr_accessor :score
 end
 
 p = Player.new
@@ -1895,32 +1895,32 @@ Operator Overloading
 ============
 ```ruby
 class Vector
-	attr_accessor :x, :y
+    attr_accessor :x, :y
 
-	def initialize(x, y)
-		@x = x
-		@y = y
-	end
+     def initialize(x, y)
+        @x = x
+        @y = y
+    end
 
-	def +(second)
-		Vector.new(@x + second.x, @y + second.y)
-	end
+    def +(second)
+        Vector.new(@x + second.x, @y + second.y)
+    end
 
-	def -(second)
-		Vector.new(@x - second.x, @y - second.y)
-	end
+    def -(second)
+        Vector.new(@x - second.x, @y - second.y)
+    end
 
-	def *(second)
-		Vector.new(@x * second.x, @y * second.y)
-	end
+    def *(second)
+        Vector.new(@x * second.x, @y * second.y)
+    end
 
-	def /(second)
-		Vector.new(@x / second.x, @y / second.y)
-	end
+    def /(second)
+        Vector.new(@x / second.x, @y / second.y)
+    end
 
-	def to_s
-		return "(#{@x}, #{@y})"
-	end
+    def to_s
+        return "(#{@x}, #{@y})"
+    end
 
 end
 ```
@@ -1939,19 +1939,19 @@ Exception Handling
 ============
 ```ruby
 begin
-	puts 'before the raise'
-	raise 'raise an exception'
-	puts 'after the raise'
+    puts 'before the raise'
+    raise 'raise an exception'
+    puts 'after the raise'
 rescue
-	puts 'rescued'
+    puts 'rescued'
 end
 ```
 ```ruby
 begin
-	raise StandardError, 'standard error occurred'
+    raise StandardError, 'standard error occurred'
 rescue StandardError => e
-	puts "#{e.class}: #{e.message}"
-	puts e.backtrace.inspect
+    puts "#{e.class}: #{e.message}"
+    puts e.backtrace.inspect
 end
 ```
 
@@ -1960,10 +1960,10 @@ end
 
 ```ruby
 begin
-	raise StandardError, 'standard error occurred'
+    raise StandardError, 'standard error occurred'
 rescue StandardError
-	puts "#{$!.class}: #{$!.message}"
-	puts "#{$@}"
+    puts "#{$!.class}: #{$!.message}"
+    puts "#{$@}"
 end
 ```
 
@@ -1973,11 +1973,11 @@ end
 retry_count = 1
 
 begin
-	puts "retry count: #{retry_count}"
-	retry_count += 1
-	raise 'raise an exception'
+    puts "retry count: #{retry_count}"
+    retry_count += 1
+    raise 'raise an exception'
 rescue
-	retry if retry_count <= 5
+    retry if retry_count <= 5
 end
 ```
 
@@ -1988,10 +1988,10 @@ class MyException < Exception
 end
 
 begin
-	raise MyException, 'my exception occurred'
+    raise MyException, 'my exception occurred'
 rescue MyException
-	puts "#{$!.class}: #{$!.message}"
-	puts "#{$@}"
+    puts "#{$!.class}: #{$!.message}"
+    puts "#{$@}"
 end
 ```
 
@@ -1999,11 +1999,11 @@ Catch multiple exceptions
 
 ```ruby
 begin
-	raise 'i am a string'.call
+  raise 'i am a string'.call
 rescue NoMethodError => e
-	puts "#{$!.class}: #{$!.message}"
+    puts "#{$!.class}: #{$!.message}"
 rescue ZeroDivisionError => e
-	puts "#{$!.class}: #{$!.message}"
+    puts "#{$!.class}: #{$!.message}"
 end
 
 ```
