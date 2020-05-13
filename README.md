@@ -1035,7 +1035,7 @@ give_me_data
 
 Procs
 ============
-A proc is like a block which can be stored in a variable
+A proc is like a block that can be stored in a variable.
 
 ```ruby
 p = Proc.new { puts "Hello World" }
@@ -1087,8 +1087,7 @@ puts return_value
 
 Lambdas
 ============
-lambda is a anonymous function, wrap the lambda with ```do and end``` (for multiline) or curly brackets ```{ and }``` (for single line). lambda returns the last evaluated statement.
-
+Lambda is an anonymous function, wrap the lambda with ```do and end``` (for multiline) or curly brackets ```{ and }``` (for a single line). Lambda returns the last evaluated statement.
 
 ```ruby
 # there are multiple ways to declare a lambda
