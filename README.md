@@ -1441,7 +1441,7 @@ data_sample = [2, 3, 5, 7]
 
 ```ruby
 1.step(20, 2) { |number| puts "#{number}"}
-#output
+# output
 # 1
 # 3
 # 5
@@ -1456,7 +1456,7 @@ data_sample = [2, 3, 5, 7]
 
 ```ruby
 19.step(1, -2) { |number| puts "#{number}"}
-#output
+# output
 # 19
 # 17
 # 15
@@ -1485,45 +1485,45 @@ Boolean Enumerable methods
 
 ```ruby
 [2, 4, 6, 8, 10].all? { |num| num % 2 == 0 }
-true
+# true
 [1, 4, 6, 8, 10].all? { |num| num % 2 == 0 }
-false
+# false
 ```
 
 ### any?
 
 ```ruby
 [1, 3, 5, 7, 10].any? { |num| num % 2 == 0 }
-true
+# true
 [1, 3, 5, 7, 19].any? { |num| num % 2 == 0 }
-false
+# false
 ```
 
 ### one?
 
 ```ruby
 [1, 3, 2, 5, 7].one? { |num| num % 2 == 0 }
-true
+# true
 [1, 3, 2, 5, 4].one? { |num| num % 2 == 0 }
-false
+# false
 ```
 
 ### none?
 
 ```ruby
 [1, 3, 5, 7, 9].none? { |num| num % 2 == 0 }
-true
+# true
 [2, 3, 5, 7, 9].none? { |num| num % 2 == 0 }
-false
+# false
 ```
 
 ### empty?
 
 ```ruby
 [].empty?
-true
+# true
 [1, 3, 5, 7, 9].empty?
-false
+# false
 ```
 
 How to check if a value exists in an Array (```include?```)
