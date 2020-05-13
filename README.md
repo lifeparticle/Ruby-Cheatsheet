@@ -1723,7 +1723,6 @@ Classes
 ============
 
 ```ruby
-# create a class
 class Person
     # when you create a new object, it looks for a method named initialize and executes it, like a constructor in java
     # def initialize(name, number)
@@ -1768,9 +1767,9 @@ puts "#{p1.name}"
 puts "#{p1.number}"
 puts "#{Person.count}"
 
-Yukihiro Matsumoto
-9999999999
-1
+# Yukihiro Matsumoto
+# 9999999999
+# 1
 
 p2 = Person.new
 p2.name = "Yukihiro Matsumoto"
@@ -1781,14 +1780,14 @@ puts "#{p2.name}"
 puts "#{p2.number}"
 puts "#{Person.count}"
 
-Yukihiro Matsumoto
-9999999999
-2
+# Yukihiro Matsumoto
+# 9999999999
+# 2
 
 # set class variable
 Person.count = 3
 puts "#{Person.count}"
-3
+# 3
 ```
 
 How to inherit a class
