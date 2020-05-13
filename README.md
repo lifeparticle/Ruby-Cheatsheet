@@ -467,8 +467,8 @@ else
   puts "cold"
 end
 
-#output
-normal
+# output
+# normal
 ```
 
 unless expression
@@ -485,8 +485,8 @@ else
   puts "hello bob"
 end
 
-#output
-hello stranger
+# output
+# hello stranger
 ```
 
 Shorthand
@@ -495,15 +495,15 @@ Shorthand
 ```ruby
 count = 1
 puts "hello world" if count == 1
-#output
-hello world
+# output
+# hello world
 
 count = 2
 puts "hello universe" if count != 1
 # or using unless
 puts "hello universe" unless count == 1
-#output
-hello universe
+# output
+# hello universe
 ```
 
 Case Expressions
@@ -564,7 +564,7 @@ end
 
 puts marks
 # output
-86
+# 86
 ```
 Data types
 ============
@@ -590,9 +590,9 @@ How to check the data type
 # both are synonymous
 a = 37
 a.kind_of? Integer
-true
+# true
 a.is_a? Integer
-true
+# true
 ```
 
 Symbol
@@ -645,7 +645,7 @@ Ranges allow us to declare data with a beginning and an end, it has two operator
 range = 1..10
 range.to_a
 # output
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
 ```ruby
@@ -654,7 +654,7 @@ range.to_a
 range = 1...10
 range.to_a
 # output
-[1, 2, 3, 4, 5, 6, 7, 8, 9]
+# [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 Helpful methods
@@ -672,16 +672,16 @@ How to use step with Range
 ```ruby
 (1..20).step(2) { |number| puts "#{number}"}
 # output
-1
-3
-5
-7
-9
-11
-13
-15
-17
-19
+# 1
+# 3
+# 5
+# 7
+# 9
+# 11
+# 13
+# 15
+# 17
+# 19
 ```
 
 
@@ -702,7 +702,7 @@ end
 
 res = method_name(20, 10)
 # output
-30
+# 30
 ```
 
 ```ruby
@@ -711,7 +711,7 @@ def method_name(parameter1, parameter2)
    return parameter1 + parameter2
 end
 # output
-30
+# 30
 ```
 
 How to call a method
@@ -735,7 +735,7 @@ end
 
 res = method_name(20, 10)
 # output
-30
+# 30
 ```
 
 How to use another parameter for the default value
@@ -747,7 +747,7 @@ end
 
 res = method_name(10)
 # output
-20
+# 20
 ```
 
 How to pass variable length argument to a method parameter
@@ -762,16 +762,16 @@ numbers = [2, 2, 2, 3, 3, 3]
 
 res = method_name("ADD", *numbers)
 # output
-15
+# 15
 
 res = method_name("SUB", *numbers)
 # output
--11
+# -11
 
 # or you can provide the values like this
 res = method_name("ADD", 2, 2, 2, 3, 3, 3)
 # output
-15
+# 15
 ```
 
 Boolean method
@@ -780,9 +780,9 @@ In ruby methods that end with a question mark (?) are called boolean methods, wh
 
 ```ruby
 "some text".nil?
-false
+# false
 nil.nil?
-true
+# true
 ```
 
 You can have your own boolean methods.
@@ -793,9 +793,9 @@ def is_vowel?(char)
 end
 
 is_vowel? 'a'
-true
+# true
 is_vowel? 'b'
-false
+# false
 ```
 
 Class method
@@ -874,7 +874,7 @@ end
 give_me_data { "Big data" }
 
 # output
-data = Big data
+# data = Big data
 ```
 
 ```ruby
@@ -916,9 +916,9 @@ end
 give_me_data { puts "Big data" }
 
 # output
-I am inside give_me_data method
-Big data
-I am back in give_me_data method
+# I am inside give_me_data method
+# Big data
+# I am back in give_me_data method
 
 # call multiple times
 def give_me_data
@@ -930,9 +930,9 @@ end
 give_me_data { puts "Big data" }
 
 # output
-Big data
-Big data
-Big data
+# Big data
+# Big data
+# Big data
 
 # call with block arguments
 
@@ -945,9 +945,9 @@ end
 give_me_data { |data| puts "Big data #{data} TB" }
 
 # output
-Big data 10 TB
-Big data 100 TB
-Big data 30 TB
+# Big data 10 TB
+# Big data 100 TB
+# Big data 30 TB
 
 # call with multiple block arguments
 
@@ -960,9 +960,9 @@ end
 give_me_data { |text, data, unit| puts "#{text} #{data} #{unit}" }
 
 # output
-Big data 10 TB
-Big data 100 GB
-Big data 30 MB
+# Big data 10 TB
+# Big data 100 GB
+# Big data 30 MB
 
 #  block will try to return from the current context
 give_me_data
@@ -978,9 +978,9 @@ end
 return_value = test
 
 # output
-I am inside test method
-I am inside give_me_data method
-10
+# I am inside test method
+# I am inside give_me_data method
+# 10
 ```
 
 ```ruby
@@ -993,8 +993,8 @@ end
 give_me_data { puts "Big data" }
 
 # output
-Big data
-Big data
+# Big data
+# Big data
 ```
 
 How to check if a block is given
@@ -1022,7 +1022,7 @@ give_me_data { puts "Big data" }
 give_me_data
 
 # output
-Big data
+# Big data
 
 def give_me_data(&block)
   block.call if block
@@ -1032,7 +1032,7 @@ give_me_data { puts "Big data" }
 give_me_data
 
 # output
-Big data
+# Big data
 ```
 
 Procs
@@ -1049,7 +1049,7 @@ end
 give_me_data p
 
 # output
-Hello World
+# Hello World
 
 # arbitrary arguments
 p = Proc.new { |count| "Hello World " * count }
@@ -1061,7 +1061,7 @@ end
 give_me_data p
 
 # output
-"Hello World Hello World Hello World Hello World Hello World "
+# "Hello World Hello World Hello World Hello World Hello World "
 
 #  proc will try to return from the current context
 p = Proc.new { return 10 }
@@ -1083,8 +1083,8 @@ return_value = give_me_data
 puts return_value
 
 # output
-I am inside give_me_data method
-10
+# I am inside give_me_data method
+# 10
 ```
 
 Lambdas
@@ -1102,7 +1102,7 @@ l = -> { puts "Hello World" }
 l.call
 
 # output
-Hello World
+# Hello World
 
 # there are multiple ways you can call a lambda
 l.()
@@ -1113,7 +1113,7 @@ l = -> (count) { "Hello World " * count }
 l.call 5
 
 # output
-"Hello World Hello World Hello World Hello World Hello World "
+# "Hello World Hello World Hello World Hello World Hello World "
 
 l.call 5, 2
 
@@ -1125,7 +1125,7 @@ l = -> { return 10 }
 l.call
 
 # output
-10
+# 10
 
 def give_me_data
    puts "I am inside give_me_data method"
@@ -1138,9 +1138,9 @@ return_value = give_me_data
 puts return_value
 
 # output
-I am inside give_me_data method
-I am back in give_me_data method
-nil # because puts return nil
+# I am inside give_me_data method
+# I am back in give_me_data method
+# nil # because puts return nil
 ```
 
 Blocks VS Procs VS Lambdas
@@ -1190,11 +1190,11 @@ There are multiple ways you can iterate an Array.
 salary = [399, 234, 566, 533, 233]
 salary.each { |s| puts s }
 # output
-399
-234
-566
-533
-233
+# 399
+# 234
+# 566
+# 533
+# 233
 ```
 
 ```ruby
@@ -1205,11 +1205,11 @@ salary.each do |s|
   puts res
 end
 # output
-3990
-2340
-5660
-5330
-2330
+# 3990
+# 2340
+# 5660
+# 5330
+# 2330
 
 # or you can do the same thing just using curly brackets {} and semicolons as separators instead of new lines
 salary.each { |s| a = 10 ; res = a * s ; puts res }
@@ -1221,11 +1221,11 @@ salary.each { |s| a = 10 ; res = a * s ; puts res }
 salary = [399, 234, 566, 533, 233]
 salary.each_with_index { |value, index| puts "#{index} #{value}" }
 # output
-0 399
-1 234
-2 566
-3 533
-4 233
+# 0 399
+# 1 234
+# 2 566
+# 3 533
+# 4 233
 ```
 
 ### each_with_object
@@ -1238,7 +1238,7 @@ colors.each_with_object(Hash.new(0)) { |color, hash| hash["color_"+color[:color]
 
 [1, 2, 3].each_with_object(0) { |number, sum| sum += number}
 # output
-0
+# 0
 # beacuse 0 is immutable, since the initial object is 0, the method returns 0
 ```
 
@@ -1248,11 +1248,11 @@ colors.each_with_object(Hash.new(0)) { |color, hash| hash["color_"+color[:color]
 salary = [399, 234, 566, 533, 233]
 salary.each_index { |i| puts i}
 # output
-0
-1
-2
-3
-4
+# 0
+# 1
+# 2
+# 3
+# 4
 ```
 
 ### map
@@ -1261,13 +1261,13 @@ salary.each_index { |i| puts i}
 salary = [399, 234, 566, 533, 233]
 salary.map { |s|  s * 10  }
 # returns
-[3990, 2340, 5660, 5330, 2330]
+# [3990, 2340, 5660, 5330, 2330]
 
 # on the other hand each returns the originl values
 salary = [399, 234, 566, 533, 233]
 salary.each { |s|  s * 10  }
 # returns
-[399, 234, 566, 533, 233]
+# [399, 234, 566, 533, 233]
 ```
 
 ### select
@@ -1276,11 +1276,11 @@ salary.each { |s|  s * 10  }
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers.select { |n| n % 2 == 0 }
 # now you have an array of even numbers, how cool is that
-[2, 4, 6, 8, 10]
+# [2, 4, 6, 8, 10]
 # returns an empty array if there is no value that satisfy your logic
 [1, 1, 1].select { |n| n % 2 == 0 }
 # no even numbers
-[]
+# []
 ```
 
 ### reject
@@ -1289,7 +1289,7 @@ numbers.select { |n| n % 2 == 0 }
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers.reject { |n| n % 2 == 0 }
 # reject if the number is even, so now we have an array of odd numbers
-[1, 3, 5, 7, 9]
+# [1, 3, 5, 7, 9]
 ```
 
 ### inject
@@ -1299,7 +1299,7 @@ numbers = [2, 2, 2, 2, 2]
 numbers.inject{ |res, n| res + n }
 # output is the result of the sum of all numbers
 # if you do not set an initial value for res, then the first element of the array is used as the initial value of res
-10
+# 10
 
 # now set the value of res with 11
 numbers = [2, 2, 2, 2, 2]
@@ -1311,13 +1311,13 @@ numbers.inject(11) { |res, n| res + n }
 numbers = [2, 2, 2, 2, 2]
 numbers.inject(:+)
 # output
-10
+# 10
 
 # using initial value and a symbol
 numbers = [2, 2, 2, 2, 2]
 numbers.inject(11, :+)
 # output
-21
+# 21
 ```
 
 ### reduce
@@ -1326,7 +1326,7 @@ numbers.inject(11, :+)
 numbers = [2, 2, 2, 2, 2]
 numbers.reduce(11, :+)
 # output
-21
+# 21
 ```
 
 ### collect
@@ -1335,7 +1335,7 @@ numbers.reduce(11, :+)
 salary = [399, 234, 566, 533, 233]
 salary.collect { |s| s > 400 }
 # output
-[false, false, true, true, false]
+# [false, false, true, true, false]
 ```
 
 ### detect
@@ -1344,12 +1344,12 @@ salary.collect { |s| s > 400 }
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 planets.detect { |name| name.start_with?("E") and name.end_with?("h") }
 # output
-Earth
+# Earth
 
 salary = [399, 234, 566, 533, 233]
 salary.detect { |s| s > 1000 }
 # output
-nil
+# nil
 ```
 
 ### while
@@ -1414,10 +1414,10 @@ end
 data_sample = [2, 3, 5, 7]
 data_sample.size.times { |index| puts "#{data_sample[index]}" }
 # output
-2
-3
-5
-7
+# 2
+# 3
+# 5
+# 7
 ```
 
 ### upto
@@ -1426,8 +1426,8 @@ data_sample.size.times { |index| puts "#{data_sample[index]}" }
 data_sample = [2, 3, 5, 7]
 0.upto((data_sample.size - 1) / 2) { |index| puts "#{data_sample[index]}" }
 # output
-2
-3
+# 2
+# 3
 ```
 
 ### downto
@@ -1436,8 +1436,8 @@ data_sample = [2, 3, 5, 7]
 data_sample = [2, 3, 5, 7]
 (data_sample.size - 1).downto(data_sample.size / 2) { |index| puts "#{data_sample[index]}" }
 # output
-7
-5
+# 7
+# 5
 ```
 
 ### step
@@ -1445,31 +1445,31 @@ data_sample = [2, 3, 5, 7]
 ```ruby
 1.step(20, 2) { |number| puts "#{number}"}
 #output
-1
-3
-5
-7
-9
-11
-13
-15
-17
-19
+# 1
+# 3
+# 5
+# 7
+# 9
+# 11
+# 13
+# 15
+# 17
+# 19
 ```
 
 ```ruby
 19.step(1, -2) { |number| puts "#{number}"}
 #output
-19
-17
-15
-13
-11
-9
-7
-5
-3
-1
+# 19
+# 17
+# 15
+# 13
+# 11
+# 9
+# 7
+# 5
+# 3
+# 1
 ```
 
 Boolean Enumerable methods
@@ -1536,11 +1536,11 @@ How to check if a value exists in an Array (```include?```)
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 planets.include? "Mars"
 # output
-true
+# true
 
 planets.include? "Pluto"
 # output
-false
+# false
 ```
 
 How to get array size
@@ -1551,11 +1551,11 @@ How to get array size
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 planets.size
 # output
-8
+# 8
 
 planets.length
 # output
-8
+# 8
 ```
 
 How to clear an Array
@@ -1565,7 +1565,7 @@ How to clear an Array
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers.clear
 # output
-[]
+# []
 ```
 
 How to get the last element of an Array
@@ -1577,7 +1577,7 @@ numbers[-1]
 # or
 numbers.last
 # output
-10
+# 10
 ```
 
 How to merge two Arrays
@@ -1590,7 +1590,7 @@ b = [2, 3, 5]
 a.zip(b)
 
 # outout
-[["tom", 2], ["mot", 3], ["otm", 5]]
+# [["tom", 2], ["mot", 3], ["otm", 5]]
 ```
 
 Hash
@@ -1613,7 +1613,7 @@ numbers = [1, 1, 1, 2, 4, 65, 55, 54, 55]
 freq_hash = numbers.each_with_object(Hash.new(0)) { |number, hash| hash[number] += 1 }
 puts "#{freq_hash}"
 # output
-{1=>3, 2=>1, 4=>1, 65=>1, 55=>2, 54=>1}
+# {1=>3, 2=>1, 4=>1, 65=>1, 55=>2, 54=>1}
 ```
 
 What's the difference between Hash .new(0) and {}
@@ -1627,11 +1627,11 @@ h1 = Hash.new(0)
 h1[:count] += 1
 puts "#{h1[:count]}"
 # output
-1
+# 1
 
 puts "#{h1[:new_key]}"
 # output
-0
+# 0
 
 h2 = {}
 h2[:count] += 1
@@ -1652,8 +1652,8 @@ salary.each do |s|
   puts s
 end
 #output
-399
-234
+# 399
+# 234
 ```
 
 How to skip inside a loop
@@ -1667,10 +1667,10 @@ salary.each do |s|
   puts s
 end
 # output
-399
-234
-566
-233
+# 399
+# 234
+# 566
+# 233
 ```
 
 How to repeat the current iteration
@@ -1697,7 +1697,7 @@ data.each do |d|
 end
 
 # output of sum
-3456
+# 3456
 ```
 
 How to restart a loop
@@ -2019,16 +2019,16 @@ a = "Better a diamond with a flaw than a pebble without"
 a[/(\w+)/]
 
 # output
-"Better"
+# "Better"
 
 a[/(\w+) (\w+)/]
 
 # output
-"Better a"
+# "Better a"
 
 a[/(?<one>\w+) (?<two>\w+)/, :two]
 # output
-"a"
+# "a"
 ```
 
 Miscellaneous
@@ -2043,25 +2043,25 @@ rand(max=0)
 rand
 
 # output
-0.055758056734957595
+# 0.055758056734957595
 
 # when the argument value is greater than or equal to 1, rand returns a integer between 0 (including) and that number (excluding), under the hood max.to_i.abs >= 1
 rand(100)
 
 # output
-7
+# 7
 
 # generating number between 2 numbers both inclusive
 rand(150..170)
 
 # output
-167
+# 167
 
 # generating number between 2 numbers, the last number is not inclusive
 rand(1...10)
 
 # output
-4
+# 4
 ```
 
 Check the syntax of a Ruby file
@@ -2078,7 +2078,7 @@ words = ["Lorem", "ipsum", "dolor", "sit", "amet"]
 words.map { |word| word.downcase }.join(' ')
 
 # output
-"lorem ipsum dolor sit amet"
+# "lorem ipsum dolor sit amet"
 ```
 
 CamelCase String split
@@ -2089,7 +2089,7 @@ sentence = "ThereIsNoSpoon"
 words = sentence.split(/(?=[A-Z])/)
 
 # output
-["There", "Is", "No", "Spoon"]
+# ["There", "Is", "No", "Spoon"]
 ```
 
 Ruby scripts
