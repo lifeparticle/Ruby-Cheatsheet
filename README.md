@@ -118,6 +118,7 @@ Table of Contents
    * [License](#license)
 
 
+
 Installation
 ============
 
@@ -179,21 +180,21 @@ gem 'rack', '~>1.1'
 gem 'rspec', :require => 'spec'
 ```
 
-```
+```bash
 # install all the gems in the Gemfile
 bundle install
 ```
 
 How to install a specific version of a particular ruby gem
 -----
-```
+```bash
 gem install bundler -v 1.17
 gem install minitest -v 5.8.4
 ```
 
 How to update a single gem using Bundler
 -----
-```
+```bash
 bundle update nokogiri
 ```
 
@@ -207,7 +208,7 @@ Bundler attempted to update `gem_name` but its version stayed the same.
 
 How to update every gem in the Gemfile using Bundler
 -----
-```
+```bash
 bundle update
 ```
 
@@ -457,11 +458,11 @@ If elsif else expression
 temp = 19
 
 if temp >= 25
-  puts "hot"
+    puts "hot"
 elsif temp < 25 && temp >= 18
-  puts "normal"
+    puts "normal"
 else
-  puts "cold"
+    puts "cold"
 end
 
 # output
