@@ -10,10 +10,10 @@ Table of Contents
    * [Installation](#installation)
       * [Troubleshooting](#troubleshooting)
          * [macOS](#macos)
-      * [How to install ruby](#how-to-install-ruby)
+      * [How to install Ruby](#how-to-install-ruby)
       * [How to install ruby gem manager, bundler gem](#how-to-install-ruby-gem-manager-bundler-gem)
       * [What is a Gemfile and Gemfile.lock](#what-is-a-gemfile-and-gemfilelock)
-      * [How to install a specific version of a specific ruby gem](#how-to-install-a-specific-version-of-a-specific-ruby-gem)
+      * [How to install a specific version of a particular ruby gem](#how-to-install-a-specific-version-of-a-particular-ruby-gem)
       * [How to update a single gem using Bundler](#how-to-update-a-single-gem-using-bundler)
       * [How to update every gem in the Gemfile using Bundler](#how-to-update-every-gem-in-the-gemfile-using-bundler)
    * [Introduction](#introduction)
@@ -36,10 +36,10 @@ Table of Contents
       * [Shorthand](#shorthand)
       * [Case Expressions](#case-expressions)
    * [Data types](#data-types)
-      * [How to check data type](#how-to-check-data-type)
+      * [How to check the data type](#how-to-check-the-data-type)
    * [Symbol](#symbol)
    * [String](#string)
-      * [How to convert string to lower or upper case](#how-to-convert-string-to-lower-or-upper-case)
+      * [How to convert String to lower or upper case](#how-to-convert-string-to-lower-or-upper-case)
       * [Helpful methods](#helpful-methods)
    * [Range](#range)
       * [Helpful methods](#helpful-methods-1)
@@ -47,7 +47,8 @@ Table of Contents
    * [Methods](#methods)
       * [How to declare a method](#how-to-declare-a-method)
       * [How to call a method](#how-to-call-a-method)
-      * [How to define default value for a method parameter](#how-to-define-default-value-for-a-method-parameter)
+      * [How to define a default value for a method parameter](#how-to-define-a-default-value-for-a-method-parameter)
+      * [How to use another parameter for the default value](#how-to-use-another-parameter-for-the-default-value)
       * [How to pass variable length argument to a method parameter](#how-to-pass-variable-length-argument-to-a-method-parameter)
       * [Boolean method](#boolean-method)
       * [Class method](#class-method)
@@ -82,24 +83,24 @@ Table of Contents
          * [one?](#one)
          * [none?](#none)
          * [empty?](#empty)
-      * [How to check if a value exist in an Array (include?)](#how-to-check-if-a-value-exist-in-an-array-include)
+      * [How to check if a value exists in an Array (include?)](#how-to-check-if-a-value-exists-in-an-array-include)
       * [How to get array size](#how-to-get-array-size)
       * [How to clear an Array](#how-to-clear-an-array)
       * [How to get the last element of an Array](#how-to-get-the-last-element-of-an-array)
       * [How to merge two Arrays](#how-to-merge-two-arrays)
    * [Hash](#hash)
       * [How to group by count](#how-to-group-by-count)
-      * [What's the difference between Hash.new(0) and {}](#whats-the-difference-between-hashnew0-and-)
+      * [What's the difference between Hash .new(0) and {}](#whats-the-difference-between-hash-new0-and-)
    * [Loop](#loop)
       * [How to break out from loop](#how-to-break-out-from-loop)
-      * [How to skip inside loop](#how-to-skip-inside-loop)
+      * [How to skip inside a loop](#how-to-skip-inside-a-loop)
       * [How to repeat the current iteration](#how-to-repeat-the-current-iteration)
       * [How to restart a loop](#how-to-restart-a-loop)
    * [Classes](#classes)
       * [How to inherit a class](#how-to-inherit-a-class)
       * [How to check instance type](#how-to-check-instance-type)
       * [Print all method names of a class](#print-all-method-names-of-a-class)
-      * [Check if a Class has a particular method](#check-if-a-Class-has-a-particular-method)
+      * [Check if a Class has a particular method](#check-if-a-class-has-a-particular-method)
    * [Modules](#modules)
    * [Operator Overloading](#operator-overloading)
    * [Exception Handling](#exception-handling)
@@ -107,7 +108,7 @@ Table of Contents
    * [Miscellaneous](#miscellaneous)
       * [How to generate random number](#how-to-generate-random-number)
       * [Check the syntax of a Ruby file](#check-the-syntax-of-a-ruby-file)
-      * [Concatenate String in loop](#concatenate-string-in-loop)
+      * [Concatenate String in a loop](#concatenate-string-in-a-loop)
       * [CamelCase String split](#camelcase-string-split)
       * [Ruby scripts](#ruby-scripts)
    * [Books and other resources](#books-and-other-resources)
@@ -136,12 +137,12 @@ ruby -v
 gem env
 ```
 
-How to install ruby
+How to install Ruby
 -----
-If you don't want to install ruby natively you can use [docker](https://www.docker.com/).
+If you don't want to install Ruby natively, you can use [docker](https://www.docker.com/).
 ```
 docker run -it --rm ruby:latest
-# check which version of ruby you're running
+# check which version of Ruby you're running
 RUBY_VERSION
 ```
 
@@ -163,7 +164,7 @@ gem uninstall bundler
 [Further reading](https://bundler.io/)
 
 What is a Gemfile and Gemfile.lock
------ 
+-----
 Gemfile is a configuration file for Bundler (also a gem), which contains a list of gems for your project (dependencies).
 
 [Further reading](https://bundler.io/v2.0/man/gemfile.5.html)
@@ -183,7 +184,7 @@ gem 'rspec', :require => 'spec'
 bundle install
 ```
 
-How to install a specific version of a specific ruby gem
+How to install a specific version of a particular ruby gem
 -----
 ```
 gem install bundler -v 1.17
@@ -191,21 +192,21 @@ gem install minitest -v 5.8.4
 ```
 
 How to update a single gem using Bundler
------ 
+-----
 ```
 bundle update nokogiri
 ```
 
-Bundler attempted to update `gem_name` but its version stayed the same
+Bundler attempted to update `gem_name` but its version stayed the same.
 
-1. Another gem depends on the `gem_name`
-2. Version number is specified in your Gemfile for `gem_name`
+1. Another gem depends on the `gem_name`.
+2. The version number is specified in your Gemfile for `gem_name`.
 ```
 'gem_name', '~> 2.0.5'
 ```
 
 How to update every gem in the Gemfile using Bundler
------ 
+-----
 ```
 bundle update
 ```
@@ -222,7 +223,7 @@ __ENCODING__ , __LINE__ , __FILE__ , BEGIN , END , alias ,
 and , begin , break , case , class , def , defined? ,
 do , else , elsif , end , ensure , false , for , if ,
 in , module , next , nil , not , or , redo, rescue ,
-retry , return , self , super , then , true , undef , 
+retry , return , self , super , then , true , undef ,
 unless , until , when , while , yield
 ```
 
@@ -246,7 +247,7 @@ Logical operators
 -----
 | No | Operator |
 |---|---|
-| 1 | and   | 
+| 1 | and   |
 | 2 | or    |
 | 3 | not   |
 | 4 | &&    |
@@ -258,7 +259,7 @@ Bitwise operators
 -----
 | No | Operator |
 |---|---|
-| 1 | &     | 
+| 1 | &     |
 | 2 | \|    |
 | 3 | ^     |
 | 4 | ~     |
@@ -269,7 +270,7 @@ Arithmetic operators
 -----
 | No | Operator |
 |---|---|
-| 1 | +     | 
+| 1 | +     |
 | 2 | -     |
 | 3 | *     |
 | 4 | /     |
@@ -280,7 +281,7 @@ Comparison operators
 -----
 | No | Operator |
 |---|---|
-| 1  | ==     | 
+| 1  | ==     |
 | 2  | !=     |
 | 3  | >      |
 | 4  | <      |
@@ -295,7 +296,7 @@ Assignment operators
 -----
 | No | Operator |
 |---|---|
-| 1 | =     | 
+| 1 | =     |
 | 2 | +=    |
 | 3 | -=    |
 | 4 | *=    |
@@ -308,7 +309,7 @@ Variables and Scope
 ============
 There are five different types of variables. The first character determines the scope.
 
-| No | Name | Scope | Example | Note | 
+| No | Name | Scope | Example | Note |
 |---|---|---|---|---|
 | 1 | [a-z] or _  | local             | count = 10 or _count = 10 | Local variables must be initialized.                                                                |
 | 2 | @           | instance variable | @id = []                  | Instance variables have the `nil` value until they are initialized.                                 |
@@ -328,14 +329,14 @@ module ... end
 the entire program (unless one of the above applies)
 ```
 
-2. Scope of a instance variable is
+2. Scope of an instance variable is
 ```
-Instance variables cannot be altered except some methods and it's distinct to each object of a class
+Instance variables cannot be altered except some methods, and it's distinct to each object of a class
 ```
 
 3. Scope of a class variable is one of
 ```
-Can be called from a class by caliing ClassName.class_variable and it's independent of any object of a class
+Can be called from a class by calling ClassName.class_variable and it's independent of any object of a class
 ```
 
 4. Scope of a global variable is
@@ -367,10 +368,10 @@ Pre-defined variables
 | No | Name | Note |
 |---|---|---|
 | 1 | $! | The exception information message. raise sets this variable. |
-| 2 | $@ | The backtrace of the last exception, which is the array of the string that indicates the point where methods invoked from. The elements in the format like: "filename:line" or "filename:line:in `methodname'" (Mnemonic: where exception occurred at.) |
-| 3 | $& |  The string matched by the last successful pattern match in this scope, or nil if the last pattern match failed. (Mnemonic: like & | in some editors.) This variable is read-only. |
-| 4 | $` | The string preceding whatever was matched by the last successful pattern match in the current scope, or nil if the last pattern match failed. (Mnemonic: ` often precedes a quoted string.) This variable is read-only. |
-| 5 | $' | The string following whatever was matched by the last successful pattern match in the current scope, or nil if the last pattern match failed. (Mnemonic: ' often follows a quoted string.) |
+| 2 | $@ | The backtrace of the last exception, which is the array of the String that indicates the point where methods invoked from. The elements in the format like: "filename:line" or "filename:line:in `methodname'" (Mnemonic: where exception occurred at.) |
+| 3 | $& |  The String matched by the last successful pattern match in this scope, or nil if the last pattern match failed. (Mnemonic: like & | in some editors.) This variable is read-only. |
+| 4 | $` | The String preceding whatever was matched by the last successful pattern match in the current scope, or nil if the last pattern match failed. (Mnemonic: ` often precedes a quoted string.) This variable is read-only. |
+| 5 | $' | The String following whatever was matched by the last successful pattern match in the current scope, or nil if the last pattern match failed. (Mnemonic: ' often follows a quoted string.) |
 | 6 | $+ | The last bracket matched by the last successful search pattern, or nil if the last pattern match failed. This is useful if you don't know which of a set of alternative patterns matched. (Mnemonic: be positive and forward looking.) |
 | 7 | $1, $2... | Contains the subpattern from the corresponding set of parentheses in the last successful pattern matched, not counting patterns matched in nested blocks that have been exited already, or nil if the last pattern match failed. (Mnemonic: like \digit.) These variables are all read-only. |
 | 8 | $~ | The information about the last match in the current scope. Setting this variables affects the match variables like $&, $+, $1, $2.. etc. The nth subexpression can be retrieved by $~[nth]. (Mnemonic: ~ is for match.) This variable is locally scoped. |
@@ -382,7 +383,7 @@ Pre-defined variables
 | 14 | $. | The current input line number of the last file that was read. |
 | 15 | $< | The virtual concatenation file of the files given by command line arguments, or stdin (in case no argument file supplied). $<.file returns the current filename. (Mnemonic: $< is a shell input source.) |
 | 16 | $> | The default output for print, printf. $stdout by default. (Mnemonic: $> is for shell output.) |
-| 17 | $_ | The last input line of string by gets or readline. It is set to nil if gets/readline meet EOF. This variable is locally scoped. (Mnemonic: partly same as Perl.) |
+| 17 | $_ | The last input line of String by gets or readline. It is set to nil if gets/readline meet EOF. This variable is locally scoped. (Mnemonic: partly same as Perl.) |
 | 17 | $0 | Contains the name of the file containing the Ruby script being executed. On some operating systems assigning to $0 modifies the argument area that the ps(1) program sees. This is more useful as a way of indicating the current program state than it is for hiding the program you're running. (Mnemonic: same as sh and ksh.) |
 | 18 | $* | Command line arguments given for the script. The options for Ruby interpreter are already removed. (Mnemonic: same as sh and ksh.) |
 | 19 | $$ | The process number of the Ruby running this script. (Mnemonic: same as shells.) |
@@ -434,7 +435,7 @@ Pre-defined global constants
 
 [Source](https://ruby-doc.org/docs/ruby-doc-bundle/Manual/man-1.4/variable.html#constants)
 
-How to check scope of variables 
+How to check scope of variables
 -----
 ```ruby
 defined? count
@@ -474,7 +475,7 @@ unless expression
 -----
 
 ```ruby
-# unless is opposite of if, evaluates when the statement is false
+# The unless is opposite of if, evaluates when the statement is false
 
 name = "rob"
 
@@ -582,13 +583,13 @@ Data types
 
 [Further readings](https://www.digitalocean.com/community/tutorials/understanding-data-types-in-ruby)
 
-How to check data type
+How to check the data type
 -----
 
 ```ruby
 # both are synonymous
 a = 37
-a.kind_of? Integer 
+a.kind_of? Integer
 true
 a.is_a? Integer
 true
@@ -597,7 +598,7 @@ true
 Symbol
 ============
 
-Symbol objects represent names. Symbols are immutable, which means every symbol is unique and it can’t be changed. Referencing the same symbol multiple times means referencing the same object everywhere in your program, which means referencing the same memory location, it can save both time and memory.
+Symbol objects represent names. Symbols are immutable, which means every symbol is unique, and it can’t be changed. Referencing the same symbol multiple times means referencing the same object everywhere in your program, which means referencing the same memory location, it can save both time and memory.
 
 Symbols as hash keys.
 ```
@@ -607,7 +608,7 @@ week_days = {sunday: 11, monday: 222}
 String
 ============
 
-How to convert string to lower or upper case
+How to convert String to lower or upper case
 -----
 
 | No | Method name | Output |
@@ -636,7 +637,7 @@ Helpful methods
 Range
 ============
 
-Ranges allow to declare data with a beginning and an end, it has two operators to generate ranges.
+Ranges allow us to declare data with a beginning and an end, it has two operators to generate ranges.
 
 ```ruby
 # .. for creating inclusive ranges
@@ -695,7 +696,7 @@ How to declare a method
 
 # both methods does the same thing, depend on your preference you can choose either of them
 def method_name(parameter1, parameter2)
-   puts "#{parameter1} #{parameter2}" 
+   puts "#{parameter1} #{parameter2}"
    parameter1 + parameter2
 end
 
@@ -706,7 +707,7 @@ res = method_name(20, 10)
 
 ```ruby
 def method_name(parameter1, parameter2)
-   puts "#{parameter1} #{parameter2}" 
+   puts "#{parameter1} #{parameter2}"
    return parameter1 + parameter2
 end
 # output
@@ -722,12 +723,12 @@ res = method_name(parameter1, parameter2)
 res = method_name parameter1, parameter2
 ```
 
-How to define default value for a method parameter
+How to define a default value for a method parameter
 -----
 
 ```ruby
 def method_name(parameter1, parameter2, type = "ADD")
-   puts "#{parameter1} #{parameter2}" 
+   puts "#{parameter1} #{parameter2}"
    return parameter1 + parameter2 if type == "ADD"
    return parameter1 - parameter2 if type == "SUB"
 end
@@ -737,8 +738,8 @@ res = method_name(20, 10)
 30
 ```
 
-# or use other parameter for default value
-
+How to use another parameter for the default value
+-----
 ```ruby
 def method_name(num1, num2 = num1)
    return num1 + num2
@@ -775,7 +776,7 @@ res = method_name("ADD", 2, 2, 2, 3, 3, 3)
 
 Boolean method
 -----
-In ruby methods that ends with question mark (?) are called boolean methods which either returns true or false.
+In ruby methods that end with a question mark (?) are called boolean methods, which either returns true or false.
 
 ```ruby
 "some text".nil?
@@ -784,7 +785,7 @@ nil.nil?
 true
 ```
 
-You can have your own boolean methods
+You can have your own boolean methods.
 
 ```ruby
 def is_vowel?(char)
@@ -799,12 +800,12 @@ false
 
 Class method
 -----
-Class method is class level method. There are multiple ways for defining a class method.
+A class method is a class-level method. There are multiple ways of defining a class method.
 
 ```ruby
 class Mobile
     def self.ring
-	"ring ring ring..."
+    "ring ring ring..."
     end
 end
 
@@ -824,8 +825,8 @@ Mobile.ring
 ```ruby
 class Mobile
     class << self
-	def ring
-	    "ring ring ring..."
+    def ring
+        "ring ring ring..."
        end
     end
 end
@@ -860,8 +861,8 @@ Mobile.ring
 
 Blocks
 ============
-Codes between ```do and end``` (for multiline) or curly brackets ```{ and }``` (for single line) are called blocks, they can have multiple arugments defined between two pipe ```(|arg1, arg2|)```.
-A block can be passed as a method parameter or can be associated with a method call. block returns the last evaluated statement.
+Codes between ```do and end``` (for multiline) or curly brackets ```{ and }``` (for a single line) are called blocks, and they can have multiple arguments defined between two pipes ```(|arg1, arg2|)```.
+A block can be passed as a method parameter or can be associated with a method call. A block returns the last evaluated statement.
 
 ```ruby
 # return value
@@ -902,7 +903,7 @@ end
 # |s|
 ```
 
-methods can take blocks implicitly and explicitly, yield is used when you want to call a block implicitly. yield finds the block and calls the passed block. Since you can pass implicit blocks, you don't have to call yield and the block will be ignored. 
+Methods can take blocks implicitly, and explicitly, the yield is used when you want to call a block implicitly. Yield finds the block and calls the passed block. Since you can pass implicit blocks, you don't have to call yield, and the block will be ignored.
 
 ```ruby
 # passing a block implicitly
@@ -948,7 +949,7 @@ Big data 10 TB
 Big data 100 TB
 Big data 30 TB
 
-# call with mutilpe block arguments
+# call with multiple block arguments
 
 def give_me_data
    yield "Big data", 10, "TB"
@@ -983,7 +984,7 @@ I am inside give_me_data method
 ```
 
 ```ruby
-# passing a block explicitly by using an ampersand parameter, here we are explicitly defining the method with block paramater and calling it
+# passing a block explicitly by using an ampersand parameter, here we are explicitly defining the method with block parameter and calling it
 def give_me_data(&block)
   block.call
   block.call
@@ -998,7 +999,7 @@ Big data
 
 How to check if a block is given
 -----
-block parameter is mandatory, when you call yield inside a method, otherwise it will raise an exception
+block parameter is mandatory when you call yield inside a method; otherwise, it will raise an exception
 
 ```ruby
 def give_me_data
@@ -1069,7 +1070,7 @@ p.call
 # output
 LocalJumpError: unexpected return
 
-# beause you can’t return from the top-level context
+# because you can’t return from the top-level context
 
 def give_me_data
    puts "I am inside give_me_data method"
@@ -1139,13 +1140,13 @@ puts return_value
 # output
 I am inside give_me_data method
 I am back in give_me_data method
-nil # because puts returns nil
+nil # because puts return nil
 ```
 
 Blocks VS Procs VS Lambdas
 ============
 
-All of them are used for executing single line or multiline codes
+All of them are used for executing a single line or multiline code.
 
 | Name | Object | Example | Object type | When to use |
 |---|---|---|---|---|
@@ -1159,28 +1160,28 @@ Array
 
 How to iterate an Array
 -----
-There are multiple ways you can iterate an Array. 
+There are multiple ways you can iterate an Array.
 
 | No | Name | When to use |
 |---|---|---|
-| 1  | each             | when you want to just iterate                                                                                                                                                                                                                                        | 
-| 2  | each_with_index  | when you want the both index and value                                                                                                                                                                                                                               | 
-| 3  | each_with_object | when you want to build a hash or reduce a collection to one object. Iterates the given block for each element with an arbitrary object given and returns the initial given object. It only works with mutable object like hash but not immutable object like integer |
+| 1  | each             | when you want to just iterate                                                                                                                                                                                                                                        |
+| 2  | each_with_index  | when you want both index and value                                                                                                                                                                                                                               |
+| 3  | each_with_object | when you want to build a hash or reduce a collection to one object. It Iterates the given block for each element with an arbitrary object given and returns the first given object. It only works with a mutable object like Hash but not an immutable object like integer |
 | 4  | each_index       | when you want just the indexes                                                                                                                                                                                                                                       |
-| 5  | map              | returns array containing the values returned by the block                                                                                                                                                                                                            |
-| 6  | select           | adds a value to a new array if your block returns true, returns ```[]``` otherwise. helpful when you are looking for a subset                                                                                                                                        |
+| 5  | map              | returns an array containing the values returned by the block                                                                                                                                                                                                            |
+| 6  | select           | adds value to a new array if your block returns true, returns ```[]``` otherwise. helpful when you are looking for a subset                                                                                                                                        |
 | 7  | reject           | removes a value from a new array if your block returns true, returns ```[]``` otherwise. helpful when you are looking for a subset                                                                                                                                   |
 | 8  | inject           | when you want a single value. helpful when you want to accumulate, concatenate                                                                                                                                                                                       |
 | 9  | reduce           | reduce and inject methods are aliases                                                                                                                                                                                                                                |
-| 10 | collect          | same as map                                                                                                                                                                                                                                                          | 
+| 10 | collect          | same as map                                                                                                                                                                                                                                                          |
 | 11 | detect           | returns the first item in the array if your block returns true, returns ```nil``` otherwise. helpful when you are looking for something based on a business logic                                                                                                    |
-| 12 | while            | when you want to iterate for certain number of times                                                                                                                                                                                                                 |
+| 12 | while            | when you want to iterate for a certain number of times                                                                                                                                                                                                                 |
 | 13 | until            | when you want to iterate until something happens                                                                                                                                                                                                                     |
 | 14 | for              | similar to each                                                                                                                                                                                                                                                      |
 | 15 | times            | when you want to iterate ```n``` number of times                                                                                                                                                                                                                     |
 | 16 | upto             | when you want to iterate upto ```n```, starting from ```m```, both inclusive, where ```n >= m```. when ```n < m``` it will run zero times                                                                                                                            |
 | 17 | downto           | when you want to iterate downto ```n```, starting from ```m```, both inclusive, where ```n <= m```. when ```n > m``` it will run zero times                                                                                                                          |
-| 18 | step             | when you want to iterate upto or downto ```n``` by incrementing or decrementing ```x``` steps starting from ```m```, both inclusive. default value of step is ```1``` and for ```n``` it's infinity                                                                  |
+| 18 | step             | when you want to iterate upto or downto ```n``` by incrementing or decrementing ```x``` steps starting from ```m```, both inclusive. the default value of step is ```1``` and for ```n``` it's infinity                                                                  |
 
 ### each
 
@@ -1197,7 +1198,7 @@ salary.each { |s| puts s }
 ```
 
 ```ruby
-# when you have multiline block, you can replace the curly brackets {} with do and end
+# when you have a multiline block, you can replace the curly brackets {} with do and end
 salary.each do |s|
   a = 10
   res = a * s
@@ -1296,7 +1297,7 @@ numbers.reject { |n| n % 2 == 0 }
 ```ruby
 numbers = [2, 2, 2, 2, 2]
 numbers.inject{ |res, n| res + n }
-# output is the result of sum of all numbers
+# output is the result of the sum of all numbers
 # if you do not set an initial value for res, then the first element of the array is used as the initial value of res
 10
 
@@ -1476,12 +1477,12 @@ Boolean Enumerable methods
 
 | No | Name | When to use |
 |---|---|---|
-| 1  | all?     | when you want check if all the elements satisfy your condition                       |
-| 2  | any?     | when you want check if at least one element satisfy your condition                   |
-| 3  | one?     | when you want check if exactly one element satisfy your condition                    |
-| 4  | none?    | when you want check if none of the elements satisfy your condition, opposite of all? |
+| 1  | all?     | when you want to check if all the elements satisfy your condition                       |
+| 2  | any?     | when you want to check if at least one item satisfies your condition                   |
+| 3  | one?     | when you want to check if precisely one element satisfies your requirement |
+| 4  | none?    | when you want to check if none of the items satisfy your condition, opposite of all? |
 | 5  | empty?   | when you want to check if the object is empty or not                                 |
-| 6  | include? | when you want check if the element exists in the object                              |
+| 6  | include? | when you want to check if the element exists in the object                              |
 
 ### all?
 
@@ -1528,7 +1529,7 @@ true
 false
 ```
 
-How to check if a value exist in an Array (```include?```)
+How to check if a value exists in an Array (```include?```)
 -----
 
 ```ruby
@@ -1615,7 +1616,7 @@ puts "#{freq_hash}"
 {1=>3, 2=>1, 4=>1, 65=>1, 55=>2, 54=>1}
 ```
 
-What's the difference between Hash.new(0) and {}
+What's the difference between Hash .new(0) and {}
 -----
 
 ```ruby
@@ -1655,7 +1656,7 @@ end
 234
 ```
 
-How to skip inside loop
+How to skip inside a loop
 -----
 
 ```ruby
@@ -1731,27 +1732,27 @@ class Person
     #    @name = name
     #    @number = number
     # end
-    
+
     # instance variable
     # @name
-    
-    # class variable 
+
+    # class variable
     # @@count
-    
-    # attr_accessor acts as a getter and setter for following instance attributes
+
+    # attr_accessor acts as a getter and setter for the following instance attributes
     attr_accessor :name, :number
-    
+
     # class variable must be initialized
     @@count = 0
-    
+
     def self.count
         @@count
     end
-    
+
     def self.count=(count)
         @@count = count
     end
-    
+
     def initialize
         @@count += 1
     end
@@ -1800,7 +1801,7 @@ class Person
     attr_accessor :name, :number
 end
 
-# use < symbol to inherit methods and attributes from parent class
+# use < symbol to inherit methods and attributes from the parent class
 class Student < Person
     attr_accessor :id
 end
@@ -1864,7 +1865,7 @@ false
 
 Modules
 ============
-modules are used for combining similar methods, so that other classes or modules can use it. You can not instantiate a module (like abstract classes in Java)
+Modules are used for combining similar methods, so that other classes or modules can use it. You can not instantiate a module (like abstract classes in Java)
 
 ```ruby
 module MyRandomHelper
@@ -1887,7 +1888,7 @@ p.roll_dice
 ```
 
 ```ruby
-TODO 
+TODO
 ```
 
 Operator Overloading
@@ -1895,16 +1896,16 @@ Operator Overloading
 ```ruby
 class Vector
     attr_accessor :x, :y
-    
+
      def initialize(x, y)
         @x = x
         @y = y
     end
-    
+
     def +(second)
         Vector.new(@x + second.x, @y + second.y)
     end
-    
+
     def -(second)
         Vector.new(@x - second.x, @y - second.y)
     end
@@ -1916,11 +1917,11 @@ class Vector
     def /(second)
         Vector.new(@x / second.x, @y / second.y)
     end
-    
+
     def to_s
         return "(#{@x}, #{@y})"
     end
-    
+
 end
 ```
 
@@ -1937,33 +1938,33 @@ puts v1 / v2
 Exception Handling
 ============
 ```ruby
-begin  
-    puts 'before the raise'  
-    raise 'raise an exception'  
-    puts 'after the raise'  
-rescue  
-    puts 'rescued'  
+begin
+    puts 'before the raise'
+    raise 'raise an exception'
+    puts 'after the raise'
+rescue
+    puts 'rescued'
 end
 ```
 ```ruby
-begin  
+begin
     raise StandardError, 'standard error occurred'
 rescue StandardError => e
-    puts "#{e.class}: #{e.message}"  
-    puts e.backtrace.inspect  
-end 
+    puts "#{e.class}: #{e.message}"
+    puts e.backtrace.inspect
+end
 ```
 
 ```$!``` contains the raised exception
 ```$@``` contains the exception backtrace
 
 ```ruby
-begin  
+begin
     raise StandardError, 'standard error occurred'
 rescue StandardError
-    puts "#{$!.class}: #{$!.message}"  
-    puts "#{$@}"  
-end 
+    puts "#{$!.class}: #{$!.message}"
+    puts "#{$@}"
+end
 ```
 
 ```retry``` re-executes the code inside begin end block
@@ -1986,12 +1987,12 @@ Custom exception
 class MyException < Exception
 end
 
-begin  
+begin
     raise MyException, 'my exception occurred'
 rescue MyException
-    puts "#{$!.class}: #{$!.message}"  
-    puts "#{$@}"  
-end 
+    puts "#{$!.class}: #{$!.message}"
+    puts "#{$@}"
+end
 ```
 
 Catch multiple exceptions
@@ -2000,9 +2001,9 @@ Catch multiple exceptions
 begin
   raise 'i am a string'.call
 rescue NoMethodError => e
-    puts "#{$!.class}: #{$!.message}"  
+    puts "#{$!.class}: #{$!.message}"
 rescue ZeroDivisionError => e
-    puts "#{$!.class}: #{$!.message}"  
+    puts "#{$!.class}: #{$!.message}"
 end
 
 ```
@@ -2036,7 +2037,7 @@ How to generate random number
 -----
 
 ```ruby
-rand(max=0) 
+rand(max=0)
 
 # when calling it without an argument, rand returns a floating point number between 0.0 (including) and 1.0 (excluding), under the hood max.to_i.abs == 0
 rand
@@ -2056,7 +2057,7 @@ rand(150..170)
 # output
 167
 
-# generating number between 2 numbers, last number is not inclusive
+# generating number between 2 numbers, the last number is not inclusive
 rand(1...10)
 
 # output
@@ -2069,7 +2070,7 @@ Check the syntax of a Ruby file
 ruby -c filename.rb
 ```
 
-Concatenate String in loop
+Concatenate String in a loop
 -----
 
 ```ruby
