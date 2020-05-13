@@ -805,7 +805,7 @@ A class method is a class-level method. There are multiple ways of defining a cl
 ```ruby
 class Mobile
     def self.ring
-    "ring ring ring..."
+        "ring ring ring..."
     end
 end
 
