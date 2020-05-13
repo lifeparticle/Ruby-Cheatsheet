@@ -313,7 +313,7 @@ There are five different types of variables. The first character determines the 
 | 2 | @           | instance variable | @id = []                  | Instance variables have the `nil` value until they are initialized.                                 |
 | 3 | @@          | class variable    | @@name = []               | Class variable must be initialized.                                                                 |
 | 4 | $           | global variable   | $version = "0.8.9"        | Global variables have the `nil` value until they are initialized.                                   |
-| 5 | [A-Z]       | constant          | PI = 3.14                 | Constant variables must be initialized and you can change the constant but you will get a warining. |
+| 5 | [A-Z]       | constant          | PI = 3.14                 | Constant variables must be initialized and you can change the constant but you will get a warning. |
 
 
 1. Scope of a local variable is one of
