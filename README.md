@@ -596,7 +596,7 @@ a.is_a? Integer
 Symbol
 ============
 
-Symbol objects represent names. Symbols are immutable, which means every symbol is unique, and it can’t be changed. Referencing the same symbol multiple times means referencing the same object everywhere in your program, which means referencing the same memory location, it can save both time and memory.
+Symbol objects represent names. Symbols are immutable, which means every symbol is unique, and we can't change it. Referencing the same symbol multiple times is the same as referencing the same object everywhere in your program. As a result, we can save both time and memory by referencing the same memory location.
 
 Symbols as hash keys.
 ```
@@ -901,7 +901,7 @@ end
 # |s|
 ```
 
-Methods can take blocks implicitly, and explicitly, the yield is used when you want to call a block implicitly. Yield finds the block and calls the passed block. Since you can pass implicit blocks, you don't have to call yield, and the block will be ignored.
+Methods can take blocks implicitly and explicitly. If you want to call a block implicitly use the `yield` keyword. Yield finds the block and calls the passed block. Since you can pass implicit blocks, you don't have to call yield, and the block will be ignored.
 
 ```ruby
 # passing a block implicitly
