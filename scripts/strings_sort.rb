@@ -1,5 +1,3 @@
-# in place sorting
-
 a = ["Drama",
 "Mystery",
 "Crime",
