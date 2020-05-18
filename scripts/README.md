@@ -1,3 +1,9 @@
+Run using docker.
+
+```
+docker run -it --rm -v $HOME/Desktop/scripts:/scripts --name scripts ruby bash
+```
+
 - [download_files](https://github.com/lifeparticle/Ruby-Cheatsheet/blob/master/scripts/download_files.rb)
 - [duration_cnverter](https://github.com/lifeparticle/Ruby-Cheatsheet/blob/master/scripts/duration_cnverter.rb)
 - [empty_string_finder](https://github.com/lifeparticle/Ruby-Cheatsheet/blob/master/scripts/empty_string_finder.rb)
