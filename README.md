@@ -1,3 +1,7 @@
+<p align="center">
+<a href="https://medium.com/@lifeparticle/a-beginners-guide-to-ruby-810f230c53da">A Beginner’s Guide To Ruby</a>
+</p>
+
 ![ruby](https://user-images.githubusercontent.com/1612112/74456286-b1bcd100-4eda-11ea-9738-7e0a27199021.png)
 
 <p align="center">
