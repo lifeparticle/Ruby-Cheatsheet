@@ -1617,6 +1617,15 @@ puts "#{freq_hash}"
 # {1=>3, 2=>1, 4=>1, 65=>1, 55=>2, 54=>1}
 ```
 
+or
+
+```ruby
+numbers = [1, 1, 1, 2, 4, 65, 55, 54, 55]
+freq_hash = Hash.new(0)
+numbers.each { |number| freq_hash[number] += 1 }
+puts "#{freq_hash}"
+```
+
 What's the difference between Hash.new(0) and {}
 -----
 
