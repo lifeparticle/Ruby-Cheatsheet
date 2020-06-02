@@ -92,9 +92,11 @@ Table of Contents
       * [How to clear an Array](#how-to-clear-an-array)
       * [How to get the last element of an Array](#how-to-get-the-last-element-of-an-array)
       * [How to merge two Arrays](#how-to-merge-two-arrays)
+      * [How to sort an Array](#how-to-sort-an-array)
    * [Hash](#hash)
       * [How to group by count](#how-to-group-by-count)
-      * [What's the difference between Hash.new(0) and {}](#whats-the-difference-between-hash-new0-and-)
+      * [What's the difference between Hash.new(0) and {}](#whats-the-difference-between-hashnew0-and-)
+      * [How to sort a Hash](#how-to-sort-a-hash)
    * [Loop](#loop)
       * [How to break out from loop](#how-to-break-out-from-loop)
       * [How to skip inside a loop](#how-to-skip-inside-a-loop)
@@ -1594,6 +1596,43 @@ a.zip(b)
 # [["tom", 2], ["mot", 3], ["otm", 5]]
 ```
 
+How to sort an Array
+-----
+
+```ruby
+primes = [7, 2, 3, 5]
+sorted_primes = primes.sort
+puts "#{sorted_primes}"
+# output
+# [2, 3, 5, 7]
+```
+
+or in-place sort
+
+```ruby
+primes = [7, 2, 3, 5]
+primes.sort!
+puts "#{primes}"
+# output
+# [2, 3, 5, 7]
+```
+
+```ruby
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+planets.sort
+# output
+# ["Earth", "Jupiter", "Mars", "Mercury", "Neptune", "Saturn", "Uranus", "Venus"]
+
+planets.sort_by { |p| p }
+# output
+# ["Earth", "Jupiter", "Mars", "Mercury", "Neptune", "Saturn", "Uranus", "Venus"]
+
+planets.sort_by { |p| p.length }
+# output
+# ["Mars", "Earth", "Venus", "Saturn", "Uranus", "Neptune", "Jupiter", "Mercury"]
+```
+
+
 Hash
 ============
 
@@ -1647,6 +1686,24 @@ h2 = {}
 h2[:count] += 1
 # error
 undefined method `+' for nil:NilClass
+```
+
+How to sort a Hash
+-----
+
+```ruby
+hash = {e: 2, d: 3, c: 5, b: 7, a: 11}
+hash.sort
+# output
+# [[:a, 11], [:b, 7], [:c, 5], [:d, 3], [:e, 2]]
+
+hash.sort_by { |k, v| k }
+# output
+# [[:a, 11], [:b, 7], [:c, 5], [:d, 3], [:e, 2]]
+
+hash.sort_by { |k, v| v }
+# output
+# [[:e, 2], [:d, 3], [:c, 5], [:b, 7], [:a, 11]]
 ```
 
 Loop
