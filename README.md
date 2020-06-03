@@ -93,10 +93,12 @@ Table of Contents
       * [How to get the last element of an Array](#how-to-get-the-last-element-of-an-array)
       * [How to merge two Arrays](#how-to-merge-two-arrays)
       * [How to sort an Array](#how-to-sort-an-array)
+      * [How to get the maximum from an Array](#how-to-get-the-maximum-from-an-array)
    * [Hash](#hash)
       * [How to group by count](#how-to-group-by-count)
       * [What's the difference between Hash.new(0) and {}](#whats-the-difference-between-hashnew0-and-)
       * [How to sort a Hash](#how-to-sort-a-hash)
+      * [How to get the maximum from a Hash](#how-to-get-the-maximum-from-a-hash)
    * [Loop](#loop)
       * [How to break out from loop](#how-to-break-out-from-loop)
       * [How to skip inside a loop](#how-to-skip-inside-a-loop)
@@ -1640,6 +1642,16 @@ planets.sort_by { |p| p.length }
 # ["Mars", "Earth", "Venus", "Saturn", "Uranus", "Neptune", "Jupiter", "Mercury"]
 ```
 
+How to get the maximum from an Array
+-----
+
+```ruby
+primes = [7, 2, 3, 5]
+primes.max_by { |p| p }
+# output
+# 7
+```
+
 
 Hash
 ============
@@ -1723,6 +1735,16 @@ hash.sort_by { |k, v| k }
 hash.sort_by { |k, v| v }
 # output
 # [[:e, 2], [:d, 3], [:c, 5], [:b, 7], [:a, 11]]
+```
+
+How to get the maximum from a Hash
+-----
+
+```ruby
+hash = {e: 2, d: 3, c: 5, b: 7, a: 11}
+hash.max_by { |k, v| v }
+# output
+# [:a, 11]
 ```
 
 Loop
