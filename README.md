@@ -153,6 +153,14 @@ docker run -it --rm ruby:latest
 RUBY_VERSION
 ```
 
+Run a specific version of Ruby.
+
+```
+docker run -it --rm ruby:2.7
+# check which version of Ruby you're running
+RUBY_VERSION
+```
+
 How to install ruby gem manager, bundler gem
 -----
 
@@ -1663,6 +1671,17 @@ numbers = [1, 1, 1, 2, 4, 65, 55, 54, 55]
 freq_hash = Hash.new(0)
 numbers.each { |number| freq_hash[number] += 1 }
 puts "#{freq_hash}"
+# output
+# {1=>3, 2=>1, 4=>1, 65=>1, 55=>2, 54=>1}
+```
+
+or from Ruby 2.7+
+
+```ruby
+numbers = [1, 1, 1, 2, 4, 65, 55, 54, 55]
+numbers.tally
+# output
+# {1=>3, 2=>1, 4=>1, 65=>1, 55=>2, 54=>1}
 ```
 
 What's the difference between Hash.new(0) and {}
@@ -2169,6 +2188,7 @@ Books and other resources
 3. [What is attr_accessor in Ruby?](https://stackoverflow.com/questions/4370960/what-is-attr-accessor-in-ruby)
 4. [Ruby Module Mixin Awesomeness](https://johnmcaliley.wordpress.com/2010/03/10/ruby-module-mixin-awesomeness/)
 5. [Tutorials](https://www.cosmiclearn.com/ruby/index.php)
+6. [Pattern matching - New feature in Ruby 2.7](https://speakerdeck.com/k_tsj/pattern-matching-new-feature-in-ruby-2-dot-7?slide=24)
 
 Bug Reports and Feature Requests
 ============
