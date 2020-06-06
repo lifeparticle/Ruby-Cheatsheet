@@ -1,3 +1,6 @@
-class Main
+class Main < Person
 
 end
+
+
+s = Main.new
