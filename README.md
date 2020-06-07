@@ -148,7 +148,9 @@ gem env
 
 How to install Ruby
 -----
-If you don't want to install Ruby natively, you can use [docker](https://www.docker.com/).
+
+First things first, make sure you have [Ruby](https://www.ruby-lang.org/en/documentation/installation/) installed on your machine. In case you don’t want to install Ruby natively, you can use [docker](https://docs.docker.com/engine/install/).
+
 ```
 docker run -it --rm ruby:latest
 # check which version of Ruby you're running
