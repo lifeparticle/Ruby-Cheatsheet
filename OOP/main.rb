@@ -1,4 +1,8 @@
 class Main < Person
+  
+  	def initialize(name)
+    
+	  end
 
 end
 
