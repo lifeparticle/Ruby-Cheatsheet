@@ -121,6 +121,7 @@ Table of Contents
    * [Concatenate String in a loop](#concatenate-string-in-a-loop)
    * [CamelCase String split](#camelcase-string-split)
    * [Ruby scripts](#ruby-scripts)
+* [Platforms that supports Ruby](#platforms-that-supports-ruby)
 * [Ruby frameworks](#ruby-frameworks)
 * [Books and other resources](#books-and-other-resources)
 * [Bug Reports and Feature Requests](#bug-reports-and-feature-requests)
@@ -2206,6 +2207,12 @@ words = sentence.split(/(?=[A-Z])/)
 Ruby scripts
 -----
 <a href="https://github.com/lifeparticle/Ruby-Cheatsheet/tree/master/Scripts"><img alt="ruby-scripts" src="https://img.shields.io/badge/ruby-scripts-red.svg?style=flat"/></a>
+
+Platforms that supports Ruby
+============
+1. [Heroku](https://www.heroku.com/ruby)
+2. [Vercel](https://vercel.com/docs/serverless-functions/supported-languages#ruby)
+3. [AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/lambda-ruby.html)
 
 Ruby frameworks
 ============
