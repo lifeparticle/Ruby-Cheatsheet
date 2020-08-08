@@ -1,14 +1,20 @@
 <p align="center">
-<a href="https://medium.com/@lifeparticle/a-beginners-guide-to-ruby-810f230c53da">A Beginner’s Guide To Ruby</a><br>
-<a href="https://towardsdatascience.com/17-useful-ruby-string-methods-to-clean-and-format-your-data-9c9147ff87b9">17 Useful Ruby String Methods to Clean and Format Your Data</a>
+   <a href="https://medium.com/@lifeparticle/a-beginners-guide-to-ruby-810f230c53da">A Beginner’s Guide To Ruby</a><br>
+   <a href="https://towardsdatascience.com/17-useful-ruby-string-methods-to-clean-and-format-your-data-9c9147ff87b9">17 Useful Ruby String Methods to Clean and Format Your Data</a>
 </p>
 
 ![ruby](https://user-images.githubusercontent.com/1612112/74456286-b1bcd100-4eda-11ea-9738-7e0a27199021.png)
 
 <p align="center">
-<a href="https://www.ruby-lang.org"><img alt="Ruby" src="https://cdn.emojidex.com/emoji/mdpi/Ruby.png"/></a>
-<a href="https://github.com/lifeparticle/Ruby-Cheatsheet/issues"><img alt="contributions welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/></a>
-<a href="https://github.com/lifeparticle/Ruby-Cheatsheet/workflows/VERIFY%20README/badge.svg"><img alt="contributions welcome" src="https://github.com/lifeparticle/Ruby-Cheatsheet/workflows/VERIFY%20README/badge.svg"/></a>
+   <a href="https://www.ruby-lang.org">
+      <img alt="Ruby" src="https://cdn.emojidex.com/emoji/mdpi/Ruby.png"/>
+   </a>
+   <a href="https://github.com/lifeparticle/Ruby-Cheatsheet/issues">
+      <img alt="contributions welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
+   </a>
+   <a href="https://github.com/lifeparticle/Ruby-Cheatsheet/workflows/VERIFY%20README/badge.svg">
+      <img alt="link" src="https://github.com/lifeparticle/Ruby-Cheatsheet/workflows/VERIFY%20README/badge.svg"/>
+   </a>
 </p>
 
 Table of Contents
