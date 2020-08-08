@@ -17,5 +17,5 @@ jobs:
       uses: actions/checkout@v2
     - name: Run awesome_bot
       uses: docker://dkhamsing/awesome_bot:latest
-    with:
-      args: --allow-dupe --allow-redirect README.md
+      with:
+        args: --allow-dupe --allow-redirect README.md
