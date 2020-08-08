@@ -18,4 +18,4 @@ jobs:
     - name: Run awesome_bot
       uses: docker://dkhamsing/awesome_bot:latest
       with:
-        args: --allow-dupe --allow-redirect README.md
+        args: --allow-timeout --allow-dupe --allow-redirect README.md

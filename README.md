@@ -8,6 +8,7 @@
 <p align="center">
 <a href="https://www.ruby-lang.org"><img alt="Ruby" src="https://cdn.emojidex.com/emoji/mdpi/Ruby.png"/></a>
 <a href="https://github.com/lifeparticle/Ruby-Cheatsheet/issues"><img alt="contributions welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/></a>
+<a href="https://github.com/lifeparticle/Ruby-Cheatsheet/workflows/VERIFY%20README/badge.svg"><img alt="contributions welcome" src="https://github.com/lifeparticle/Ruby-Cheatsheet/workflows/VERIFY%20README/badge.svg"/></a>
 </p>
 
 Table of Contents
