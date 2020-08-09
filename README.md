@@ -1,8 +1,3 @@
-<p align="center">
-   <a href="https://medium.com/@lifeparticle/a-beginners-guide-to-ruby-810f230c53da">A Beginner’s Guide To Ruby</a><br>
-   <a href="https://towardsdatascience.com/17-useful-ruby-string-methods-to-clean-and-format-your-data-9c9147ff87b9">17 Useful Ruby String Methods to Clean and Format Your Data</a>
-</p>
-
 ![ruby](https://user-images.githubusercontent.com/1612112/74456286-b1bcd100-4eda-11ea-9738-7e0a27199021.png)
 
 <p align="center">
@@ -130,6 +125,7 @@ Table of Contents
    * [Ruby scripts](#ruby-scripts)
 * [Platforms that supports Ruby](#platforms-that-supports-ruby)
 * [Ruby frameworks](#ruby-frameworks)
+* [My Ruby Articles](#my-ruby-articles)
 * [Books and other resources](#books-and-other-resources)
 * [Bug Reports and Feature Requests](#bug-reports-and-feature-requests)
 * [Contribution Guidelines](#contribution-guidelines)
@@ -2226,6 +2222,11 @@ Ruby frameworks
 1. [Ruby on Rails](https://rubyonrails.org/)
 2. [Sinatra](http://sinatrarb.com/)
 3. [Padrino](http://padrinorb.com/)
+
+My Ruby Articles
+============
+1. [A Beginner’s Guide To Ruby](https://medium.com/@lifeparticle/a-beginners-guide-to-ruby-810f230c53da)
+2. [17 Useful Ruby String Methods to Clean and Format Your Data](https://towardsdatascience.com/17-useful-ruby-string-methods-to-clean-and-format-your-data-9c9147ff87b9)
 
 Books and other resources
 ============
