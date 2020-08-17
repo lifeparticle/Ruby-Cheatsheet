@@ -2236,6 +2236,7 @@ Books and other resources
 4. [Ruby Module Mixin Awesomeness](https://johnmcaliley.wordpress.com/2010/03/10/ruby-module-mixin-awesomeness/)
 5. [Tutorials](https://www.cosmiclearn.com/ruby/index.php)
 6. [Pattern matching - New feature in Ruby 2.7](https://speakerdeck.com/k_tsj/pattern-matching-new-feature-in-ruby-2-dot-7?slide=24)
+7. [Awesome Ruby Blogs](https://github.com/Yegorov/awesome-ruby-blogs)
 
 Bug Reports and Feature Requests
 ============
