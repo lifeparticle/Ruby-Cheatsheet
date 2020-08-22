@@ -2238,6 +2238,7 @@ Books and other resources
 5. [Tutorials](https://www.cosmiclearn.com/ruby/index.php)
 6. [Pattern matching - New feature in Ruby 2.7](https://speakerdeck.com/k_tsj/pattern-matching-new-feature-in-ruby-2-dot-7?slide=24)
 7. [Awesome Ruby Blogs](https://github.com/Yegorov/awesome-ruby-blogs)
+8. [Ruby Scripts](https://github.com/jakewmeyer/Ruby-Scripts)
 
 Bug Reports and Feature Requests
 ============
