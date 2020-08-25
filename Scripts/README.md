@@ -1,7 +1,9 @@
 Run using docker.
 
 ```
-docker run -it --rm -v $HOME/Desktop/scripts:/scripts --name scripts ruby bash
+docker run -it --rm -v $HOME/Desktop/Scripts:/Scripts --name scripts ruby bash
+cd Scripts
+ruby strings_sort.rb
 ```
 
 - [download_files](https://github.com/lifeparticle/Ruby-Cheatsheet/blob/master/Scripts/download_files.rb)
