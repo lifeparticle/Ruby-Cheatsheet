@@ -49,6 +49,8 @@ Table of Contents
 * [String](#string)
    * [How to convert String to lower or upper case](#how-to-convert-string-to-lower-or-upper-case)
    * [Helpful methods](#helpful-methods)
+* [Integer](#integer)
+   * [Helpful methods](#helpful-methods-1)
 * [Range](#range)
    * [Helpful methods](#helpful-methods-1)
    * [How to use step with Range](#how-to-use-step-with-range)
@@ -502,6 +504,7 @@ unless expression
 
 name = "rob"
 
+# if name != "bob"
 unless name == "bob"
     puts "hello stranger"
 else
@@ -656,6 +659,19 @@ Helpful methods
 | 8 | prepend                          | a = "world" <br> a.prepend("hello ") <br> "hello world"                                            | Add string before another string  |
 | 9 | insert                           | a = "hello" <br> a.insert(a.length, " world") <br> "hello world"                                   | Insert string at a specific position |
 
+
+Integer
+============
+
+Helpful methods
+-----
+
+```ruby
+2.even?
+# true
+3.even?
+# false
+```
 
 Range
 ============
