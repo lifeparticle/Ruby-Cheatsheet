@@ -268,8 +268,19 @@ comment
 
 Operators
 ============
-Logical operators
------
+
+<table>
+<tr>
+<th>Logical operators</th>
+<th>Bitwise operators</th>
+<th>Arithmetic operators</th>
+<th>Comparison operators</th>
+<th>Assignment operators</th>
+</tr>
+<tr>
+
+<td valign="top">
+
 | No | Operator |
 |---|---|
 | 1 | and   |
@@ -279,9 +290,10 @@ Logical operators
 | 5 | \|\|  |
 | 6 | !     |
 
+</td>
 
-Bitwise operators
------
+<td valign="top">
+
 | No | Operator |
 |---|---|
 | 1 | &     |
@@ -291,8 +303,10 @@ Bitwise operators
 | 5 | <<    |
 | 6 | >>    |
 
-Arithmetic operators
------
+</td>
+
+<td valign="top">
+
 | No | Operator |
 |---|---|
 | 1 | +     |
@@ -302,8 +316,10 @@ Arithmetic operators
 | 5 | %     |
 | 6 | **    |
 
-Comparison operators
------
+</td>
+
+<td valign="top">
+
 | No | Operator |
 |---|---|
 | 1  | ==     |
@@ -317,8 +333,10 @@ Comparison operators
 | 9  | eql?   |
 | 10 | equal? |
 
-Assignment operators
------
+</td>
+
+<td valign="top">
+
 | No | Operator |
 |---|---|
 | 1 | =     |
@@ -329,6 +347,9 @@ Assignment operators
 | 6 | %=    |
 | 7 | **=   |
 
+</td>
+
+</tr></table>
 
 Variables and Scope
 ============
