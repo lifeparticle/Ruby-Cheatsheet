@@ -269,8 +269,8 @@ Operators
 <th>Logical operators</th>
 <th>Bitwise operators</th>
 <th>Arithmetic operators</th>
-<th>Comparison operators</th>
 <th>Assignment operators</th>
+<th>Comparison operators</th>
 </tr>
 <tr>
 
