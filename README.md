@@ -1212,6 +1212,25 @@ All of them are used for executing a single line or multiline code.
 Array
 ============
 
+Initialize an empty array.
+
+```ruby
+array = Array.new
+
+# or
+
+array = []
+```
+
+Initialize an array with three elements with the value of 7.
+
+```ruby
+array = Array.new(3, 7)
+
+# or
+array = [7, 7, 7]
+```
+
 How to iterate an Array
 -----
 There are multiple ways you can iterate an Array.
