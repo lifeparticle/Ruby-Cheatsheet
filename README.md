@@ -1231,6 +1231,42 @@ array = Array.new(3, 7)
 array = [7, 7, 7]
 ```
 
+Array indexing starts at 0. A negative index is relative to the end of the array, so -1 is the last element of the array, -2 is the second last element in the array, and so on.
+
+```ruby
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+puts numbers[0]
+# 1
+puts numbers[-1]
+# 10
+
+# numbers.at
+puts numbers.at(0)
+# 1
+```
+
+Get a range.
+
+```ruby
+# numbers[start..end], both index are inclusive
+puts numbers[0..3]
+# 1
+# 2
+# 3
+# 4
+
+# numbers[start..end], end index is exclusive
+puts numbers[0...3]
+# 1
+# 2
+# 3
+
+# or numbers[start..length]
+puts numbers[0, 1]
+# 1
+```
+
 How to iterate an Array
 -----
 There are multiple ways you can iterate an Array.
