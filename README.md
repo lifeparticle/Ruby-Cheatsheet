@@ -1819,7 +1819,7 @@ primes.drop(3)
 # [5]
 ```
 
-Remove firt element.
+Remove first element.
 
 ```ruby
 primes = [7, 2, 3, 5]
