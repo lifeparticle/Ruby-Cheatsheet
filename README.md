@@ -1226,7 +1226,7 @@ array = Array.new
 array = []
 ```
 
-Initialize an array with three elements with the value of 7.
+Initialize an array with n elements.
 
 ```ruby
 array = Array.new(3, 7)
