@@ -47,7 +47,7 @@ Table of Contents
 * [Integer](#integer)
    * [Helpful methods](#helpful-methods-1)
 * [Range](#range)
-   * [Helpful methods](#helpful-methods-1)
+   * [Helpful methods](#helpful-methods-2)
    * [How to use step with Range](#how-to-use-step-with-range)
 * [Methods](#methods)
    * [How to declare a method](#how-to-declare-a-method)
@@ -91,10 +91,14 @@ Table of Contents
    * [How to check if a value exists in an Array (include?)](#how-to-check-if-a-value-exists-in-an-array-include)
    * [How to get array size](#how-to-get-array-size)
    * [How to clear an Array](#how-to-clear-an-array)
+   * [How to get the first element of an Array](#how-to-get-the-first-element-of-an-array)
    * [How to get the last element of an Array](#how-to-get-the-last-element-of-an-array)
    * [How to merge two Arrays](#how-to-merge-two-arrays)
    * [How to sort an Array](#how-to-sort-an-array)
    * [How to get the maximum from an Array](#how-to-get-the-maximum-from-an-array)
+   * [How to get Array elements using a range](#how-to-get-array-elements-using-a-range)
+   * [How to get first n elements of an Array](#how-to-get-first-n-elements-of-an-array)
+   * [How to remove one or more elements of an Array](#how-to-remove-one-or-more-elements-of-an-array)
 * [Hash](#hash)
    * [How to group by count](#how-to-group-by-count)
    * [What's the difference between Hash.new(0) and {}](#whats-the-difference-between-hashnew0-and-)
@@ -1246,25 +1250,39 @@ puts numbers.at(0)
 # 1
 ```
 
-Get a range.
+Add values at the end of the array.
 
 ```ruby
-# numbers[start..end], both index are inclusive
-puts numbers[0..3]
-# 1
-# 2
-# 3
-# 4
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers.push(11)
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+numbers.push(12, 13, 14)
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+```
 
-# numbers[start..end], end index is exclusive
-puts numbers[0...3]
-# 1
-# 2
-# 3
+Add values at the start of the array.
 
-# or numbers[start..length]
-puts numbers[0, 1]
-# 1
+```ruby
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers.unshift(0)
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers.unshift(-3, -2, -1)
+# [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+Insert values at the given index.
+
+```ruby
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers.insert(0, 0)
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers.insert(0, -3, -2, -1)
+# [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+numbers.insert(-1, 12, 13, 14)
+# [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14]
+numbers.insert(-4, 11)
+# [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 ```
 
 How to iterate an Array
@@ -1676,6 +1694,17 @@ numbers.clear
 # output
 # []
 ```
+How to get the first element of an Array
+-----
+
+```ruby
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers[0]
+# or
+numbers.first
+# output
+# 1
+```
 
 How to get the last element of an Array
 -----
@@ -1748,6 +1777,79 @@ primes.max_by { |p| p }
 # 7
 ```
 
+How to get Array elements using a range
+-----
+
+```ruby
+# numbers[start..end], both index are inclusive
+puts numbers[0..3]
+# 1
+# 2
+# 3
+# 4
+
+# numbers[start..end], end index is exclusive
+puts numbers[0...3]
+# 1
+# 2
+# 3
+
+# or numbers[start..length]
+puts numbers[0, 1]
+# 1
+```
+
+How to get first n elements of an Array
+-----
+
+```ruby
+primes = [7, 2, 3, 5]
+primes.take(3)
+# [7, 2, 3]
+```
+
+How to remove one or more elements of an Array
+-----
+
+Remove first n elements.
+
+```ruby
+primes = [7, 2, 3, 5]
+primes.drop(3)
+# [5]
+```
+
+Remove firt element.
+
+```ruby
+primes = [7, 2, 3, 5]
+primes.shift
+# [2, 3, 5]
+```
+
+Remove last element.
+
+```ruby
+primes = [7, 2, 3, 5]
+primes.pop
+# [7, 2, 3]
+```
+
+Remove element with an Index.
+
+```ruby
+primes = [7, 2, 3, 5]
+primes.delete_at(-1)
+# [7, 2, 3]
+```
+
+Remove all occurrences of an element.
+
+```ruby
+primes = [7, 2, 3, 5, 5]
+primes.delete(5)
+# [7, 2, 3]
+```
 
 Hash
 ============
