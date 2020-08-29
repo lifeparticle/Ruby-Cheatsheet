@@ -1220,9 +1220,7 @@ Initialize an empty array.
 
 ```ruby
 array = Array.new
-
 # or
-
 array = []
 ```
 
@@ -1230,7 +1228,6 @@ Initialize an array with n elements.
 
 ```ruby
 array = Array.new(3, 7)
-
 # or
 array = [7, 7, 7]
 ```
@@ -1239,7 +1236,6 @@ Array indexing starts at 0. A negative index is relative to the end of the array
 
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
 puts numbers[0]
 # 1
 puts numbers[-1]
