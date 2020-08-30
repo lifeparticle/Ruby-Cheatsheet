@@ -647,7 +647,7 @@ Symbol
 Symbol objects represent names. Symbols are immutable, which means every symbol is unique, and we can't change it. Referencing the same symbol multiple times is the same as referencing the same object everywhere in your program. As a result, we can save both time and memory by referencing the same memory location.
 
 Symbols as hash keys.
-```
+```ruby
 week_days = {sunday: 11, monday: 222}
 ```
 
