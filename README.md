@@ -69,19 +69,24 @@ Table of Contents
       * [each_with_object](#each_with_object)
       * [each_index](#each_index)
       * [map](#map)
-      * [select](#select)
-      * [reject](#reject)
-      * [inject](#inject)
-      * [reduce](#reduce)
       * [collect](#collect)
-      * [detect](#detect)
       * [while](#while)
-      * [until](#until)
+      * [do while](#do-while)
       * [for](#for)
+      * [until](#until)
       * [times](#times)
       * [upto](#upto)
       * [downto](#downto)
       * [step](#step)
+      * [inject](#inject)
+      * [reduce](#reduce)
+      * [detect](#detect)
+      * [find](#find)
+      * [select](#select)
+      * [reject](#reject)
+      * [keep_if](#keep_if)
+      * [delete_if](#delete_if)
+      * [drop_while](#drop_while)
    * [Boolean Enumerable methods](#boolean-enumerable-methods)
       * [all?](#all)
       * [any?](#any)
@@ -669,16 +674,15 @@ Helpful methods
 
 | No | Method name | Output | Note |
 |---|---|---|---|
-| 1 | length or size                   | "HELLO World".length <br> 11 <br> "HELLO World".size <br> 11                                       | returns the length of the string  |
-| 2 | reverse                          | "hello worlD".reverse <br> "Dlrow olleh"                                                           | returns the reversed string |
-| 3 | include? other_str               | "hEllo wOrlD".include? "w" <br> true                                                               | returns true if the string or charecter is present or otherwise false |
-| 4 | gsub(pattern, replacement)       | "hEllo wOrlD".gsub(" ", "_") <br> "hEllo_wOrlD"                                                    | gsub or global substitute substitutes one or more string with provided strings |
-| 5 | gsub(pattern, hash)              | "organization".gsub("z", 'z' => 's') <br>"organisation"                                            | gsub or global substitute substitutes one or more string with provided hash |
-| 6 | gsub(pattern) { \|match\| block} | "Price of the phone is 1000 AUD".gsub(/\d+/) { \|s\| '$'+s } <br>"Price of the phone is $1000 AUD" | gsub or global substitute substitutes one or more string with provided block |
+| 1 | length or size                   | "HELLO World".length <br> 11 <br> "HELLO World".size <br> 11                                       | returns the length of the string                                                                                                                                                                 |
+| 2 | reverse                          | "hello worlD".reverse <br> "Dlrow olleh"                                                           | returns the reversed string                                                                                                                                                                      |
+| 3 | include? other_str               | "hEllo wOrlD".include? "w" <br> true                                                               | returns true if the string or charecter is present or otherwise false                                                                                                                            |
+| 4 | gsub(pattern, replacement)       | "hEllo wOrlD".gsub(" ", "_") <br> "hEllo_wOrlD"                                                    | gsub or global substitute substitutes one or more string with provided strings                                                                                                                   |
+| 5 | gsub(pattern, hash)              | "organization".gsub("z", 'z' => 's') <br>"organisation"                                            | gsub or global substitute substitutes one or more string with provided hash                                                                                                                      |
+| 6 | gsub(pattern) { \|match\| block} | "Price of the phone is 1000 AUD".gsub(/\d+/) { \|s\| '$'+s } <br>"Price of the phone is $1000 AUD" | gsub or global substitute substitutes one or more string with provided block                                                                                                                     |
 | 7 | strip                            | "  hEllo WOrlD  ".strip <br> "hEllo WOrlD"                                                         | It will remove (trim) any of the following leading and trailing characters: null("\x00"), horizontal tab("\t"), line feed(\n), vertical tab("\v"), form feed(f), carriage return(\r), space(" ") |
-| 8 | prepend                          | a = "world" <br> a.prepend("hello ") <br> "hello world"                                            | Add string before another string  |
-| 9 | insert                           | a = "hello" <br> a.insert(a.length, " world") <br> "hello world"                                   | Insert string at a specific position |
-
+| 8 | prepend                          | a = "world" <br> a.prepend("hello ") <br> "hello world"                                            | Add string before another string                                                                                                                                                                 |
+| 9 | insert                           | a = "hello" <br> a.insert(a.length, " world") <br> "hello world"                                   | Insert string at a specific position                                                                                                                                                             |
 
 Integer
 ============
@@ -1287,24 +1291,29 @@ There are multiple ways you can iterate an Array.
 
 | No | Name | When to use |
 |---|---|---|
-| 1  | each             | when you want to just iterate                                                                                                                                                                                                                                        |
-| 2  | each_with_index  | when you want both index and value                                                                                                                                                                                                                               |
+| 1  | each             | when you want to just iterate                                                                                                                                                                                                                                              |
+| 2  | each_with_index  | when you want both index and value                                                                                                                                                                                                                                         |
 | 3  | each_with_object | when you want to build a hash or reduce a collection to one object. It Iterates the given block for each element with an arbitrary object given and returns the first given object. It only works with a mutable object like Hash but not an immutable object like integer |
-| 4  | each_index       | when you want just the indexes                                                                                                                                                                                                                                       |
-| 5  | map              | returns an array containing the values returned by the block                                                                                                                                                                                                            |
-| 6  | select           | adds value to a new array if your block returns true, returns ```[]``` otherwise. helpful when you are looking for a subset                                                                                                                                        |
-| 7  | reject           | removes a value from a new array if your block returns true, returns ```[]``` otherwise. helpful when you are looking for a subset                                                                                                                                   |
-| 8  | inject           | when you want a single value. helpful when you want to accumulate, concatenate                                                                                                                                                                                       |
-| 9  | reduce           | reduce and inject methods are aliases                                                                                                                                                                                                                                |
-| 10 | collect          | same as map                                                                                                                                                                                                                                                          |
-| 11 | detect           | returns the first item in the array if your block returns true, returns ```nil``` otherwise. helpful when you are looking for something based on a business logic                                                                                                    |
-| 12 | while            | when you want to iterate for a certain number of times                                                                                                                                                                                                                 |
-| 13 | until            | when you want to iterate until something happens                                                                                                                                                                                                                     |
-| 14 | for              | similar to each                                                                                                                                                                                                                                                      |
-| 15 | times            | when you want to iterate ```n``` number of times                                                                                                                                                                                                                     |
-| 16 | upto             | when you want to iterate upto ```n```, starting from ```m```, both inclusive, where ```n >= m```. when ```n < m``` it will run zero times                                                                                                                            |
-| 17 | downto           | when you want to iterate downto ```n```, starting from ```m```, both inclusive, where ```n <= m```. when ```n > m``` it will run zero times                                                                                                                          |
-| 18 | step             | when you want to iterate upto or downto ```n``` by incrementing or decrementing ```x``` steps starting from ```m```, both inclusive. the default value of step is ```1``` and for ```n``` it's infinity                                                                  |
+| 4  | each_index       | when you want just the indexes                                                                                                                                                                                                                                             |
+| 5  | map              | returns an array containing the values returned by the block                                                                                                                                                                                                               |
+| 6  | collect          | same as map                                                                                                                                                                                                                                                                |
+| 7  | while            | when you want to iterate for a certain number of times                                                                                                                                                                                                                     |
+| 8  | do while         | when you want to iterate until something happens                                                                                                                                                                                                                           |
+| 9  | for              | similar to each_with_index                                                                                                                                                                                                                                                 |
+| 10 | until            | when you want to iterate until something happens                                                                                                                                                                                                                           |
+| 11 | times            | when you want to iterate ```n``` number of times                                                                                                                                                                                                                           |
+| 12 | upto             | when you want to iterate upto ```n```, starting from ```m```, both inclusive, where ```n >= m```. when ```n < m``` it will run zero times                                                                                                                                  |
+| 13 | downto           | when you want to iterate downto ```n```, starting from ```m```, both inclusive, where ```n <= m```. when ```n > m``` it will run zero times                                                                                                                                |
+| 14 | step             | when you want to iterate upto or downto ```n``` by incrementing or decrementing ```x``` steps starting from ```m```, both inclusive. the default value of step is ```1``` and for ```n``` it's infinity                                                                    |
+| 15 | inject           | when you want a single value. helpful when you want to accumulate, concatenate                                                                                                                                                                                             |
+| 16 | reduce           | reduce and inject methods are aliases                                                                                                                                                                                                                                      |
+| 17 | detect           | returns the first item if matched the condition, returns ```nil``` otherwise. helpful when you are looking for something based on a business logic                                                                                                                         |
+| 18 | find             | find and detect methods are aliases                                                                                                                                                                                                                                        |
+| 19 | select           | adds value to a new array if your block returns true, returns ```[]``` otherwise. helpful when you are looking for a subset                                                                                                                                                |
+| 20 | reject           | removes a value from a new array if your block returns true, returns ```[]``` otherwise. helpful when you are looking for a subset                                                                                                                                         |
+| 21 | keep_if          | keeps a value in the original array if your block returns true                                                                                                                                                                                                             |
+| 22 | delete_if        | removes a value from the original array if your block returns true                                                                                                                                                                                                         |
+| 23 | drop_while       | drops elements up to but not including for the first element which the block returns nil or false and returns an array containing the remaining elements                                                                                                                   |
 
 ### each
 
@@ -1393,65 +1402,6 @@ salary.each { |s|  s * 10  }
 # [399, 234, 566, 533, 233]
 ```
 
-### select
-
-```ruby
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-numbers.select { |n| n % 2 == 0 }
-# now you have an array of even numbers, how cool is that
-# [2, 4, 6, 8, 10]
-# returns an empty array if there is no value that satisfy your logic
-[1, 1, 1].select { |n| n % 2 == 0 }
-# no even numbers
-# []
-```
-
-### reject
-
-```ruby
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-numbers.reject { |n| n % 2 == 0 }
-# reject if the number is even, so now we have an array of odd numbers
-# [1, 3, 5, 7, 9]
-```
-
-### inject
-
-```ruby
-numbers = [2, 2, 2, 2, 2]
-numbers.inject{ |res, n| res + n }
-# output is the result of the sum of all numbers
-# if you do not set an initial value for res, then the first element of the array is used as the initial value of res
-# 10
-
-# now set the value of res with 11
-numbers = [2, 2, 2, 2, 2]
-numbers.inject(11) { |res, n| res + n }
-# so 11 + 2, 13 + 2, 15 + 2, 17 + 2 and 19 + 2
-# 21
-
-# using symbol
-numbers = [2, 2, 2, 2, 2]
-numbers.inject(:+)
-# output
-# 10
-
-# using initial value and a symbol
-numbers = [2, 2, 2, 2, 2]
-numbers.inject(11, :+)
-# output
-# 21
-```
-
-### reduce
-
-```ruby
-numbers = [2, 2, 2, 2, 2]
-numbers.reduce(11, :+)
-# output
-# 21
-```
-
 ### collect
 
 ```ruby
@@ -1459,20 +1409,6 @@ salary = [399, 234, 566, 533, 233]
 salary.collect { |s| s > 400 }
 # output
 # [false, false, true, true, false]
-```
-
-### detect
-
-```ruby
-planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
-planets.detect { |name| name.start_with?("E") and name.end_with?("h") }
-# output
-# Earth
-
-salary = [399, 234, 566, 533, 233]
-salary.detect { |s| s > 1000 }
-# output
-# nil
 ```
 
 ### while
@@ -1493,6 +1429,26 @@ while a <= 10
     puts star
     star += '*'
     a += 1
+end
+```
+
+### do while
+
+```ruby
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+index = 0
+loop do
+    puts "#{planets[index]}"
+    index += 1
+    break if planets[index] == "Mars" or index > planets.size
+end
+```
+
+### for
+
+```ruby
+for value in [2, 3, 5, 7]
+    puts value
 end
 ```
 
@@ -1517,13 +1473,6 @@ until star.length > 10
 end
 ```
 
-### for
-
-```ruby
-for value in [2, 3, 5, 7]
-    puts value
-end
-```
 ### times
 
 ```ruby
@@ -1595,17 +1544,126 @@ data_sample = [2, 3, 5, 7]
 # 1
 ```
 
+### inject
+
+```ruby
+numbers = [2, 2, 2, 2, 2]
+numbers.inject{ |res, n| res + n }
+# output is the result of the sum of all numbers
+# if you do not set an initial value for res, then the first element of the array is used as the initial value of res
+# 10
+
+# now set the value of res with 11
+numbers = [2, 2, 2, 2, 2]
+numbers.inject(11) { |res, n| res + n }
+# so 11 + 2, 13 + 2, 15 + 2, 17 + 2 and 19 + 2
+# 21
+
+# using symbol
+numbers = [2, 2, 2, 2, 2]
+numbers.inject(:+)
+# output
+# 10
+
+# using initial value and a symbol
+numbers = [2, 2, 2, 2, 2]
+numbers.inject(11, :+)
+# output
+# 21
+```
+
+### reduce
+
+```ruby
+numbers = [2, 2, 2, 2, 2]
+numbers.reduce(11, :+)
+# output
+# 21
+```
+
+### detect
+
+```ruby
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+planets.detect { |name| name.start_with?("E") and name.end_with?("h") }
+# output
+# Earth
+
+salary = [399, 234, 566, 533, 233]
+salary.detect { |s| s > 1000 }
+# output
+# nil
+```
+
+### find
+
+```ruby
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+planets.find { |name| name.start_with?("E") and name.end_with?("h") }
+# output
+# Earth
+```
+
+### select
+
+```ruby
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers.select { |n| n % 2 == 0 }
+# now you have an array of even numbers, how cool is that
+# [2, 4, 6, 8, 10]
+# returns an empty array if there is no value that satisfy your logic
+[1, 1, 1].select { |n| n % 2 == 0 }
+# no even numbers
+# []
+```
+
+### reject
+
+```ruby
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers.reject { |n| n % 2 == 0 }
+# reject if the number is even, so now we have an array of odd numbers
+# [1, 3, 5, 7, 9]
+```
+
+### keep_if
+
+```ruby
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers.keep_if { |n| n % 2 == 0 }
+# numbers array holds only even numbers
+# [2, 4, 6, 8, 10]
+```
+
+### delete_if
+
+```ruby
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers.delete_if { |n| n % 2 == 0 }
+# numbers array holds only odd numbers
+# [1, 3, 5, 7, 9]
+```
+
+### drop_while
+
+```ruby
+numbers = [1, 2, 3, 1, 2, 3, 0]
+numbers.drop_while { |n| n < 3 }
+# is 3 less than 3, returns false, so drop 1, 2
+# [3, 1, 2, 3, 0]
+```
+
 Boolean Enumerable methods
 -----
 
 | No | Name | When to use |
 |---|---|---|
-| 1  | all?     | when you want to check if all the elements satisfy your condition                       |
-| 2  | any?     | when you want to check if at least one item satisfies your condition                   |
-| 3  | one?     | when you want to check if precisely one element satisfies your requirement |
+| 1  | all?     | when you want to check if all the elements satisfy your condition                    |
+| 2  | any?     | when you want to check if at least one item satisfies your condition                 |
+| 3  | one?     | when you want to check if precisely one element satisfies your requirement           |
 | 4  | none?    | when you want to check if none of the items satisfy your condition, opposite of all? |
 | 5  | empty?   | when you want to check if the object is empty or not                                 |
-| 6  | include? | when you want to check if the element exists in the object                              |
+| 6  | include? | when you want to check if the element exists in the object                           |
 
 ### all?
 
@@ -1851,12 +1909,21 @@ Hash
 ============
 
 ```ruby
-students = {name: 'John', email: 'john@col.com'}
-# or
+# initialize an empty hash
 students = Hash.new
 students = {name: 'John', email: 'john@col.com'}
-
 puts "#{students[:name]}"
+# or
+students = {name: 'John', email: 'john@col.com'}
+puts "#{students[:name]}"
+
+# initialize an empty hash with default value of 1 for every key
+students = Hash.new(1)
+puts "#{students["id"]}"
+# or
+students = Hash.new
+students.default = 1
+puts "#{students["id"]}"
 ```
 
 How to group by count
