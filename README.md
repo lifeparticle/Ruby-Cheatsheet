@@ -244,7 +244,15 @@ bundle update
 
 Introduction
 ============
-In Ruby everything is an object.
+Ruby is an object-oriented and interpreted (executes the code at runtime) programming language like Python. In Ruby, everything is an object.
+
+```ruby
+1.next # 2
+```
+
+To test the above code, you can use IRB (interactive Ruby), it’s a tool to execute Ruby code read from the standard input interactively. Type the irb command from your shell to initiate the interpreter.
+
+![1_OrzIgbBwYZUmgx3xm-woAg](https://user-images.githubusercontent.com/1612112/92318937-70e30000-f056-11ea-95b9-a9d3480fed36.gif)
 
 Reserved Words
 ============
