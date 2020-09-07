@@ -55,6 +55,7 @@ Table of Contents
    * [How to define a default value for a method parameter](#how-to-define-a-default-value-for-a-method-parameter)
    * [How to use another parameter for the default value](#how-to-use-another-parameter-for-the-default-value)
    * [How to pass variable length argument to a method parameter](#how-to-pass-variable-length-argument-to-a-method-parameter)
+   * [Modify object](#modify-object)
    * [Boolean method](#boolean-method)
    * [Class method](#class-method)
 * [Blocks](#blocks)
@@ -761,13 +762,14 @@ How to use step with Range
 Methods
 ============
 
+A method is a function that takes zero or more parameters and returns a value. Ruby method returns nil by default.
+
 How to declare a method
 -----
 
-```ruby
-# In Ruby last statement evaluated is the return value of that method
+In Ruby, the last statement evaluated is the return value of that method. The return statement is optional. Depending on your preference, you can choose either of them 👍. I prefer to use the return statement because it's easier to understand. 
 
-# both methods does the same thing, depend on your preference you can choose either of them
+```ruby
 def method_name(parameter1, parameter2)
     puts "#{parameter1} #{parameter2}"
     parameter1 + parameter2
@@ -845,6 +847,38 @@ res = method_name("SUB", *numbers)
 res = method_name("ADD", 2, 2, 2, 3, 3, 3)
 # output
 # 15
+```
+
+Modify object
+-----
+The ! is used after the method when you want to modify the object.
+
+```
+a = ["Drama",
+"Mystery",
+"Crime",
+"Sci-fi",
+"Disaster",
+"Thriller"]
+a.sort
+puts a
+# we didn't modify the object
+# Drama
+# Mystery
+# Crime
+# Sci-fi
+# Disaster
+# Thriller
+
+a.sort!
+puts a
+# modify the object
+# Crime
+# Disaster
+# Drama
+# Mystery
+# Sci-fi
+# Thriller
 ```
 
 Boolean method
