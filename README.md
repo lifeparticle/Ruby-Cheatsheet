@@ -278,6 +278,8 @@ comment
 =end
 ```
 
+I prefer `#` for multiline comments because it maintains my style guide and easier to read.
+
 Operators
 ============
 
