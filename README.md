@@ -2525,6 +2525,7 @@ My Ruby Articles
 1. [A Beginner’s Guide To Ruby](https://medium.com/@lifeparticle/a-beginners-guide-to-ruby-810f230c53da)
 2. [17 Useful Ruby String Methods to Clean and Format Your Data](https://towardsdatascience.com/17-useful-ruby-string-methods-to-clean-and-format-your-data-9c9147ff87b9)
 3. [How to Deploy a Ruby Serverless Function to Vercel](https://towardsdatascience.com/how-to-deploy-a-ruby-serverless-function-to-vercel-da8c3581f7c2)
+4. [Useful Ruby Array Methods to Manage Your Data](https://towardsdatascience.com/useful-ruby-array-methods-to-manage-your-data-4d2813c63ccf)
 
 Books and other resources
 ============
