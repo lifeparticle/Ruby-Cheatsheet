@@ -106,6 +106,7 @@ Table of Contents
    * [How to get first n elements of an Array](#how-to-get-first-n-elements-of-an-array)
    * [How to access an element](#how-to-access-an-element)
    * [How to remove one or more elements of an Array](#how-to-remove-one-or-more-elements-of-an-array)
+   * [How to remove duplicate elements from an Array](#how-to-remove-duplicate-elements-from-an-array)
 * [Hash](#hash)
    * [How to group by count](#how-to-group-by-count)
    * [What's the difference between Hash.new(0) and {}](#whats-the-difference-between-hashnew0-and-)
@@ -2013,6 +2014,15 @@ Remove all occurrences of an element.
 primes = [7, 2, 3, 5, 5]
 primes.delete(5)
 # [7, 2, 3]
+```
+
+How to remove duplicate elements from an Array
+-----
+
+```ruby
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 1]
+numbers.uniq
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
 Hash
