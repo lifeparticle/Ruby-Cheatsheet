@@ -15,6 +15,7 @@
 Table of Contents
 =================
 
+* [Table of Contents](#table-of-contents)
 * [Installation](#installation)
    * [Troubleshooting](#troubleshooting)
       * [macOS](#macos)
@@ -104,6 +105,7 @@ Table of Contents
    * [How to get the maximum from an Array](#how-to-get-the-maximum-from-an-array)
    * [How to get Array elements using a range](#how-to-get-array-elements-using-a-range)
    * [How to get first n elements of an Array](#how-to-get-first-n-elements-of-an-array)
+   * [How to access an element](#how-to-access-an-element)
    * [How to remove one or more elements of an Array](#how-to-remove-one-or-more-elements-of-an-array)
 * [Hash](#hash)
    * [How to group by count](#how-to-group-by-count)
@@ -1264,7 +1266,9 @@ All of them are used for executing a single line or multiline code.
 Array
 ============
 
-Initialize an empty array.
+Unlike other programming languages like Java, Ruby only has dynamic arrays but no static arrays. That means you don’t have to worry about the size of the array while adding new values.
+
+There are multiple ways we can Initialize an empty array.
 
 ```ruby
 array = Array.new
@@ -1272,12 +1276,44 @@ array = Array.new
 array = []
 ```
 
-Initialize an array with n elements.
+Fill an array with the initial size and a default object.
 
 ```ruby
-array = Array.new(3, 7)
+numbers = Array.new(3, 7)
+# [7, 7, 7]
 # or
-array = [7, 7, 7]
+numbers = [7, 7, 7]
+# [7, 7, 7]
+# or
+numbers = []
+numbers.fill(7, 0..2)
+# [7, 7, 7]
+```
+
+How about an array with different hashes? No problem, Ruby has you covered!
+
+```ruby
+array_with_hashes = Array.new(2) { {} }
+# [{}, {}]
+array_with_hashes[0][:name] = "Bob"
+array_with_hashes[0][:id] = 10
+# [{:name=>"Bob", :id=>10}, {}]
+```
+
+Let’s talk about 2D arrays briefly.
+
+```ruby
+temperature_data = [ 
+                     ["A908", 38],
+                     ["A909", 37],
+                     ["A910", 38],
+                   ]
+temperature_data[0]
+# ["A908", 38]
+temperature_data[0][0]
+# "A908"
+temperature_data[0][1]
+# 38
 ```
 
 Array indexing starts at 0. A negative index is relative to the end of the array, so -1 is the last element of the array, -2 is the second last element in the array, and so on.
@@ -1327,6 +1363,22 @@ numbers.insert(-1, 12, 13, 14)
 # [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14]
 numbers.insert(-4, 11)
 # [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+```
+
+How about a block to populate the values of an array?
+
+```ruby
+numbers = Array.new(10) { |n| n = n * 2 }
+# [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+```
+It gets easier to fill an array.
+
+```ruby
+numbers = Array(100..110)
+# [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]
+# or we can convert a range to an array
+(100..110).to_a
+# [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]
 ```
 
 How to iterate an Array
@@ -1904,6 +1956,21 @@ How to get first n elements of an Array
 primes = [7, 2, 3, 5]
 primes.take(3)
 # [7, 2, 3]
+```
+
+How to access an element
+-----
+
+```ruby
+primes = [7, 2, 3, 5]
+primes.fetch(3)
+# 5
+# Fetch will throw an error if the element does not exist
+primes.fetch(10)
+# (index 10 outside of array bounds: -4...4)
+# or get an default value
+primes.fetch(10, -1)
+# -1
 ```
 
 How to remove one or more elements of an Array
