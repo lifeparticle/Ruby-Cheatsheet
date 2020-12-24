@@ -2602,6 +2602,7 @@ My Ruby Articles
 2. [17 Useful Ruby String Methods to Clean and Format Your Data](https://towardsdatascience.com/17-useful-ruby-string-methods-to-clean-and-format-your-data-9c9147ff87b9)
 3. [How to Deploy a Ruby Serverless Function to Vercel](https://towardsdatascience.com/how-to-deploy-a-ruby-serverless-function-to-vercel-da8c3581f7c2)
 4. [Useful Ruby Array Methods to Manage Your Data](https://towardsdatascience.com/useful-ruby-array-methods-to-manage-your-data-4d2813c63ccf)
+5. [An Introduction to Ruby Hashes](https://towardsdatascience.com/an-introduction-to-ruby-hash-1c1c4b2dd905)
 
 Books and other resources
 ============
