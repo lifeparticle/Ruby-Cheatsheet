@@ -2028,23 +2028,87 @@ numbers.uniq
 Hash
 ============
 
-```ruby
-# initialize an empty hash
-students = Hash.new
-students = {name: 'John', email: 'john@col.com'}
-puts "#{students[:name]}"
-# or
-students = {name: 'John', email: 'john@col.com'}
-puts "#{students[:name]}"
+Let's start with some basic operations. Below we have an example of how to initialize an empty hash.
 
-# initialize an empty hash with default value of 1 for every key
-students = Hash.new(1)
-puts "#{students["id"]}"
+```ruby
+students = Hash.new
+or
+students = {}
+```
+
+Here we have an empty hash, without any key-value pairs. Now the question is, what if someone wants to access a key that does not exist in the hash? Well, the answer is nil, which is the default value.
+
+```ruby
+puts "#{students[:name]}"
+# nil
+```
+
+Let’s add some values to the hash using symbols. There are two ways to declare symbols as keys.
+
+```ruby
+students = Hash.new
+students = {name: 'John', email: 'john@col.com'}
+puts "#{students[:name]}"
 # or
 students = Hash.new
-students.default = 1
-puts "#{students["id"]}"
+students = {:name => 'John', :email => 'john@col.com'}
+puts "#{students[:name]}"
 ```
+
+I prefer the former one because I’ve to type less! How about initializing with default values, here we have initialized an empty hash with a default value of “no email” for every key.
+
+```ruby
+students = Hash.new("no data")
+puts "#{students[:email]}"
+# no email
+# or
+students = Hash.new
+students.default = "no data"
+puts "#{students[:email]}"
+# no email
+```
+
+The Hash.new() creates a single default object for every key. That’s why by altering it for one key changes for other keys as well. For example, when we change the default value for the key id, it affects other unassigned key’s default value, in this case, name.
+
+```ruby
+students = Hash.new("no data")
+students[:email] = "john@col.com"
+puts "#{students[:email]}"
+# john@col.com
+puts "#{students[:id]}"
+# no data
+puts "#{students[:name]}"
+# no data
+students[:id].upcase!
+puts "#{students[:email]}"
+# john@col.com
+puts "#{students[:id]}"
+# NO DATA
+puts "#{students[:name]}"
+# NO DATA
+```
+
+If the above code behavior is not desired, you can use Hash.new {|hash, key| block } instead. This method creates a default object each time for different keys.
+
+```ruby
+students = Hash.new {|hash, key| hash[key] = "no data" }
+students[:email] = "john@col.com"
+puts "#{students[:email]}"
+# john@col.com
+puts "#{students[:id]}"
+# no data
+puts "#{students[:name]}"
+# no data
+students[:id].upcase!
+puts "#{students[:email]}"
+# john@col.com
+puts "#{students[:id]}"
+# NO DATA
+puts "#{students[:name]}"
+# no data
+```
+
+In short, Hash.new(some_value) sets a default value of some_value for every key that does not exist in the hash, Hash.new {|hash, key| block } creates a new default object for every key that does not exist in the hash, and Hash.new() or {} sets nil for every key.
 
 How to group by count
 -----
