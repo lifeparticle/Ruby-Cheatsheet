@@ -626,9 +626,8 @@ result = case marks
     else "Invalid marks"
 end
 
-puts marks
-# output
-# 86
+puts result
+# High Distinction
 ```
 Data types
 ============
