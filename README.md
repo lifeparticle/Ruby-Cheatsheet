@@ -151,6 +151,10 @@ The latest news from ruby-lang.org
 Installation
 ============
 
+<!-- news starts -->
+
+<!-- news ends -->
+
 Troubleshooting
 -----
 
@@ -774,7 +778,7 @@ A method is a function that takes zero or more parameters and returns a value. R
 How to declare a method
 -----
 
-In Ruby, the last statement evaluated is the return value of that method. The return statement is optional. Depending on your preference, you can choose either of them 👍. I prefer to use the return statement because it's easier to understand. 
+In Ruby, the last statement evaluated is the return value of that method. The return statement is optional. Depending on your preference, you can choose either of them 👍. I prefer to use the return statement because it's easier to understand.
 
 ```ruby
 def method_name(parameter1, parameter2)
@@ -1308,7 +1312,7 @@ array_with_hashes[0][:id] = 10
 Let’s talk about 2D arrays briefly.
 
 ```ruby
-temperature_data = [ 
+temperature_data = [
                      ["A908", 38],
                      ["A909", 37],
                      ["A910", 38],
