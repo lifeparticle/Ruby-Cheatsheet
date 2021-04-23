@@ -10,6 +10,9 @@
    <a href="https://github.com/lifeparticle/Ruby-Cheatsheet/workflows/VERIFY%20README/badge.svg">
       <img alt="link" src="https://github.com/lifeparticle/Ruby-Cheatsheet/workflows/VERIFY%20README/badge.svg"/>
    </a>
+   <a href="https://github.com/lifeparticle/Ruby-Cheatsheet/actions/workflows/python-app.yml">
+      <img alt="link" src="https://github.com/lifeparticle/Ruby-Cheatsheet/actions/workflows/python-app.yml/badge.svg"/>
+   </a>
 </p>
 
 Table of Contents
