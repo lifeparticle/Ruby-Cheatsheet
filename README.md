@@ -7,7 +7,7 @@
    <a href="https://github.com/lifeparticle/Ruby-Cheatsheet/issues">
       <img alt="contributions welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
    </a>
-   <a href="https://github.com/lifeparticle/Ruby-Cheatsheet/workflows/VERIFY%20README/badge.svg">
+   <a href="https://github.com/lifeparticle/Ruby-Cheatsheet/actions/workflows/link.yml">
       <img alt="link" src="https://github.com/lifeparticle/Ruby-Cheatsheet/workflows/VERIFY%20README/badge.svg"/>
    </a>
    <a href="https://github.com/lifeparticle/Ruby-Cheatsheet/actions/workflows/python-app.yml">
