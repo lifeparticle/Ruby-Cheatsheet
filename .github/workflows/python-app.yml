@@ -26,9 +26,6 @@ jobs:
       run: |-
         python build_readme.py
         cat README.md
-      env:
-          CLIENT_ID: ${{secrets.CLIENT_ID}}
-          CLIENT_SECRET: ${{secrets.CLIENT_SECRET}}
     - name: Commit and push if changed
       run: |-
         git diff
