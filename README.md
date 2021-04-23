@@ -15,6 +15,7 @@
 Table of Contents
 =================
 
+* [The latest news from ruby-lang.org](#the-latest-news-from ruby-lang.org)
 * [Installation](#installation)
    * [Troubleshooting](#troubleshooting)
       * [macOS](#macos)
@@ -140,6 +141,11 @@ Table of Contents
 * [Contribution Guidelines](#contribution-guidelines)
 * [Author](#author)
 * [License](#license)
+
+
+The latest news from ruby-lang.org
+============
+
 
 
 Installation
