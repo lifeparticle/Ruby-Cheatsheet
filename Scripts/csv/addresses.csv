@@ -1,0 +1,22 @@
+id,location_id,address_1,address_2,city,state_province,postal_code,country
+1,1,2600 Middlefield Road,,Redwood City,CA,94063,US
+2,2,24 Second Avenue,,San Mateo,CA,94401,US
+3,3,24 Second Avenue,,San Mateo,CA,94403,US
+4,4,24 Second Avenue,,San Mateo,CA,94401,US
+5,5,24 Second Avenue,,San Mateo,CA,94401,US
+6,6,800 Middle Avenue,,Menlo Park,CA,94025-9881,US
+7,7,500 Arbor Road,,Menlo Park,CA,94025,US
+8,8,800 Middle Avenue,,Menlo Park,CA,94025-9881,US
+9,9,2510 Middlefield Road,,Redwood City,CA,94063,US
+10,10,1044 Middlefield Road,,Redwood City,CA,94063,US
+11,11,2140 Euclid Avenue.,,Redwood City,CA,94061,US
+12,12,1044 Middlefield Road,2nd Floor,Redwood City,CA,94063,US
+13,13,399 Marine Parkway.,,Redwood City,CA,94065,US
+14,14,660 Veterans Blvd.,,Redwood City,CA,94063,US
+15,15,1500 Valencia Street,,San Francisco,CA,94110,US
+16,16,1161 South Bernardo,,Sunnyvale,CA,94087,US
+17,17,409 South Spruce Avenue,,South San Francisco,CA,94080,US
+18,18,114 Fifth Avenue,,Redwood City,CA,94063,US
+19,19,19 West 39th Avenue,,San Mateo,CA,94403,US
+20,21,123 El Camino Real,,Belmont,CA,94002,US
+21,22,2013 Avenue of the fellows,Suite 100,San Francisco,CA,94103,US

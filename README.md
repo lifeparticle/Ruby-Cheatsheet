@@ -872,7 +872,7 @@ res = method_name("ADD", 2, 2, 2, 3, 3, 3)
 
 Modify object
 -----
-The ! is used after the method when you want to modify the object.
+The `!` is used after the method when you want to modify the object.
 
 ```
 a = ["Drama",
