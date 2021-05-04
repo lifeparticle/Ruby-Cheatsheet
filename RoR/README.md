@@ -34,12 +34,14 @@ rails g model Student first_name:string last_name:string gender:string
 Model validations
 
 https://guides.rubyonrails.org/active_record_validations.html
+
 https://learn.co/lessons/activerecord-lifecycle-reading
 
 
 List all tables
 ```
 ActiveRecord::Base.connection.tables
+```
 
 List all columns of a table
 ```
