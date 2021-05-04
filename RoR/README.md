@@ -50,15 +50,17 @@ ActiveRecord::Base.connection.columns('student').map(&:name)
 
 When creating a new database, the following command tends to be faster
 
+```
+bin/rails db:schema:load
+```
+
 Delete all records in a database table
 
 ```
 Post.delete_all
 ```
 
-```
-bin/rails db:schema:load
-```
+
 
 
 # Resources
