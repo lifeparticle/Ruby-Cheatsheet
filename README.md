@@ -204,6 +204,9 @@ docker run -it --rm ruby:2.7
 RUBY_VERSION
 ```
 
+[RVM](https://www.ruby-lang.org/en/documentation/installation/#rvm)
+
+
 How to install ruby gem manager, bundler gem
 -----
 
