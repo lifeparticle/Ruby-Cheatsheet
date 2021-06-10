@@ -168,7 +168,7 @@ Installation
 Troubleshooting
 -----
 
-### macOS 
+### macOS
 
 macOS Big Sur (Version 11.3)
 
@@ -206,6 +206,14 @@ RUBY_VERSION
 
 [RVM](https://www.ruby-lang.org/en/documentation/installation/#rvm)
 
+```
+\curl -sSL https://get.rvm.io | bash -s stable
+rvm list
+rvm install 3.0.1
+rvm install 3.0.0
+rvm list
+rvm use 3.0.1
+```
 
 How to install ruby gem manager, bundler gem
 -----
