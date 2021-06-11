@@ -13,3 +13,4 @@ ruby strings_sort.rb
 - [rm_dup_from_array](https://github.com/lifeparticle/Ruby-Cheatsheet/blob/master/Scripts/rm_dup_from_array.rb)
 - [strings_sort](https://github.com/lifeparticle/Ruby-Cheatsheet/blob/master/Scripts/strings_sort.rb)
 - [csv](https://github.com/lifeparticle/Ruby-Cheatsheet/tree/master/Scripts/csv)
+- [web_scraper](https://github.com/lifeparticle/Ruby-Cheatsheet/blob/master/Scripts/web_scraper)
