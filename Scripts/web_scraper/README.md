@@ -9,7 +9,7 @@ brew install chromedriver
 cd /opt/homebrew/Caskroom/chromedriver/91.0.4472.19
 ```
 
-Working solution
+Working solution for macOS Big Sur
 ```
 Open Finder
 Navigate to where the chromedriver file is located
