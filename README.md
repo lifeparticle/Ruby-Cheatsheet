@@ -2713,6 +2713,7 @@ Books and other resources
 7. [Awesome Ruby Blogs](https://github.com/Yegorov/awesome-ruby-blogs)
 8. [Ruby Scripts](https://github.com/jakewmeyer/Ruby-Scripts)
 9. [Awesome Ruby](https://github.com/markets/awesome-ruby)
+10. [Ruby Bookmarks](https://github.com/dreikanter/ruby-bookmarks)
 
 Bug Reports and Feature Requests
 ============
