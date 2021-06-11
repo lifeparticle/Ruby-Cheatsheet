@@ -23,4 +23,4 @@ gem install selenium-webdriver
 
 
 1. [selenium-webdriver-doc](https://www.rubydoc.info/gems/selenium-webdriver/0.0.28/Selenium/WebDriver/Find)
-2. [tutorials][https://testautomationu.applitools.com/selenium-webdriver-with-ruby/]
+2. [tutorials](https://testautomationu.applitools.com/selenium-webdriver-with-ruby/)
