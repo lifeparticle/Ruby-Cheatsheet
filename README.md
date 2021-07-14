@@ -2701,6 +2701,7 @@ My Ruby Articles
 3. [How to Deploy a Ruby Serverless Function to Vercel](https://towardsdatascience.com/how-to-deploy-a-ruby-serverless-function-to-vercel-da8c3581f7c2)
 4. [Useful Ruby Array Methods to Manage Your Data](https://towardsdatascience.com/useful-ruby-array-methods-to-manage-your-data-4d2813c63ccf)
 5. [An Introduction to Ruby Hashes](https://towardsdatascience.com/an-introduction-to-ruby-hash-1c1c4b2dd905)
+6. [How to Dockerize an Existing Sinatra Application](https://towardsdatascience.com/how-to-dockerize-an-existing-sinatra-application-3a6943d7a428)
 
 Books and other resources
 ============
