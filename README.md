@@ -2716,6 +2716,7 @@ Books and other resources
 8. [Ruby Scripts](https://github.com/jakewmeyer/Ruby-Scripts)
 9. [Awesome Ruby](https://github.com/markets/awesome-ruby)
 10. [Ruby Bookmarks](https://github.com/dreikanter/ruby-bookmarks)
+11. [Code With Jason](https://www.codewithjason.com/articles/)
 
 Bug Reports and Feature Requests
 ============
