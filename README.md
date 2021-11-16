@@ -150,6 +150,7 @@ The latest news from ruby-lang.org
 ============
 
 <!-- news starts -->
+* [CVE-2021-41817: Regular Expression Denial of Service Vunlerability of Date Parsing Methods](https://www.ruby-lang.org/en/news/2021/11/15/date-parsing-method-regexp-dos-cve-2021-41817/) <br/> <sub>2021-11-15 08:00:00</sub>
 * [Ruby 3.1.0 Preview 1 Released](https://www.ruby-lang.org/en/news/2021/11/09/ruby-3-1-0-preview1-released/) <br/> <sub>2021-11-09 00:00:00</sub>
 * [2022 Fukuoka Ruby Award Competition - Entries to be judged by Matz](https://www.ruby-lang.org/en/news/2021/08/03/fukuoka-ruby-award-2022/) <br/> <sub>2021-08-03 00:00:00</sub>
 * [CVE-2021-31810: Trusting FTP PASV responses vulnerability in Net::FTP](https://www.ruby-lang.org/en/news/2021/07/07/trusting-pasv-responses-in-net-ftp/) <br/> <sub>2021-07-07 09:00:00</sub>
@@ -159,7 +160,6 @@ The latest news from ruby-lang.org
 * [Ruby 2.6.8 Released](https://www.ruby-lang.org/en/news/2021/07/07/ruby-2-6-8-released/) <br/> <sub>2021-07-07 09:00:00</sub>
 * [CVE-2021-31799: A command injection vulnerability in RDoc](https://www.ruby-lang.org/en/news/2021/05/02/os-command-injection-in-rdoc/) <br/> <sub>2021-05-02 09:00:00</sub>
 * [CVE-2021-28965: XML round-trip vulnerability in REXML](https://www.ruby-lang.org/en/news/2021/04/05/xml-round-trip-vulnerability-in-rexml-cve-2021-28965/) <br/> <sub>2021-04-05 12:00:00</sub>
-* [CVE-2021-28966: Path traversal in Tempfile on Windows](https://www.ruby-lang.org/en/news/2021/04/05/tempfile-path-traversal-on-windows-cve-2021-28966/) <br/> <sub>2021-04-05 12:00:00</sub>
 <!-- news ends -->
 
 Installation
