@@ -150,16 +150,16 @@ The latest news from ruby-lang.org
 ============
 
 <!-- news starts -->
+* [Ruby 3.0.3 Released](https://www.ruby-lang.org/en/news/2021/11/24/ruby-3-0-3-released/) <br/> <sub>2021-11-24 12:00:00</sub>
+* [Ruby 2.7.5 Released](https://www.ruby-lang.org/en/news/2021/11/24/ruby-2-7-5-released/) <br/> <sub>2021-11-24 12:00:00</sub>
+* [Ruby 2.6.9 Released](https://www.ruby-lang.org/en/news/2021/11/24/ruby-2-6-9-released/) <br/> <sub>2021-11-24 12:00:00</sub>
+* [CVE-2021-41819: Cookie Prefix Spoofing in CGI::Cookie.parse](https://www.ruby-lang.org/en/news/2021/11/24/cookie-prefix-spoofing-in-cgi-cookie-parse-cve-2021-41819/) <br/> <sub>2021-11-24 12:00:00</sub>
+* [CVE-2021-41816: Buffer Overrun in CGI.escape_html](https://www.ruby-lang.org/en/news/2021/11/24/buffer-overrun-in-cgi-escape_html-cve-2021-41816/) <br/> <sub>2021-11-24 12:00:00</sub>
 * [CVE-2021-41817: Regular Expression Denial of Service Vulnerability of Date Parsing Methods](https://www.ruby-lang.org/en/news/2021/11/15/date-parsing-method-regexp-dos-cve-2021-41817/) <br/> <sub>2021-11-15 08:00:00</sub>
 * [Ruby 3.1.0 Preview 1 Released](https://www.ruby-lang.org/en/news/2021/11/09/ruby-3-1-0-preview1-released/) <br/> <sub>2021-11-09 00:00:00</sub>
 * [2022 Fukuoka Ruby Award Competition - Entries to be judged by Matz](https://www.ruby-lang.org/en/news/2021/08/03/fukuoka-ruby-award-2022/) <br/> <sub>2021-08-03 00:00:00</sub>
 * [CVE-2021-31810: Trusting FTP PASV responses vulnerability in Net::FTP](https://www.ruby-lang.org/en/news/2021/07/07/trusting-pasv-responses-in-net-ftp/) <br/> <sub>2021-07-07 09:00:00</sub>
 * [CVE-2021-32066: A StartTLS stripping vulnerability in Net::IMAP](https://www.ruby-lang.org/en/news/2021/07/07/starttls-stripping-in-net-imap/) <br/> <sub>2021-07-07 09:00:00</sub>
-* [Ruby 3.0.2 Released](https://www.ruby-lang.org/en/news/2021/07/07/ruby-3-0-2-released/) <br/> <sub>2021-07-07 09:00:00</sub>
-* [Ruby 2.7.4 Released](https://www.ruby-lang.org/en/news/2021/07/07/ruby-2-7-4-released/) <br/> <sub>2021-07-07 09:00:00</sub>
-* [Ruby 2.6.8 Released](https://www.ruby-lang.org/en/news/2021/07/07/ruby-2-6-8-released/) <br/> <sub>2021-07-07 09:00:00</sub>
-* [CVE-2021-31799: A command injection vulnerability in RDoc](https://www.ruby-lang.org/en/news/2021/05/02/os-command-injection-in-rdoc/) <br/> <sub>2021-05-02 09:00:00</sub>
-* [CVE-2021-28965: XML round-trip vulnerability in REXML](https://www.ruby-lang.org/en/news/2021/04/05/xml-round-trip-vulnerability-in-rexml-cve-2021-28965/) <br/> <sub>2021-04-05 12:00:00</sub>
 <!-- news ends -->
 
 Installation
