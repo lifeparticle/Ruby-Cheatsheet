@@ -150,6 +150,7 @@ The latest news from ruby-lang.org
 ============
 
 <!-- news starts -->
+* [Ruby 3.1.0 Released](https://www.ruby-lang.org/en/news/2021/12/25/ruby-3-1-0-released/) <br/> <sub>2021-12-25 00:00:00</sub>
 * [Ruby 3.0.3 Released](https://www.ruby-lang.org/en/news/2021/11/24/ruby-3-0-3-released/) <br/> <sub>2021-11-24 12:00:00</sub>
 * [Ruby 2.7.5 Released](https://www.ruby-lang.org/en/news/2021/11/24/ruby-2-7-5-released/) <br/> <sub>2021-11-24 12:00:00</sub>
 * [Ruby 2.6.9 Released](https://www.ruby-lang.org/en/news/2021/11/24/ruby-2-6-9-released/) <br/> <sub>2021-11-24 12:00:00</sub>
@@ -159,7 +160,6 @@ The latest news from ruby-lang.org
 * [Ruby 3.1.0 Preview 1 Released](https://www.ruby-lang.org/en/news/2021/11/09/ruby-3-1-0-preview1-released/) <br/> <sub>2021-11-09 00:00:00</sub>
 * [2022 Fukuoka Ruby Award Competition - Entries to be judged by Matz](https://www.ruby-lang.org/en/news/2021/08/03/fukuoka-ruby-award-2022/) <br/> <sub>2021-08-03 00:00:00</sub>
 * [CVE-2021-31810: Trusting FTP PASV responses vulnerability in Net::FTP](https://www.ruby-lang.org/en/news/2021/07/07/trusting-pasv-responses-in-net-ftp/) <br/> <sub>2021-07-07 09:00:00</sub>
-* [CVE-2021-32066: A StartTLS stripping vulnerability in Net::IMAP](https://www.ruby-lang.org/en/news/2021/07/07/starttls-stripping-in-net-imap/) <br/> <sub>2021-07-07 09:00:00</sub>
 <!-- news ends -->
 
 Installation
