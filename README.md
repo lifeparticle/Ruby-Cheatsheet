@@ -150,6 +150,7 @@ The latest news from ruby-lang.org
 ============
 
 <!-- news starts -->
+* [Ruby 3.2.0 Preview 1 Released](https://www.ruby-lang.org/en/news/2022/04/03/ruby-3-2-0-preview1-released/) <br/> <sub>2022-04-03 00:00:00</sub>
 * [Ruby 3.1.1 Released](https://www.ruby-lang.org/en/news/2022/02/18/ruby-3-1-1-released/) <br/> <sub>2022-02-18 12:00:00</sub>
 * [Ruby 3.1.0 Released](https://www.ruby-lang.org/en/news/2021/12/25/ruby-3-1-0-released/) <br/> <sub>2021-12-25 00:00:00</sub>
 * [Ruby 3.0.3 Released](https://www.ruby-lang.org/en/news/2021/11/24/ruby-3-0-3-released/) <br/> <sub>2021-11-24 12:00:00</sub>
@@ -159,7 +160,6 @@ The latest news from ruby-lang.org
 * [CVE-2021-41816: Buffer Overrun in CGI.escape_html](https://www.ruby-lang.org/en/news/2021/11/24/buffer-overrun-in-cgi-escape_html-cve-2021-41816/) <br/> <sub>2021-11-24 12:00:00</sub>
 * [CVE-2021-41817: Regular Expression Denial of Service Vulnerability of Date Parsing Methods](https://www.ruby-lang.org/en/news/2021/11/15/date-parsing-method-regexp-dos-cve-2021-41817/) <br/> <sub>2021-11-15 08:00:00</sub>
 * [Ruby 3.1.0 Preview 1 Released](https://www.ruby-lang.org/en/news/2021/11/09/ruby-3-1-0-preview1-released/) <br/> <sub>2021-11-09 00:00:00</sub>
-* [2022 Fukuoka Ruby Award Competition - Entries to be judged by Matz](https://www.ruby-lang.org/en/news/2021/08/03/fukuoka-ruby-award-2022/) <br/> <sub>2021-08-03 00:00:00</sub>
 <!-- news ends -->
 
 Installation
