@@ -150,16 +150,16 @@ The latest news from ruby-lang.org
 ============
 
 <!-- news starts -->
+* [Ruby 3.1.2 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-3-1-2-released/) <br/> <sub>2022-04-12 12:00:00</sub>
+* [Ruby 3.0.4 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-3-0-4-released/) <br/> <sub>2022-04-12 12:00:00</sub>
+* [Ruby 2.7.6 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-2-7-6-released/) <br/> <sub>2022-04-12 12:00:00</sub>
+* [Ruby 2.6.10 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-2-6-10-released/) <br/> <sub>2022-04-12 12:00:00</sub>
+* [CVE-2022-28738: Double free in Regexp compilation](https://www.ruby-lang.org/en/news/2022/04/12/double-free-in-regexp-compilation-cve-2022-28738/) <br/> <sub>2022-04-12 12:00:00</sub>
+* [CVE-2022-28739: Buffer overrun in String-to-Float conversion](https://www.ruby-lang.org/en/news/2022/04/12/buffer-overrun-in-string-to-float-cve-2022-28739/) <br/> <sub>2022-04-12 12:00:00</sub>
 * [Ruby 3.2.0 Preview 1 Released](https://www.ruby-lang.org/en/news/2022/04/03/ruby-3-2-0-preview1-released/) <br/> <sub>2022-04-03 00:00:00</sub>
 * [Ruby 3.1.1 Released](https://www.ruby-lang.org/en/news/2022/02/18/ruby-3-1-1-released/) <br/> <sub>2022-02-18 12:00:00</sub>
 * [Ruby 3.1.0 Released](https://www.ruby-lang.org/en/news/2021/12/25/ruby-3-1-0-released/) <br/> <sub>2021-12-25 00:00:00</sub>
 * [Ruby 3.0.3 Released](https://www.ruby-lang.org/en/news/2021/11/24/ruby-3-0-3-released/) <br/> <sub>2021-11-24 12:00:00</sub>
-* [Ruby 2.7.5 Released](https://www.ruby-lang.org/en/news/2021/11/24/ruby-2-7-5-released/) <br/> <sub>2021-11-24 12:00:00</sub>
-* [Ruby 2.6.9 Released](https://www.ruby-lang.org/en/news/2021/11/24/ruby-2-6-9-released/) <br/> <sub>2021-11-24 12:00:00</sub>
-* [CVE-2021-41819: Cookie Prefix Spoofing in CGI::Cookie.parse](https://www.ruby-lang.org/en/news/2021/11/24/cookie-prefix-spoofing-in-cgi-cookie-parse-cve-2021-41819/) <br/> <sub>2021-11-24 12:00:00</sub>
-* [CVE-2021-41816: Buffer Overrun in CGI.escape_html](https://www.ruby-lang.org/en/news/2021/11/24/buffer-overrun-in-cgi-escape_html-cve-2021-41816/) <br/> <sub>2021-11-24 12:00:00</sub>
-* [CVE-2021-41817: Regular Expression Denial of Service Vulnerability of Date Parsing Methods](https://www.ruby-lang.org/en/news/2021/11/15/date-parsing-method-regexp-dos-cve-2021-41817/) <br/> <sub>2021-11-15 08:00:00</sub>
-* [Ruby 3.1.0 Preview 1 Released](https://www.ruby-lang.org/en/news/2021/11/09/ruby-3-1-0-preview1-released/) <br/> <sub>2021-11-09 00:00:00</sub>
 <!-- news ends -->
 
 Installation
