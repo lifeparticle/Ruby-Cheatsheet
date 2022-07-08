@@ -677,7 +677,7 @@ Data types
 | 6 | Boolean  | a = false<br>a = true        | a.class > FalseClass <br>a.class > TrueClass               | [TrueClass](https://ruby-doc.org/core-2.6.3/TrueClass.html) <br> [FalseClass](https://ruby-doc.org/core-2.6.3/FalseClass.html)  |
 | 7 | Symbol   | a = :status                  | a.class > Symbol                                           | [link](https://ruby-doc.org/core-2.6.3/Symbol.html)   |
 | 8 | Range    | a = 1..3                     | a.class > Range                                            | [link](https://ruby-doc.org/core-2.6.3/Range.html)    |
-| 9 | Nill     | a = nil                      | a.class > NilClass                                         | [link](https://ruby-doc.org/core-2.6.3/NilClass.html) |
+| 9 | Nil     | a = nil                      | a.class > NilClass                                         | [link](https://ruby-doc.org/core-2.6.3/NilClass.html) |
 
 [Further readings](https://www.digitalocean.com/community/tutorials/understanding-data-types-in-ruby)
 
