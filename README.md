@@ -472,7 +472,7 @@ Pre-defined variables
 | 5 | $' | The String following whatever was matched by the last successful pattern match in the current scope, or nil if the last pattern match failed. (Mnemonic: ' often follows a quoted string.) |
 | 6 | $+ | The last bracket matched by the last successful search pattern, or nil if the last pattern match failed. This is useful if you don't know which of a set of alternative patterns matched. (Mnemonic: be positive and forward looking.) |
 | 7 | $1, $2... | Contains the subpattern from the corresponding set of parentheses in the last successful pattern matched, not counting patterns matched in nested blocks that have been exited already, or nil if the last pattern match failed. (Mnemonic: like \digit.) These variables are all read-only. |
-| 8 | $~ | The information about the last match in the current scope. Setting this variables affects the match variables like $&, $+, $1, $2.. etc. The nth subexpression can be retrieved by $~[nth]. (Mnemonic: ~ is for match.) This variable is locally scoped. |
+| 8 | $~ | The information about the last match in the current scope. Setting this variables affects the match variables like `$&, $+, $1, $2..` etc. The nth subexpression can be retrieved by $~[nth]. (Mnemonic: ~ is for match.) This variable is locally scoped. |
 | 9 | $= | The flag for case insensitive, nil by default. (Mnemonic: = is for comparison.) |
 | 10 | $/ | The input record separator, newline by default. Works like awk's RS variable. If it is set to nil, whole file will be read at once. (Mnemonic: / is used to delimit line boundaries when quoting poetry.) |
 | 11 | $\ | The output record separator for the print and IO#write. The default is nil. (Mnemonic: It's just like /, but it's what you get "back" from Ruby.) |
@@ -677,7 +677,7 @@ Data types
 | 6 | Boolean  | a = false<br>a = true        | a.class > FalseClass <br>a.class > TrueClass               | [TrueClass](https://ruby-doc.org/core-2.6.3/TrueClass.html) <br> [FalseClass](https://ruby-doc.org/core-2.6.3/FalseClass.html)  |
 | 7 | Symbol   | a = :status                  | a.class > Symbol                                           | [link](https://ruby-doc.org/core-2.6.3/Symbol.html)   |
 | 8 | Range    | a = 1..3                     | a.class > Range                                            | [link](https://ruby-doc.org/core-2.6.3/Range.html)    |
-| 9 | Nil     | a = nil                      | a.class > NilClass                                         | [link](https://ruby-doc.org/core-2.6.3/NilClass.html) |
+| 9 | Nil      | a = nil                      | a.class > NilClass                                         | [link](https://ruby-doc.org/core-2.6.3/NilClass.html) |
 
 [Further readings](https://www.digitalocean.com/community/tutorials/understanding-data-types-in-ruby)
 
