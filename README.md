@@ -2687,6 +2687,7 @@ Platforms that supports Ruby
 1. [Heroku](https://www.heroku.com/ruby)
 2. [Vercel](https://vercel.com/docs/serverless-functions/supported-languages#ruby)
 3. [AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/lambda-ruby.html)
+4. [Fly.io](https://fly.io/)
 
 Ruby frameworks
 ============
