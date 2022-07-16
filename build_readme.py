@@ -1,12 +1,11 @@
 import requests
 import pathlib
 import json
-import sys
 import re
-import os
 
 # https://www.ruby-lang.org/en/feeds/news.rss
 
+RUBY_LATEST_SOURCE_URL =  "https://www.ruby-lang.org/en/downloads/"
 root = pathlib.Path(__file__).parent.resolve()
 
 def replace_chunk(content, marker, chunk, inline=False):
@@ -34,6 +33,14 @@ def fetch_blog_posts(link):
 		print('Not Found: ') + link
 	return result
 
+def fetch_ruby_latest_version():
+	response = requests.get(RUBY_LATEST_SOURCE_URL)
+
+	if (response.status_code != 200):
+		raise RuntimeError(f"Error while getting {RUBY_LATEST_SOURCE_URL}")
+
+	return re.search("http.*ruby-(.*).tar.gz", response.text).groups()[0]
+
 if __name__ == "__main__":
 	readme = root / "README.md"
 
@@ -50,3 +57,18 @@ if __name__ == "__main__":
 		rewritten = replace_chunk(rewritten, "news", posts_md)
 
 	readme.open("w").write(rewritten)
+
+	# Update the doc links to point the latest ruby version docs
+	stored_ruby_latest_version_file = root / ".ruby-latest-version"
+	stored_ruby_latest_version = stored_ruby_latest_version_file.open().read().strip()
+	ruby_latest_version = fetch_ruby_latest_version()
+
+	if (stored_ruby_latest_version != ruby_latest_version):
+		stored_ruby_latest_version_file.open("w").write(ruby_latest_version)
+		readme_contents = readme.open().read()
+
+		doc_links = re.search("<!-- doc_links starts -->(.*)<!-- doc_links ends -->", readme_contents, re.DOTALL).groups()[0].strip()
+		updated_doc_links = re.sub("core-\d.\d.\d", f"core-{ruby_latest_version}", doc_links)
+
+		readme_with_updated_doc_links = replace_chunk(readme_contents, "doc_links", updated_doc_links)
+		readme.open("w").write(readme_with_updated_doc_links)

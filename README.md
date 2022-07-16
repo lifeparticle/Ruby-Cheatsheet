@@ -1,5 +1,20 @@
 ![ruby](https://user-images.githubusercontent.com/1612112/74456286-b1bcd100-4eda-11ea-9738-7e0a27199021.png)
 
+<!-- doc_links starts -->
+[1]: https://ruby-doc.org/core-3.1.2/doc/keywords_rdoc.html
+[2]: https://ruby-doc.org/core-3.1.2/Integer.html
+[3]: https://ruby-doc.org/core-3.1.2/Float.html
+[4]: https://ruby-doc.org/core-3.1.2/String.html
+[5]: https://ruby-doc.org/core-3.1.2/Array.html
+[6]: https://ruby-doc.org/core-3.1.2/Hash.html
+[7]: https://ruby-doc.org/core-3.1.2/TrueClass.html
+[8]: https://ruby-doc.org/core-3.1.2/FalseClass.html
+[9]: https://ruby-doc.org/core-3.1.2/Symbol.html 
+[10]:https://ruby-doc.org/core-3.1.2/Range.html 
+[11]:https://ruby-doc.org/core-3.1.2/NilClass.html
+[12]:https://ruby-doc.org/core-3.1.2/Exception.html
+<!-- doc_links ends -->
+
 <p align="center">
    <a href="https://www.ruby-lang.org">
       <img alt="Ruby" src="https://cdn.emojidex.com/emoji/mdpi/Ruby.png"/>
@@ -299,7 +314,7 @@ not , or , redo, rescue , retry , return , self , super , then , true , undef , 
 when , while , yield
 ```
 
-[Further reading](https://ruby-doc.org/core-2.6.4/doc/keywords_rdoc.html)
+[Further reading][1]
 
 Comment
 ============
@@ -666,15 +681,15 @@ Data types
 
 | No | Type  | Example  | Class  | Doc  |
 |---|---|---|---|---|
-| 1 | Integer  | a = 17                       | a.class > Integer <br>a.class.superclass > Numeric         | [link](https://ruby-doc.org/core-2.6.3/Integer.html)  |
-| 2 | Float    | a = 87.23                    | a.class > Float <br>a.class.superclass > Numeric           | [link](https://ruby-doc.org/core-2.6.3/Float.html)    |
-| 3 | String   | a = "Hello universe"         | a.class > String                                           | [link](https://ruby-doc.org/core-2.6.3/String.html)   |
-| 4 | Array    | a = [12, 34]                 | a.class > Array                                            | [link](https://ruby-doc.org/core-2.6.3/Array.html)    |
-| 5 | Hash     | a = {type: "tea", count: 10} | a.class > Hash                                             | [link](https://ruby-doc.org/core-2.6.3/Hash.html)     |
-| 6 | Boolean  | a = false<br>a = true        | a.class > FalseClass <br>a.class > TrueClass               | [TrueClass](https://ruby-doc.org/core-2.6.3/TrueClass.html) <br> [FalseClass](https://ruby-doc.org/core-2.6.3/FalseClass.html)  |
-| 7 | Symbol   | a = :status                  | a.class > Symbol                                           | [link](https://ruby-doc.org/core-2.6.3/Symbol.html)   |
-| 8 | Range    | a = 1..3                     | a.class > Range                                            | [link](https://ruby-doc.org/core-2.6.3/Range.html)    |
-| 9 | Nil      | a = nil                      | a.class > NilClass                                         | [link](https://ruby-doc.org/core-2.6.3/NilClass.html) |
+| 1 | Integer  | a = 17                       | a.class > Integer <br>a.class.superclass > Numeric         | [link][2]  |
+| 2 | Float    | a = 87.23                    | a.class > Float <br>a.class.superclass > Numeric           | [link][3]  |
+| 3 | String   | a = "Hello universe"         | a.class > String                                           | [link][4]  |
+| 4 | Array    | a = [12, 34]                 | a.class > Array                                            | [link][5]  |
+| 5 | Hash     | a = {type: "tea", count: 10} | a.class > Hash                                             | [link][6]  |
+| 6 | Boolean  | a = false<br>a = true        | a.class > FalseClass <br>a.class > TrueClass               | [TrueClass][7] <br> [FalseClass][8]  |
+| 7 | Symbol   | a = :status                  | a.class > Symbol                                           | [link][9]  |
+| 8 | Range    | a = 1..3                     | a.class > Range                                            | [link][10] |
+| 9 | Nil      | a = nil                      | a.class > NilClass                                         | [link][11] |
 
 [Further readings](https://www.digitalocean.com/community/tutorials/understanding-data-types-in-ruby)
 
@@ -2591,7 +2606,7 @@ end
 
 ```
 
-[Further readings](https://ruby-doc.org/core-2.6.4/Exception.html)
+[Further readings][12]
 
 
 Regular expression
