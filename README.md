@@ -1,20 +1,5 @@
 ![ruby](https://user-images.githubusercontent.com/1612112/74456286-b1bcd100-4eda-11ea-9738-7e0a27199021.png)
 
-<!-- doc_links starts -->
-[1]: https://ruby-doc.org/core-3.1.2/doc/keywords_rdoc.html
-[2]: https://ruby-doc.org/core-3.1.2/Integer.html
-[3]: https://ruby-doc.org/core-3.1.2/Float.html
-[4]: https://ruby-doc.org/core-3.1.2/String.html
-[5]: https://ruby-doc.org/core-3.1.2/Array.html
-[6]: https://ruby-doc.org/core-3.1.2/Hash.html
-[7]: https://ruby-doc.org/core-3.1.2/TrueClass.html
-[8]: https://ruby-doc.org/core-3.1.2/FalseClass.html
-[9]: https://ruby-doc.org/core-3.1.2/Symbol.html 
-[10]:https://ruby-doc.org/core-3.1.2/Range.html 
-[11]:https://ruby-doc.org/core-3.1.2/NilClass.html
-[12]:https://ruby-doc.org/core-3.1.2/Exception.html
-<!-- doc_links ends -->
-
 <p align="center">
    <a href="https://www.ruby-lang.org">
       <img alt="Ruby" src="https://cdn.emojidex.com/emoji/mdpi/Ruby.png"/>
@@ -425,7 +410,7 @@ There are five different types of variables. The first character determines the 
 | 2 | @           | instance variable | @id = []                  | Instance variables have the `nil` value until they are initialized.                                 |
 | 3 | @@          | class variable    | @@name = []               | Class variable must be initialized.                                                                 |
 | 4 | $           | global variable   | $version = "0.8.9"        | Global variables have the `nil` value until they are initialized.                                   |
-| 5 | [A-Z]       | constant          | PI = 3.14                 | Constant variables must be initialized and you can change the constant but you will get a warning. |
+| 5 | [A-Z]       | constant          | PI = 3.14                 | Constant variables must be initialized and you can change the constant but you will get a warning.  |
 
 
 1. Scope of a local variable is one of
@@ -464,11 +449,11 @@ Pseudo variables
 
 | No | Name | Note |
 |---|---|---|
-| 1  | self        | The receiver object of the current method  |
-| 2  | true        | Instance of the TrueClass  |
-| 3  | false       | Instance of the FalseClass  |
-| 4  | nil         | Instance of the NilClass   |
-| 5  | `__FILE__`  | The name of current source file name  |
+| 1  | self        | The receiver object of the current method      |
+| 2  | true        | Instance of the TrueClass                      |
+| 3  | false       | Instance of the FalseClass                     |
+| 4  | nil         | Instance of the NilClass                       |
+| 5  | `__FILE__`  | The name of current source file name           |
 | 6  | `__LINE__`  | The current line number of current source file |
 
 
@@ -477,36 +462,36 @@ Pre-defined variables
 
 | No | Name | Note |
 |---|---|---|
-| 1 | $! | The exception information message. raise sets this variable. |
-| 2 | $@ | The backtrace of the last exception, which is the array of the String that indicates the point where methods invoked from. The elements in the format like: "filename:line" or "filename:line:in `methodname'" (Mnemonic: where exception occurred at.) |
-| 3 | $& |  The String matched by the last successful pattern match in this scope, or nil if the last pattern match failed. (Mnemonic: like & | in some editors.) This variable is read-only. |
-| 4 | $` | The String preceding whatever was matched by the last successful pattern match in the current scope, or nil if the last pattern match failed. (Mnemonic: ` often precedes a quoted string.) This variable is read-only. |
-| 5 | $' | The String following whatever was matched by the last successful pattern match in the current scope, or nil if the last pattern match failed. (Mnemonic: ' often follows a quoted string.) |
-| 6 | $+ | The last bracket matched by the last successful search pattern, or nil if the last pattern match failed. This is useful if you don't know which of a set of alternative patterns matched. (Mnemonic: be positive and forward looking.) |
-| 7 | $1, $2... | Contains the subpattern from the corresponding set of parentheses in the last successful pattern matched, not counting patterns matched in nested blocks that have been exited already, or nil if the last pattern match failed. (Mnemonic: like \digit.) These variables are all read-only. |
-| 8 | $~ | The information about the last match in the current scope. Setting this variables affects the match variables like `$&, $+, $1, $2..` etc. The nth subexpression can be retrieved by $~[nth]. (Mnemonic: ~ is for match.) This variable is locally scoped. |
-| 9 | $= | The flag for case insensitive, nil by default. (Mnemonic: = is for comparison.) |
-| 10 | $/ | The input record separator, newline by default. Works like awk's RS variable. If it is set to nil, whole file will be read at once. (Mnemonic: / is used to delimit line boundaries when quoting poetry.) |
-| 11 | $\ | The output record separator for the print and IO#write. The default is nil. (Mnemonic: It's just like /, but it's what you get "back" from Ruby.) |
-| 12 | $, | The output field separator for the print. Also, it is the default separator for Array#join. (Mnemonic: what is printed when there is a , in your print statement.) |
-| 13 | $; | The default separator for String#split. |
-| 14 | $. | The current input line number of the last file that was read. |
-| 15 | $< | The virtual concatenation file of the files given by command line arguments, or stdin (in case no argument file supplied). $<.file returns the current filename. (Mnemonic: $< is a shell input source.) |
-| 16 | $> | The default output for print, printf. $stdout by default. (Mnemonic: $> is for shell output.) |
-| 17 | $_ | The last input line of String by gets or readline. It is set to nil if gets/readline meet EOF. This variable is locally scoped. (Mnemonic: partly same as Perl.) |
-| 17 | $0 | Contains the name of the file containing the Ruby script being executed. On some operating systems assigning to $0 modifies the argument area that the ps(1) program sees. This is more useful as a way of indicating the current program state than it is for hiding the program you're running. (Mnemonic: same as sh and ksh.) |
-| 18 | $* | Command line arguments given for the script. The options for Ruby interpreter are already removed. (Mnemonic: same as sh and ksh.) |
-| 19 | $$ | The process number of the Ruby running this script. (Mnemonic: same as shells.) |
-| 20 | $? | The status of the last executed child process. |
-| 21 | $: | The array contains the list of places to look for Ruby scripts and binary modules by load or require. It initially consists of the arguments to any -I command line switches, followed by the default Ruby library, probabl "/usr/local/lib/ruby", followed by ".", to represent the current directory. (Mnemonic: colon is the separators for PATH environment variable.) |
-| 22 | $" | The array contains the module names loaded by require. Used for prevent require from load modules twice. (Mnemonic: prevent files to be doubly quoted(loaded).) |
-| 23 | $DEBUG | The status of the -d switch. |
-| 24 | $FILENAME | Same as $<.filename. |
-| 25 | $LOAD_PATH | The alias to the $:. |
-| 26 | $stdin | The current standard input. |
-| 27 | $stdout | The current standard output. |
-| 28 | $stderr | The current standard error output. |
-| 29 | $VERBOSE | The verbose flag, which is set by the -v switch to the Ruby interpreter. |
+| 1 | $!           | The exception information message. raise sets this variable.                                                                                                                                                                                                                                                                                                               |
+| 2 | $@           | The backtrace of the last exception, which is the array of the String that indicates the point where methods invoked from. The elements in the format like: "filename:line" or "filename:line:in `methodname'" (Mnemonic: where exception occurred at.)                                                                                                                    |
+| 3 | $&           |  The String matched by the last successful pattern match in this scope, or nil if the last pattern match failed. (Mnemonic: like & in some editors.) This variable is read-only.                                                                                                                                                                                           |
+| 4 | $`           | The String preceding whatever was matched by the last successful pattern match in the current scope, or nil if the last pattern match failed. (Mnemonic: ` often precedes a quoted string.) This variable is read-only.                                                                                                                                                    |
+| 5 | $'           | The String following whatever was matched by the last successful pattern match in the current scope, or nil if the last pattern match failed. (Mnemonic: ' often follows a quoted string.)                                                                                                                                                                                 |
+| 6 | $+           | The last bracket matched by the last successful search pattern, or nil if the last pattern match failed. This is useful if you don't know which of a set of alternative patterns matched. (Mnemonic: be positive and forward looking.)                                                                                                                                     |
+| 7 | $1, $2...    | Contains the subpattern from the corresponding set of parentheses in the last successful pattern matched, not counting patterns matched in nested blocks that have been exited already, or nil if the last pattern match failed. (Mnemonic: like \digit.) These variables are all read-only.                                                                               |
+| 8 | $~           | The information about the last match in the current scope. Setting this variables affects the match variables like `$&, $+, $1, $2..` etc. The nth subexpression can be retrieved by $~[nth]. (Mnemonic: ~ is for match.) This variable is locally scoped.                                                                                                                 |
+| 9 | $=           | The flag for case insensitive, nil by default. (Mnemonic: = is for comparison.)                                                                                                                                                                                                                                                                                            |
+| 10 | $/          | The input record separator, newline by default. Works like awk's RS variable. If it is set to nil, whole file will be read at once. (Mnemonic: / is used to delimit line boundaries when quoting poetry.)                                                                                                                                                                  |
+| 11 | $\          | The output record separator for the print and IO#write. The default is nil. (Mnemonic: It's just like /, but it's what you get "back" from Ruby.)                                                                                                                                                                                                                          |
+| 12 | $,          | The output field separator for the print. Also, it is the default separator for Array#join. (Mnemonic: what is printed when there is a , in your print statement.)                                                                                                                                                                                                         |
+| 13 | $;          | The default separator for String#split.                                                                                                                                                                                                                                                                                                                                    |
+| 14 | $.          | The current input line number of the last file that was read.                                                                                                                                                                                                                                                                                                              |
+| 15 | $<          | The virtual concatenation file of the files given by command line arguments, or stdin (in case no argument file supplied). $<.file returns the current filename. (Mnemonic: $< is a shell input source.)                                                                                                                                                                   |
+| 16 | $>          | The default output for print, printf. $stdout by default. (Mnemonic: $> is for shell output.)                                                                                                                                                                                                                                                                              |
+| 17 | $_          | The last input line of String by gets or readline. It is set to nil if gets/readline meet EOF. This variable is locally scoped. (Mnemonic: partly same as Perl.)                                                                                                                                                                                                           |
+| 17 | $0          | Contains the name of the file containing the Ruby script being executed. On some operating systems assigning to $0 modifies the argument area that the ps(1) program sees. This is more useful as a way of indicating the current program state than it is for hiding the program you're running. (Mnemonic: same as sh and ksh.)                                          |
+| 18 | $*          | Command line arguments given for the script. The options for Ruby interpreter are already removed. (Mnemonic: same as sh and ksh.)                                                                                                                                                                                                                                         |
+| 19 | $$          | The process number of the Ruby running this script. (Mnemonic: same as shells.)                                                                                                                                                                                                                                                                                            |
+| 20 | $?          | The status of the last executed child process.                                                                                                                                                                                                                                                                                                                             |
+| 21 | $:          | The array contains the list of places to look for Ruby scripts and binary modules by load or require. It initially consists of the arguments to any -I command line switches, followed by the default Ruby library, probabl "/usr/local/lib/ruby", followed by ".", to represent the current directory. (Mnemonic: colon is the separators for PATH environment variable.) |
+| 22 | $"          | The array contains the module names loaded by require. Used for prevent require from load modules twice. (Mnemonic: prevent files to be doubly quoted(loaded).)                                                                                                                                                                                                            |
+| 23 | $DEBUG      | The status of the -d switch.                                                                                                                                                                                                                                                                                                                                               |
+| 24 | $FILENAME   | Same as $<.filename.                                                                                                                                                                                                                                                                                                                                                       |
+| 25 | $LOAD_PATH  | The alias to the $:.                                                                                                                                                                                                                                                                                                                                                       |
+| 26 | $stdin      | The current standard input.                                                                                                                                                                                                                                                                                                                                                |
+| 27 | $stdout     | The current standard output.                                                                                                                                                                                                                                                                                                                                               |
+| 28 | $stderr     | The current standard error output.                                                                                                                                                                                                                                                                                                                                         |
+| 29 | $VERBOSE    | The verbose flag, which is set by the -v switch to the Ruby interpreter.                                                                                                                                                                                                                                                                                                   |
 
 Option variables: The variables which names are in the form of $-?, where ? is the option character, are called option variables and contains the information about interpreter command line options.
 
@@ -2749,3 +2734,18 @@ License
 MIT License
 
 ![Jul-16-2019 22-21-31](https://user-images.githubusercontent.com/1612112/61294008-41e94980-a818-11e9-9ff0-656ae53c8360.gif)
+
+<!-- doc_links starts -->
+[1]: https://ruby-doc.org/core-3.1.2/doc/keywords_rdoc.html
+[2]: https://ruby-doc.org/core-3.1.2/Integer.html
+[3]: https://ruby-doc.org/core-3.1.2/Float.html
+[4]: https://ruby-doc.org/core-3.1.2/String.html
+[5]: https://ruby-doc.org/core-3.1.2/Array.html
+[6]: https://ruby-doc.org/core-3.1.2/Hash.html
+[7]: https://ruby-doc.org/core-3.1.2/TrueClass.html
+[8]: https://ruby-doc.org/core-3.1.2/FalseClass.html
+[9]: https://ruby-doc.org/core-3.1.2/Symbol.html
+[10]:https://ruby-doc.org/core-3.1.2/Range.html
+[11]:https://ruby-doc.org/core-3.1.2/NilClass.html
+[12]:https://ruby-doc.org/core-3.1.2/Exception.html
+<!-- doc_links ends -->
