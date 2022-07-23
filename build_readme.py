@@ -43,7 +43,6 @@ def fetch_ruby_latest_version():
 if __name__ == "__main__":
 	readme = root / "README.md"
 	readme_contents = readme.open().read()
-	rewritten = readme_contents
 	posts = fetch_blog_posts(RUBY_RSS_URL)
 
 	if len(posts) != 0:
@@ -51,7 +50,7 @@ if __name__ == "__main__":
 		posts_md = "\n".join(
 			["* [{title}]({link}) <br/> <sub>{pubDate}</sub>".format(**post) for post in posts]
 		)
-		rewritten = replace_chunk(rewritten, "news", posts_md)
+		readme_contents = replace_chunk(readme_contents, "news", posts_md)
 
 	# Update the doc links to point the latest ruby version docs
 	current_stable_version = root / "current_stable_version.txt"
@@ -59,9 +58,9 @@ if __name__ == "__main__":
 	ruby_latest_version = fetch_ruby_latest_version()
 
 	if (current_stable_version_contents != ruby_latest_version):
-		doc_links = re.search("<!-- doc_links starts -->(.*)<!-- doc_links ends -->", rewritten, re.DOTALL).groups()[0].strip()
+		doc_links = re.search("<!-- doc_links starts -->(.*)<!-- doc_links ends -->", readme_contents, re.DOTALL).groups()[0].strip()
 		updated_doc_links = re.sub("core-\d.\d.\d", f"core-{ruby_latest_version}", doc_links)
-		rewritten = replace_chunk(readme_contents, "doc_links", updated_doc_links)
+		readme_contents = replace_chunk(readme_contents, "doc_links", updated_doc_links)
 		current_stable_version.open("w").write(ruby_latest_version)
 
-	readme.open("w").write(rewritten)
+	readme.open("w").write(readme_contents)
