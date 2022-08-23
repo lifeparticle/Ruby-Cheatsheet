@@ -169,13 +169,13 @@ Troubleshooting
 
 macOS Big Sur (Version 11.3)
 
-List all the installed Ruby versions
+List all the installed Ruby versions:
 ```
 which -a ruby
 # /usr/bin/ruby
 ```
 
-Get information about currently used Ruby
+Get information about currently used Ruby:
 ```
 ruby -v
 # ruby 2.6.3p62 (2019-04-16 revision 67580) [universal.arm64e-darwin20]
@@ -285,7 +285,7 @@ Ruby is an object-oriented and interpreted (executes the code at runtime) progra
 1.next # 2
 ```
 
-To test the above code, you can use IRB (interactive Ruby), it’s a tool to execute Ruby code read from the standard input interactively. Type the irb command from your shell to initiate the interpreter.
+To test the above code, you can use IRB (interactive Ruby). It’s a tool to execute Ruby code read from the standard input interactively. Type the irb command from your shell to initiate the interpreter.
 
 ![1_OrzIgbBwYZUmgx3xm-woAg](https://user-images.githubusercontent.com/1612112/92318937-70e30000-f056-11ea-95b9-a9d3480fed36.gif)
 
@@ -313,7 +313,7 @@ comment
 =end
 ```
 
-I prefer `#` for multiline comments because it maintains my style guide and easier to read.
+I prefer `#` for multiline comments because it maintains my style guide and is easier to read.
 
 Operators
 ============
@@ -426,22 +426,22 @@ the entire program (unless one of the above applies)
 
 2. Scope of an instance variable is
 ```
-Instance variables cannot be altered except some methods, and it's distinct to each object of a class
+Instance variables cannot be altered except for some methods, and it's distinct to each object of a class.
 ```
 
 3. Scope of a class variable is one of
 ```
-Can be called from a class by calling ClassName.class_variable and it's independent of any object of a class
+It can be called from a class by calling ClassName.class_variable, and it's independent of any object of a class.
 ```
 
 4. Scope of a global variable is
 ```
-It can be referred from anywhere in a program
+It can be referred from anywhere in a program.
 ```
 
 5. Scope of a constant variable is
 ```
-Accessible outside the class
+Accessible outside the class.
 ```
 
 Pseudo variables
@@ -449,12 +449,12 @@ Pseudo variables
 
 | No | Name | Note |
 |---|---|---|
-| 1  | self        | The receiver object of the current method      |
-| 2  | true        | Instance of the TrueClass                      |
-| 3  | false       | Instance of the FalseClass                     |
-| 4  | nil         | Instance of the NilClass                       |
-| 5  | `__FILE__`  | The name of current source file name           |
-| 6  | `__LINE__`  | The current line number of current source file |
+| 1  | self        | The receiver object of the current method          |
+| 2  | true        | Instance of the TrueClass                          |
+| 3  | false       | Instance of the FalseClass                         |
+| 4  | nil         | Instance of the NilClass                           |
+| 5  | `__FILE__`  | The name of current source file name               |
+| 6  | `__LINE__`  | The current line number of the current source file |
 
 
 Pre-defined variables
