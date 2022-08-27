@@ -279,13 +279,31 @@ bundle update
 
 Introduction
 ============
-Ruby is an object-oriented and interpreted (executes the code at runtime) programming language like Python. In Ruby, everything is an object.
+Ruby is a pure object-oriented and interpreted (executes the code at runtime) programming language invented in the mid-90s by Yukihiro Matsumoto. In Ruby, everything is an object.
+It is easy-to-learn with dynamic typing and automatic memory management.
 
+With the idea that programming should be enjoyable for programmers, it was created to increase programmer
+productivity. It emphasizes the necessity for software to be understood by humans first and computers second. 
+
+Ruby will be quite familiar to Python and Perl developers (and to a lesser extent C# and JavaScript developers) as Ruby was heavily inspired by Perl in certain areas (as was Python).
+Ruby is less related to languages like C, C++ or Java because these languages are compiled (not interpreted), statically typed, and focused on performance rather than flexibility and
+conciseness.
+
+Ruby comes with a program that will show the results of any Ruby statements
+you feed it. Playing with Ruby code in interactive sessions like this is a
+terrific way to learn the language.
+
+Open up IRB (which stands for Interactive Ruby).
+
+* If you’re using **macOS** open up `Terminal` and type `irb`, then hit enter.
+* If you’re using **Linux**, open up a `shell` and type `irb` and hit enter.
+* If you’re using **Windows**, open `Interactive Ruby` from the Ruby section
+  of your Start Menu.
 ```ruby
 1.next # 2
 ```
 
-To test the above code, you can use IRB (interactive Ruby). It’s a tool to execute Ruby code read from the standard input interactively. Type the irb command from your shell to initiate the interpreter.
+To test the above code, type the irb command from your shell to initiate the interpreter.
 
 ![1_OrzIgbBwYZUmgx3xm-woAg](https://user-images.githubusercontent.com/1612112/92318937-70e30000-f056-11ea-95b9-a9d3480fed36.gif)
 
