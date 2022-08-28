@@ -279,7 +279,7 @@ bundle update
 
 Introduction
 ============
-Ruby is a pure object-oriented and interpreted (executes the code at runtime) programming language invented in the mid-90s by Yukihiro Matsumoto. In Ruby, everything is an object.
+Ruby is a pure object-oriented and interpreted (executes the code at runtime) programming language invented in the mid-90s by [Yukihiro Matsumoto](https://github.com/matz). In Ruby, everything is an object.
 It is easy to learn with dynamic typing and automatic memory management.
 
 With the idea that programming should be enjoyable for programmers, it was created to increase programmer
