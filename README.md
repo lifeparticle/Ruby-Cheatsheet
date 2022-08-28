@@ -280,13 +280,13 @@ bundle update
 Introduction
 ============
 Ruby is a pure object-oriented and interpreted (executes the code at runtime) programming language invented in the mid-90s by Yukihiro Matsumoto. In Ruby, everything is an object.
-It is easy-to-learn with dynamic typing and automatic memory management.
+It is easy to learn with dynamic typing and automatic memory management.
 
 With the idea that programming should be enjoyable for programmers, it was created to increase programmer
 productivity. It emphasizes the necessity for software to be understood by humans first and computers second. 
 
-Ruby will be quite familiar to Python and Perl developers (and to a lesser extent C# and JavaScript developers) as Ruby was heavily inspired by Perl in certain areas (as was Python).
-Ruby is less related to languages like C, C++ or Java because these languages are compiled (not interpreted), statically typed, and focused on performance rather than flexibility and
+Ruby will be quite familiar to Python, and Perl developers (and to a lesser extent C# and JavaScript developers) as Ruby was heavily inspired by Perl in certain areas (as was Python).
+Ruby is less related to languages like C, C++, or Java because these languages are compiled (not interpreted), statically typed, and focused on performance rather than flexibility and
 conciseness.
 
 Ruby comes with a program that will show the results of any Ruby statements
