@@ -309,13 +309,48 @@ To test the above code, type the irb command from your shell to initiate the int
 
 Reserved Words
 ============
-
-```
-__ENCODING__ , __LINE__ , __FILE__ , BEGIN , END , alias , and , begin , break , case , class ,
-def , defined? , do , else , elsif , end , ensure , false , for , if , in , module , next , nil ,
-not , or , redo, rescue , retry , return , self , super , then , true , undef , unless , until ,
-when , while , yield
-```
+| Reserved Word | Description                                                                                                   |
+|---------------|---------------------------------------------------------------------------------------------------------------| 
+|`__ENCODING__`  | The script encoding of the current file.                                                                      |
+| `__LINE__`     | The line number of this keyword in the current file.                                                          |
+| `__FILE__`     | The path to the current file.                                                                                 |
+| BEGIN         | Code enclosed in { } to run before program runs                                                               | 
+| END           | enclosed in  { }  to run when program ends                                                                    | 
+| alias         | Create alias for existing method, operator, global variable                                                   |
+| and           | Logical AND Operator                                                                                          |
+| begin         | Begins a block of code                                                                                        |
+| break         | Terminate a loop                                                                                              |
+| case          | Comparing an expression with matching when clause which<br/> closes with end                                  |
+| class         | Defining a class                                                                                              |
+| def           | Defining a function/method                                                                                    |
+| defined?      | To check if some variable, function exists or not                                                             |
+| do            | Begins a code block and execute code in the block, this ends with<br/> **end keyword**                        |
+| else          | Executes following code if previous conditional is not true                                                   |
+| elsif         | An alternate condition for an if expression.                                                                  |
+| end           | For ending a code block which started with keywords like begin, class, def, do, if                            |
+| ensure        | Always execute at block termination                                                                           |
+| false         | Logical Boolean false value                                                                                   |
+| for           | Begin a for loop                                                                                              |
+| if            | Executes the code block in case conditional statement for if is true                                          |
+| in            | Used with for loop                                                                                            |
+| module        | Defining a module                                                                                             |
+| next          | Jump to point immediately before evaluation of loop’s conditional                                             |
+| nil           | Empty or invalid or always false                                                                              |
+| not           | Logical Negation Operator                                                                                     |
+| or            | Logical Or Operator                                                                                           |
+| redo          | 	Jump after a loop conditional                                                                                |
+| rescue        | Evaluates the expression after an exception is raised                                                         |
+| retry         | • When called outside of rescue repates the method call<br/>• When called inside rescue jumps to top of block |
+| return        | Returns a value from a method or code block                                                                   |
+| self          | Current Object                                                                                                |
+| super         | Calls method of same name in the superclass                                                                   |
+| then          | Separator used with if, unless, when, case, rescue                                                            |
+| true          | Logical Boolean true                                                                                          |
+| undef         | Makes a method/function undefined in current class                                                            |
+| until         | Execute code block while conditional statement is false                                                       |
+| when          | Starts a clause under case statement                                                                          |
+| while         | Executes the code block, until the conditional statement becomes false                                        |
+| yield         | Executes the code block which is passed to a method                                                           |
 
 [Further reading][1]
 
