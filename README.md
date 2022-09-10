@@ -311,9 +311,9 @@ Reserved Words
 ============
 | Reserved Word | Description                                                                                                   |
 |---------------|---------------------------------------------------------------------------------------------------------------| 
-|`__ENCODING__`  | The script encoding of the current file.                                                                      |
-| `__LINE__`     | The line number of this keyword in the current file.                                                          |
-| `__FILE__`     | The path to the current file.                                                                                 |
+|`__ENCODING__` | The script encoding of the current file.                                                                      |
+| `__LINE__`    | The line number of this keyword in the current file.                                                          |
+| `__FILE__`    | The path to the current file.                                                                                 |
 | BEGIN         | Code enclosed in { } to run before program runs                                                               | 
 | END           | enclosed in  { }  to run when program ends                                                                    | 
 | alias         | Create alias for existing method, operator, global variable                                                   |
@@ -338,7 +338,7 @@ Reserved Words
 | nil           | Empty or invalid or always false                                                                              |
 | not           | Logical Negation Operator                                                                                     |
 | or            | Logical Or Operator                                                                                           |
-| redo          | 	Jump after a loop conditional                                                                                |
+| redo          | Jump after a loop conditional                                                                                 |
 | rescue        | Evaluates the expression after an exception is raised                                                         |
 | retry         | • When called outside of rescue repates the method call<br/>• When called inside rescue jumps to top of block |
 | return        | Returns a value from a method or code block                                                                   |
