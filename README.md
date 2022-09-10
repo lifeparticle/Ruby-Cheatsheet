@@ -364,7 +364,14 @@ Comment
 multiline
 comment
 =end
+
+=begin Comment line 1 =end
+
+puts "Hello world!"  # Inline comment about the code
+
 ```
+We put a space between the contents of the comment & the start of the comment to make
+it easier to read.
 
 I prefer `#` for multiline comments because it maintains my style guide and is easier to read.
 
