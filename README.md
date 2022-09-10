@@ -453,6 +453,153 @@ Operators
 
 </tr></table>
 
+
+## Usage
+
+```ruby
+# Addition
+1 + 1   #=> 2
+
+# Subtraction
+2 - 1   #=> 1
+
+# Multiplication
+2 * 2   #=> 4
+
+# Division
+10 / 5  #=> 2
+17 / 5    #=> 3, not 3.4
+17 / 5.0  #=> 3.4
+
+# Exponent
+2 ** 2  #=> 4
+3 ** 4  #=> 81
+
+# Modulus (find the remainder of division)
+8 % 2   #=> 0  (8 / 2 = 4; no remainder)
+10 % 4  #=> 2  (10 / 4 = 2 with a remainder of 2)
+
+a = 10
+b = 20
+
+a == b #=> false
+a != b #=> true
+a > b #=> false
+a < b #=> true
+a >= b #=> false
+a <= b #=> true
+
+# Comparison Operator
+a <=> b #=> -1
+c = 20
+c <=> b #=> 0
+c <=> a  #=> 1
+
+# Used to test equality within a when clause of a case statement.
+(1...10) === 5 #=> true
+
+# True if the receiver and argument have both the same type and equal values.
+1.eql?(1.0) #=> false
+
+c = a + b  #=> 30
+c += a #=> 40
+c -= a #=> 30
+c *= a #=> 300 
+c /= a #=> 30
+c %= a #=> 3
+c **= a #=> 59049
+
+# Ruby Parallel Assignment
+
+a = 10
+b = 20
+c = 30
+
+a, b, c = 10, 20, 30
+
+# Ruby Bitwise Operators
+
+a = 60
+b = 13
+# & Binary AND Operator copies a bit to the result if it exists in both operands.
+
+a & b #=> 12
+
+# | Binary OR Operator copies a bit if it exists in either operand.
+
+a | b #=> 61
+
+# ^ Binary XOR Operator copies the bit if it is set in one operand but not both.
+
+a ^ b #=> 49
+
+# ~ Binary Ones Complement Operator is unary and has the effect of 'flipping' bits.
+
+~a
+
+# << Binary Left Shift Operator. The left operands value is moved
+# left by the number of bits specified by the right operand.
+
+a << 2
+
+# >> Binary Right Shift Operator. The left operands value is moved
+# right by the number of bits specified by the right operand.	
+
+a >> 2
+
+
+# Ruby Logical Operators
+
+a and b #=> true.
+a or b #=> true.
+a && b #=> true.
+(a || b) #=> true.
+!(a && b) #=> false.
+not(a && b) #=> false.
+
+# Ruby Ternary Operator
+
+# ? :
+# If Condition is true ? Then value X : Otherwise value Y
+a == 10 ? puts 'Right' : puts 'Wrong'
+
+# Ruby Range Operators
+
+# .. Creates a range from start point to end point inclusive.
+1..10 #=> Creates a range from 1 to 10 inclusive.
+
+# ... Creates a range from start point to end point exclusive.
+1...10 #=> Creates a range from 1 to 10 exclusive.
+
+
+```
+
+## Operator Precedence Table
+
+|                           Operators                            | 
+|:--------------------------------------------------------------:|
+|                         !, ~, unary +                          |
+|                               **                               |
+|                            unary -                             |
+|                            *, /, %                             |
+|                              +, -                              |
+|                             <<, >>                             |
+|                               &                                |
+|                               ^                                |
+|                          >, >=, <, <=                          |
+|                    <=>, ==, ===, !=, =~, !~                    |
+|                               &&                               |
+|                              ?, :                              |
+|                        modifier-rescue                         |
+|                     =, +=, -=, *=, /=, %=                      |
+|                            defined?                            |
+|                              not                               |
+|                            or, and                             |
+|  modifier-if, modifier-unless, modifier-while, modifier-until  |
+|                           { } blocks                           |
+|                       do ... end blocks                        |
+
+
 Variables and Scope
 ============
 There are five different types of variables. The first character determines the scope.
