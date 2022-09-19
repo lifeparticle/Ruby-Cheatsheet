@@ -621,84 +621,89 @@ There are five different types of variables. The first character determines the 
 
 
 #### 1. Local Variable
-  Local variables are available to the block in which they are declared.
-  A local variable declared within a loop or method cannot be accessed outside
-  of that loop or method. They must either begin with an underscore or lowercase letter.
 
-  ```ruby
-    current_weather = "rainy"
-    _weather = "sunny"
-  ```
-  Scope of a local variable is one of
+Local variables are available to the block in which they are declared.
+A local variable declared within a loop or method cannot be accessed outside
+of that loop or method. They must either begin with an underscore or lowercase letter.
 
-    proc{ ... }
-    loop{ ... }
-    def ... end
-    class ... end
-    module ... end
-    the entire program (unless one of the above applies)
+```ruby
+current_weather = "rainy"
+_weather = "sunny"
+```
+Scope of a local variable is one of
+
+proc{ ... }
+loop{ ... }
+def ... end
+class ... end
+module ... end
+the entire program (unless one of the above applies)
 
 #### 2. Instance Variable
-  Instance variable is specific instance of an object. Changes to an instance variable are only
-  available to that instance of the object. Instance variables are declared with a single @ sign.
 
-  ```ruby
-    @current_weather = "rainy"
-  ```
+Instance variable is specific instance of an object. Changes to an instance variable are only
+available to that instance of the object. Instance variables are declared with a single @ sign.
 
-  Scope of an instance variable is
+```ruby
+@current_weather = "rainy"
+```
 
-    Instance variables cannot be altered except for some methods,
-    and it's distinct to each object of a class.
+Scope of an instance variable is
+
+Instance variables cannot be altered except for some methods,
+and it's distinct to each object of a class.
 
 #### 3. Class Variable
-  Class variables are shared by all instances of a Ruby class.
-  If one object instance changes the value of a class variable,
-  that new value will essentially change for all other object instances. 
-  Class variables begin with a double @ sign.
 
-  ```ruby
-    @current_weather = "rainy"
-  ```
+Class variables are shared by all instances of a Ruby class.
+If one object instance changes the value of a class variable,
+that new value will essentially change for all other object instances. 
+Class variables begin with a double @ sign.
 
-  Scope of a class variable is one of
+```ruby
+@current_weather = "rainy"
+```
 
-    It can be called from a class by calling ClassName.class_variable, and it's independent of any object of a class.
+Scope of a class variable is one of
+
+It can be called from a class by calling ClassName.class_variable, and it's independent of any object of a class.
 
 
 #### 4. Global Variable
-  Global variables in Ruby are accessible anywhere in the Ruby program,
-  regardless of where they are declared. Global variable names must 
-  begin with a dollar sign ($).
+  
+Global variables in Ruby are accessible anywhere in the Ruby program,
+regardless of where they are declared. Global variable names must 
+begin with a dollar sign ($).
 
-  The use of global variables is discouraged because they are visible
-  anywhere in the code for a program and can be changed from anywhere
-  in a program. This can make tracking down bugs extremely difficult.
+The use of global variables is discouraged because they are visible
+anywhere in the code for a program and can be changed from anywhere
+in a program. This can make tracking down bugs extremely difficult.
 
-  ```ruby
-    $current_weather = "rainy"
-  ```
+```ruby
+$current_weather = "rainy"
+```
 
-  Scope of a global variable is
+Scope of a global variable is
 
-    It can be referred from anywhere in a program.
+It can be referred from anywhere in a program.
 
 
 #### 5. Constant Variable
-   Ruby constants are variables which, once assigned a value, shouldn't be changed.
-   Constant declared outside of a class or module have global scope.
-   If they are declared inside a class or module, they are available within
-   the context of the class or module in which they were declared.
+   
+Ruby constants are variables which, once assigned a value, shouldn't be changed.
+Constant declared outside of a class or module have global scope.
+If they are declared inside a class or module, they are available within
+the context of the class or module in which they were declared.
 
-  ```ruby
-    WEATHER = "rainy".freeze
-  ```
+```ruby
+WEATHER = "rainy".freeze
+```
 
-   Scope of a constant variable is
+Scope of a constant variable is
 
-   ```
-   Accessible outside the class.
-   ```
+```
+Accessible outside the class.
+```
 
 Pseudo variables
 -----
@@ -732,22 +737,22 @@ Pre-defined variables
 | 12 | $,          | The output field separator for the print. Also, it is the default separator for Array#join. (Mnemonic: what is printed when there is a , in your print statement.)                                                                                                                                                                                                         |
 | 13 | $;          | The default separator for String#split.                                                                                                                                                                                                                                                                                                                                    |
 | 14 | $.          | The current input line number of the last file that was read.                                                                                                                                                                                                                                                                                                              |
-| 15 | $<          | The virtual concatenation file of the files given by command line arguments, or stdin (in case no argument file supplied). $<.file returns the current filename. (Mnemonic: $< is a shell input source.)                                                                                                                                                                   |
-| 16 | $>          | The default output for print, printf. $stdout by default. (Mnemonic: $> is for shell output.)                                                                                                                                                                                                                                                                              |
+| 15 | $<          | The virtual concatenation file of the files given by command line arguments, or stdin (in case no argument file supplied). `$<.file` returns the current filename. (Mnemonic: `$<` is a shell input source.)                                                                                                                                                                   |
+| 16 | $>          | The default output for `print`, `printf`. `$stdout` by default. (Mnemonic: `$>` is for shell output.)                                                                                                                                                                                                                                                                              |
 | 17 | $_          | The last input line of String by gets or readline. It is set to nil if gets/readline meet EOF. This variable is locally scoped. (Mnemonic: partly same as Perl.)                                                                                                                                                                                                           |
 | 17 | $0          | Contains the name of the file containing the Ruby script being executed. On some operating systems assigning to $0 modifies the argument area that the ps(1) program sees. This is more useful as a way of indicating the current program state than it is for hiding the program you're running. (Mnemonic: same as sh and ksh.)                                          |
 | 18 | $*          | Command line arguments given for the script. The options for Ruby interpreter are already removed. (Mnemonic: same as sh and ksh.)                                                                                                                                                                                                                                         |
 | 19 | $$          | The process number of the Ruby running this script. (Mnemonic: same as shells.)                                                                                                                                                                                                                                                                                            |
 | 20 | $?          | The status of the last executed child process.                                                                                                                                                                                                                                                                                                                             |
-| 21 | $:          | The array contains the list of places to look for Ruby scripts and binary modules by load or require. It initially consists of the arguments to any -I command line switches, followed by the default Ruby library, probabl "/usr/local/lib/ruby", followed by ".", to represent the current directory. (Mnemonic: colon is the separators for PATH environment variable.) |
+| 21 | $:          | The array contains the list of places to look for Ruby scripts and binary modules by load or require. It initially consists of the arguments to any `-I` command line switches, followed by the default Ruby library, probabl `"/usr/local/lib/ruby"`, followed by `"."`, to represent the current directory. (Mnemonic: colon is the separators for PATH environment variable.) |
 | 22 | $"          | The array contains the module names loaded by require. Used for prevent require from load modules twice. (Mnemonic: prevent files to be doubly quoted(loaded).)                                                                                                                                                                                                            |
-| 23 | $DEBUG      | The status of the -d switch.                                                                                                                                                                                                                                                                                                                                               |
-| 24 | $FILENAME   | Same as $<.filename.                                                                                                                                                                                                                                                                                                                                                       |
-| 25 | $LOAD_PATH  | The alias to the $:.                                                                                                                                                                                                                                                                                                                                                       |
+| 23 | $DEBUG      | The status of the `-d` switch.                                                                                                                                                                                                                                                                                                                                               |
+| 24 | $FILENAME   | Same as `$<.filename`.                                                                                                                                                                                                                                                                                                                                                       |
+| 25 | $LOAD_PATH  | The alias to the `$:`.                                                                                                                                                                                                                                                                                                                                                       |
 | 26 | $stdin      | The current standard input.                                                                                                                                                                                                                                                                                                                                                |
 | 27 | $stdout     | The current standard output.                                                                                                                                                                                                                                                                                                                                               |
 | 28 | $stderr     | The current standard error output.                                                                                                                                                                                                                                                                                                                                         |
-| 29 | $VERBOSE    | The verbose flag, which is set by the -v switch to the Ruby interpreter.                                                                                                                                                                                                                                                                                                   |
+| 29 | $VERBOSE    | The verbose flag, which is set by the `-v` switch to the Ruby interpreter.                                                                                                                                                                                                                                                                                                   |
 
 Option variables
 -----
