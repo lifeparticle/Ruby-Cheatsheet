@@ -632,14 +632,12 @@ _weather = "sunny"
 ```
 Scope of a local variable is one of
 
-```
-proc{ ... }
-loop{ ... }
-def ... end
-class ... end
-module ... end
-the entire program (unless one of the above applies)
-```
+- proc{ ... }
+- loop{ ... }
+- def ... end
+- class ... end
+- module ... end
+- the entire program (unless one of the above applies)
 
 #### 2. Instance Variable
 
