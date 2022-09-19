@@ -632,12 +632,14 @@ _weather = "sunny"
 ```
 Scope of a local variable is one of
 
+```
 proc{ ... }
 loop{ ... }
 def ... end
 class ... end
 module ... end
 the entire program (unless one of the above applies)
+```
 
 #### 2. Instance Variable
 
@@ -666,7 +668,8 @@ Class variables begin with a double @ sign.
 
 Scope of a class variable is one of
 
-It can be called from a class by calling ClassName.class_variable, and it's independent of any object of a class.
+It can be called from a class by calling ClassName.class_variable,
+and it's independent of any object of a class.
 
 
 #### 4. Global Variable
@@ -701,9 +704,7 @@ WEATHER = "rainy".freeze
 
 Scope of a constant variable is
 
-```
 Accessible outside the class.
-```
 
 Pseudo variables
 -----
