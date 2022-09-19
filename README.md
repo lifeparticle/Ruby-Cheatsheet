@@ -620,36 +620,85 @@ There are five different types of variables. The first character determines the 
 | 5 | [A-Z]       | constant          | PI = 3.14                 | Constant variables must be initialized and you can change the constant but you will get a warning.  |
 
 
-1. Scope of a local variable is one of
+#### 1. Local Variable
+  Local variables are available to the block in which they are declared.
+  A local variable declared within a loop or method cannot be accessed outside
+  of that loop or method. They must either begin with an underscore or lowercase letter.
 
-```
-proc{ ... }
-loop{ ... }
-def ... end
-class ... end
-module ... end
-the entire program (unless one of the above applies)
-```
+  ```ruby
+    current_weather = "rainy"
+    _weather = "sunny"
+  ```
+  Scope of a local variable is one of
 
-2. Scope of an instance variable is
-```
-Instance variables cannot be altered except for some methods, and it's distinct to each object of a class.
-```
+    proc{ ... }
+    loop{ ... }
+    def ... end
+    class ... end
+    module ... end
+    the entire program (unless one of the above applies)
 
-3. Scope of a class variable is one of
-```
-It can be called from a class by calling ClassName.class_variable, and it's independent of any object of a class.
-```
+#### 2. Instance Variable
+  Instance variable is specific instance of an object. Changes to an instance variable are only
+  available to that instance of the object. Instance variables are declared with a single @ sign.
 
-4. Scope of a global variable is
-```
-It can be referred from anywhere in a program.
-```
+  ```ruby
+    @current_weather = "rainy"
+  ```
 
-5. Scope of a constant variable is
-```
-Accessible outside the class.
-```
+  Scope of an instance variable is
+
+    Instance variables cannot be altered except for some methods,
+    and it's distinct to each object of a class.
+
+#### 3. Class Variable
+  Class variables are shared by all instances of a Ruby class.
+  If one object instance changes the value of a class variable,
+  that new value will essentially change for all other object instances. 
+  Class variables begin with a double @ sign.
+
+  ```ruby
+    @current_weather = "rainy"
+  ```
+
+  Scope of a class variable is one of
+
+    It can be called from a class by calling ClassName.class_variable, and it's independent of any object of a class.
+
+
+#### 4. Global Variable
+  Global variables in Ruby are accessible anywhere in the Ruby program,
+  regardless of where they are declared. Global variable names must 
+  begin with a dollar sign ($).
+
+  The use of global variables is discouraged because they are visible
+  anywhere in the code for a program and can be changed from anywhere
+  in a program. This can make tracking down bugs extremely difficult.
+
+  ```ruby
+    $current_weather = "rainy"
+  ```
+
+  Scope of a global variable is
+
+    It can be referred from anywhere in a program.
+
+
+#### 5. Constant Variable
+   Ruby constants are variables which, once assigned a value, shouldn't be changed.
+   Constant declared outside of a class or module have global scope.
+   If they are declared inside a class or module, they are available within
+   the context of the class or module in which they were declared.
+
+  ```ruby
+    WEATHER = "rainy".freeze
+  ```
+
+   Scope of a constant variable is
+
+   ```
+   Accessible outside the class.
+   ```
 
 Pseudo variables
 -----
@@ -700,7 +749,12 @@ Pre-defined variables
 | 28 | $stderr     | The current standard error output.                                                                                                                                                                                                                                                                                                                                         |
 | 29 | $VERBOSE    | The verbose flag, which is set by the -v switch to the Ruby interpreter.                                                                                                                                                                                                                                                                                                   |
 
-Option variables: The variables which names are in the form of $-?, where ? is the option character, are called option variables and contains the information about interpreter command line options.
+Option variables
+-----
+
+The variables which names are in the form of $-?, where ? is the option character,
+are called option variables and contains the information about interpreter command 
+line options.
 
 | No | Name | Note |
 |---|---|---|
@@ -762,11 +816,11 @@ If elsif else expression
 temp = 19
 
 if temp >= 25
-    puts "hot"
+  puts "hot"
 elsif temp < 25 && temp >= 18
-    puts "normal"
+  puts "normal"
 else
-    puts "cold"
+  puts "cold"
 end
 
 # output
@@ -783,9 +837,9 @@ name = "rob"
 
 # if name != "bob"
 unless name == "bob"
-    puts "hello stranger"
+  puts "hello stranger"
 else
-    puts "hello bob"
+  puts "hello bob"
 end
 
 # output
@@ -818,52 +872,52 @@ Case Expressions
 case input
 # check an integer, 19
 when 19
-puts "It's 19"
-# check a float number, 33.3
+  puts "It's 19"
+  # check a float number, 33.3
 when 33.3
-puts "It's 33.3"
-# check an exact string, "Zaman"
+  puts "It's 33.3"
+  # check an exact string, "Zaman"
 when "Zaman"
-puts "Hi Zaman"
+  puts "Hi Zaman"
 when 10
-puts "It's 10"
-# check against a range
+  puts "It's 10"
+  # check against a range
 when 7..11
-puts "It's between 7 and 11"
-# check against multiple values, "coffee"
+  puts "It's between 7 and 11"
+  # check against multiple values, "coffee"
 when "tea", "coffee"
-puts "Happy days"
-# check against a regular expression, "aA6"
+  puts "Happy days"
+  # check against a regular expression, "aA6"
 when /^a[A-Z]+[0-6]+$/
-puts "It's a valid match"
-# check any string by comparing against the String class, "any string"
+  puts "It's a valid match"
+  # check any string by comparing against the String class, "any string"
 when String
-puts "It's a String"
+  puts "It's a String"
 end
 
 # using short syntax
 case input
-when 19 then puts "It's 19"
+  when 19 then puts "It's 19"
 end
 
 # optional fallthrough
 case input
-when 19 then puts "It's 19"
+  when 19 then puts "It's 19"
 else
-puts "It's not 19"
+  puts "It's not 19"
 end
 
 # get the return value
 marks = 86
 
 result = case marks
-    when 0..49 then "Fail"
-    when 50..64 then "Pass"
-    when 65..74 then "Credit"
-    when 75..84 then "Distinction"
-    when 85..100 then "High Distinction"
-    else "Invalid marks"
-end
+         when 0..49 then "Fail"
+         when 50..64 then "Pass"
+         when 65..74 then "Credit"
+         when 75..84 then "Distinction"
+         when 85..100 then "High Distinction"
+         else "Invalid marks"
+         end
 
 puts result
 # High Distinction
