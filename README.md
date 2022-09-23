@@ -968,6 +968,43 @@ week_days = {sunday: 11, monday: 222}
 String
 ============
 
+String Interpolation
+-----
+
+String interpolation allows you to combine strings together:
+
+```ruby
+name = "World"
+puts "Hello #{name}"
+
+puts "The total is #{1+1}"
+# "the total is 2"
+```
+
+How to Extract a Substring
+-----
+
+A substring is a smaller part of a string, it’s useful if you only want that specific part, 
+like the beginning, middle, or end.
+
+```ruby
+
+string = "abc123"
+string[0,3]
+# "abc"
+
+string[3,3]
+# "123"
+
+string[0..-2]
+# "abc12"
+
+#remove or replace the substring
+string[0..2] = ""
+puts string
+# "123"
+```
+
 How to convert String to lower or upper case
 -----
 
@@ -981,17 +1018,36 @@ How to convert String to lower or upper case
 Helpful methods
 -----
 
-| No | Method name | Output | Note |
-|---|---|---|---|
-| 1 | length or size                   | "HELLO World".length <br> 11 <br> "HELLO World".size <br> 11                                       | returns the length of the string                                                                                                                                                                 |
-| 2 | reverse                          | "hello worlD".reverse <br> "Dlrow olleh"                                                           | returns the reversed string                                                                                                                                                                      |
-| 3 | include? other_str               | "hEllo wOrlD".include? "w" <br> true                                                               | returns true if the string or charecter is present or otherwise false                                                                                                                            |
-| 4 | gsub(pattern, replacement)       | "hEllo wOrlD".gsub(" ", "_") <br> "hEllo_wOrlD"                                                    | gsub or global substitute substitutes one or more string with provided strings                                                                                                                   |
-| 5 | gsub(pattern, hash)              | "organization".gsub("z", 'z' => 's') <br>"organisation"                                            | gsub or global substitute substitutes one or more string with provided hash                                                                                                                      |
-| 6 | gsub(pattern) { \|match\| block} | "Price of the phone is 1000 AUD".gsub(/\d+/) { \|s\| '$'+s } <br>"Price of the phone is $1000 AUD" | gsub or global substitute substitutes one or more string with provided block                                                                                                                     |
-| 7 | strip                            | "  hEllo WOrlD  ".strip <br> "hEllo WOrlD"                                                         | It will remove (trim) any of the following leading and trailing characters: null("\x00"), horizontal tab("\t"), line feed(\n), vertical tab("\v"), form feed(f), carriage return(\r), space(" ") |
-| 8 | prepend                          | a = "world" <br> a.prepend("hello ") <br> "hello world"                                            | Add string before another string                                                                                                                                                                 |
-| 9 | insert                           | a = "hello" <br> a.insert(a.length, " world") <br> "hello world"                                   | Insert string at a specific position                                                                                                                                                             |
+| No  | Method name                | Output                                                                                   | Note                                                                                                                                                                                             |
+|-----|----------------------------|------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1   | length or size             | "HELLO World".length <br> 11 <br> "HELLO World".size <br> 11                             | returns the length of the string                                                                                                                                                                 |
+| 2   | reverse                    | "hello worlD".reverse <br> "Dlrow olleh"                                                 | returns the reversed string                                                                                                                                                                      |
+| 3   | include? other_str         | "hEllo wOrlD".include? "w" <br> true                                                     | returns true if the string or charecter is present or otherwise false                                                                                                                            |
+| 4   | gsub(pattern, replacement) | "hEllo wOrlD".gsub(" ", "_") <br> "hEllo_wOrlD"                                          | gsub or global substitute substitutes one or more string with provided strings                                                                                                                   |
+| 5   | gsub(pattern, hash)        | "organization".gsub("z", 'z' => 's') <br>"organisation"                                  | gsub or global substitute substitutes one or more string with provided hash                                                                                                                      |
+| 6   | gsub(pattern) { \          | match\                                                                                   | block}                                                                                                                                                                                           | "Price of the phone is 1000 AUD".gsub(/\d+/) { \|s\| '$'+s } <br>"Price of the phone is $1000 AUD" | gsub or global substitute substitutes one or more string with provided block                                                                                                                     |
+| 7   | strip                      | "  hEllo WOrlD  ".strip <br> "hEllo WOrlD"                                               | It will remove (trim) any of the following leading and trailing characters: null("\x00"), horizontal tab("\t"), line feed(\n), vertical tab("\v"), form feed(f), carriage return(\r), space(" ") |
+| 8   | prepend                    | a = "world" <br> a.prepend("hello ") <br> "hello world"                                  | Add string before another string                                                                                                                                                                 |
+| 9   | insert                     | a = "hello" <br> a.insert(a.length, " world") <br> "hello world"                         | Insert string at a specific position                                                                                                                                                             |
+| 10  | start_with?                | string = "ruby programming" <br> string.start_with? "ruby" <br> true                     | To check if a string starts with a specific prefix                                                                                                                                               |
+| 11  | end_with?                  | string = "ruby programming" <br> string.end_with? "ruby" <br> false                      | To check if a string ends with a specific prefix                                                                                                                                                 |
+| 12  | delete_suffix              | string = "sausage is expensive" <br> string.delete_suffix(" is expensive") <br> "sausage" | Deletes suffix from a string                                                                                                                                                                     |
+| 13  | delete_prefix              | string = "sausage is expensive" <br> string.delete_prefix("sausage") <br> " is expensive" | Deletes prefix from a string                                                                                                                                                                     |
+| 14  | split                      | string = "a b c d" <br> string.split <br> ["a", "b", "c", "d"]                           | Convert a String to An Array of Characters                                                                                                                                                       |
+| 16  | join                       | arr = ['a', 'b', 'c'] <br> arr.join <br> "abc"                                           | Convert an Array to a String                                                                                                                                                                     |
+| 17  | to_i                       | a = "49" <br> a.to_i <br> 49                                                             | Convert a String Into An Integer                                                                                                                                                                 |
+| 18  | chop                       | "abcd?".chop("?") <br> "abcd"                                                            | Removes the Last Character From a String                                                                                                                                                         |
+| 19  | count                      | str = "aaab" <br> str.count("a") <br> 3                                                  | Counts character in a string                                                                                                                                                                     |
+| 20  | to_f                       | a = "49" <br> a.to_f <br> 49.0                                                           | Convert a String Into A Floating Number                                                                                                                                                          |
+| 21  | to_sym                     | a = "key" <br> a.to_sym <br> :key                                                        | Convert a String Into A Symbol                                                                                                                                                                   |
+| 22  | match                      | "abcd?".match(/ab/) <br> #<MatchData "ab">                                               | Convert pattern to regexp and invoke its match method on string                                                                                                                                  |
+| 23  | empty?                     | "hello".empty? <br> false                                                                | Return true if string has a length of zero                                                                                                                                                       |
+| 24  | squeeze                    | "Booook".squeeze <br> "Bok"                                                              | Return copy of string where runs of the same character are replaced by a single character                                                                                                        |
+| 25  | *                          | puts "Ruby " * 4 <br> Ruby Ruby Ruby Ruby                                                | Returns the concatenation of multiple copies of self                                                                                                                                             |
+| 26  | +                          | "sammy " + "shark" <br> "sammyshark"                                                     | Returns the concatenation of self and a given other string                                                                                                                                       |
+| 27  | eql?                       | s = 'foo' <br> s.eql?('foo') <br> true                                                   | Returns true if object has the same length and content; as self; false otherwise                                                                                                                 |
+| 26  | +                          | "sammy " + "shark" <br> "sammyshark"                                                     | Returns the concatenation of self and a given other string                                                                                                                                       |
+| 26  | +                          | "sammy " + "shark" <br> "sammyshark"                                                     | Returns the concatenation of self and a given other string                                                                                                                                       |
 
 Integer
 ============
