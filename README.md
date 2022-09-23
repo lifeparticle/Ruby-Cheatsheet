@@ -43,6 +43,8 @@ Table of Contents
    * [How to check the data type](#how-to-check-the-data-type)
 * [Symbol](#symbol)
 * [String](#string)
+   * [String Interpolation](#string-interpolation)
+   * [How to Extract a Substring](#how-to-extract-a-substring)
    * [How to convert String to lower or upper case](#how-to-convert-string-to-lower-or-upper-case)
    * [Helpful methods](#helpful-methods)
 * [Integer](#integer)
