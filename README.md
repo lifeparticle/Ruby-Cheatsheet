@@ -116,10 +116,14 @@ Table of Contents
    * [How to sort a Hash](#how-to-sort-a-hash)
    * [How to get the maximum from a Hash](#how-to-get-the-maximum-from-a-hash)
 * [Loop](#loop)
-   * [How to break out from loop](#how-to-break-out-from-loop)
-   * [How to skip inside a loop](#how-to-skip-inside-a-loop)
-   * [How to repeat the current iteration](#how-to-repeat-the-current-iteration)
-   * [How to restart a loop](#how-to-restart-a-loop)
+  * [while loop](#while-loop)
+  * [for loop](#for-loop)
+  * [do..while loop](#do-while-loop)
+  * [until loop](#until-loop)
+  * [How to break out from loop](#how-to-break-out-from-loop)
+  * [How to skip inside a loop](#how-to-skip-inside-a-loop)
+  * [How to repeat the current iteration](#how-to-repeat-the-current-iteration)
+  * [How to restart a loop](#how-to-restart-a-loop)
 * [Classes](#classes)
    * [How to inherit a class](#how-to-inherit-a-class)
    * [How to check instance type](#how-to-check-instance-type)
@@ -2548,15 +2552,156 @@ hash.max_by { |k, v| v }
 
 Loop
 ============
+
+The loops in Ruby are :
+1. while loop
+2. for loop
+3. do..while loop
+4. until loop
+
+
+while loop
+-----
+The condition which is to be tested, given at the beginning of the loop
+and all statements are executed until the given boolean condition satisfies. 
+When the condition becomes false, the control will be out from the while loop.
+It is also known as Entry Controlled Loop because the condition to be tested 
+is present at the beginning of the loop body. So basically, while loop is
+used when the number of iterations is not fixed in a program.
+
+```ruby
+# Ruby program to illustrate 'while' loop
+
+# variable count
+count = 4
+
+# using while loop
+# here conditional is count i.e. 4
+while count >= 1
+
+  # statements to be executed
+  puts "Ruby Cheatsheet"
+  count = count - 1
+
+  # while loop ends here
+end
+```
+
+Output
+```
+Ruby Cheatsheet
+Ruby Cheatsheet
+Ruby Cheatsheet
+Ruby Cheatsheet
+```
+
+for loop
+-----
+“for” loop has similar functionality as while loop but with different syntax. 
+for loop is preferred when the number of times loop statements are to be executed
+is known beforehand. It iterates over a specific range of numbers.
+It is also known as Entry Controlled Loop because the condition to be tested
+is present at the beginning of the loop body.
+
+```ruby
+# Ruby program to illustrate 'for'
+# loop using range as expression
+
+text = "Ruby Cheatsheet"
+
+# using for loop with the range
+for count in 1..5 do
+
+  puts text
+
+end
+
+```
+
+Output
+```
+Ruby Cheatsheet
+Ruby Cheatsheet
+Ruby Cheatsheet
+Ruby Cheatsheet
+Ruby Cheatsheet
+```
+
+do..while Loop
+-----
+do while loop is similar to while loop with the only difference that
+it checks the condition after executing the statements, i.e it will
+execute the loop body one time for sure. It is a Exit-Controlled loop
+because it tests the condition which presents at the end of the loop body.
+
+```ruby
+# Ruby program to illustrate 'do..while'loop
+
+# starting of do..while loop
+loop do
+
+  puts "Ruby Cheatsheet"
+
+  val = '7'
+
+  # using boolean expressions
+  if val == '7'
+    break
+  end
+
+  # ending of ruby do..while loop
+end
+```
+
+Output
+```
+Ruby Cheatsheet
+```
+
+until Loop
+-----
+Ruby until loop will executes the statements or code till the given
+condition evaluates to true. Basically it’s just opposite to the while
+loop which executes until the given condition evaluates to false.
+An until statement’s conditional is separated from code by the
+reserved word do, a newline, or a semicolon.
+
+```ruby
+var = 7
+
+# using until loop
+# here do is optional
+until var == 11 do
+
+  # code to be executed
+  puts var * 10
+  var = var + 1
+
+  # here loop ends
+end
+```
+
+Output
+```
+70
+80
+90
+100
+```
+
 How to break out from loop
 -----
+**break** terminates the most internal loop.
+Terminates a method with an associated block 
+if called within the block (with the method returning nil).
 
 ```ruby
 # by using break keyword
 salary = [399, 234, 566, 533, 233]
 salary.each do |s|
-    break if s == 566
-    puts s
+  break if s == 566
+
+  puts s
 end
 #output
 # 399
@@ -2570,8 +2715,9 @@ How to skip inside a loop
 # by using next keyword
 salary = [399, 234, 566, 533, 233]
 salary.each do |s|
-    next if s == 533
-    puts s
+  next if s == 533
+
+  puts s
 end
 # output
 # 399
