@@ -626,7 +626,7 @@ There are five different types of variables. The first character determines the 
 | 4   | $           | global variable   | $version = "0.8.9"         | Global variables have the `nil` value until they are initialized.                                  |
 | 5   | [A-Z]       | constant          | PI = 3.14                  | Constant variables must be initialized and you can change the constant but you will get a warning. |
 
-#### 1. Local Variable
+## Local Variable
 
 Local variables are available to the block in which they are declared.
 A local variable declared within a loop or method cannot be accessed outside
@@ -646,7 +646,7 @@ Scope of a local variable is one of
 -   module ... end
 -   the entire program (unless one of the above applies)
 
-#### 2. Instance Variable
+## Instance Variable
 
 Instance variable is specific instance of an object. Changes to an instance variable are only
 available to that instance of the object. Instance variables are declared with a single @ sign.
@@ -660,7 +660,7 @@ Scope of an instance variable is
 Instance variables cannot be altered except for some methods,
 and it's distinct to each object of a class.
 
-#### 3. Class Variable
+## Class Variable
 
 Class variables are shared by all instances of a Ruby class.
 If one object instance changes the value of a class variable,
@@ -676,7 +676,7 @@ Scope of a class variable is one of
 It can be called from a class by calling ClassName.class_variable,
 and it's independent of any object of a class.
 
-#### 4. Global Variable
+## Global Variable
 
 Global variables in Ruby are accessible anywhere in the Ruby program,
 regardless of where they are declared. Global variable names must
@@ -694,7 +694,7 @@ Scope of a global variable is
 
 It can be referred from anywhere in a program.
 
-#### 5. Constant Variable
+## Constant Variable
 
 Ruby constants are variables which, once assigned a value, shouldn't be changed.
 Constant declared outside of a class or module have global scope.
