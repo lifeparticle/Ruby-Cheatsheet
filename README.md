@@ -174,9 +174,34 @@
 
 ## Troubleshooting
 
+### Debian, Ubuntu
+
+Debian GNU/Linux and Ubuntu use the apt package manager. You can use it like this:
+
+````
+$ sudo apt-get install ruby-full
+````
+
+### Windows Package Manager
+
+On Windows, you can use the [Windows Package Manager CLI](https://github.com/microsoft/winget-cli) to install Ruby:
+
+````
+> winget install RubyInstallerTeam.Ruby
+````
+
 ### macOS
 
-macOS Big Sur (Version 11.3)
+Homebrew (macOS)
+Ruby versions 2.0 and above are included by default in macOS releases since at least El Capitan (10.11).
+
+[Homebrew](https://brew.sh/) is a commonly used package manager on macOS. Installing Ruby using Homebrew is easy:
+
+````
+$ brew install ruby
+````
+This should install the latest Ruby version.
+
 
 List all the installed Ruby versions:
 
@@ -211,13 +236,66 @@ docker run -it --rm ruby:2.7
 RUBY_VERSION
 ```
 
+[rbenv](https://github.com/rbenv/rbenv#readme)
+
+rbenv is a version manager tool for the Ruby programming language on Unix-like systems.
+It is useful for switching between multiple Ruby versions on the same machine and for
+ensuring that each project you are working on always runs on the correct Ruby version.
+
+### Install rbenv with package managers
+#### macOS
+````
+brew install rbenv ruby-build
+````
+
+#### Debian, ubuntu and other derivatives
+
+````
+sudo apt install rbenv
+````
+
+Load rbenv 
+
+````
+# run this and follow the printed instructions:
+rbenv init
+````
+
+Restart terminal for the changes to take effect.
+
+### Install ruby with rbenv
+
+````
+# list latest stable versions:
+rbenv install -l
+
+# list all local versions:
+rbenv install -L
+
+# install a Ruby version:
+rbenv install 3.1.2
+
+rbenv global 3.1.2   # set the default Ruby version for this machine
+# or:
+rbenv local 3.1.2    # set the Ruby version for this directory
+rbenv local --unset
+
+rbenv version # Displays the currently active Ruby version
+=> 1.9.3-p327 (set by /Users/sam/.rbenv/version)
+````
+
+
 [RVM](https://www.ruby-lang.org/en/documentation/installation/#rvm)
 
+RVM allows you to install and manage multiple installations of Ruby on your system.
+It can also manage different gemsets. It is available for macOS, Linux, or other UNIX-like operating systems.
+
+
+### Install ruby with RVM
 ```
 \curl -sSL https://get.rvm.io | bash -s stable
 rvm list
 rvm install 3.0.1
-rvm install 3.0.0
 rvm list
 rvm use 3.0.1
 ```
