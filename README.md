@@ -221,7 +221,7 @@ ruby -v
 gem env
 ```
 
-## Docker
+### Docker
 
 In case you don’t want to install Ruby natively, you can use [docker](https://docs.docker.com/engine/install/).
 
@@ -247,13 +247,13 @@ ensuring that each project you are working on always runs on the correct Ruby ve
 
 [rbenv](https://github.com/rbenv/rbenv#readme)
 
-### macOS
+#### macOS
 
 ```shell
 brew install rbenv ruby-build
 ```
 
-### Debian, ubuntu and other derivatives
+#### Debian, ubuntu and other derivatives
 
 ```shell
 sudo apt install rbenv
