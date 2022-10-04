@@ -172,23 +172,25 @@
 
 # Installation
 
-## Troubleshooting
+## How to install Ruby
+
+First things first, make sure you have [Ruby](https://www.ruby-lang.org/en/documentation/installation/) installed on your machine.
 
 ### Debian, Ubuntu
 
 Debian GNU/Linux and Ubuntu use the apt package manager. You can use it like this:
 
-````
+```shell
 $ sudo apt-get install ruby-full
-````
+```
 
 ### Windows Package Manager
 
 On Windows, you can use the [Windows Package Manager CLI](https://github.com/microsoft/winget-cli) to install Ruby:
 
-````
+```shell
 > winget install RubyInstallerTeam.Ruby
-````
+```
 
 ### macOS
 
@@ -197,32 +199,33 @@ Ruby versions 2.0 and above are included by default in macOS releases since at l
 
 [Homebrew](https://brew.sh/) is a commonly used package manager on macOS. Installing Ruby using Homebrew is easy:
 
-````
+```shell
 $ brew install ruby
-````
+```
+
 This should install the latest Ruby version.
 
 
 List all the installed Ruby versions:
 
-```
+```shell
 which -a ruby
 # /usr/bin/ruby
 ```
 
 Get information about currently used Ruby:
 
-```
+```shell
 ruby -v
 # ruby 2.6.3p62 (2019-04-16 revision 67580) [universal.arm64e-darwin20]
 gem env
 ```
 
-## How to install Ruby
+## Docker
 
-First things first, make sure you have [Ruby](https://www.ruby-lang.org/en/documentation/installation/) installed on your machine. In case you don’t want to install Ruby natively, you can use [docker](https://docs.docker.com/engine/install/).
+In case you don’t want to install Ruby natively, you can use [docker](https://docs.docker.com/engine/install/).
 
-```
+```shell
 docker run -it --rm ruby:latest
 # check which version of Ruby you're running
 RUBY_VERSION
@@ -236,36 +239,38 @@ docker run -it --rm ruby:2.7
 RUBY_VERSION
 ```
 
-[rbenv](https://github.com/rbenv/rbenv#readme)
+### Install rbenv with package managers
 
 rbenv is a version manager tool for the Ruby programming language on Unix-like systems.
 It is useful for switching between multiple Ruby versions on the same machine and for
 ensuring that each project you are working on always runs on the correct Ruby version.
 
-### Install rbenv with package managers
-#### macOS
-````
+[rbenv](https://github.com/rbenv/rbenv#readme)
+
+### macOS
+
+```shell
 brew install rbenv ruby-build
-````
+```
 
-#### Debian, ubuntu and other derivatives
+### Debian, ubuntu and other derivatives
 
-````
+```shell
 sudo apt install rbenv
-````
+```
 
 Load rbenv 
 
-````
+```shell
 # run this and follow the printed instructions:
 rbenv init
-````
+```
 
 Restart terminal for the changes to take effect.
 
 ### Install ruby with rbenv
 
-````
+```shell
 # list latest stable versions:
 rbenv install -l
 
@@ -282,17 +287,16 @@ rbenv local --unset
 
 rbenv version # Displays the currently active Ruby version
 => 1.9.3-p327 (set by /Users/sam/.rbenv/version)
-````
+```
 
-
-[RVM](https://www.ruby-lang.org/en/documentation/installation/#rvm)
+### Install ruby with RVM
 
 RVM allows you to install and manage multiple installations of Ruby on your system.
 It can also manage different gemsets. It is available for macOS, Linux, or other UNIX-like operating systems.
 
+[RVM](https://www.ruby-lang.org/en/documentation/installation/#rvm)
 
-### Install ruby with RVM
-```
+```shell
 \curl -sSL https://get.rvm.io | bash -s stable
 rvm list
 rvm install 3.0.1
