@@ -50,10 +50,10 @@
   * [Pre-defined global constants](#pre-defined-global-constants)
   * [How to check scope of variables](#how-to-check-scope-of-variables)
 - [Conditional structures](#conditional-structures)
-  * [If elsif else expression](#if-elsif-else-expression)
-  * [unless expression](#unless-expression)
-  * [Shorthand](#shorthand)
-  * [Case Expressions](#case-expressions)
+  * [if Modifier](#if-modifier)
+  * [If elsif else Statement](#if-elsif-else-statement)
+  * [unless Statement](#unless-statement)
+  * [Case Statement](#case-statement)
 - [Data types](#data-types)
   * [How to check the data type](#how-to-check-the-data-type)
 - [Symbol](#symbol)
@@ -903,7 +903,15 @@ defined? PI
 
 # Conditional structures
 
-## If elsif else expression
+## if Modifier
+
+```ruby
+num = 2
+puts 'two' if num == 2 
+```
+Executes code if the conditional is true.
+
+## If elsif else Statement
 
 ```ruby
 temp = 19
@@ -920,7 +928,16 @@ end
 # normal
 ```
 
-## unless expression
+`if` expressions are used for conditional execution.
+The values `false` and `nil` are `false`, and everything else are `true`. 
+Notice Ruby uses `elsif`, not `else if` nor `elif`.
+
+Executes code if the conditional is `true`. If the conditional is not `true`, code specified in the `else` clause is executed.
+
+An `if` expression's conditional is separated from code by the reserved word then, a newline, or a semicolon.
+
+
+## unless Statement
 
 ```ruby
 # The unless is opposite of if, evaluates when the statement is false
@@ -933,28 +950,17 @@ unless name == "bob"
 else
   puts "hello bob"
 end
-
 # output
 # hello stranger
-```
 
-## Shorthand
-
-```ruby
-count = 1
-puts "hello world" if count == 1
+num = 6
+puts 'not two' unless num == 2
 # output
-# hello world
-
-count = 2
-puts "hello universe" if count != 1
-# or using unless
-puts "hello universe" unless count == 1
-# output
-# hello universe
+# not two
 ```
+Executes code if conditional is `false`. If the conditional is `true`, code specified in the else clause is executed.
 
-## Case Expressions
+## Case Statements
 
 ```ruby
 # case returns the value of the last expression executed
@@ -1012,6 +1018,13 @@ result = case marks
 puts result
 # High Distinction
 ```
+Compares the expression specified by case and that specified by when using the === operator and executes the code of 
+the when clause that matches.
+
+The expression specified by the when clause is evaluated as the left operand. If no when clauses match, case executes
+the code of the else clause.
+
+A when statement's expression is separated from code by the reserved word then, a newline, or a semicolon.
 
 # Data types
 
