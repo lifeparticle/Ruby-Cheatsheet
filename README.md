@@ -2435,9 +2435,6 @@ planets.length
 # output
 # 8
 
-planets.count
-# output
-# 8
 ```
 
 ## How to clear an Array
