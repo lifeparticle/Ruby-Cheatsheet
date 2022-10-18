@@ -106,12 +106,20 @@
     + [keep_if](#keep_if)
     + [delete_if](#delete_if)
     + [drop_while](#drop_while)
+    + [reverse_each](#reverse_each)
   * [Boolean Enumerable methods](#boolean-enumerable-methods)
     + [all?](#all)
     + [any?](#any)
     + [one?](#one)
     + [none?](#none)
     + [empty?](#empty)
+  * [Methods for combining](#methods-for-combining)
+    + [&](#&)
+    + [+](#+)
+    + [-](#-)
+    + [union](#union)
+    + [difference](#difference)
+    + [product](#product)
   * [How to check if a value exists in an Array (`include?`)](#how-to-check-if-a-value-exists-in-an-array-include)
   * [How to get array size](#how-to-get-array-size)
   * [How to clear an Array](#how-to-clear-an-array)
@@ -1015,17 +1023,17 @@ puts result
 
 # Data types
 
-| No  | Type    | Example                      | Class                                              | Doc                                 |
-| --- | ------- | ---------------------------- | -------------------------------------------------- | ----------------------------------- |
-| 1   | Integer | a = 17                       | a.class > Integer <br>a.class.superclass > Numeric | [link][2]                           |
-| 2   | Float   | a = 87.23                    | a.class > Float <br>a.class.superclass > Numeric   | [link][3]                           |
-| 3   | String  | a = "Hello universe"         | a.class > String                                   | [link][4]                           |
-| 4   | Array   | a = [12, 34]                 | a.class > Array                                    | [link][5]                           |
-| 5   | Hash    | a = {type: "tea", count: 10} | a.class > Hash                                     | [link][6]                           |
-| 6   | Boolean | a = false<br>a = true        | a.class > FalseClass <br>a.class > TrueClass       | [TrueClass][7] <br> [FalseClass][8] |
-| 7   | Symbol  | a = :status                  | a.class > Symbol                                   | [link][9]                           |
-| 8   | Range   | a = 1..3                     | a.class > Range                                    | [link][10]                          |
-| 9   | Nil     | a = nil                      | a.class > NilClass                                 | [link][11]                          |
+| No  | Type    |     | Example                      | Class                                              | Doc                                 |
+| --- | ------- |-----| ---------------------------- | -------------------------------------------------- | ----------------------------------- |
+| 1   | Integer |     | a = 17                       | a.class > Integer <br>a.class.superclass > Numeric | [link][2]                           |
+| 2   | Float   |     | a = 87.23                    | a.class > Float <br>a.class.superclass > Numeric   | [link][3]                           |
+| 3   | String  |     | a = "Hello universe"         | a.class > String                                   | [link][4]                           |
+| 4   | Array   |     | a = [12, 34]                 | a.class > Array                                    | [link][5]                           |
+| 5   | Hash    |     | a = {type: "tea", count: 10} | a.class > Hash                                     | [link][6]                           |
+| 6   | Boolean |     | a = false<br>a = true        | a.class > FalseClass <br>a.class > TrueClass       | [TrueClass][7] <br> [FalseClass][8] |
+| 7   | Symbol  |     | a = :status                  | a.class > Symbol                                   | [link][9]                           |
+| 8   | Range   |     | a = 1..3                     | a.class > Range                                    | [link][10]                          |
+| 9   | Nil     |     | a = nil                      | a.class > NilClass                                 | [link][11]                          |
 
 [Further readings](https://www.digitalocean.com/community/tutorials/understanding-data-types-in-ruby)
 
@@ -1686,38 +1694,52 @@ All of them are used for executing a single line or multiline code.
 
 # Array
 
-Unlike other programming languages like Java, Ruby only has dynamic arrays but no static arrays. That means you don’t have to worry about the size of the array while adding new values.
+Unlike other programming languages like Java, Ruby only has dynamic arrays 
+but no static arrays. That means you don’t have to worry about the size of
+the array while adding new values.
 
-There are multiple ways we can Initialize an empty array.
+One way Ruby allows you to represent a collection of data is with arrays,
+which you can think of as ordered lists. Rather than working with individual
+variables, numbers, or strings, an array allows you to create and manipulate
+an ordered and indexed collection of these data.
+
+The individual variables, numbers, or strings within an array are known
+as elements.
+
+An array can contain any combination of variables, numbers, strings, or other
+Ruby objects (including other arrays), although it is advisable to keep similar
+data types in any one array.
+
+There are multiple ways we can initialize an empty array.
 
 ```ruby
-array = Array.new
+array = Array.new   #=> []
 # or
 array = []
+
+# An Array can contain different types of objects. 
+array = [1, "two", 3.0] #=> [1, "two", 3.0]
+
 ```
 
 Fill an array with the initial size and a default object.
 
 ```ruby
-numbers = Array.new(3, 7)
-# [7, 7, 7]
-# or
-numbers = [7, 7, 7]
-# [7, 7, 7]
-# or
+
+numbers = Array.new(3)            #=> [nil, nil, nil]
+numbers = Array.new(3, 7)         #=> [7, 7, 7]
+numbers = Array.new(3, true)      #=> [true, true, true]
+
 numbers = []
-numbers.fill(7, 0..2)
-# [7, 7, 7]
+numbers.fill(7, 0..2)   #=> [7, 7, 7]
 ```
 
 How about an array with different hashes? No problem, Ruby has you covered!
 
 ```ruby
-array_with_hashes = Array.new(2) { {} }
-# [{}, {}]
+array_with_hashes = Array.new(2) { {} } #=> [{}, {}]
 array_with_hashes[0][:name] = "Bob"
-array_with_hashes[0][:id] = 10
-# [{:name=>"Bob", :id=>10}, {}]
+array_with_hashes[0][:id] = 10          #=> [{:name=>"Bob", :id=>10}, {}]
 ```
 
 Let’s talk about 2D arrays briefly.
@@ -1728,83 +1750,163 @@ temperature_data = [
                      ["A909", 37],
                      ["A910", 38],
                    ]
-temperature_data[0]
-# ["A908", 38]
-temperature_data[0][0]
-# "A908"
-temperature_data[0][1]
-# 38
+temperature_data[0]    #=> ["A908", 38]
+temperature_data[0][0] #=> "A908"
+temperature_data[0][1] #=> 38
 ```
 
-Array indexing starts at 0. A negative index is relative to the end of the array, so -1 is the last element of the array, -2 is the second last element in the array, and so on.
+Array indexing starts at 0. A negative index is relative to the end of the array,
+so -1 is the last element of the array, -2 is the second last element in the array,
+and so on.
 
 ```ruby
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-puts numbers[0]
-# 1
-puts numbers[-1]
-# 10
+str_array = ["This", "is", "a", "small", "array"]
+str_array[0]            #=> "This"
+str_array[1]            #=> "is"
+str_array[4]            #=> "array"
 
-# numbers.at
-puts numbers.at(0)
-# 1
+# A negative index is an offset, backwards, from the end of the array:
+
+# Index -1 indicates the last element.
+str_array[-1]             #=> "array"
+
+# Index -2 indicates the next-to-last element.
+str_array[-2]             #=> "small"
+
+# A negative index is in range if its absolute value is 
+# not larger than the size of the array.
+
+str_array[-6]             #=> nil
+
+# str_array.at
+puts str_array.at(0)      #=> "This"
+
+arr = [1, 2, 3, 4, 5, 6]
+arr[100]                  #=> nil
+arr[-3]                   #=> 4
+arr[2, 3]                 #=> [3, 4, 5]
+arr[1..4]                 #=> [2, 3, 4, 5]
+arr[1..-3]                #=> [2, 3, 4]
+
+# To raise an error for indices outside of the array bounds
+# or else to provide a default value when that happens, you can use fetch.
+
+arr = ['a', 'b', 'c', 'd', 'e', 'f']
+arr.fetch(100)            #=> IndexError: index 100 outside of array bounds: -6...6
+arr.fetch(100, "oops")    #=> "oops"
+
+
+arr = [1, 2, 3, 4, 5, 6]
+
+# The special methods first and last will return the first and last elements of an array
+arr.first                #=> 1
+arr.last                 #=> 6
+
+# To return the first n elements of an array, use take
+arr.take(3)             #=> [1, 2, 3]
+
+# drop does the opposite of take, by returning the elements
+# after n elements have been dropped
+arr.drop(3)            #=> [4, 5, 6]
+
 ```
 
 Add values at the end of the array.
 
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-numbers.push(11)
-# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-numbers.push(12, 13, 14)
-# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+numbers.push(11)          #=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+numbers.push(12, 13, 14)  #=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+```
+
+Remove value from the end of the array.
+
+```ruby
+num_array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+num_array.pop             #=> 10
+num_array                 #=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 Add values at the start of the array.
 
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-numbers.unshift(0)
-# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-numbers.unshift(-3, -2, -1)
-# [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers.unshift(0)          #=> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers.unshift(-3, -2, -1) #=> [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+To retrieve and at the same time remove the first item, use shift:
+
+```ruby
+numbers.shift #=> 1
+numbers       #=> [2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+To delete an element at a particular index:
+
+```ruby
+numbers.delete_at(2) #=> 4
+numbers              #=> [2, 3, 5, 6, 7, 8, 9, 10]
+```
+
+To delete a particular element anywhere in an array, use delete:
+
+```ruby
+numbers.delete(2) #=> 2
+numbers           #=> [3, 5, 6, 7, 8, 9, 10]
 ```
 
 Insert values at the given index.
 
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-numbers.insert(0, 0)
-# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-numbers.insert(0, -3, -2, -1)
-# [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers.insert(0, 0)           #=> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers.insert(0, -3, -2, -1)  #=> [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-numbers.insert(-1, 12, 13, 14)
-# [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14]
-numbers.insert(-4, 11)
-# [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+numbers.insert(-1, 12, 13, 14) #=> [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14]
+numbers.insert(-4, 11)         #=> [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 ```
 
 How about a block to populate the values of an array?
 
 ```ruby
-numbers = Array.new(10) { |n| n = n * 2 }
-# [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+numbers = Array.new(10) { |n| n = n * 2 } #=> [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
 ```
 
 It gets easier to fill an array.
 
 ```ruby
-numbers = Array(100..110)
-# [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]
+numbers = Array(100..110) #=> [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]
+
 # or we can convert a range to an array
-(100..110).to_a
-# [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]
+(100..110).to_a #=> [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]
+
 ```
 
+A useful method if you need to remove nil values from an array is compact:
+
+```ruby
+arr = ['foo', 0, nil, 'bar', 7, 'baz', nil]
+arr.compact  #=> ['foo', 0, 'bar', 7, 'baz']
+arr          #=> ['foo', 0, nil, 'bar', 7, 'baz', nil]
+arr.compact! #=> ['foo', 0, 'bar', 7, 'baz']
+arr          #=> ['foo', 0, 'bar', 7, 'baz']
+
+```
+
+Another common need is to remove duplicate elements from an array.
+
+It has the non-destructive uniq, and destructive method uniq!
+
+```ruby
+arr = [2, 5, 6, 556, 6, 6, 8, 9, 0, 123, 556]
+arr.uniq #=> [2, 5, 6, 556, 8, 9, 0, 123]
+
+```
 ## How to iterate an Array
 
 There are multiple ways you can iterate an Array.
+
 
 | No  | Name             | When to use                                                                                                                                                                                                                                                                |
 | --- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1831,6 +1933,7 @@ There are multiple ways you can iterate an Array.
 | 21  | keep_if          | keeps a value in the original array if your block returns true                                                                                                                                                                                                             |
 | 22  | delete_if        | removes a value from the original array if your block returns true                                                                                                                                                                                                         |
 | 23  | drop_while       | drops elements up to but not including for the first element which the block returns nil or false and returns an array containing the remaining elements                                                                                                                   |
+| 24  |   reverse_each   | when you want to iterate over the elements in the array in `reverse` order                                                                                                                                                                                                   |
 
 ### each
 
@@ -1888,7 +1991,7 @@ colors.each_with_object(Hash.new(0)) { |color, hash| hash["color_"+color[:color]
 [1, 2, 3].each_with_object(0) { |number, sum| sum += number}
 # output
 # 0
-# beacuse 0 is immutable, since the initial object is 0, the method returns 0
+# because 0 is immutable, since the initial object is 0, the method returns 0
 ```
 
 ### each_index
@@ -2170,6 +2273,15 @@ numbers.drop_while { |n| n < 3 }
 # [3, 1, 2, 3, 0]
 ```
 
+### reverse_each
+
+```ruby
+words = %w[first second third fourth fifth sixth]
+str = ""
+words.reverse_each {|word| str += "#{word} "}
+p str #=> "sixth fifth fourth third second first "
+```
+
 ## Boolean Enumerable methods
 
 | No  | Name     | When to use                                                                          |
@@ -2226,6 +2338,77 @@ numbers.drop_while { |n| n < 3 }
 # false
 ```
 
+## Methods for combining
+
+| No  | Name         | When to use                                                                                                                                                        |
+|-----|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1   | &            | Returns a new Array containing each element found in both array and Array other_array; duplicates are omitted; items are compared using eql?:                      |
+| 2   | intersection | Returns a new Array containing each element found both in self and in all of the given Arrays other_arrays; duplicates are omitted; items are compared using eql?: |
+| 3   | +            | Returns an array containing all elements of self followed by all elements of a given array.                                                                        |
+| 4   | -            | Returns an array containiing all elements of self that are not found in a given array.                                                                             |
+| 5   | union        | Returns an array containing all elements of self and all elements of given arrays, duplicates removed.                                                             |
+| 6   | difference   | Returns an array containing all elements of self that are not found in any of the given arrays.                                                                    |
+| 7   | product      | Returns or yields all combinations of elements from self and given arrays.                                                                                         |
+
+
+
+
+### &
+
+```ruby
+[0, 1, 2, 3] & [1, 2] # => [1, 2]
+[0, 1, 0, 1] & [0, 1] # => [0, 1]
+```
+
+### intersection
+
+```ruby
+[0, 1, 2, 3].intersection([0, 1, 2], [0, 1, 3]) # => [0, 1]
+[0, 0, 1, 1, 2, 3].intersection([0, 1, 2], [0, 1, 3]) # => [0, 1]
+```
+
+### +
+
+```ruby
+a = [0, 1] + [2, 3]
+a # => [0, 1, 2, 3]
+```
+
+### -
+
+```ruby
+[0, 1, 1, 2, 1, 1, 3, 1, 1] - [1] # => [0, 2, 3]
+[0, 1, 2, 3] - [3, 0] # => [1, 2]
+[0, 1, 2] - [4] # => [0, 1, 2]
+```
+
+### union
+
+```ruby
+[0, 1, 2, 3].union([4, 5], [6, 7]) # => [0, 1, 2, 3, 4, 5, 6, 7]
+[0, 1, 1].union([2, 1], [3, 1]) # => [0, 1, 2, 3]
+[0, 1, 2, 3].union([3, 2], [1, 0]) # => [0, 1, 2, 3]
+```
+
+### difference
+
+```ruby
+[0, 1, 1, 2, 1, 1, 3, 1, 1].difference([1]) # => [0, 2, 3]
+[0, 1, 2, 3].difference([3, 0], [1, 3]) # => [2]
+[0, 1, 2].difference([4]) # => [0, 1, 2]
+```
+
+
+### product
+
+```ruby
+a = [0, 1, 2]
+a1 = [3, 4]
+p = a.product(a1)
+p.size # => 6 # a.size * a1.size
+p # => [[0, 3], [0, 4], [1, 3], [1, 4], [2, 3], [2, 4]]
+```
+
 ## How to check if a value exists in an Array (`include?`)
 
 ```ruby
@@ -2249,6 +2432,10 @@ planets.size
 # 8
 
 planets.length
+# output
+# 8
+
+planets.count
 # output
 # 8
 ```
