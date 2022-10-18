@@ -1023,17 +1023,17 @@ puts result
 
 # Data types
 
-| No  | Type    |     | Example                      | Class                                              | Doc                                 |
-| --- | ------- |-----| ---------------------------- | -------------------------------------------------- | ----------------------------------- |
-| 1   | Integer |     | a = 17                       | a.class > Integer <br>a.class.superclass > Numeric | [link][2]                           |
-| 2   | Float   |     | a = 87.23                    | a.class > Float <br>a.class.superclass > Numeric   | [link][3]                           |
-| 3   | String  |     | a = "Hello universe"         | a.class > String                                   | [link][4]                           |
-| 4   | Array   |     | a = [12, 34]                 | a.class > Array                                    | [link][5]                           |
-| 5   | Hash    |     | a = {type: "tea", count: 10} | a.class > Hash                                     | [link][6]                           |
-| 6   | Boolean |     | a = false<br>a = true        | a.class > FalseClass <br>a.class > TrueClass       | [TrueClass][7] <br> [FalseClass][8] |
-| 7   | Symbol  |     | a = :status                  | a.class > Symbol                                   | [link][9]                           |
-| 8   | Range   |     | a = 1..3                     | a.class > Range                                    | [link][10]                          |
-| 9   | Nil     |     | a = nil                      | a.class > NilClass                                 | [link][11]                          |
+| No  | Type    | Example                      | Class                                              | Doc                                 |
+| --- | ------- | ---------------------------- | -------------------------------------------------- | ----------------------------------- |
+| 1   | Integer | a = 17                       | a.class > Integer <br>a.class.superclass > Numeric | [link][2]                           |
+| 2   | Float   | a = 87.23                    | a.class > Float <br>a.class.superclass > Numeric   | [link][3]                           |
+| 3   | String  | a = "Hello universe"         | a.class > String                                   | [link][4]                           |
+| 4   | Array   | a = [12, 34]                 | a.class > Array                                    | [link][5]                           |
+| 5   | Hash    | a = {type: "tea", count: 10} | a.class > Hash                                     | [link][6]                           |
+| 6   | Boolean | a = false<br>a = true        | a.class > FalseClass <br>a.class > TrueClass       | [TrueClass][7] <br> [FalseClass][8] |
+| 7   | Symbol  | a = :status                  | a.class > Symbol                                   | [link][9]                           |
+| 8   | Range   | a = 1..3                     | a.class > Range                                    | [link][10]                          |
+| 9   | Nil     | a = nil                      | a.class > NilClass                                 | [link][11]                          |
 
 [Further readings](https://www.digitalocean.com/community/tutorials/understanding-data-types-in-ruby)
 
