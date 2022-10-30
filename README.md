@@ -2632,6 +2632,8 @@ numbers.uniq
 
 # Hash
 
+A Hash maps each of its unique keys to a specific value. But it has certain similarities to an Array, but an Array index is always an Integer.  A Hash key can be (almost) any object.
+
 Let's start with some basic operations. Below we have an example of how to initialize an empty hash.
 
 ```ruby
@@ -2651,11 +2653,11 @@ Let’s add some values to the hash using symbols. There are two ways to declare
 
 ```ruby
 students = Hash.new
-students = {name: 'John', email: 'john@col.com'}
+students = { name: 'John', email: 'john@col.com' }
 puts "#{students[:name]}"
 # or
 students = Hash.new
-students = {:name => 'John', :email => 'john@col.com'}
+students = { :name => 'John', :email => 'john@col.com' }
 puts "#{students[:name]}"
 ```
 
