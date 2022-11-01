@@ -138,6 +138,7 @@
   * [What's the difference between Hash.new(0) and {}](#whats-the-difference-between-hashnew0-and-)
   * [How to sort a Hash](#how-to-sort-a-hash)
   * [How to get the maximum from a Hash](#how-to-get-the-maximum-from-a-hash)
+  * [Hash Built-in Methods](#hash-built-in-methods)
 - [Loop](#loop)
   * [while loop](#while-loop)
   * [for loop](#for-loop)
@@ -419,7 +420,7 @@ To test the above code, type the irb command from your shell to initiate the int
 # Reserved Words
 
 | Reserved Word  | Description                                                                                                   |
-| -------------- | ------------------------------------------------------------------------------------------------------------- |
+|----------------|---------------------------------------------------------------------------------------------------------------|
 | `__ENCODING__` | The script encoding of the current file.                                                                      |
 | `__LINE__`     | The line number of this keyword in the current file.                                                          |
 | `__FILE__`     | The path to the current file.                                                                                 |
@@ -2632,6 +2633,8 @@ numbers.uniq
 
 # Hash
 
+A Hash maps each of its unique keys to a specific value. But it has certain similarities to an Array, but an Array index is always an Integer.  A Hash key can be (almost) any object.
+
 Let's start with some basic operations. Below we have an example of how to initialize an empty hash.
 
 ```ruby
@@ -2651,11 +2654,11 @@ Let’s add some values to the hash using symbols. There are two ways to declare
 
 ```ruby
 students = Hash.new
-students = {name: 'John', email: 'john@col.com'}
+students = { name: 'John', email: 'john@col.com' }
 puts "#{students[:name]}"
 # or
 students = Hash.new
-students = {:name => 'John', :email => 'john@col.com'}
+students = { :name => 'John', :email => 'john@col.com' }
 puts "#{students[:name]}"
 ```
 
@@ -2763,7 +2766,7 @@ puts "#{h1[:new_key]}"
 h2 = {}
 h2[:count] += 1
 # error
-undefined method `+' for nil:NilClass
+"undefined method `+` for nil:NilClass"
 ```
 
 ## How to sort a Hash
@@ -2791,6 +2794,30 @@ hash.max_by { |k, v| v }
 # output
 # [:a, 11]
 ```
+## Hash Built-in Methods
+
+| **Method**                 | **Description**                                                                                                                                                                    | **Example**                                                                                                            |
+|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| **hash == other_hash**     | Tests whether two hashes are equal, based on whether they have the same number of<br/> key-value pairs, and whether the key-value pairs match the corresponding pair in each hash. | { apple: 1, orange: 2 } == { banana: 4 } <br/>=> false                                                                 |
+| **hash.[key]**             | Using a key, references a value from hash. If the key is not found,<br/> returns a default value.                                                                                  | fruits = { apple: 1, orange: 2 } <br/> fruits[:apple]<br/> => 1                                                        |
+| **hash.[key] = value**     | Associates the value given by value with the key given by key.                                                                                                                     | fruits = { apple: 1, orange: 2 } <br/> fruits[:apple] = 5<br/> fruits = { apple: 5, orange: 2 }                        |
+| **hash.clear**             | Removes all key-value pairs from hash.                                                                                                                                             | fruits = { apple: 1, orange: 2 }<br/> fruits.clear<br/> fruits = {}                                                    |
+| **hash.delete(key)**       | Deletes a key-value pair from hash by key.                                                                                                                                         | fruits = { apple: 1, orange: 2 }<br/> fruits.delete(:apple)<br/> => fruits = { orange: 2 }                             |
+| **hash.dig(key)**          | Finds and returns the object in nested objects that is specified by key                                                                                                            | fruits = { apple: 1, orange: 2 }<br/> fruits.dig(:orange) <br/> => 2                                                   |
+| **hash.empty?**            | Tests whether hash is empty (contains no key-value pairs), returning true or false.                                                                                                | {}.empty? <br/> => true                                                                                                |
+| **hash.key?(key)**         | Tests whether a given key is present in hash, returning true or false.                                                                                                             | fruits = { apple: 1, orange: 2 }<br/> fruits.key?(:pineapple) <br/> => false                                           |
+| **hash.has_value?(value)** | Tests whether hash contains the given value.                                                                                                                                       | fruits = { apple: 1, orange: 2 }<br/> fruits.has_value?(2) <br/> => true                                               |
+| **hash.index(value)**      | Returns the key for the given value in hash, nil if no matching value is found.                                                                                                    | fruits = { apple: 1, orange: 2 }<br/> fruits.index(2) <br/> => :orange                                                 |
+| **hash.inspect**           | Returns a pretty print string version of hash.                                                                                                                                     | fruits = { apple: 1, orange: 2 }<br/> fruits.inspect <br/> => "{:apple=>1, :orange=>2}"                                |
+| **hash.invert**            | Creates a new hash, inverting keys and values from hash; that is, in the new hash,<br/> the keys from hash become values and values become keys.                                   | fruits = { apple: 1, orange: 2 }<br/> fruits.invert<br/> => {1=>:apple, 2=>:orange}                                    |
+| **hash.keys**              | Creates a new array with keys from hash.                                                                                                                                           | fruits = { apple: 1, orange: 2 }<br/> fruits.keys<br/> => [:apple, :orange]                                            |
+| **hash.length**            | Returns the size or length of hash as an integer.                                                                                                                                  | fruits = { apple: 1, orange: 2 }<br/> fruits.length <br/> => 2                                                         |
+| **hash.size**              | Returns the size or length of hash as an integer.                                                                                                                                  | fruits = { apple: 1, orange: 2 }<br/> fruits.size <br/> => 2                                                           |
+| **hash.shift**             | Removes a key-value pair from hash, returning it as a two-element array.                                                                                                           | fruits = { apple: 1, orange: 2 }<br/> fruits.shift <br/> => [:apple, 1]<br/> fruits <br/> => {:orange=>2}              |
+| **hash.sort**              | Converts hash to a two-dimensional array containing arrays of key-value pairs,<br/> then sorts it as an array.                                                                     | fruits = { pineapple: 5, apple: 1, orange: 2 } <br/> apple: 1, orange: 2 }=> {:pineapple=>5, :apple=>1, :orange=>2}    |
+| **hash.to_a**              | Creates a two-dimensional array from hash. Each key/value pair is converted to an array,<br/>  and all these arrays are stored in a containing array.                              | fruits = { pineapple: 5, apple: 1, orange: 2 } <br/> fruits.to_a <br/> => [[:pineapple, 5], [:apple, 1], [:orange, 2]] |
+| **hash.values**            | Returns a new array containing all the values of hash.                                                                                                                             | fruits = { pineapple: 5, apple: 1, orange: 2 } <br/> fruits.values <br/> => [5, 1, 2]                                  |
+
 
 # Loop
 
