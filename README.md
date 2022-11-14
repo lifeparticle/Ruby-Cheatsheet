@@ -1674,7 +1674,7 @@ A proc is like a block that can be stored in a variable.
 p = Proc.new { puts "Hello World" }
 
 def give_me_data(proc)
-    proc.call
+  proc.call
 end
 
 give_me_data p
@@ -1686,7 +1686,7 @@ give_me_data p
 p = Proc.new { |count| "Hello World " * count }
 
 def give_me_data(proc)
-    proc.call 5, 2
+  proc.call 5, 2
 end
 
 give_me_data p
@@ -1704,10 +1704,10 @@ LocalJumpError: unexpected return
 # because you can’t return from the top-level context
 
 def give_me_data
-    puts "I am inside give_me_data method"
-    p = Proc.new { return 10 }
-    p.call # code returns from here
-    puts "I am back in give_me_data method"
+  puts "I am inside give_me_data method"
+  p = Proc.new { return 10 }
+  p.call # code returns from here
+  puts "I am back in give_me_data method"
 end
 
 return_value = give_me_data
@@ -1758,10 +1758,10 @@ l.call
 # 10
 
 def give_me_data
-    puts "I am inside give_me_data method"
-    l = -> { return 10 }
-    l.call
-    puts "I am back in give_me_data method"
+  puts "I am inside give_me_data method"
+  l = -> { return 10 }
+  l.call
+  puts "I am back in give_me_data method"
 end
 
 return_value = give_me_data
@@ -2000,7 +2000,7 @@ There are multiple ways you can iterate an Array.
 
 
 | No  | Name             | When to use                                                                                                                                                                                                                                                                |
-| --- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --- |------------------| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1   | each             | when you want to just iterate                                                                                                                                                                                                                                              |
 | 2   | each_with_index  | when you want both index and value                                                                                                                                                                                                                                         |
 | 3   | each_with_object | when you want to build a hash or reduce a collection to one object. It Iterates the given block for each element with an arbitrary object given and returns the first given object. It only works with a mutable object like Hash but not an immutable object like integer |
@@ -2024,7 +2024,7 @@ There are multiple ways you can iterate an Array.
 | 21  | keep_if          | keeps a value in the original array if your block returns true                                                                                                                                                                                                             |
 | 22  | delete_if        | removes a value from the original array if your block returns true                                                                                                                                                                                                         |
 | 23  | drop_while       | drops elements up to but not including for the first element which the block returns nil or false and returns an array containing the remaining elements                                                                                                                   |
-| 24  |   reverse_each   | when you want to iterate over the elements in the array in `reverse` order                                                                                                                                                                                                   |
+| 24  | reverse_each     | when you want to iterate over the elements in the array in `reverse` order                                                                                                                                                                                                   |
 
 ### each
 
@@ -2128,8 +2128,8 @@ salary.collect { |s| s > 400 }
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 index = 0
 while index < planets.size
-    puts "#{planets[index]}"
-    index += 1
+  puts "#{planets[index]}"
+  index += 1
 end
 ```
 
@@ -2137,9 +2137,9 @@ end
 a = 1
 star = '*'
 while a <= 10
-    puts star
-    star += '*'
-    a += 1
+  puts star
+  star += '*'
+  a += 1
 end
 ```
 
@@ -2149,9 +2149,9 @@ end
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 index = 0
 loop do
-    puts "#{planets[index]}"
-    index += 1
-    break if planets[index] == "Mars" or index > planets.size
+  puts "#{planets[index]}"
+  index += 1
+  break if planets[index] == "Mars" or index > planets.size
 end
 ```
 
@@ -2159,7 +2159,7 @@ end
 
 ```ruby
 for value in [2, 3, 5, 7]
-    puts value
+  puts value
 end
 ```
 
@@ -2169,8 +2169,8 @@ end
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 index = planets.size - 1
 until index < 0
-    puts "#{planets[index]}"
-    index -= 1
+  puts "#{planets[index]}"
+  index -= 1
 end
 ```
 
@@ -2178,9 +2178,9 @@ end
 a = 1
 star = '*'
 until star.length > 10
-    puts star
-    star += '*'
-    a += 1
+  puts star
+  star += '*'
+  a += 1
 end
 ```
 
