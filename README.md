@@ -1203,6 +1203,36 @@ puts string
 # true
 3.even?
 # false
+65.chr
+#=> "A"
+36.gcdlcm(60)
+#=> [12, 180]
+36.lcm(60)
+#=> 180
+(-12345).abs
+#=> 12345
+1.next
+#=> 2
+(-1).succ
+#=> 0
+1.pred
+#=> 0
+5.remainder(3)
+#=> 2
+12345.to_s
+#=> "12345"
+12345.to_s(2)
+#=> "11000000111001"
+12345.to_s(8)
+#=> "30071"
+12345.to_s(10)
+#=> "12345"
+12345.to_s(16)
+#=> "3039"
+12345.to_s(36)
+#=> "9ix"
+12345.digits
+#=> [5, 4, 3, 2, 1]
 ```
 
 # Range
@@ -1230,12 +1260,16 @@ range.to_a
 ## Helpful methods
 
 | No  | Method name | Output                              |
-| --- | ----------- | ----------------------------------- |
+|-----|-------------|-------------------------------------|
 | 1   | cover?      | (1..5).cover?(5) <br> true          |
 | 2   | end         | ('a'..'z').end <br> "z"             |
 | 3   | first       | (1..5).first <br> 1                 |
 | 4   | first(3)    | ('A'..'Z').first(2) <br> ["A", "B"] |
 | 5   | eql?        | ((0..2).eql?(0..5) <br> false       |
+| 6   | begin       | (1..10).begin   #=> 1               |
+| 7   | last        | (10..20).last(3)   #=> [18, 19, 20] |
+| 8   | max         | (10..20).max   #=> 20               |
+| 9   | min         | (10..20).min    #=> 10              |
 
 ## How to use step with Range
 
@@ -1387,7 +1421,7 @@ You can have your own boolean methods.
 
 ```ruby
 def is_vowel?(char)
-    ['a','e','i','o','u'].include? char
+  ['a','e','i','o','u'].include? char
 end
 
 is_vowel? 'a'
@@ -1402,9 +1436,9 @@ A class method is a class-level method. There are multiple ways of defining a cl
 
 ```ruby
 class Mobile
-    def self.ring
-        "ring ring ring..."
-    end
+  def self.ring
+      "ring ring ring..."
+  end
 end
 
 Mobile.ring
@@ -1412,9 +1446,9 @@ Mobile.ring
 
 ```ruby
 class Mobile
-    def Mobile.ring
-        "ring ring ring..."
-    end
+  def Mobile.ring
+      "ring ring ring..."
+  end
 end
 
 Mobile.ring
@@ -1422,11 +1456,11 @@ Mobile.ring
 
 ```ruby
 class Mobile
-    class << self
+  class << self
     def ring
-        "ring ring ring..."
-       end
+      "ring ring ring..."
     end
+  end
 end
 
 Mobile.ring
@@ -1436,9 +1470,9 @@ A class method is an instance method of the class object. When a new class is cr
 
 ```ruby
 Mobile = Class.new do
-    def self.ring
-        "ring ring ring..."
-    end
+  def self.ring
+      "ring ring ring..."
+  end
 end
 
 Mobile.ring
@@ -1448,9 +1482,9 @@ Mobile.ring
 Mobile = Class.new
 
 class << Mobile
-    def ring
-        "ring ring ring..."
-    end
+  def ring
+      "ring ring ring..."
+  end
 end
 
 Mobile.ring
@@ -1464,8 +1498,8 @@ A block can be passed as a method parameter or can be associated with a method c
 ```ruby
 # return value
 def give_me_data
-    data = yield
-    puts "data = #{data}"
+  data = yield
+  puts "data = #{data}"
 end
 
 give_me_data { "Big data" }
