@@ -1037,8 +1037,12 @@ A when statement's expression is separated from code by the reserved word then, 
 
 # Data types
 
+Data types represent different types of data such as numbers,
+booleans, strings, etc. As an object-oriented language, 
+all data types are based on classes.
+
 | No  | Type    | Example                      | Class                                              | Doc                                 |
-| --- | ------- | ---------------------------- | -------------------------------------------------- | ----------------------------------- |
+|-----|---------|------------------------------| -------------------------------------------------- | ----------------------------------- |
 | 1   | Integer | a = 17                       | a.class > Integer <br>a.class.superclass > Numeric | [link][2]                           |
 | 2   | Float   | a = 87.23                    | a.class > Float <br>a.class.superclass > Numeric   | [link][3]                           |
 | 3   | String  | a = "Hello universe"         | a.class > String                                   | [link][4]                           |
@@ -1046,10 +1050,49 @@ A when statement's expression is separated from code by the reserved word then, 
 | 5   | Hash    | a = {type: "tea", count: 10} | a.class > Hash                                     | [link][6]                           |
 | 6   | Boolean | a = false<br>a = true        | a.class > FalseClass <br>a.class > TrueClass       | [TrueClass][7] <br> [FalseClass][8] |
 | 7   | Symbol  | a = :status                  | a.class > Symbol                                   | [link][9]                           |
-| 8   | Range   | a = 1..3                     | a.class > Range                                    | [link][10]                          |
-| 9   | Nil     | a = nil                      | a.class > NilClass                                 | [link][11]                          |
+| 8   | Nil     | a = nil                      | a.class > NilClass                                 | [link][11]                          |
 
 [Further readings](https://www.digitalocean.com/community/tutorials/understanding-data-types-in-ruby)
+
+## Integer
+
+In Ruby, Integer class is the basis for the two concrete classes that hold whole numbers. These concrete classes are
+Bignum and Fixnum. Fixnum holds integer values that are shown in the native machine word, whereas Bignum holds the
+integer value outside the range of Fixnum. Integer class contains a wide range of methods that are used for performing
+specified tasks. Integer class is a subclass of Numeric class.
+
+## Float
+
+Float objects represent inexact real numbers using the native architecture's double-precision floating point
+representation.
+
+## String
+
+A string is a group of letters that represent a sentence or a word. Strings are defined by enclosing a text within a
+single (') or double (") quotes. You can use both double quotes and single quotes to create strings. Strings are objects
+of class String. Double-quoted strings allow substitution and backslash notation but single-quoted strings doesn't 
+allow substitution and allow backslash notation only for \\ and \’.
+
+## Array
+
+An array stores data or list of data. It can contain all types of data. Data in an array are separated by comma in
+between them and are enclosed within square bracket.The position of elements in an array starts with 0. A trailing comma 
+is ignored.
+
+## Hash
+
+A hash assign its values to its key. Value to a key is assigned by => sign. A key pair is separated with a comma between
+them and all the pairs are enclosed within curly braces. A hash in Ruby is like an object literal in JavaScript or an 
+associative array in PHP. They’re made similarly to arrays. A trailing comma is ignored.
+
+## Boolean
+
+Boolean data type represents only one bit of information either true or false.
+
+## Symbol
+
+Symbols are light-weight strings. A symbol is preceded by a colon (:). They are used instead of strings because they can
+take up much less memory. Symbols have better performance.
 
 ## How to check the data type
 
@@ -1064,9 +1107,9 @@ a.is_a? Integer
 
 # Symbol
 
-Symbol objects represent names. Symbols are immutable, which means every symbol is unique, and we can't change it. Referencing the same symbol multiple times is the same as referencing the same object everywhere in your program. As a result, we can save both time and memory by referencing the same memory location.
-
-Symbols as hash keys.
+Symbol objects represent names. Symbols are immutable, which means every symbol is unique, and we can't change it.
+Referencing the same symbol multiple times is the same as referencing the same object everywhere in your program. 
+As a result, we can save both time and memory by referencing the same memory location. Symbols as hash keys.
 
 ```ruby
 week_days = {sunday: 11, monday: 222}
