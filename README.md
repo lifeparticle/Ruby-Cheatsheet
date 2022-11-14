@@ -1290,11 +1290,18 @@ range.to_a
 
 # Methods
 
-A method is a function that takes zero or more parameters and returns a value. Ruby method returns nil by default.
+A method is a function that takes zero or more parameters and returns a value.
+Ruby method returns nil by default. 
+
+Method names should begin with a lowercase letter. If you begin a method name with an uppercase letter, 
+Ruby might think that it is a constant and hence can parse the call incorrectly.
+
+Methods should be defined before calling them, otherwise Ruby will raise an exception for undefined method invoking.
 
 ## How to declare a method
 
-In Ruby, the last statement evaluated is the return value of that method. The return statement is optional. Depending on your preference, you can choose either of them 👍. I prefer to use the return statement because it's easier to understand.
+In Ruby, the last statement evaluated is the return value of that method. The return statement is optional. Depending on your preference, you can choose either of them 👍.
+I prefer to use the return statement because it's easier to understand.
 
 ```ruby
 def method_name(parameter1, parameter2)
@@ -1323,6 +1330,11 @@ res = method_name(parameter1, parameter2)
 # In Ruby you can call methods without parentheses
 res = method_name parameter1, parameter2
 ```
+The most important drawback to using methods with parameters 
+is that you need to remember the number of parameters whenever
+you call such methods. For example, if a method accepts three 
+parameters and you pass only two, then Ruby displays an error.
+
 
 ## How to define a default value for a method parameter
 
