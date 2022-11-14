@@ -1328,9 +1328,9 @@ res = method_name parameter1, parameter2
 
 ```ruby
 def method_name(parameter1, parameter2, type = "ADD")
-    puts "#{parameter1} #{parameter2}"
-    return parameter1 + parameter2 if type == "ADD"
-    return parameter1 - parameter2 if type == "SUB"
+  puts "#{parameter1} #{parameter2}"
+  return parameter1 + parameter2 if type == "ADD"
+  return parameter1 - parameter2 if type == "SUB"
 end
 
 res = method_name(20, 10)
@@ -1342,7 +1342,7 @@ res = method_name(20, 10)
 
 ```ruby
 def method_name(num1, num2 = num1)
-    return num1 + num2
+  return num1 + num2
 end
 
 res = method_name(10)
@@ -1354,8 +1354,8 @@ res = method_name(10)
 
 ```ruby
 def method_name(type, *values)
-    return values.reduce(:+) if type == "ADD"
-    return values.reduce(:-) if type == "SUB"
+  return values.reduce(:+) if type == "ADD"
+  return values.reduce(:-) if type == "SUB"
 end
 
 numbers = [2, 2, 2, 3, 3, 3]
@@ -1437,7 +1437,7 @@ A class method is a class-level method. There are multiple ways of defining a cl
 ```ruby
 class Mobile
   def self.ring
-      "ring ring ring..."
+    "ring ring ring..."
   end
 end
 
@@ -1447,7 +1447,7 @@ Mobile.ring
 ```ruby
 class Mobile
   def Mobile.ring
-      "ring ring ring..."
+    "ring ring ring..."
   end
 end
 
@@ -1471,7 +1471,7 @@ A class method is an instance method of the class object. When a new class is cr
 ```ruby
 Mobile = Class.new do
   def self.ring
-      "ring ring ring..."
+    "ring ring ring..."
   end
 end
 
@@ -1520,9 +1520,9 @@ salary.each { |s| puts s }
 ```ruby
 # multiline block
 salary.each do |s|
-    a = 10
-    res = a * s
-    puts res
+  a = 10
+  res = a * s
+  puts res
 end
 
 # block body
@@ -1539,9 +1539,9 @@ Methods can take blocks implicitly and explicitly. If you want to call a block i
 ```ruby
 # passing a block implicitly
 def give_me_data
-    puts "I am inside give_me_data method"
-    yield
-    puts "I am back in give_me_data method"
+  puts "I am inside give_me_data method"
+  yield
+  puts "I am back in give_me_data method"
 end
 
 give_me_data { puts "Big data" }
@@ -1553,9 +1553,9 @@ give_me_data { puts "Big data" }
 
 # call multiple times
 def give_me_data
-    yield
-    yield
-    yield
+  yield
+  yield
+  yield
 end
 
 give_me_data { puts "Big data" }
@@ -1568,9 +1568,9 @@ give_me_data { puts "Big data" }
 # call with block arguments
 
 def give_me_data
-    yield 10
-    yield 100
-    yield 30
+  yield 10
+  yield 100
+  yield 30
 end
 
 give_me_data { |data| puts "Big data #{data} TB" }
@@ -1583,9 +1583,9 @@ give_me_data { |data| puts "Big data #{data} TB" }
 # call with multiple block arguments
 
 def give_me_data
-    yield "Big data", 10, "TB"
-    yield "Big data", 100, "GB"
-    yield "Big data", 30, "MB"
+  yield "Big data", 10, "TB"
+  yield "Big data", 100, "GB"
+  yield "Big data", 30, "MB"
 end
 
 give_me_data { |text, data, unit| puts "#{text} #{data} #{unit}" }
@@ -1597,13 +1597,13 @@ give_me_data { |text, data, unit| puts "#{text} #{data} #{unit}" }
 
 #  block will try to return from the current context
 give_me_data
-    puts "I am inside give_me_data method"
+  puts "I am inside give_me_data method"
 end
 
 def test
-    puts "I am inside test method"
-    give_me_data { return 10 } # code returns from here
-    puts "I am back in test method"
+  puts "I am inside test method"
+  give_me_data { return 10 } # code returns from here
+  puts "I am back in test method"
 end
 
 return_value = test
@@ -1617,8 +1617,8 @@ return_value = test
 ```ruby
 # passing a block explicitly by using an ampersand parameter, here we are explicitly defining the method with block parameter and calling it
 def give_me_data(&block)
-    block.call
-    block.call
+  block.call
+  block.call
 end
 
 give_me_data { puts "Big data" }
@@ -1634,7 +1634,7 @@ block parameter is mandatory when you call yield inside a method; otherwise, it 
 
 ```ruby
 def give_me_data
-    yield
+  yield
 end
 
 give_me_data
@@ -1645,8 +1645,8 @@ give_me_data
 # you can use block_given? method to handle the exception and make the block optional
 
 def give_me_data
-    return "no block" unless block_given?
-    yield
+  return "no block" unless block_given?
+  yield
 end
 
 give_me_data { puts "Big data" }
@@ -1656,7 +1656,7 @@ give_me_data
 # Big data
 
 def give_me_data(&block)
-    block.call if block
+  block.call if block
 end
 
 give_me_data { puts "Big data" }
