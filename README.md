@@ -1446,6 +1446,16 @@ is_vowel? 'b'
 
 A class method is a class-level method. There are multiple ways of defining a class method.
 
+When a method is defined outside of the class definition, the method is marked as private by default. On the other hand, 
+the methods defined in the class definition are marked as public by default. The default visibility and the private mark 
+of the methods can be changed by public or private of the Module.
+
+Whenever you want to access a method of a class, you first need to instantiate the class. Then, using the object,
+you can access any member of the class.
+
+Ruby gives you a way to access a method without instantiating a class.
+Let us see how a class method is declared and accessed −
+
 ```ruby
 class Mobile
   def self.ring
@@ -1477,8 +1487,10 @@ end
 
 Mobile.ring
 ```
+To access this method, you need not create objects of the class Mobile.
 
-A class method is an instance method of the class object. When a new class is created, an object of type `Class` is initialized and assigned to a global constant (Mobile in this case).
+A class method is an instance method of the class object. When a new class is created, an object of type `Class` is 
+initialized and assigned to a global constant (Mobile in this case).
 
 ```ruby
 Mobile = Class.new do
