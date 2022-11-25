@@ -175,6 +175,9 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 3.1.3 Released](https://www.ruby-lang.org/en/news/2022/11/24/ruby-3-1-3-released/) <br/> <sub>2022-11-24 12:00:00</sub>
+* [Ruby 3.0.5 Released](https://www.ruby-lang.org/en/news/2022/11/24/ruby-3-0-5-released/) <br/> <sub>2022-11-24 12:00:00</sub>
+* [Ruby 2.7.7 Released](https://www.ruby-lang.org/en/news/2022/11/24/ruby-2-7-7-released/) <br/> <sub>2022-11-24 12:00:00</sub>
 * [CVE-2021-33621: HTTP response splitting in CGI](https://www.ruby-lang.org/en/news/2022/11/22/http-response-splitting-in-cgi-cve-2021-33621/) <br/> <sub>2022-11-22 02:00:00</sub>
 * [Ruby 3.2.0 Preview 3 Released](https://www.ruby-lang.org/en/news/2022/11/11/ruby-3-2-0-preview3-released/) <br/> <sub>2022-11-11 00:00:00</sub>
 * [Ruby 3.2.0 Preview 2 Released](https://www.ruby-lang.org/en/news/2022/09/09/ruby-3-2-0-preview2-released/) <br/> <sub>2022-09-09 00:00:00</sub>
@@ -182,9 +185,6 @@
 * [Ruby 3.0.4 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-3-0-4-released/) <br/> <sub>2022-04-12 12:00:00</sub>
 * [Ruby 2.7.6 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-2-7-6-released/) <br/> <sub>2022-04-12 12:00:00</sub>
 * [Ruby 2.6.10 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-2-6-10-released/) <br/> <sub>2022-04-12 12:00:00</sub>
-* [CVE-2022-28738: Double free in Regexp compilation](https://www.ruby-lang.org/en/news/2022/04/12/double-free-in-regexp-compilation-cve-2022-28738/) <br/> <sub>2022-04-12 12:00:00</sub>
-* [CVE-2022-28739: Buffer overrun in String-to-Float conversion](https://www.ruby-lang.org/en/news/2022/04/12/buffer-overrun-in-string-to-float-cve-2022-28739/) <br/> <sub>2022-04-12 12:00:00</sub>
-* [Ruby 3.2.0 Preview 1 Released](https://www.ruby-lang.org/en/news/2022/04/03/ruby-3-2-0-preview1-released/) <br/> <sub>2022-04-03 00:00:00</sub>
 <!-- news ends -->
 
 # Installation
@@ -3467,18 +3467,16 @@ MIT License
 ![Jul-16-2019 22-21-31](https://user-images.githubusercontent.com/1612112/61294008-41e94980-a818-11e9-9ff0-656ae53c8360.gif)
 
 <!-- doc_links starts -->
-
-[1]: https://ruby-doc.org/core-3.1.2/doc/keywords_rdoc.html
-[2]: https://ruby-doc.org/core-3.1.2/Integer.html
-[3]: https://ruby-doc.org/core-3.1.2/Float.html
-[4]: https://ruby-doc.org/core-3.1.2/String.html
-[5]: https://ruby-doc.org/core-3.1.2/Array.html
-[6]: https://ruby-doc.org/core-3.1.2/Hash.html
-[7]: https://ruby-doc.org/core-3.1.2/TrueClass.html
-[8]: https://ruby-doc.org/core-3.1.2/FalseClass.html
-[9]: https://ruby-doc.org/core-3.1.2/Symbol.html
-[10]: https://ruby-doc.org/core-3.1.2/Range.html
-[11]: https://ruby-doc.org/core-3.1.2/NilClass.html
-[12]: https://ruby-doc.org/core-3.1.2/Exception.html
-
+[1]: https://ruby-doc.org/core-3.1.3/doc/keywords_rdoc.html
+[2]: https://ruby-doc.org/core-3.1.3/Integer.html
+[3]: https://ruby-doc.org/core-3.1.3/Float.html
+[4]: https://ruby-doc.org/core-3.1.3/String.html
+[5]: https://ruby-doc.org/core-3.1.3/Array.html
+[6]: https://ruby-doc.org/core-3.1.3/Hash.html
+[7]: https://ruby-doc.org/core-3.1.3/TrueClass.html
+[8]: https://ruby-doc.org/core-3.1.3/FalseClass.html
+[9]: https://ruby-doc.org/core-3.1.3/Symbol.html
+[10]: https://ruby-doc.org/core-3.1.3/Range.html
+[11]: https://ruby-doc.org/core-3.1.3/NilClass.html
+[12]: https://ruby-doc.org/core-3.1.3/Exception.html
 <!-- doc_links ends -->
