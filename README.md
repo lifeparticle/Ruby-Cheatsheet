@@ -1037,8 +1037,12 @@ A when statement's expression is separated from code by the reserved word then, 
 
 # Data types
 
+Data types represent different types of data such as numbers,
+booleans, strings, etc. As an object-oriented language, 
+all data types are based on classes.
+
 | No  | Type    | Example                      | Class                                              | Doc                                 |
-| --- | ------- | ---------------------------- | -------------------------------------------------- | ----------------------------------- |
+|-----|---------|------------------------------| -------------------------------------------------- | ----------------------------------- |
 | 1   | Integer | a = 17                       | a.class > Integer <br>a.class.superclass > Numeric | [link][2]                           |
 | 2   | Float   | a = 87.23                    | a.class > Float <br>a.class.superclass > Numeric   | [link][3]                           |
 | 3   | String  | a = "Hello universe"         | a.class > String                                   | [link][4]                           |
@@ -1046,10 +1050,49 @@ A when statement's expression is separated from code by the reserved word then, 
 | 5   | Hash    | a = {type: "tea", count: 10} | a.class > Hash                                     | [link][6]                           |
 | 6   | Boolean | a = false<br>a = true        | a.class > FalseClass <br>a.class > TrueClass       | [TrueClass][7] <br> [FalseClass][8] |
 | 7   | Symbol  | a = :status                  | a.class > Symbol                                   | [link][9]                           |
-| 8   | Range   | a = 1..3                     | a.class > Range                                    | [link][10]                          |
-| 9   | Nil     | a = nil                      | a.class > NilClass                                 | [link][11]                          |
+| 8   | Nil     | a = nil                      | a.class > NilClass                                 | [link][11]                          |
 
 [Further readings](https://www.digitalocean.com/community/tutorials/understanding-data-types-in-ruby)
+
+## Integer
+
+In Ruby, Integer class is the basis for the two concrete classes that hold whole numbers. These concrete classes are
+Bignum and Fixnum. Fixnum holds integer values that are shown in the native machine word, whereas Bignum holds the
+integer value outside the range of Fixnum. Integer class contains a wide range of methods that are used for performing
+specified tasks. Integer class is a subclass of Numeric class.
+
+## Float
+
+Float objects represent inexact real numbers using the native architecture's double-precision floating point
+representation.
+
+## String
+
+A string is a group of letters that represent a sentence or a word. Strings are defined by enclosing a text within a
+single (') or double (") quotes. You can use both double quotes and single quotes to create strings. Strings are objects
+of class String. Double-quoted strings allow substitution and backslash notation but single-quoted strings doesn't 
+allow substitution and allow backslash notation only for \\ and \’.
+
+## Array
+
+An array stores data or list of data. It can contain all types of data. Data in an array are separated by comma in
+between them and are enclosed within square bracket.The position of elements in an array starts with 0. A trailing comma 
+is ignored.
+
+## Hash
+
+A hash assign its values to its key. Value to a key is assigned by => sign. A key pair is separated with a comma between
+them and all the pairs are enclosed within curly braces. A hash in Ruby is like an object literal in JavaScript or an 
+associative array in PHP. They’re made similarly to arrays. A trailing comma is ignored.
+
+## Boolean
+
+Boolean data type represents only one bit of information either true or false.
+
+## Symbol
+
+Symbols are light-weight strings. A symbol is preceded by a colon (:). They are used instead of strings because they can
+take up much less memory. Symbols have better performance.
 
 ## How to check the data type
 
@@ -1064,9 +1107,9 @@ a.is_a? Integer
 
 # Symbol
 
-Symbol objects represent names. Symbols are immutable, which means every symbol is unique, and we can't change it. Referencing the same symbol multiple times is the same as referencing the same object everywhere in your program. As a result, we can save both time and memory by referencing the same memory location.
-
-Symbols as hash keys.
+Symbol objects represent names. Symbols are immutable, which means every symbol is unique, and we can't change it.
+Referencing the same symbol multiple times is the same as referencing the same object everywhere in your program. 
+As a result, we can save both time and memory by referencing the same memory location. Symbols as hash keys.
 
 ```ruby
 week_days = {sunday: 11, monday: 222}
@@ -1160,6 +1203,36 @@ puts string
 # true
 3.even?
 # false
+65.chr
+#=> "A"
+36.gcdlcm(60)
+#=> [12, 180]
+36.lcm(60)
+#=> 180
+(-12345).abs
+#=> 12345
+1.next
+#=> 2
+(-1).succ
+#=> 0
+1.pred
+#=> 0
+5.remainder(3)
+#=> 2
+12345.to_s
+#=> "12345"
+12345.to_s(2)
+#=> "11000000111001"
+12345.to_s(8)
+#=> "30071"
+12345.to_s(10)
+#=> "12345"
+12345.to_s(16)
+#=> "3039"
+12345.to_s(36)
+#=> "9ix"
+12345.digits
+#=> [5, 4, 3, 2, 1]
 ```
 
 # Range
@@ -1187,12 +1260,16 @@ range.to_a
 ## Helpful methods
 
 | No  | Method name | Output                              |
-| --- | ----------- | ----------------------------------- |
+|-----|-------------|-------------------------------------|
 | 1   | cover?      | (1..5).cover?(5) <br> true          |
 | 2   | end         | ('a'..'z').end <br> "z"             |
 | 3   | first       | (1..5).first <br> 1                 |
 | 4   | first(3)    | ('A'..'Z').first(2) <br> ["A", "B"] |
 | 5   | eql?        | ((0..2).eql?(0..5) <br> false       |
+| 6   | begin       | (1..10).begin   #=> 1               |
+| 7   | last        | (10..20).last(3)   #=> [18, 19, 20] |
+| 8   | max         | (10..20).max   #=> 20               |
+| 9   | min         | (10..20).min    #=> 10              |
 
 ## How to use step with Range
 
@@ -1213,11 +1290,18 @@ range.to_a
 
 # Methods
 
-A method is a function that takes zero or more parameters and returns a value. Ruby method returns nil by default.
+A method is a function that takes zero or more parameters and returns a value.
+Ruby method returns nil by default. 
+
+Method names should begin with a lowercase letter. If you begin a method name with an uppercase letter, 
+Ruby might think that it is a constant and hence can parse the call incorrectly.
+
+Methods should be defined before calling them, otherwise Ruby will raise an exception for undefined method invoking.
 
 ## How to declare a method
 
-In Ruby, the last statement evaluated is the return value of that method. The return statement is optional. Depending on your preference, you can choose either of them 👍. I prefer to use the return statement because it's easier to understand.
+In Ruby, the last statement evaluated is the return value of that method. The return statement is optional. Depending on your preference, you can choose either of them 👍.
+I prefer to use the return statement because it's easier to understand.
 
 ```ruby
 def method_name(parameter1, parameter2)
@@ -1246,14 +1330,19 @@ res = method_name(parameter1, parameter2)
 # In Ruby you can call methods without parentheses
 res = method_name parameter1, parameter2
 ```
+The most important drawback to using methods with parameters 
+is that you need to remember the number of parameters whenever
+you call such methods. For example, if a method accepts three 
+parameters and you pass only two, then Ruby displays an error.
+
 
 ## How to define a default value for a method parameter
 
 ```ruby
 def method_name(parameter1, parameter2, type = "ADD")
-    puts "#{parameter1} #{parameter2}"
-    return parameter1 + parameter2 if type == "ADD"
-    return parameter1 - parameter2 if type == "SUB"
+  puts "#{parameter1} #{parameter2}"
+  return parameter1 + parameter2 if type == "ADD"
+  return parameter1 - parameter2 if type == "SUB"
 end
 
 res = method_name(20, 10)
@@ -1265,7 +1354,7 @@ res = method_name(20, 10)
 
 ```ruby
 def method_name(num1, num2 = num1)
-    return num1 + num2
+  return num1 + num2
 end
 
 res = method_name(10)
@@ -1277,8 +1366,8 @@ res = method_name(10)
 
 ```ruby
 def method_name(type, *values)
-    return values.reduce(:+) if type == "ADD"
-    return values.reduce(:-) if type == "SUB"
+  return values.reduce(:+) if type == "ADD"
+  return values.reduce(:-) if type == "SUB"
 end
 
 numbers = [2, 2, 2, 3, 3, 3]
@@ -1344,7 +1433,7 @@ You can have your own boolean methods.
 
 ```ruby
 def is_vowel?(char)
-    ['a','e','i','o','u'].include? char
+  ['a','e','i','o','u'].include? char
 end
 
 is_vowel? 'a'
@@ -1357,11 +1446,21 @@ is_vowel? 'b'
 
 A class method is a class-level method. There are multiple ways of defining a class method.
 
+When a method is defined outside of the class definition, the method is marked as private by default. On the other hand, 
+the methods defined in the class definition are marked as public by default. The default visibility and the private mark 
+of the methods can be changed by public or private of the Module.
+
+Whenever you want to access a method of a class, you first need to instantiate the class. Then, using the object,
+you can access any member of the class.
+
+Ruby gives you a way to access a method without instantiating a class.
+Let us see how a class method is declared and accessed −
+
 ```ruby
 class Mobile
-    def self.ring
-        "ring ring ring..."
-    end
+  def self.ring
+    "ring ring ring..."
+  end
 end
 
 Mobile.ring
@@ -1369,9 +1468,9 @@ Mobile.ring
 
 ```ruby
 class Mobile
-    def Mobile.ring
-        "ring ring ring..."
-    end
+  def Mobile.ring
+    "ring ring ring..."
+  end
 end
 
 Mobile.ring
@@ -1379,23 +1478,25 @@ Mobile.ring
 
 ```ruby
 class Mobile
-    class << self
+  class << self
     def ring
-        "ring ring ring..."
-       end
+      "ring ring ring..."
     end
+  end
 end
 
 Mobile.ring
 ```
+To access this method, you need not create objects of the class Mobile.
 
-A class method is an instance method of the class object. When a new class is created, an object of type `Class` is initialized and assigned to a global constant (Mobile in this case).
+A class method is an instance method of the class object. When a new class is created, an object of type `Class` is 
+initialized and assigned to a global constant (Mobile in this case).
 
 ```ruby
 Mobile = Class.new do
-    def self.ring
-        "ring ring ring..."
-    end
+  def self.ring
+    "ring ring ring..."
+  end
 end
 
 Mobile.ring
@@ -1405,9 +1506,9 @@ Mobile.ring
 Mobile = Class.new
 
 class << Mobile
-    def ring
-        "ring ring ring..."
-    end
+  def ring
+      "ring ring ring..."
+  end
 end
 
 Mobile.ring
@@ -1421,8 +1522,8 @@ A block can be passed as a method parameter or can be associated with a method c
 ```ruby
 # return value
 def give_me_data
-    data = yield
-    puts "data = #{data}"
+  data = yield
+  puts "data = #{data}"
 end
 
 give_me_data { "Big data" }
@@ -1443,9 +1544,9 @@ salary.each { |s| puts s }
 ```ruby
 # multiline block
 salary.each do |s|
-    a = 10
-    res = a * s
-    puts res
+  a = 10
+  res = a * s
+  puts res
 end
 
 # block body
@@ -1462,9 +1563,9 @@ Methods can take blocks implicitly and explicitly. If you want to call a block i
 ```ruby
 # passing a block implicitly
 def give_me_data
-    puts "I am inside give_me_data method"
-    yield
-    puts "I am back in give_me_data method"
+  puts "I am inside give_me_data method"
+  yield
+  puts "I am back in give_me_data method"
 end
 
 give_me_data { puts "Big data" }
@@ -1476,9 +1577,9 @@ give_me_data { puts "Big data" }
 
 # call multiple times
 def give_me_data
-    yield
-    yield
-    yield
+  yield
+  yield
+  yield
 end
 
 give_me_data { puts "Big data" }
@@ -1491,9 +1592,9 @@ give_me_data { puts "Big data" }
 # call with block arguments
 
 def give_me_data
-    yield 10
-    yield 100
-    yield 30
+  yield 10
+  yield 100
+  yield 30
 end
 
 give_me_data { |data| puts "Big data #{data} TB" }
@@ -1506,9 +1607,9 @@ give_me_data { |data| puts "Big data #{data} TB" }
 # call with multiple block arguments
 
 def give_me_data
-    yield "Big data", 10, "TB"
-    yield "Big data", 100, "GB"
-    yield "Big data", 30, "MB"
+  yield "Big data", 10, "TB"
+  yield "Big data", 100, "GB"
+  yield "Big data", 30, "MB"
 end
 
 give_me_data { |text, data, unit| puts "#{text} #{data} #{unit}" }
@@ -1520,13 +1621,13 @@ give_me_data { |text, data, unit| puts "#{text} #{data} #{unit}" }
 
 #  block will try to return from the current context
 give_me_data
-    puts "I am inside give_me_data method"
+  puts "I am inside give_me_data method"
 end
 
 def test
-    puts "I am inside test method"
-    give_me_data { return 10 } # code returns from here
-    puts "I am back in test method"
+  puts "I am inside test method"
+  give_me_data { return 10 } # code returns from here
+  puts "I am back in test method"
 end
 
 return_value = test
@@ -1540,8 +1641,8 @@ return_value = test
 ```ruby
 # passing a block explicitly by using an ampersand parameter, here we are explicitly defining the method with block parameter and calling it
 def give_me_data(&block)
-    block.call
-    block.call
+  block.call
+  block.call
 end
 
 give_me_data { puts "Big data" }
@@ -1557,7 +1658,7 @@ block parameter is mandatory when you call yield inside a method; otherwise, it 
 
 ```ruby
 def give_me_data
-    yield
+  yield
 end
 
 give_me_data
@@ -1568,8 +1669,8 @@ give_me_data
 # you can use block_given? method to handle the exception and make the block optional
 
 def give_me_data
-    return "no block" unless block_given?
-    yield
+  return "no block" unless block_given?
+  yield
 end
 
 give_me_data { puts "Big data" }
@@ -1579,7 +1680,7 @@ give_me_data
 # Big data
 
 def give_me_data(&block)
-    block.call if block
+  block.call if block
 end
 
 give_me_data { puts "Big data" }
@@ -1597,7 +1698,7 @@ A proc is like a block that can be stored in a variable.
 p = Proc.new { puts "Hello World" }
 
 def give_me_data(proc)
-    proc.call
+  proc.call
 end
 
 give_me_data p
@@ -1609,7 +1710,7 @@ give_me_data p
 p = Proc.new { |count| "Hello World " * count }
 
 def give_me_data(proc)
-    proc.call 5, 2
+  proc.call 5, 2
 end
 
 give_me_data p
@@ -1627,10 +1728,10 @@ LocalJumpError: unexpected return
 # because you can’t return from the top-level context
 
 def give_me_data
-    puts "I am inside give_me_data method"
-    p = Proc.new { return 10 }
-    p.call # code returns from here
-    puts "I am back in give_me_data method"
+  puts "I am inside give_me_data method"
+  p = Proc.new { return 10 }
+  p.call # code returns from here
+  puts "I am back in give_me_data method"
 end
 
 return_value = give_me_data
@@ -1681,10 +1782,10 @@ l.call
 # 10
 
 def give_me_data
-    puts "I am inside give_me_data method"
-    l = -> { return 10 }
-    l.call
-    puts "I am back in give_me_data method"
+  puts "I am inside give_me_data method"
+  l = -> { return 10 }
+  l.call
+  puts "I am back in give_me_data method"
 end
 
 return_value = give_me_data
@@ -1923,7 +2024,7 @@ There are multiple ways you can iterate an Array.
 
 
 | No  | Name             | When to use                                                                                                                                                                                                                                                                |
-| --- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --- |------------------| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1   | each             | when you want to just iterate                                                                                                                                                                                                                                              |
 | 2   | each_with_index  | when you want both index and value                                                                                                                                                                                                                                         |
 | 3   | each_with_object | when you want to build a hash or reduce a collection to one object. It Iterates the given block for each element with an arbitrary object given and returns the first given object. It only works with a mutable object like Hash but not an immutable object like integer |
@@ -1947,7 +2048,7 @@ There are multiple ways you can iterate an Array.
 | 21  | keep_if          | keeps a value in the original array if your block returns true                                                                                                                                                                                                             |
 | 22  | delete_if        | removes a value from the original array if your block returns true                                                                                                                                                                                                         |
 | 23  | drop_while       | drops elements up to but not including for the first element which the block returns nil or false and returns an array containing the remaining elements                                                                                                                   |
-| 24  |   reverse_each   | when you want to iterate over the elements in the array in `reverse` order                                                                                                                                                                                                   |
+| 24  | reverse_each     | when you want to iterate over the elements in the array in `reverse` order                                                                                                                                                                                                   |
 
 ### each
 
@@ -2051,8 +2152,8 @@ salary.collect { |s| s > 400 }
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 index = 0
 while index < planets.size
-    puts "#{planets[index]}"
-    index += 1
+  puts "#{planets[index]}"
+  index += 1
 end
 ```
 
@@ -2060,9 +2161,9 @@ end
 a = 1
 star = '*'
 while a <= 10
-    puts star
-    star += '*'
-    a += 1
+  puts star
+  star += '*'
+  a += 1
 end
 ```
 
@@ -2072,9 +2173,9 @@ end
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 index = 0
 loop do
-    puts "#{planets[index]}"
-    index += 1
-    break if planets[index] == "Mars" or index > planets.size
+  puts "#{planets[index]}"
+  index += 1
+  break if planets[index] == "Mars" or index > planets.size
 end
 ```
 
@@ -2082,7 +2183,7 @@ end
 
 ```ruby
 for value in [2, 3, 5, 7]
-    puts value
+  puts value
 end
 ```
 
@@ -2092,8 +2193,8 @@ end
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 index = planets.size - 1
 until index < 0
-    puts "#{planets[index]}"
-    index -= 1
+  puts "#{planets[index]}"
+  index -= 1
 end
 ```
 
@@ -2101,9 +2202,9 @@ end
 a = 1
 star = '*'
 until star.length > 10
-    puts star
-    star += '*'
-    a += 1
+  puts star
+  star += '*'
+  a += 1
 end
 ```
 
@@ -3422,6 +3523,19 @@ words = sentence.split(/(?=[A-Z])/)
 1. [Ruby on Rails](https://rubyonrails.org/)
 2. [Sinatra](http://sinatrarb.com/)
 3. [Padrino](http://padrinorb.com/)
+4. [Camping](http://www.ruby-camping.com/)
+5. [Ramaze](http://ramaze.net/)
+6. [Goliath](https://postrank-labs.github.io/goliath/)
+7. [Hanami](https://hanamirb.org/)
+8. [NYNY](https://alisnic.github.io/nyny/)
+9. [Cuba](https://cuba.is/)
+10. [Grape](https://www.ruby-grape.org/)
+11. [Scorched](https://scorchedrb.com/)
+12. [Roda](https://roda.jeremyevans.net/documentation.html)
+13. [Volt](https://github.com/voltrb/volt)
+14. [Ramverk](https://github.com/tobidelius/ramverk)
+15. [Hobbit](https://github.com/patriciomacadden/hobbit)
+16. [Cramp](https://github.com/lifo/cramp)
 
 # My Ruby Articles
 
