@@ -53,14 +53,16 @@ if __name__ == "__main__":
 		readme_contents = replace_chunk(readme_contents, "news", posts_md)
 
 	# Update the doc links to point the latest ruby version docs
-	current_stable_version = root / "current_stable_version.txt"
+	current_stable_version = root / "current_ruby_doc_stable_version.txt"
 	current_stable_version_contents = current_stable_version.open().read().strip()
 	ruby_latest_version = fetch_ruby_latest_version()
 
 	if (current_stable_version_contents != ruby_latest_version):
 		doc_links = re.search("<!-- doc_links starts -->(.*)<!-- doc_links ends -->", readme_contents, re.DOTALL).groups()[0].strip()
 		updated_doc_links = re.sub("core-\d.\d.\d", f"core-{ruby_latest_version}", doc_links)
-		readme_contents = replace_chunk(readme_contents, "doc_links", updated_doc_links)
-		current_stable_version.open("w").write(ruby_latest_version)
+		response = requests.get(updated_doc_links)
+		if response.status_code == 200:
+			readme_contents = replace_chunk(readme_contents, "doc_links", updated_doc_links)
+			current_stable_version.open("w").write(ruby_latest_version)
 
 	readme.open("w").write(readme_contents)
