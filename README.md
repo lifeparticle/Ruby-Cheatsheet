@@ -14,177 +14,178 @@
 
 # Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [The latest news from ruby-lang.org](#the-latest-news-from-ruby-langorg)
-- [Installation](#installation)
-  * [How to install Ruby](#how-to-install-ruby)
-    + [Debian, Ubuntu](#debian-ubuntu)
-    + [Windows Package Manager](#windows-package-manager)
-    + [macOS](#macos)
-    + [Docker](#docker)
-    + [Install rbenv with package managers](#install-rbenv-with-package-managers)
-      - [macOS](#macos-1)
-      - [Debian, ubuntu and other derivatives](#debian-ubuntu-and-other-derivatives)
-    + [Install ruby with rbenv](#install-ruby-with-rbenv)
-    + [Install ruby with RVM](#install-ruby-with-rvm)
-  * [How to install ruby gem manager, bundler gem](#how-to-install-ruby-gem-manager-bundler-gem)
-  * [What is a Gemfile and Gemfile.lock](#what-is-a-gemfile-and-gemfilelock)
-  * [How to install a specific version of a particular ruby gem](#how-to-install-a-specific-version-of-a-particular-ruby-gem)
-  * [How to update a single gem using Bundler](#how-to-update-a-single-gem-using-bundler)
-  * [How to update every gem in the Gemfile using Bundler](#how-to-update-every-gem-in-the-gemfile-using-bundler)
-- [Introduction](#introduction)
-- [Reserved Words](#reserved-words)
-- [Comment](#comment)
-- [Operators](#operators)
-  * [Usage](#usage)
-  * [Operator Precedence Table](#operator-precedence-table)
-- [Variables and Scope](#variables-and-scope)
-  * [Local Variable](#local-variable)
-  * [Instance Variable](#instance-variable)
-  * [Class Variable](#class-variable)
-  * [Global Variable](#global-variable)
-  * [Constant Variable](#constant-variable)
-  * [Pseudo variables](#pseudo-variables)
-  * [Pre-defined variables](#pre-defined-variables)
-  * [Option variables](#option-variables)
-  * [Pre-defined global constants](#pre-defined-global-constants)
-  * [How to check scope of variables](#how-to-check-scope-of-variables)
-- [Conditional structures](#conditional-structures)
-  * [if Modifier](#if-modifier)
-  * [If elsif else Statement](#if-elsif-else-statement)
-  * [unless Statement](#unless-statement)
-  * [Case Statement](#case-statement)
-- [Data types](#data-types)
-  * [How to check the data type](#how-to-check-the-data-type)
-- [Symbol](#symbol)
-- [String](#string)
-  * [String Interpolation](#string-interpolation)
-  * [How to Extract a Substring](#how-to-extract-a-substring)
-  * [How to convert String to lower or upper case](#how-to-convert-string-to-lower-or-upper-case)
-  * [Helpful methods](#helpful-methods)
-- [Integer](#integer)
-  * [Helpful methods](#helpful-methods-1)
-- [Range](#range)
-  * [Helpful methods](#helpful-methods-2)
-  * [How to use step with Range](#how-to-use-step-with-range)
-- [Methods](#methods)
-  * [How to declare a method](#how-to-declare-a-method)
-  * [How to call a method](#how-to-call-a-method)
-  * [How to define a default value for a method parameter](#how-to-define-a-default-value-for-a-method-parameter)
-  * [How to use another parameter for the default value](#how-to-use-another-parameter-for-the-default-value)
-  * [How to pass variable length argument to a method parameter](#how-to-pass-variable-length-argument-to-a-method-parameter)
-  * [Modify object](#modify-object)
-  * [Boolean method](#boolean-method)
-  * [Class method](#class-method)
-- [Blocks](#blocks)
-  * [How to check if a block is given](#how-to-check-if-a-block-is-given)
-- [Procs](#procs)
-- [Lambdas](#lambdas)
-- [Blocks VS Procs VS Lambdas](#blocks-vs-procs-vs-lambdas)
-- [Array](#array)
-  * [How to iterate an Array](#how-to-iterate-an-array)
-    + [each](#each)
-    + [each_with_index](#each_with_index)
-    + [each_with_object](#each_with_object)
-    + [each_index](#each_index)
-    + [map](#map)
-    + [collect](#collect)
-    + [while](#while)
-    + [do while](#do-while)
-    + [for](#for)
-    + [until](#until)
-    + [times](#times)
-    + [upto](#upto)
-    + [downto](#downto)
-    + [step](#step)
-    + [inject](#inject)
-    + [reduce](#reduce)
-    + [detect](#detect)
-    + [find](#find)
-    + [select](#select)
-    + [reject](#reject)
-    + [keep_if](#keep_if)
-    + [delete_if](#delete_if)
-    + [drop_while](#drop_while)
-    + [reverse_each](#reverse_each)
-  * [Boolean Enumerable methods](#boolean-enumerable-methods)
-    + [all?](#all)
-    + [any?](#any)
-    + [one?](#one)
-    + [none?](#none)
-    + [empty?](#empty)
-  * [Methods for combining](#methods-for-combining)
-    + [&](#&)
-    + [+](#+)
-    + [-](#-)
-    + [union](#union)
-    + [difference](#difference)
-    + [product](#product)
-  * [How to check if a value exists in an Array (`include?`)](#how-to-check-if-a-value-exists-in-an-array-include)
-  * [How to get array size](#how-to-get-array-size)
-  * [How to clear an Array](#how-to-clear-an-array)
-  * [How to get the first element of an Array](#how-to-get-the-first-element-of-an-array)
-  * [How to get the last element of an Array](#how-to-get-the-last-element-of-an-array)
-  * [How to merge two Arrays](#how-to-merge-two-arrays)
-  * [How to sort an Array](#how-to-sort-an-array)
-  * [How to get the maximum from an Array](#how-to-get-the-maximum-from-an-array)
-  * [How to get Array elements using a range](#how-to-get-array-elements-using-a-range)
-  * [How to get first n elements of an Array](#how-to-get-first-n-elements-of-an-array)
-  * [How to access an element](#how-to-access-an-element)
-  * [How to remove one or more elements of an Array](#how-to-remove-one-or-more-elements-of-an-array)
-  * [How to remove duplicate elements from an Array](#how-to-remove-duplicate-elements-from-an-array)
-- [Hash](#hash)
-  * [How to group by count](#how-to-group-by-count)
-  * [What's the difference between Hash.new(0) and {}](#whats-the-difference-between-hashnew0-and-)
-  * [How to sort a Hash](#how-to-sort-a-hash)
-  * [How to get the maximum from a Hash](#how-to-get-the-maximum-from-a-hash)
-  * [Hash Built-in Methods](#hash-built-in-methods)
-- [Loop](#loop)
-  * [while loop](#while-loop)
-  * [for loop](#for-loop)
-  * [do..while Loop](#dowhile-loop)
-  * [until Loop](#until-loop)
-  * [How to break out from loop](#how-to-break-out-from-loop)
-  * [How to skip inside a loop](#how-to-skip-inside-a-loop)
-  * [How to repeat the current iteration](#how-to-repeat-the-current-iteration)
-  * [How to restart a loop](#how-to-restart-a-loop)
-- [Classes](#classes)
-  * [How to inherit a class](#how-to-inherit-a-class)
-  * [How to check instance type](#how-to-check-instance-type)
-  * [Print all method names of a class](#print-all-method-names-of-a-class)
-  * [Check if a Class has a particular method](#check-if-a-class-has-a-particular-method)
-- [Modules](#modules)
-- [Operator Overloading](#operator-overloading)
-- [Exception Handling](#exception-handling)
-- [Regular expression](#regular-expression)
-- [Miscellaneous](#miscellaneous)
-  * [How to generate random number](#how-to-generate-random-number)
-  * [Check the syntax of a Ruby file](#check-the-syntax-of-a-ruby-file)
-  * [Concatenate String in a loop](#concatenate-string-in-a-loop)
-  * [CamelCase String split](#camelcase-string-split)
-  * [Ruby scripts](#ruby-scripts)
-- [Platforms that supports Ruby](#platforms-that-supports-ruby)
-- [Ruby frameworks](#ruby-frameworks)
-- [My Ruby Articles](#my-ruby-articles)
-- [Books and other resources](#books-and-other-resources)
-- [Bug Reports and Feature Requests](#bug-reports-and-feature-requests)
-- [Contribution Guidelines](#contribution-guidelines)
-- [Author](#author)
-- [License](#license)
+-   [Table of Contents](#table-of-contents)
+-   [The latest news from ruby-lang.org](#the-latest-news-from-ruby-langorg)
+-   [Installation](#installation)
+    -   [How to install Ruby](#how-to-install-ruby)
+        -   [Debian, Ubuntu](#debian-ubuntu)
+        -   [Windows Package Manager](#windows-package-manager)
+        -   [macOS](#macos)
+        -   [Docker](#docker)
+        -   [Install rbenv with package managers](#install-rbenv-with-package-managers)
+            -   [macOS](#macos-1)
+            -   [Debian, ubuntu and other derivatives](#debian-ubuntu-and-other-derivatives)
+        -   [Install ruby with rbenv](#install-ruby-with-rbenv)
+        -   [Install ruby with RVM](#install-ruby-with-rvm)
+    -   [How to install ruby gem manager, bundler gem](#how-to-install-ruby-gem-manager-bundler-gem)
+    -   [What is a Gemfile and Gemfile.lock](#what-is-a-gemfile-and-gemfilelock)
+    -   [How to install a specific version of a particular ruby gem](#how-to-install-a-specific-version-of-a-particular-ruby-gem)
+    -   [How to update a single gem using Bundler](#how-to-update-a-single-gem-using-bundler)
+    -   [How to update every gem in the Gemfile using Bundler](#how-to-update-every-gem-in-the-gemfile-using-bundler)
+-   [Introduction](#introduction)
+-   [Reserved Words](#reserved-words)
+-   [Comment](#comment)
+-   [Operators](#operators)
+    -   [Usage](#usage)
+    -   [Operator Precedence Table](#operator-precedence-table)
+-   [Variables and Scope](#variables-and-scope)
+    -   [Local Variable](#local-variable)
+    -   [Instance Variable](#instance-variable)
+    -   [Class Variable](#class-variable)
+    -   [Global Variable](#global-variable)
+    -   [Constant Variable](#constant-variable)
+    -   [Pseudo variables](#pseudo-variables)
+    -   [Pre-defined variables](#pre-defined-variables)
+    -   [Option variables](#option-variables)
+    -   [Pre-defined global constants](#pre-defined-global-constants)
+    -   [How to check scope of variables](#how-to-check-scope-of-variables)
+-   [Conditional structures](#conditional-structures)
+    -   [if Modifier](#if-modifier)
+    -   [If elsif else Statement](#if-elsif-else-statement)
+    -   [unless Statement](#unless-statement)
+    -   [Case Statement](#case-statement)
+-   [Data types](#data-types)
+    -   [How to check the data type](#how-to-check-the-data-type)
+-   [Symbol](#symbol)
+-   [String](#string)
+    -   [String Interpolation](#string-interpolation)
+    -   [How to Extract a Substring](#how-to-extract-a-substring)
+    -   [How to convert String to lower or upper case](#how-to-convert-string-to-lower-or-upper-case)
+    -   [Helpful methods](#helpful-methods)
+-   [Integer](#integer)
+    -   [Helpful methods](#helpful-methods-1)
+-   [Range](#range)
+    -   [Helpful methods](#helpful-methods-2)
+    -   [How to use step with Range](#how-to-use-step-with-range)
+-   [Methods](#methods)
+    -   [How to declare a method](#how-to-declare-a-method)
+    -   [How to call a method](#how-to-call-a-method)
+    -   [How to define a default value for a method parameter](#how-to-define-a-default-value-for-a-method-parameter)
+    -   [How to use another parameter for the default value](#how-to-use-another-parameter-for-the-default-value)
+    -   [How to pass variable length argument to a method parameter](#how-to-pass-variable-length-argument-to-a-method-parameter)
+    -   [Modify object](#modify-object)
+    -   [Boolean method](#boolean-method)
+    -   [Class method](#class-method)
+-   [Blocks](#blocks)
+    -   [How to check if a block is given](#how-to-check-if-a-block-is-given)
+-   [Procs](#procs)
+-   [Lambdas](#lambdas)
+-   [Blocks VS Procs VS Lambdas](#blocks-vs-procs-vs-lambdas)
+-   [Array](#array)
+    -   [How to iterate an Array](#how-to-iterate-an-array)
+        -   [each](#each)
+        -   [each_with_index](#each_with_index)
+        -   [each_with_object](#each_with_object)
+        -   [each_index](#each_index)
+        -   [map](#map)
+        -   [collect](#collect)
+        -   [while](#while)
+        -   [do while](#do-while)
+        -   [for](#for)
+        -   [until](#until)
+        -   [times](#times)
+        -   [upto](#upto)
+        -   [downto](#downto)
+        -   [step](#step)
+        -   [inject](#inject)
+        -   [reduce](#reduce)
+        -   [detect](#detect)
+        -   [find](#find)
+        -   [select](#select)
+        -   [reject](#reject)
+        -   [keep_if](#keep_if)
+        -   [delete_if](#delete_if)
+        -   [drop_while](#drop_while)
+        -   [reverse_each](#reverse_each)
+    -   [Boolean Enumerable methods](#boolean-enumerable-methods)
+        -   [all?](#all)
+        -   [any?](#any)
+        -   [one?](#one)
+        -   [none?](#none)
+        -   [empty?](#empty)
+    -   [Methods for combining](#methods-for-combining)
+        -   [&](#&)
+        -   [+](#+)
+        -   [-](#-)
+        -   [union](#union)
+        -   [difference](#difference)
+        -   [product](#product)
+    -   [How to check if a value exists in an Array (`include?`)](#how-to-check-if-a-value-exists-in-an-array-include)
+    -   [How to get array size](#how-to-get-array-size)
+    -   [How to clear an Array](#how-to-clear-an-array)
+    -   [How to get the first element of an Array](#how-to-get-the-first-element-of-an-array)
+    -   [How to get the last element of an Array](#how-to-get-the-last-element-of-an-array)
+    -   [How to merge two Arrays](#how-to-merge-two-arrays)
+    -   [How to sort an Array](#how-to-sort-an-array)
+    -   [How to get the maximum from an Array](#how-to-get-the-maximum-from-an-array)
+    -   [How to get Array elements using a range](#how-to-get-array-elements-using-a-range)
+    -   [How to get first n elements of an Array](#how-to-get-first-n-elements-of-an-array)
+    -   [How to access an element](#how-to-access-an-element)
+    -   [How to remove one or more elements of an Array](#how-to-remove-one-or-more-elements-of-an-array)
+    -   [How to remove duplicate elements from an Array](#how-to-remove-duplicate-elements-from-an-array)
+-   [Hash](#hash)
+    -   [How to group by count](#how-to-group-by-count)
+    -   [What's the difference between Hash.new(0) and {}](#whats-the-difference-between-hashnew0-and-)
+    -   [How to sort a Hash](#how-to-sort-a-hash)
+    -   [How to get the maximum from a Hash](#how-to-get-the-maximum-from-a-hash)
+    -   [Hash Built-in Methods](#hash-built-in-methods)
+-   [Loop](#loop)
+    -   [while loop](#while-loop)
+    -   [for loop](#for-loop)
+    -   [do..while Loop](#dowhile-loop)
+    -   [until Loop](#until-loop)
+    -   [How to break out from loop](#how-to-break-out-from-loop)
+    -   [How to skip inside a loop](#how-to-skip-inside-a-loop)
+    -   [How to repeat the current iteration](#how-to-repeat-the-current-iteration)
+    -   [How to restart a loop](#how-to-restart-a-loop)
+-   [Classes](#classes)
+    -   [How to inherit a class](#how-to-inherit-a-class)
+    -   [How to check instance type](#how-to-check-instance-type)
+    -   [Print all method names of a class](#print-all-method-names-of-a-class)
+    -   [Check if a Class has a particular method](#check-if-a-class-has-a-particular-method)
+-   [Modules](#modules)
+-   [Operator Overloading](#operator-overloading)
+-   [Exception Handling](#exception-handling)
+-   [Regular expression](#regular-expression)
+-   [Miscellaneous](#miscellaneous)
+    -   [How to generate random number](#how-to-generate-random-number)
+    -   [Check the syntax of a Ruby file](#check-the-syntax-of-a-ruby-file)
+    -   [Concatenate String in a loop](#concatenate-string-in-a-loop)
+    -   [CamelCase String split](#camelcase-string-split)
+    -   [Ruby scripts](#ruby-scripts)
+-   [Platforms that supports Ruby](#platforms-that-supports-ruby)
+-   [Ruby frameworks](#ruby-frameworks)
+-   [My Ruby Articles](#my-ruby-articles)
+-   [Books and other resources](#books-and-other-resources)
+-   [Bug Reports and Feature Requests](#bug-reports-and-feature-requests)
+-   [Contribution Guidelines](#contribution-guidelines)
+-   [Author](#author)
+-   [License](#license)
 
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
-* [Ruby 3.1.3 Released](https://www.ruby-lang.org/en/news/2022/11/24/ruby-3-1-3-released/) <br/> <sub>2022-11-24 12:00:00</sub>
-* [Ruby 3.0.5 Released](https://www.ruby-lang.org/en/news/2022/11/24/ruby-3-0-5-released/) <br/> <sub>2022-11-24 12:00:00</sub>
-* [Ruby 2.7.7 Released](https://www.ruby-lang.org/en/news/2022/11/24/ruby-2-7-7-released/) <br/> <sub>2022-11-24 12:00:00</sub>
-* [CVE-2021-33621: HTTP response splitting in CGI](https://www.ruby-lang.org/en/news/2022/11/22/http-response-splitting-in-cgi-cve-2021-33621/) <br/> <sub>2022-11-22 02:00:00</sub>
-* [Ruby 3.2.0 Preview 3 Released](https://www.ruby-lang.org/en/news/2022/11/11/ruby-3-2-0-preview3-released/) <br/> <sub>2022-11-11 00:00:00</sub>
-* [Ruby 3.2.0 Preview 2 Released](https://www.ruby-lang.org/en/news/2022/09/09/ruby-3-2-0-preview2-released/) <br/> <sub>2022-09-09 00:00:00</sub>
-* [Ruby 3.1.2 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-3-1-2-released/) <br/> <sub>2022-04-12 12:00:00</sub>
-* [Ruby 3.0.4 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-3-0-4-released/) <br/> <sub>2022-04-12 12:00:00</sub>
-* [Ruby 2.7.6 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-2-7-6-released/) <br/> <sub>2022-04-12 12:00:00</sub>
-* [Ruby 2.6.10 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-2-6-10-released/) <br/> <sub>2022-04-12 12:00:00</sub>
+
+-   [Ruby 3.1.3 Released](https://www.ruby-lang.org/en/news/2022/11/24/ruby-3-1-3-released/) <br/> <sub>2022-11-24 12:00:00</sub>
+-   [Ruby 3.0.5 Released](https://www.ruby-lang.org/en/news/2022/11/24/ruby-3-0-5-released/) <br/> <sub>2022-11-24 12:00:00</sub>
+-   [Ruby 2.7.7 Released](https://www.ruby-lang.org/en/news/2022/11/24/ruby-2-7-7-released/) <br/> <sub>2022-11-24 12:00:00</sub>
+-   [CVE-2021-33621: HTTP response splitting in CGI](https://www.ruby-lang.org/en/news/2022/11/22/http-response-splitting-in-cgi-cve-2021-33621/) <br/> <sub>2022-11-22 02:00:00</sub>
+-   [Ruby 3.2.0 Preview 3 Released](https://www.ruby-lang.org/en/news/2022/11/11/ruby-3-2-0-preview3-released/) <br/> <sub>2022-11-11 00:00:00</sub>
+-   [Ruby 3.2.0 Preview 2 Released](https://www.ruby-lang.org/en/news/2022/09/09/ruby-3-2-0-preview2-released/) <br/> <sub>2022-09-09 00:00:00</sub>
+-   [Ruby 3.1.2 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-3-1-2-released/) <br/> <sub>2022-04-12 12:00:00</sub>
+-   [Ruby 3.0.4 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-3-0-4-released/) <br/> <sub>2022-04-12 12:00:00</sub>
+-   [Ruby 2.7.6 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-2-7-6-released/) <br/> <sub>2022-04-12 12:00:00</sub>
+-   [Ruby 2.6.10 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-2-6-10-released/) <br/> <sub>2022-04-12 12:00:00</sub>
 <!-- news ends -->
 
 # Installation
@@ -221,7 +222,6 @@ $ brew install ruby
 ```
 
 This should install the latest Ruby version.
-
 
 List all the installed Ruby versions:
 
@@ -276,7 +276,7 @@ brew install rbenv ruby-build
 sudo apt install rbenv
 ```
 
-Load rbenv 
+Load rbenv
 
 ```shell
 # run this and follow the printed instructions:
@@ -420,7 +420,7 @@ To test the above code, type the irb command from your shell to initiate the int
 # Reserved Words
 
 | Reserved Word  | Description                                                                                                   |
-|----------------|---------------------------------------------------------------------------------------------------------------|
+| -------------- | ------------------------------------------------------------------------------------------------------------- |
 | `__ENCODING__` | The script encoding of the current file.                                                                      |
 | `__LINE__`     | The line number of this keyword in the current file.                                                          |
 | `__FILE__`     | The path to the current file.                                                                                 |
@@ -916,8 +916,9 @@ defined? PI
 
 ```ruby
 num = 2
-puts 'two' if num == 2 
+puts 'two' if num == 2
 ```
+
 Executes code if the conditional is true.
 
 ## If elsif else Statement
@@ -938,13 +939,12 @@ end
 ```
 
 `if` expressions are used for conditional execution.
-The values `false` and `nil` are `false`, and everything else are `true`. 
+The values `false` and `nil` are `false`, and everything else are `true`.
 Notice Ruby uses `elsif`, not `else if` nor `elif`.
 
 Executes code if the conditional is `true`. If the conditional is not `true`, code specified in the `else` clause is executed.
 
 An `if` expression's conditional is separated from code by the reserved word then, a newline, or a semicolon.
-
 
 ## unless Statement
 
@@ -967,6 +967,7 @@ puts 'not two' unless num == 2
 # output
 # not two
 ```
+
 Executes code if conditional is `false`. If the conditional is `true`, code specified in the else clause is executed.
 
 ## Case Statements
@@ -1027,7 +1028,8 @@ result = case marks
 puts result
 # High Distinction
 ```
-Compares the expression specified by case and that specified by when using the === operator and executes the code of 
+
+Compares the expression specified by case and that specified by when using the === operator and executes the code of
 the when clause that matches.
 
 The expression specified by the when clause is evaluated as the left operand. If no when clauses match, case executes
@@ -1038,11 +1040,11 @@ A when statement's expression is separated from code by the reserved word then, 
 # Data types
 
 Data types represent different types of data such as numbers,
-booleans, strings, etc. As an object-oriented language, 
+booleans, strings, etc. As an object-oriented language,
 all data types are based on classes.
 
 | No  | Type    | Example                      | Class                                              | Doc                                 |
-|-----|---------|------------------------------| -------------------------------------------------- | ----------------------------------- |
+| --- | ------- | ---------------------------- | -------------------------------------------------- | ----------------------------------- |
 | 1   | Integer | a = 17                       | a.class > Integer <br>a.class.superclass > Numeric | [link][2]                           |
 | 2   | Float   | a = 87.23                    | a.class > Float <br>a.class.superclass > Numeric   | [link][3]                           |
 | 3   | String  | a = "Hello universe"         | a.class > String                                   | [link][4]                           |
@@ -1070,19 +1072,19 @@ representation.
 
 A string is a group of letters that represent a sentence or a word. Strings are defined by enclosing a text within a
 single (') or double (") quotes. You can use both double quotes and single quotes to create strings. Strings are objects
-of class String. Double-quoted strings allow substitution and backslash notation but single-quoted strings doesn't 
+of class String. Double-quoted strings allow substitution and backslash notation but single-quoted strings doesn't
 allow substitution and allow backslash notation only for \\ and \’.
 
 ## Array
 
 An array stores data or list of data. It can contain all types of data. Data in an array are separated by comma in
-between them and are enclosed within square bracket.The position of elements in an array starts with 0. A trailing comma 
+between them and are enclosed within square bracket.The position of elements in an array starts with 0. A trailing comma
 is ignored.
 
 ## Hash
 
 A hash assign its values to its key. Value to a key is assigned by => sign. A key pair is separated with a comma between
-them and all the pairs are enclosed within curly braces. A hash in Ruby is like an object literal in JavaScript or an 
+them and all the pairs are enclosed within curly braces. A hash in Ruby is like an object literal in JavaScript or an
 associative array in PHP. They’re made similarly to arrays. A trailing comma is ignored.
 
 ## Boolean
@@ -1108,7 +1110,7 @@ a.is_a? Integer
 # Symbol
 
 Symbol objects represent names. Symbols are immutable, which means every symbol is unique, and we can't change it.
-Referencing the same symbol multiple times is the same as referencing the same object everywhere in your program. 
+Referencing the same symbol multiple times is the same as referencing the same object everywhere in your program.
 As a result, we can save both time and memory by referencing the same memory location. Symbols as hash keys.
 
 ```ruby
@@ -1260,16 +1262,16 @@ range.to_a
 ## Helpful methods
 
 | No  | Method name | Output                              |
-|-----|-------------|-------------------------------------|
+| --- | ----------- | ----------------------------------- |
 | 1   | cover?      | (1..5).cover?(5) <br> true          |
 | 2   | end         | ('a'..'z').end <br> "z"             |
 | 3   | first       | (1..5).first <br> 1                 |
 | 4   | first(3)    | ('A'..'Z').first(2) <br> ["A", "B"] |
 | 5   | eql?        | ((0..2).eql?(0..5) <br> false       |
-| 6   | begin       | (1..10).begin   #=> 1               |
-| 7   | last        | (10..20).last(3)   #=> [18, 19, 20] |
-| 8   | max         | (10..20).max   #=> 20               |
-| 9   | min         | (10..20).min    #=> 10              |
+| 6   | begin       | (1..10).begin #=> 1                 |
+| 7   | last        | (10..20).last(3) #=> [18, 19, 20]   |
+| 8   | max         | (10..20).max #=> 20                 |
+| 9   | min         | (10..20).min #=> 10                 |
 
 ## How to use step with Range
 
@@ -1291,9 +1293,9 @@ range.to_a
 # Methods
 
 A method is a function that takes zero or more parameters and returns a value.
-Ruby method returns nil by default. 
+Ruby method returns nil by default.
 
-Method names should begin with a lowercase letter. If you begin a method name with an uppercase letter, 
+Method names should begin with a lowercase letter. If you begin a method name with an uppercase letter,
 Ruby might think that it is a constant and hence can parse the call incorrectly.
 
 Methods should be defined before calling them, otherwise Ruby will raise an exception for undefined method invoking.
@@ -1330,11 +1332,11 @@ res = method_name(parameter1, parameter2)
 # In Ruby you can call methods without parentheses
 res = method_name parameter1, parameter2
 ```
-The most important drawback to using methods with parameters 
-is that you need to remember the number of parameters whenever
-you call such methods. For example, if a method accepts three 
-parameters and you pass only two, then Ruby displays an error.
 
+The most important drawback to using methods with parameters
+is that you need to remember the number of parameters whenever
+you call such methods. For example, if a method accepts three
+parameters and you pass only two, then Ruby displays an error.
 
 ## How to define a default value for a method parameter
 
@@ -1446,8 +1448,8 @@ is_vowel? 'b'
 
 A class method is a class-level method. There are multiple ways of defining a class method.
 
-When a method is defined outside of the class definition, the method is marked as private by default. On the other hand, 
-the methods defined in the class definition are marked as public by default. The default visibility and the private mark 
+When a method is defined outside of the class definition, the method is marked as private by default. On the other hand,
+the methods defined in the class definition are marked as public by default. The default visibility and the private mark
 of the methods can be changed by public or private of the Module.
 
 Whenever you want to access a method of a class, you first need to instantiate the class. Then, using the object,
@@ -1487,9 +1489,10 @@ end
 
 Mobile.ring
 ```
+
 To access this method, you need not create objects of the class Mobile.
 
-A class method is an instance method of the class object. When a new class is created, an object of type `Class` is 
+A class method is an instance method of the class object. When a new class is created, an object of type `Class` is
 initialized and assigned to a global constant (Mobile in this case).
 
 ```ruby
@@ -1809,7 +1812,7 @@ All of them are used for executing a single line or multiline code.
 
 # Array
 
-Unlike other programming languages like Java, Ruby only has dynamic arrays 
+Unlike other programming languages like Java, Ruby only has dynamic arrays
 but no static arrays. That means you don’t have to worry about the size of
 the array while adding new values.
 
@@ -1832,7 +1835,7 @@ array = Array.new   #=> []
 # or
 array = []
 
-# An Array can contain different types of objects. 
+# An Array can contain different types of objects.
 array = [1, "two", 3.0] #=> [1, "two", 3.0]
 
 ```
@@ -1888,7 +1891,7 @@ str_array[-1]             #=> "array"
 # Index -2 indicates the next-to-last element.
 str_array[-2]             #=> "small"
 
-# A negative index is in range if its absolute value is 
+# A negative index is in range if its absolute value is
 # not larger than the size of the array.
 
 str_array[-6]             #=> nil
@@ -2018,13 +2021,13 @@ arr = [2, 5, 6, 556, 6, 6, 8, 9, 0, 123, 556]
 arr.uniq #=> [2, 5, 6, 556, 8, 9, 0, 123]
 
 ```
+
 ## How to iterate an Array
 
 There are multiple ways you can iterate an Array.
 
-
 | No  | Name             | When to use                                                                                                                                                                                                                                                                |
-| --- |------------------| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1   | each             | when you want to just iterate                                                                                                                                                                                                                                              |
 | 2   | each_with_index  | when you want both index and value                                                                                                                                                                                                                                         |
 | 3   | each_with_object | when you want to build a hash or reduce a collection to one object. It Iterates the given block for each element with an arbitrary object given and returns the first given object. It only works with a mutable object like Hash but not an immutable object like integer |
@@ -2048,7 +2051,7 @@ There are multiple ways you can iterate an Array.
 | 21  | keep_if          | keeps a value in the original array if your block returns true                                                                                                                                                                                                             |
 | 22  | delete_if        | removes a value from the original array if your block returns true                                                                                                                                                                                                         |
 | 23  | drop_while       | drops elements up to but not including for the first element which the block returns nil or false and returns an array containing the remaining elements                                                                                                                   |
-| 24  | reverse_each     | when you want to iterate over the elements in the array in `reverse` order                                                                                                                                                                                                   |
+| 24  | reverse_each     | when you want to iterate over the elements in the array in `reverse` order                                                                                                                                                                                                 |
 
 ### each
 
@@ -2456,7 +2459,7 @@ p str #=> "sixth fifth fourth third second first "
 ## Methods for combining
 
 | No  | Name         | When to use                                                                                                                                                        |
-|-----|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 1   | &            | Returns a new Array containing each element found in both array and Array other_array; duplicates are omitted; items are compared using eql?:                      |
 | 2   | intersection | Returns a new Array containing each element found both in self and in all of the given Arrays other_arrays; duplicates are omitted; items are compared using eql?: |
 | 3   | +            | Returns an array containing all elements of self followed by all elements of a given array.                                                                        |
@@ -2464,9 +2467,6 @@ p str #=> "sixth fifth fourth third second first "
 | 5   | union        | Returns an array containing all elements of self and all elements of given arrays, duplicates removed.                                                             |
 | 6   | difference   | Returns an array containing all elements of self that are not found in any of the given arrays.                                                                    |
 | 7   | product      | Returns or yields all combinations of elements from self and given arrays.                                                                                         |
-
-
-
 
 ### &
 
@@ -2512,7 +2512,6 @@ a # => [0, 1, 2, 3]
 [0, 1, 2, 3].difference([3, 0], [1, 3]) # => [2]
 [0, 1, 2].difference([4]) # => [0, 1, 2]
 ```
-
 
 ### product
 
@@ -2734,7 +2733,7 @@ numbers.uniq
 
 # Hash
 
-A Hash maps each of its unique keys to a specific value. But it has certain similarities to an Array, but an Array index is always an Integer.  A Hash key can be (almost) any object.
+A Hash maps each of its unique keys to a specific value. But it has certain similarities to an Array, but an Array index is always an Integer. A Hash key can be (almost) any object.
 
 Let's start with some basic operations. Below we have an example of how to initialize an empty hash.
 
@@ -2895,10 +2894,11 @@ hash.max_by { |k, v| v }
 # output
 # [:a, 11]
 ```
+
 ## Hash Built-in Methods
 
 | **Method**                 | **Description**                                                                                                                                                                    | **Example**                                                                                                            |
-|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | **hash == other_hash**     | Tests whether two hashes are equal, based on whether they have the same number of<br/> key-value pairs, and whether the key-value pairs match the corresponding pair in each hash. | { apple: 1, orange: 2 } == { banana: 4 } <br/>=> false                                                                 |
 | **hash.[key]**             | Using a key, references a value from hash. If the key is not found,<br/> returns a default value.                                                                                  | fruits = { apple: 1, orange: 2 } <br/> fruits[:apple]<br/> => 1                                                        |
 | **hash.[key] = value**     | Associates the value given by value with the key given by key.                                                                                                                     | fruits = { apple: 1, orange: 2 } <br/> fruits[:apple] = 5<br/> fruits = { apple: 5, orange: 2 }                        |
@@ -2916,9 +2916,8 @@ hash.max_by { |k, v| v }
 | **hash.size**              | Returns the size or length of hash as an integer.                                                                                                                                  | fruits = { apple: 1, orange: 2 }<br/> fruits.size <br/> => 2                                                           |
 | **hash.shift**             | Removes a key-value pair from hash, returning it as a two-element array.                                                                                                           | fruits = { apple: 1, orange: 2 }<br/> fruits.shift <br/> => [:apple, 1]<br/> fruits <br/> => {:orange=>2}              |
 | **hash.sort**              | Converts hash to a two-dimensional array containing arrays of key-value pairs,<br/> then sorts it as an array.                                                                     | fruits = { pineapple: 5, apple: 1, orange: 2 } <br/> apple: 1, orange: 2 }=> {:pineapple=>5, :apple=>1, :orange=>2}    |
-| **hash.to_a**              | Creates a two-dimensional array from hash. Each key/value pair is converted to an array,<br/>  and all these arrays are stored in a containing array.                              | fruits = { pineapple: 5, apple: 1, orange: 2 } <br/> fruits.to_a <br/> => [[:pineapple, 5], [:apple, 1], [:orange, 2]] |
+| **hash.to_a**              | Creates a two-dimensional array from hash. Each key/value pair is converted to an array,<br/> and all these arrays are stored in a containing array.                               | fruits = { pineapple: 5, apple: 1, orange: 2 } <br/> fruits.to_a <br/> => [[:pineapple, 5], [:apple, 1], [:orange, 2]] |
 | **hash.values**            | Returns a new array containing all the values of hash.                                                                                                                             | fruits = { pineapple: 5, apple: 1, orange: 2 } <br/> fruits.values <br/> => [5, 1, 2]                                  |
-
 
 # Loop
 
@@ -3581,16 +3580,18 @@ MIT License
 ![Jul-16-2019 22-21-31](https://user-images.githubusercontent.com/1612112/61294008-41e94980-a818-11e9-9ff0-656ae53c8360.gif)
 
 <!-- doc_links starts -->
-[1]: https://ruby-doc.org/core-3.1.3/doc/keywords_rdoc.html
-[2]: https://ruby-doc.org/core-3.1.3/Integer.html
-[3]: https://ruby-doc.org/core-3.1.3/Float.html
-[4]: https://ruby-doc.org/core-3.1.3/String.html
-[5]: https://ruby-doc.org/core-3.1.3/Array.html
-[6]: https://ruby-doc.org/core-3.1.3/Hash.html
-[7]: https://ruby-doc.org/core-3.1.3/TrueClass.html
-[8]: https://ruby-doc.org/core-3.1.3/FalseClass.html
-[9]: https://ruby-doc.org/core-3.1.3/Symbol.html
-[10]: https://ruby-doc.org/core-3.1.3/Range.html
-[11]: https://ruby-doc.org/core-3.1.3/NilClass.html
-[12]: https://ruby-doc.org/core-3.1.3/Exception.html
+
+[1]: https://ruby-doc.org/core-3.1.2/doc/keywords_rdoc.html
+[2]: https://ruby-doc.org/core-3.1.2/Integer.html
+[3]: https://ruby-doc.org/core-3.1.2/Float.html
+[4]: https://ruby-doc.org/core-3.1.2/String.html
+[5]: https://ruby-doc.org/core-3.1.2/Array.html
+[6]: https://ruby-doc.org/core-3.1.2/Hash.html
+[7]: https://ruby-doc.org/core-3.1.2/TrueClass.html
+[8]: https://ruby-doc.org/core-3.1.2/FalseClass.html
+[9]: https://ruby-doc.org/core-3.1.2/Symbol.html
+[10]: https://ruby-doc.org/core-3.1.2/Range.html
+[11]: https://ruby-doc.org/core-3.1.2/NilClass.html
+[12]: https://ruby-doc.org/core-3.1.2/Exception.html
+
 <!-- doc_links ends -->

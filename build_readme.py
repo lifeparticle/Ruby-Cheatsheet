@@ -25,7 +25,7 @@ def replace_chunk(content, marker, chunk, inline=False):
 def fetch_blog_posts(link):
 	result = []
 	response = requests.get(link)
-	if response.status_code == 200:
+	if (response.status_code == 200):
 		posts = json.loads(response.text)["items"]
 		for post in posts:
 			result.append(post)
@@ -60,8 +60,8 @@ if __name__ == "__main__":
 	if (current_stable_version_contents != ruby_latest_version):
 		doc_links = re.search("<!-- doc_links starts -->(.*)<!-- doc_links ends -->", readme_contents, re.DOTALL).groups()[0].strip()
 		updated_doc_links = re.sub("core-\d.\d.\d", f"core-{ruby_latest_version}", doc_links)
-		response = requests.get(updated_doc_links)
-		if response.status_code == 200:
+		response = requests.get("https://ruby-doc.org/core-/"+str(ruby_latest_version))
+		if (response.status_code == 200):
 			readme_contents = replace_chunk(readme_contents, "doc_links", updated_doc_links)
 			current_stable_version.open("w").write(ruby_latest_version)
 
