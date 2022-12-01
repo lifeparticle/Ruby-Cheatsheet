@@ -175,17 +175,16 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
-
--   [Ruby 3.1.3 Released](https://www.ruby-lang.org/en/news/2022/11/24/ruby-3-1-3-released/) <br/> <sub>2022-11-24 12:00:00</sub>
--   [Ruby 3.0.5 Released](https://www.ruby-lang.org/en/news/2022/11/24/ruby-3-0-5-released/) <br/> <sub>2022-11-24 12:00:00</sub>
--   [Ruby 2.7.7 Released](https://www.ruby-lang.org/en/news/2022/11/24/ruby-2-7-7-released/) <br/> <sub>2022-11-24 12:00:00</sub>
--   [CVE-2021-33621: HTTP response splitting in CGI](https://www.ruby-lang.org/en/news/2022/11/22/http-response-splitting-in-cgi-cve-2021-33621/) <br/> <sub>2022-11-22 02:00:00</sub>
--   [Ruby 3.2.0 Preview 3 Released](https://www.ruby-lang.org/en/news/2022/11/11/ruby-3-2-0-preview3-released/) <br/> <sub>2022-11-11 00:00:00</sub>
--   [Ruby 3.2.0 Preview 2 Released](https://www.ruby-lang.org/en/news/2022/09/09/ruby-3-2-0-preview2-released/) <br/> <sub>2022-09-09 00:00:00</sub>
--   [Ruby 3.1.2 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-3-1-2-released/) <br/> <sub>2022-04-12 12:00:00</sub>
--   [Ruby 3.0.4 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-3-0-4-released/) <br/> <sub>2022-04-12 12:00:00</sub>
--   [Ruby 2.7.6 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-2-7-6-released/) <br/> <sub>2022-04-12 12:00:00</sub>
--   [Ruby 2.6.10 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-2-6-10-released/) <br/> <sub>2022-04-12 12:00:00</sub>
+* [Ruby 3.1.3 Released](https://www.ruby-lang.org/en/news/2022/11/24/ruby-3-1-3-released/) <br/> <sub>2022-11-24 12:00:00</sub>
+* [Ruby 3.0.5 Released](https://www.ruby-lang.org/en/news/2022/11/24/ruby-3-0-5-released/) <br/> <sub>2022-11-24 12:00:00</sub>
+* [Ruby 2.7.7 Released](https://www.ruby-lang.org/en/news/2022/11/24/ruby-2-7-7-released/) <br/> <sub>2022-11-24 12:00:00</sub>
+* [CVE-2021-33621: HTTP response splitting in CGI](https://www.ruby-lang.org/en/news/2022/11/22/http-response-splitting-in-cgi-cve-2021-33621/) <br/> <sub>2022-11-22 02:00:00</sub>
+* [Ruby 3.2.0 Preview 3 Released](https://www.ruby-lang.org/en/news/2022/11/11/ruby-3-2-0-preview3-released/) <br/> <sub>2022-11-11 00:00:00</sub>
+* [Ruby 3.2.0 Preview 2 Released](https://www.ruby-lang.org/en/news/2022/09/09/ruby-3-2-0-preview2-released/) <br/> <sub>2022-09-09 00:00:00</sub>
+* [Ruby 3.1.2 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-3-1-2-released/) <br/> <sub>2022-04-12 12:00:00</sub>
+* [Ruby 3.0.4 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-3-0-4-released/) <br/> <sub>2022-04-12 12:00:00</sub>
+* [Ruby 2.7.6 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-2-7-6-released/) <br/> <sub>2022-04-12 12:00:00</sub>
+* [Ruby 2.6.10 Released](https://www.ruby-lang.org/en/news/2022/04/12/ruby-2-6-10-released/) <br/> <sub>2022-04-12 12:00:00</sub>
 <!-- news ends -->
 
 # Installation
