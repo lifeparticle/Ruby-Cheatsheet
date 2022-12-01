@@ -3531,9 +3531,8 @@ words = sentence.split(/(?=[A-Z])/)
 11. [Scorched](https://scorchedrb.com/)
 12. [Roda](https://roda.jeremyevans.net/documentation.html)
 13. [Volt](https://github.com/voltrb/volt)
-14. [Ramverk](https://github.com/tobidelius/ramverk)
-15. [Hobbit](https://github.com/patriciomacadden/hobbit)
-16. [Cramp](https://github.com/lifo/cramp)
+14. [Hobbit](https://github.com/patriciomacadden/hobbit)
+15. [Cramp](https://github.com/lifo/cramp)
 
 # My Ruby Articles
 
