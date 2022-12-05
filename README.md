@@ -1746,7 +1746,24 @@ puts return_value
 
 # Lambdas
 
-Lambda is an anonymous function, wrap the lambda with `do and end` (for multiline) or curly brackets `{ and }` (for a single line). Lambda returns the last evaluated statement.
+Lambdas are a powerful feature of the Ruby language. They allow you to wrap logic and data into a portable package.
+A lambda function encapsulates control flow, parameters and local variables into a single package assigned to a variable
+or used inline. If assigned to a variable, it can be passed to other functions or stored in data structures, just like a 
+more typical variable containing a string or float.
+
+A lambda function can then be executed far from the code location where it was defined. Lambda functions are often 
+called anonymous functions or a function literal, wrap the lambda with `do and end` (for multiline) or curly brackets
+`{ and }` (for a single line). Lambda returns the last evaluated statement.
+
+With Ruby, the **lambda** keyword is used to create a lambda function. It requires a block and can define zero or more parameters. 
+You call the resulting lambda function by using the call method.
+
+The following are specific situations in which you might want to use a Ruby lambda.
+
+1. Encapsulating complicated logic 
+2. An in-memory state machine or data pipeline 
+3. Perfect for simple callbacks
+4. Used in ActiveRecord scopes
 
 ```ruby
 # there are multiple ways to declare a lambda
