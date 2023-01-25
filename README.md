@@ -1518,8 +1518,21 @@ Mobile.ring
 
 # Blocks
 
-Codes between `do` and `end` (for multiline) or curly brackets `{` and `}` (for a single line) are called blocks, and they can have multiple arguments defined between two pipes `(|arg1, arg2|)`.
-A block can be passed as a method parameter or can be associated with a method call. A block returns the last evaluated statement.
+In Ruby, a block is a piece of code that can be passed as an argument to a method, and is executed by the method at a 
+later time. Blocks are defined using the keywords "do" and "end" or using curly braces {}. They can also be passed
+using the "yield" keyword within a method. They are commonly used in iterators such as "each" and "map" to perform an 
+operation on each element of a collection. A block returns the last evaluated statement.
+
+Blocks in Ruby have a few key aspects that are significant:
+
+1. Block can accept arguments and returns a value.
+2. Block does not have their own name.
+3. Block consist of chunks of code.
+4. A block is always invoked with a function or can say passed to a method call.
+5. To call a block within a method with a value, yield statement is used.
+6. Blocks can be called just like methods from inside the method that it is passed to.
+
+
 
 ```ruby
 # return value
@@ -1560,7 +1573,8 @@ end
 # |s|
 ```
 
-Methods can take blocks implicitly and explicitly. If you want to call a block implicitly use the `yield` keyword. Yield finds the block and calls the passed block. Since you can pass implicit blocks, you don't have to call yield, and the block will be ignored.
+Methods can take blocks implicitly and explicitly. If you want to call a block implicitly use the `yield` keyword. 
+Yield finds the block and calls the passed block. Since you can pass implicit blocks, you don't have to call yield, and the block will be ignored.
 
 ```ruby
 # passing a block implicitly
@@ -1656,7 +1670,7 @@ give_me_data { puts "Big data" }
 
 ## How to check if a block is given
 
-block parameter is mandatory when you call yield inside a method; otherwise, it will raise an exception
+Block parameter is mandatory when you call yield inside a method; otherwise, it will raise an exception
 
 ```ruby
 def give_me_data
@@ -1694,7 +1708,19 @@ give_me_data
 
 # Procs
 
-A proc is like a block that can be stored in a variable.
+In Ruby, a **proc** (short for "**procedure**") is a way to package a block of code as an object, which can be passed around and reused like any other object in Ruby.
+This allows you to define a block of code once and use it in multiple places, rather than having to repeat the same code multiple times.
+
+The benefits of using Procs include:
+
+* **Reus-ability:** Since a Proc is an object, it can be stored in a variable and passed as an argument to a method, allowing it to be used in multiple places throughout your code.
+* **Flexibility:** Procs can be used in a variety of situations where a block is accepted, such as in iterators, callbacks, and event handlers. 
+* **Clarity:** Procs can help to make your code more readable by encapsulating complex logic into a single, named object
+that can be easily understood. 
+
+Procs can be created by passing a block to the Proc.new or lambda methods, or by using
+the shorthand notation: `my_proc = proc {puts "Hello, World!"}` and `my_proc.call` can be used to invoke the proc
+
 
 ```ruby
 p = Proc.new { puts "Hello World" }
@@ -1765,6 +1791,22 @@ The following are specific situations in which you might want to use a Ruby lamb
 3. Perfect for simple callbacks
 4. Used in ActiveRecord scopes
 
+In Ruby, a lambda is a type of Proc that has some specific characteristics and behaviors. Like a Proc, a lambda is a way
+to package a block of code as a object that can be passed around and reused, but there are some differences between the two.
+
+The main difference between a lambda and a proc is in the way they handle the "return" keyword. In a proc, the "return" 
+keyword will return from the method that the proc was defined in, whereas in a lambda, the "return" keyword will only 
+return from the lambda itself.
+
+The benefits of using a lambda include:
+
+* **Clarity:** Like procs, using a lambda can help to make your code more readable by encapsulating complex logic into 
+a single, named object that can be easily understood.
+* **Strictness:** Since Lambdas are more strict in terms of how they handle the return keyword, it can be beneficial 
+in cases where you want to ensure that a block of code behaves in a specific way.
+* **Strict number of arguments:** Lambdas also check the number of arguments passed to them, unlike procs which don't 
+check the number of arguments passed to them.
+
 ```ruby
 # there are multiple ways to declare a lambda
 l = lambda { puts "Hello World" }
@@ -1816,14 +1858,17 @@ puts return_value
 # nil # because puts return nil
 ```
 
+In summary, procs are more flexible and forgiving in their behavior, while lambdas are more strict and predictable. 
+It depends on the specific use-case and the desired behavior of the code.
+
 # Blocks VS Procs VS Lambdas
 
 All of them are used for executing a single line or multiline code.
 
 | Name    | Object | Example                             | Object type                                 | When to use                                                                                                                                |
-| ------- | ------ | ----------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| ------- | ------ | ----------------------------------- | ------------------------------------------- |--------------------------------------------------------------------------------------------------------------------------------------------|
 | Blocks  | No     | { puts "Hello World" }              | -                                           | 1. when you want to pass blocks of code to a methods <br> 2. arbitrary arguments <br> 3. blocks return from the current method             |
-| Procs   | Yes    | p = Proc.new { puts "Hello World" } | p.class <br> Proc <br> p.lambda? <br> false | 1. similar to blocks but can store in variables <br> 2. arbitrary arguments <br> 3. Procs return from the current method                   |
+| Procs   | Yes    | p = Proc.new { puts "Hello World" } | p.class <br> Proc <br> p.lambda? <br> false | 1. similar to blocks but can be stored in variables <br> 2. arbitrary arguments <br> 3. Procs return from the current method               |
 | Lambdas | Yes    | l = lambda { puts "Hello World" }   | l.class <br> Proc <br> l.lambda? <br> true  | 1. it's a proc but acts like methods and can be stored in variables <br> 2. strict arguments <br> 3. lambdas return from the lambda itself |
 
 # Array
