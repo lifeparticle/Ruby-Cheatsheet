@@ -175,6 +175,7 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 3.3.0-preview1 Released](https://www.ruby-lang.org/en/news/2023/05/12/ruby-3-3-0-preview1-released/) <br/> <sub>2023-05-12 00:00:00</sub>
 * [Ruby 3.2.2 Released](https://www.ruby-lang.org/en/news/2023/03/30/ruby-3-2-2-released/) <br/> <sub>2023-03-30 12:00:00</sub>
 * [Ruby 3.1.4 Released](https://www.ruby-lang.org/en/news/2023/03/30/ruby-3-1-4-released/) <br/> <sub>2023-03-30 12:00:00</sub>
 * [Ruby 3.0.6 Released](https://www.ruby-lang.org/en/news/2023/03/30/ruby-3-0-6-released/) <br/> <sub>2023-03-30 12:00:00</sub>
@@ -184,7 +185,6 @@
 * [Ruby 3.2.1 Released](https://www.ruby-lang.org/en/news/2023/02/08/ruby-3-2-1-released/) <br/> <sub>2023-02-08 12:00:00</sub>
 * [Ruby 3.2.0 Released](https://www.ruby-lang.org/en/news/2022/12/25/ruby-3-2-0-released/) <br/> <sub>2022-12-25 00:00:00</sub>
 * [Ruby 3.2.0 RC 1 Released](https://www.ruby-lang.org/en/news/2022/12/06/ruby-3-2-0-rc1-released/) <br/> <sub>2022-12-06 00:00:00</sub>
-* [Ruby 3.1.3 Released](https://www.ruby-lang.org/en/news/2022/11/24/ruby-3-1-3-released/) <br/> <sub>2022-11-24 12:00:00</sub>
 <!-- news ends -->
 
 # Installation
