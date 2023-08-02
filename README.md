@@ -767,7 +767,7 @@ that new value will essentially change for all other object instances.
 Class variables begin with a double @ sign.
 
 ```ruby
-@current_weather = "rainy"
+@@current_weather = "rainy"
 ```
 
 Scope of a class variable is one of
