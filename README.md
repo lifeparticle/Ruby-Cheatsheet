@@ -175,6 +175,7 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 3.3.0-preview3 Released](https://www.ruby-lang.org/en/news/2023/11/12/ruby-3-3-0-preview3-released/) <br/> <sub>2023-11-12 00:00:00</sub>
 * [Ruby 3.3.0-preview2 Released](https://www.ruby-lang.org/en/news/2023/09/14/ruby-3-3-0-preview2-released/) <br/> <sub>2023-09-14 00:00:00</sub>
 * [CVE-2023-36617: ReDoS vulnerability in URI](https://www.ruby-lang.org/en/news/2023/06/29/redos-in-uri-CVE-2023-36617/) <br/> <sub>2023-06-29 01:00:00</sub>
 * [Ruby 3.3.0-preview1 Released](https://www.ruby-lang.org/en/news/2023/05/12/ruby-3-3-0-preview1-released/) <br/> <sub>2023-05-12 00:00:00</sub>
@@ -184,7 +185,6 @@
 * [Ruby 2.7.8 Released](https://www.ruby-lang.org/en/news/2023/03/30/ruby-2-7-8-released/) <br/> <sub>2023-03-30 12:00:00</sub>
 * [CVE-2023-28756: ReDoS vulnerability in Time](https://www.ruby-lang.org/en/news/2023/03/30/redos-in-time-cve-2023-28756/) <br/> <sub>2023-03-30 11:00:00</sub>
 * [CVE-2023-28755: ReDoS vulnerability in URI](https://www.ruby-lang.org/en/news/2023/03/28/redos-in-uri-cve-2023-28755/) <br/> <sub>2023-03-28 01:00:00</sub>
-* [Ruby 3.2.1 Released](https://www.ruby-lang.org/en/news/2023/02/08/ruby-3-2-1-released/) <br/> <sub>2023-02-08 12:00:00</sub>
 <!-- news ends -->
 
 # Installation
