@@ -175,16 +175,16 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 3.3.1 Released](https://www.ruby-lang.org/en/news/2024/04/23/ruby-3-3-1-released/) <br/> <sub>2024-04-23 10:00:00</sub>
+* [Ruby 3.2.4 Released](https://www.ruby-lang.org/en/news/2024/04/23/ruby-3-2-4-released/) <br/> <sub>2024-04-23 10:00:00</sub>
+* [Ruby 3.1.5 Released](https://www.ruby-lang.org/en/news/2024/04/23/ruby-3-1-5-released/) <br/> <sub>2024-04-23 10:00:00</sub>
+* [Ruby 3.0.7 Released](https://www.ruby-lang.org/en/news/2024/04/23/ruby-3-0-7-released/) <br/> <sub>2024-04-23 10:00:00</sub>
+* [CVE-2024-27282: Arbitrary memory address read vulnerability with Regex search](https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/) <br/> <sub>2024-04-23 10:00:00</sub>
 * [CVE-2024-27281: RCE vulnerability with .rdoc_options in RDoc](https://www.ruby-lang.org/en/news/2024/03/21/rce-rdoc-cve-2024-27281/) <br/> <sub>2024-03-21 04:00:00</sub>
 * [CVE-2024-27280: Buffer overread vulnerability in StringIO](https://www.ruby-lang.org/en/news/2024/03/21/buffer-overread-cve-2024-27280/) <br/> <sub>2024-03-21 04:00:00</sub>
 * [Ruby 3.2.3 Released](https://www.ruby-lang.org/en/news/2024/01/18/ruby-3-2-3-released/) <br/> <sub>2024-01-18 09:00:00</sub>
 * [Ruby 3.3.0 Released](https://www.ruby-lang.org/en/news/2023/12/25/ruby-3-3-0-released/) <br/> <sub>2023-12-25 00:00:00</sub>
 * [Ruby 3.3.0-rc1 Released](https://www.ruby-lang.org/en/news/2023/12/11/ruby-3-3-0-rc1-released/) <br/> <sub>2023-12-11 00:00:00</sub>
-* [Ruby 3.3.0-preview3 Released](https://www.ruby-lang.org/en/news/2023/11/12/ruby-3-3-0-preview3-released/) <br/> <sub>2023-11-12 00:00:00</sub>
-* [Ruby 3.3.0-preview2 Released](https://www.ruby-lang.org/en/news/2023/09/14/ruby-3-3-0-preview2-released/) <br/> <sub>2023-09-14 00:00:00</sub>
-* [CVE-2023-36617: ReDoS vulnerability in URI](https://www.ruby-lang.org/en/news/2023/06/29/redos-in-uri-CVE-2023-36617/) <br/> <sub>2023-06-29 01:00:00</sub>
-* [Ruby 3.3.0-preview1 Released](https://www.ruby-lang.org/en/news/2023/05/12/ruby-3-3-0-preview1-released/) <br/> <sub>2023-05-12 00:00:00</sub>
-* [Ruby 3.2.2 Released](https://www.ruby-lang.org/en/news/2023/03/30/ruby-3-2-2-released/) <br/> <sub>2023-03-30 12:00:00</sub>
 <!-- news ends -->
 
 # Installation
