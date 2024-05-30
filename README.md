@@ -175,6 +175,7 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 3.1.6 Released](https://www.ruby-lang.org/en/news/2024/05/29/ruby-3-1-6-released/) <br/> <sub>2024-05-29 09:00:00</sub>
 * [CVE-2024-35176: DoS in REXML](https://www.ruby-lang.org/en/news/2024/05/16/dos-rexml-cve-2024-35176/) <br/> <sub>2024-05-16 05:00:00</sub>
 * [Ruby 3.4.0 preview1 Released](https://www.ruby-lang.org/en/news/2024/05/16/ruby-3-4-0-preview1-released/) <br/> <sub>2024-05-16 00:00:00</sub>
 * [Ruby 3.3.1 Released](https://www.ruby-lang.org/en/news/2024/04/23/ruby-3-3-1-released/) <br/> <sub>2024-04-23 10:00:00</sub>
@@ -184,7 +185,6 @@
 * [CVE-2024-27282: Arbitrary memory address read vulnerability with Regex search](https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/) <br/> <sub>2024-04-23 10:00:00</sub>
 * [CVE-2024-27281: RCE vulnerability with .rdoc_options in RDoc](https://www.ruby-lang.org/en/news/2024/03/21/rce-rdoc-cve-2024-27281/) <br/> <sub>2024-03-21 04:00:00</sub>
 * [CVE-2024-27280: Buffer overread vulnerability in StringIO](https://www.ruby-lang.org/en/news/2024/03/21/buffer-overread-cve-2024-27280/) <br/> <sub>2024-03-21 04:00:00</sub>
-* [Ruby 3.2.3 Released](https://www.ruby-lang.org/en/news/2024/01/18/ruby-3-2-3-released/) <br/> <sub>2024-01-18 09:00:00</sub>
 <!-- news ends -->
 
 # Installation
