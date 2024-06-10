@@ -3584,7 +3584,7 @@ words = sentence.split(/(?=[A-Z])/)
 2. [Sinatra](http://sinatrarb.com/)
 3. [Padrino](http://padrinorb.com/)
 4. [Camping](http://www.ruby-camping.com/)
-5. [Ramaze](http://ramaze.net/)
+<!-- 5. [Ramaze](http://ramaze.net/) -->
 6. [Goliath](https://postrank-labs.github.io/goliath/)
 7. [Hanami](https://hanamirb.org/)
 8. [NYNY](https://alisnic.github.io/nyny/)
