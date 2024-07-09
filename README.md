@@ -2,7 +2,7 @@
 
 <p align="center">
    <a href="https://www.ruby-lang.org">
-      <img alt="Ruby" src="https://cdn.emojidex.com/emoji/mdpi/Ruby.png"/>
+      💎
    </a>
    <a href="https://github.com/lifeparticle/Ruby-Cheatsheet/issues">
       <img alt="contributions welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
@@ -1518,9 +1518,9 @@ Mobile.ring
 
 # Blocks
 
-In Ruby, a block is a piece of code that can be passed as an argument to a method, and is executed by the method at a 
+In Ruby, a block is a piece of code that can be passed as an argument to a method, and is executed by the method at a
 later time. Blocks are defined using the keywords "do" and "end" or using curly braces {}. They can also be passed
-using the "yield" keyword within a method. They are commonly used in iterators such as "each" and "map" to perform an 
+using the "yield" keyword within a method. They are commonly used in iterators such as "each" and "map" to perform an
 operation on each element of a collection. A block returns the last evaluated statement.
 
 Blocks in Ruby have a few key aspects that are significant:
@@ -1573,7 +1573,7 @@ end
 # |s|
 ```
 
-Methods can take blocks implicitly and explicitly. If you want to call a block implicitly use the `yield` keyword. 
+Methods can take blocks implicitly and explicitly. If you want to call a block implicitly use the `yield` keyword.
 Yield finds the block and calls the passed block. Since you can pass implicit blocks, you don't have to call yield, and the block will be ignored.
 
 ```ruby
@@ -1714,9 +1714,9 @@ This allows you to define a block of code once and use it in multiple places, ra
 The benefits of using Procs include:
 
 * **Reus-ability:** Since a Proc is an object, it can be stored in a variable and passed as an argument to a method, allowing it to be used in multiple places throughout your code.
-* **Flexibility:** Procs can be used in a variety of situations where a block is accepted, such as in iterators, callbacks, and event handlers. 
+* **Flexibility:** Procs can be used in a variety of situations where a block is accepted, such as in iterators, callbacks, and event handlers.
 * **Clarity:** Procs can help to make your code more readable by encapsulating complex logic into a single, named object
-that can be easily understood. 
+that can be easily understood.
 
 Procs can be created by passing a block to the Proc.new or lambda methods, or by using
 the shorthand notation: `my_proc = proc {puts "Hello, World!"}` and `my_proc.call` can be used to invoke the proc
@@ -1774,37 +1774,37 @@ puts return_value
 
 Lambdas are a powerful feature of the Ruby language. They allow you to wrap logic and data into a portable package.
 A lambda function encapsulates control flow, parameters and local variables into a single package assigned to a variable
-or used inline. If assigned to a variable, it can be passed to other functions or stored in data structures, just like a 
+or used inline. If assigned to a variable, it can be passed to other functions or stored in data structures, just like a
 more typical variable containing a string or float.
 
-A lambda function can then be executed far from the code location where it was defined. Lambda functions are often 
+A lambda function can then be executed far from the code location where it was defined. Lambda functions are often
 called anonymous functions or a function literal, wrap the lambda with `do and end` (for multiline) or curly brackets
 `{ and }` (for a single line). Lambda returns the last evaluated statement.
 
-With Ruby, the **lambda** keyword is used to create a lambda function. It requires a block and can define zero or more parameters. 
+With Ruby, the **lambda** keyword is used to create a lambda function. It requires a block and can define zero or more parameters.
 You call the resulting lambda function by using the call method.
 
 The following are specific situations in which you might want to use a Ruby lambda.
 
-1. Encapsulating complicated logic 
-2. An in-memory state machine or data pipeline 
+1. Encapsulating complicated logic
+2. An in-memory state machine or data pipeline
 3. Perfect for simple callbacks
 4. Used in ActiveRecord scopes
 
 In Ruby, a lambda is a type of Proc that has some specific characteristics and behaviors. Like a Proc, a lambda is a way
 to package a block of code as a object that can be passed around and reused, but there are some differences between the two.
 
-The main difference between a lambda and a proc is in the way they handle the "return" keyword. In a proc, the "return" 
-keyword will return from the method that the proc was defined in, whereas in a lambda, the "return" keyword will only 
+The main difference between a lambda and a proc is in the way they handle the "return" keyword. In a proc, the "return"
+keyword will return from the method that the proc was defined in, whereas in a lambda, the "return" keyword will only
 return from the lambda itself.
 
 The benefits of using a lambda include:
 
-* **Clarity:** Like procs, using a lambda can help to make your code more readable by encapsulating complex logic into 
+* **Clarity:** Like procs, using a lambda can help to make your code more readable by encapsulating complex logic into
 a single, named object that can be easily understood.
-* **Strictness:** Since Lambdas are more strict in terms of how they handle the return keyword, it can be beneficial 
+* **Strictness:** Since Lambdas are more strict in terms of how they handle the return keyword, it can be beneficial
 in cases where you want to ensure that a block of code behaves in a specific way.
-* **Strict number of arguments:** Lambdas also check the number of arguments passed to them, unlike procs which don't 
+* **Strict number of arguments:** Lambdas also check the number of arguments passed to them, unlike procs which don't
 check the number of arguments passed to them.
 
 ```ruby
@@ -1858,7 +1858,7 @@ puts return_value
 # nil # because puts return nil
 ```
 
-In summary, procs are more flexible and forgiving in their behavior, while lambdas are more strict and predictable. 
+In summary, procs are more flexible and forgiving in their behavior, while lambdas are more strict and predictable.
 It depends on the specific use-case and the desired behavior of the code.
 
 # Blocks VS Procs VS Lambdas
