@@ -175,6 +175,7 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 3.3.4 Released](https://www.ruby-lang.org/en/news/2024/07/09/ruby-3-3-4-released/) <br/> <sub>2024-07-09 00:30:00</sub>
 * [Ruby 3.3.3 Released](https://www.ruby-lang.org/en/news/2024/06/12/ruby-3-3-3-released/) <br/> <sub>2024-06-12 00:30:00</sub>
 * [Ruby 3.3.2 Released](https://www.ruby-lang.org/en/news/2024/05/30/ruby-3-3-2-released/) <br/> <sub>2024-05-30 03:50:00</sub>
 * [Datadog provides OSS community support for ruby-lang.org](https://www.ruby-lang.org/en/news/2024/05/30/datadog-oss-program/) <br/> <sub>2024-05-30 00:00:00</sub>
@@ -184,7 +185,6 @@
 * [Ruby 3.3.1 Released](https://www.ruby-lang.org/en/news/2024/04/23/ruby-3-3-1-released/) <br/> <sub>2024-04-23 10:00:00</sub>
 * [Ruby 3.2.4 Released](https://www.ruby-lang.org/en/news/2024/04/23/ruby-3-2-4-released/) <br/> <sub>2024-04-23 10:00:00</sub>
 * [Ruby 3.1.5 Released](https://www.ruby-lang.org/en/news/2024/04/23/ruby-3-1-5-released/) <br/> <sub>2024-04-23 10:00:00</sub>
-* [Ruby 3.0.7 Released](https://www.ruby-lang.org/en/news/2024/04/23/ruby-3-0-7-released/) <br/> <sub>2024-04-23 10:00:00</sub>
 <!-- news ends -->
 
 # Installation
