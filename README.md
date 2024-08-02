@@ -175,16 +175,16 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [CVE-2024-41946: DoS vulnerability in REXML](https://www.ruby-lang.org/en/news/2024/08/01/dos-rexml-cve-2024-41946/) <br/> <sub>2024-08-01 03:00:00</sub>
+* [CVE-2024-41123: DoS vulnerabilities in REXML](https://www.ruby-lang.org/en/news/2024/08/01/dos-rexml-cve-2024-41123/) <br/> <sub>2024-08-01 03:00:00</sub>
 * [Ruby 3.2.5 Released](https://www.ruby-lang.org/en/news/2024/07/26/ruby-3-2-5-released/) <br/> <sub>2024-07-26 10:00:00</sub>
-* [CVE-2024-39908 : DoS in REXML](https://www.ruby-lang.org/en/news/2024/07/16/dos-rexml-cve-2024-39908/) <br/> <sub>2024-07-16 03:00:00</sub>
+* [CVE-2024-39908: DoS vulnerability in REXML](https://www.ruby-lang.org/en/news/2024/07/16/dos-rexml-cve-2024-39908/) <br/> <sub>2024-07-16 03:00:00</sub>
 * [Ruby 3.3.4 Released](https://www.ruby-lang.org/en/news/2024/07/09/ruby-3-3-4-released/) <br/> <sub>2024-07-09 00:30:00</sub>
 * [Ruby 3.3.3 Released](https://www.ruby-lang.org/en/news/2024/06/12/ruby-3-3-3-released/) <br/> <sub>2024-06-12 00:30:00</sub>
 * [Ruby 3.3.2 Released](https://www.ruby-lang.org/en/news/2024/05/30/ruby-3-3-2-released/) <br/> <sub>2024-05-30 03:50:00</sub>
 * [Datadog provides OSS community support for ruby-lang.org](https://www.ruby-lang.org/en/news/2024/05/30/datadog-oss-program/) <br/> <sub>2024-05-30 00:00:00</sub>
 * [Ruby 3.1.6 Released](https://www.ruby-lang.org/en/news/2024/05/29/ruby-3-1-6-released/) <br/> <sub>2024-05-29 09:00:00</sub>
-* [CVE-2024-35176: DoS in REXML](https://www.ruby-lang.org/en/news/2024/05/16/dos-rexml-cve-2024-35176/) <br/> <sub>2024-05-16 05:00:00</sub>
-* [Ruby 3.4.0 preview1 Released](https://www.ruby-lang.org/en/news/2024/05/16/ruby-3-4-0-preview1-released/) <br/> <sub>2024-05-16 00:00:00</sub>
-* [Ruby 3.3.1 Released](https://www.ruby-lang.org/en/news/2024/04/23/ruby-3-3-1-released/) <br/> <sub>2024-04-23 10:00:00</sub>
+* [CVE-2024-35176: DoS vulnerability in REXML](https://www.ruby-lang.org/en/news/2024/05/16/dos-rexml-cve-2024-35176/) <br/> <sub>2024-05-16 05:00:00</sub>
 <!-- news ends -->
 
 # Installation
