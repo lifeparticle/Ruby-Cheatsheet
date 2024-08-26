@@ -3292,13 +3292,13 @@ s.name = "James Bond"
 s.number = 700
 s.id = 678
 
-puts "#{p.name}"
+puts "#{s.name}"
 James Bond
 
-puts "#{p.number}"
+puts "#{s.number}"
 700
 
-puts "#{p.id}"
+puts "#{s.id}"
 678
 ```
 
