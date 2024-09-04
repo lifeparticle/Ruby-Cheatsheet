@@ -175,6 +175,7 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 3.3.5 Released](https://www.ruby-lang.org/en/news/2024/09/03/3-3-5-released/) <br/> <sub>2024-09-03 06:40:00</sub>
 * [CVE-2024-43398: DoS vulnerability in REXML](https://www.ruby-lang.org/en/news/2024/08/22/dos-rexml-cve-2024-43398/) <br/> <sub>2024-08-22 03:00:00</sub>
 * [CVE-2024-41946: DoS vulnerability in REXML](https://www.ruby-lang.org/en/news/2024/08/01/dos-rexml-cve-2024-41946/) <br/> <sub>2024-08-01 03:00:00</sub>
 * [CVE-2024-41123: DoS vulnerabilities in REXML](https://www.ruby-lang.org/en/news/2024/08/01/dos-rexml-cve-2024-41123/) <br/> <sub>2024-08-01 03:00:00</sub>
@@ -184,7 +185,6 @@
 * [Ruby 3.3.3 Released](https://www.ruby-lang.org/en/news/2024/06/12/ruby-3-3-3-released/) <br/> <sub>2024-06-12 00:30:00</sub>
 * [Ruby 3.3.2 Released](https://www.ruby-lang.org/en/news/2024/05/30/ruby-3-3-2-released/) <br/> <sub>2024-05-30 03:50:00</sub>
 * [Datadog provides OSS community support for ruby-lang.org](https://www.ruby-lang.org/en/news/2024/05/30/datadog-oss-program/) <br/> <sub>2024-05-30 00:00:00</sub>
-* [Ruby 3.1.6 Released](https://www.ruby-lang.org/en/news/2024/05/29/ruby-3-1-6-released/) <br/> <sub>2024-05-29 09:00:00</sub>
 <!-- news ends -->
 
 # Installation
