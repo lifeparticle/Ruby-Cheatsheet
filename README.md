@@ -175,6 +175,7 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 3.2.6 Released](https://www.ruby-lang.org/en/news/2024/10/30/ruby-3-2-6-released/) <br/> <sub>2024-10-30 10:00:00</sub>
 * [CVE-2024-49761: ReDoS vulnerability in REXML](https://www.ruby-lang.org/en/news/2024/10/28/redos-rexml-cve-2024-49761/) <br/> <sub>2024-10-28 03:00:00</sub>
 * [Ruby 3.4.0 preview2 Released](https://www.ruby-lang.org/en/news/2024/10/07/ruby-3-4-0-preview2-released/) <br/> <sub>2024-10-07 00:00:00</sub>
 * [Ruby 3.3.5 Released](https://www.ruby-lang.org/en/news/2024/09/03/3-3-5-released/) <br/> <sub>2024-09-03 06:40:00</sub>
@@ -184,7 +185,6 @@
 * [Ruby 3.2.5 Released](https://www.ruby-lang.org/en/news/2024/07/26/ruby-3-2-5-released/) <br/> <sub>2024-07-26 10:00:00</sub>
 * [CVE-2024-39908: DoS vulnerability in REXML](https://www.ruby-lang.org/en/news/2024/07/16/dos-rexml-cve-2024-39908/) <br/> <sub>2024-07-16 03:00:00</sub>
 * [Ruby 3.3.4 Released](https://www.ruby-lang.org/en/news/2024/07/09/ruby-3-3-4-released/) <br/> <sub>2024-07-09 00:30:00</sub>
-* [Ruby 3.3.3 Released](https://www.ruby-lang.org/en/news/2024/06/12/ruby-3-3-3-released/) <br/> <sub>2024-06-12 00:30:00</sub>
 <!-- news ends -->
 
 # Installation
