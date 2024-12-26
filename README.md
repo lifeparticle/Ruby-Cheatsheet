@@ -175,6 +175,8 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 3.4.1 Released](https://www.ruby-lang.org/en/news/2024/12/25/ruby-3-4-1-released/) <br/> <sub>2024-12-25 00:00:00</sub>
+* [Ruby 3.4.0 Released](https://www.ruby-lang.org/en/news/2024/12/25/ruby-3-4-0-released/) <br/> <sub>2024-12-25 00:00:00</sub>
 * [Ruby 3.4.0 rc1 Released](https://www.ruby-lang.org/en/news/2024/12/12/ruby-3-4-0-rc1-released/) <br/> <sub>2024-12-12 00:00:00</sub>
 * [Ruby 3.3.6 Released](https://www.ruby-lang.org/en/news/2024/11/05/ruby-3-3-6-released/) <br/> <sub>2024-11-05 04:25:00</sub>
 * [Ruby 3.2.6 Released](https://www.ruby-lang.org/en/news/2024/10/30/ruby-3-2-6-released/) <br/> <sub>2024-10-30 10:00:00</sub>
@@ -183,8 +185,6 @@
 * [Ruby 3.3.5 Released](https://www.ruby-lang.org/en/news/2024/09/03/3-3-5-released/) <br/> <sub>2024-09-03 06:40:00</sub>
 * [CVE-2024-43398: DoS vulnerability in REXML](https://www.ruby-lang.org/en/news/2024/08/22/dos-rexml-cve-2024-43398/) <br/> <sub>2024-08-22 03:00:00</sub>
 * [CVE-2024-41946: DoS vulnerability in REXML](https://www.ruby-lang.org/en/news/2024/08/01/dos-rexml-cve-2024-41946/) <br/> <sub>2024-08-01 03:00:00</sub>
-* [CVE-2024-41123: DoS vulnerabilities in REXML](https://www.ruby-lang.org/en/news/2024/08/01/dos-rexml-cve-2024-41123/) <br/> <sub>2024-08-01 03:00:00</sub>
-* [Ruby 3.2.5 Released](https://www.ruby-lang.org/en/news/2024/07/26/ruby-3-2-5-released/) <br/> <sub>2024-07-26 10:00:00</sub>
 <!-- news ends -->
 
 # Installation
