@@ -175,6 +175,7 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [CVE-2025-25186: DoS vulnerability in net-imap](https://www.ruby-lang.org/en/news/2025/02/10/dos-net-imap-cve-2025-25186/) <br/> <sub>2025-02-10 03:00:00</sub>
 * [Ruby 3.2.7 Released](https://www.ruby-lang.org/en/news/2025/02/04/ruby-3-2-7-released/) <br/> <sub>2025-02-04 12:00:00</sub>
 * [Ruby 3.3.7 Released](https://www.ruby-lang.org/en/news/2025/01/15/ruby-3-3-7-released/) <br/> <sub>2025-01-15 07:51:59</sub>
 * [Ruby 3.4.1 Released](https://www.ruby-lang.org/en/news/2024/12/25/ruby-3-4-1-released/) <br/> <sub>2024-12-25 00:00:00</sub>
@@ -184,7 +185,6 @@
 * [Ruby 3.2.6 Released](https://www.ruby-lang.org/en/news/2024/10/30/ruby-3-2-6-released/) <br/> <sub>2024-10-30 10:00:00</sub>
 * [CVE-2024-49761: ReDoS vulnerability in REXML](https://www.ruby-lang.org/en/news/2024/10/28/redos-rexml-cve-2024-49761/) <br/> <sub>2024-10-28 03:00:00</sub>
 * [Ruby 3.4.0 preview2 Released](https://www.ruby-lang.org/en/news/2024/10/07/ruby-3-4-0-preview2-released/) <br/> <sub>2024-10-07 00:00:00</sub>
-* [Ruby 3.3.5 Released](https://www.ruby-lang.org/en/news/2024/09/03/3-3-5-released/) <br/> <sub>2024-09-03 06:40:00</sub>
 <!-- news ends -->
 
 # Installation
