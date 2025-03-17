@@ -1,4 +1,3 @@
-
 # Rails Debugging and Development Guide
 
 ## Development Tools and URLs
