@@ -1,3 +1,104 @@
+
+# Rails Debugging and Development Guide
+
+## Development Tools and URLs
+
+### Rails Development URLs
+
+- **Routes Information**: `http://localhost:3000/rails/info/routes`
+
+  - Lists all available routes in your Rails application
+  - Helpful for debugging routing issues
+  - Shows controller actions and their corresponding URLs
+
+- **Letter Opener**: `http://localhost:3000/letter_opener`
+  - Preview emails in the browser instead of sending them
+  - Great for testing email functionality locally
+
+## Debugging Tools
+
+### Rails Console
+
+```bash
+rails c  # or rails console
+```
+
+- Interactive console to test Ruby code
+- Direct database access
+- Test model associations
+- Execute arbitrary Ruby code in your app's environment
+
+### Rails Logger
+
+```ruby
+Rails.logger.debug "Debug: @user = #{@user}"
+```
+
+Other log levels:
+
+```ruby
+Rails.logger.info "Info message"
+Rails.logger.warn "Warning message"
+Rails.logger.error "Error message"
+Rails.logger.fatal "Fatal message"
+```
+
+## Database Commands
+
+### Seeding Data
+
+```bash
+rails db:seed:development:users  # Seed development user data
+rails db:seed                    # Run all seed files
+```
+
+Other useful database commands:
+
+```bash
+rails db:migrate                # Run pending migrations
+rails db:rollback               # Rollback last migration
+rails db:reset                  # Drop & recreate database
+rails db:setup                  # Create database, load schema, and initialize with seed data
+```
+
+## Code Quality Tools
+
+### RuboCop
+
+Basic usage:
+
+```bash
+rubocop                         # Check code style
+```
+
+Auto-correction options:
+
+```bash
+rubocop -a                      # Safe auto-corrections (--auto-correct)
+rubocop -A                      # Safe + unsafe auto-corrections (--auto-correct-all)
+```
+
+Common RuboCop flags:
+
+```bash
+rubocop --only Style/StringLiterals    # Check specific cop
+rubocop --format html > rubocop.html   # Generate HTML report
+rubocop --auto-gen-config              # Generate .rubocop_todo.yml
+```
+
+### Performance Monitoring
+
+```ruby
+# Add at the start of a block you want to measure
+start_time = Time.now
+
+# Add at the end of the block
+end_time = Time.now
+Rails.logger.debug "Operation took #{end_time - start_time} seconds"
+```
+
+----------------------------
+
 # Initialization
 
 For macOS
