@@ -54,10 +54,13 @@ rails db:seed                    # Run all seed files
 Other useful database commands:
 
 ```bash
-rails db:migrate                # Run pending migrations
-rails db:rollback               # Rollback last migration
-rails db:reset                  # Drop & recreate database
-rails db:setup                  # Create database, load schema, and initialize with seed data
+rails db:migrate                                               # Run pending migrations
+rails db:rollback                                              # Rollback last migration
+rails db:reset                                                 # Drop & recreate database
+rails db:setup                                                 # Create database, load schema, and initialize with seed data
+rails db:drop db:create db:migrate                             # Reset database by dropping, creating, and running migrations
+ActiveRecord::Base.connection.tables                           # List all database tables
+ActiveRecord::Base.connection.columns('users').map(&:name)     # List all column names of the 'users' table
 ```
 
 ## Code Quality Tools
