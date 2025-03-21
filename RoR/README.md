@@ -131,6 +131,11 @@ bundle exec rspec
 
 ----------------------------
 
+
+```
+annotate
+```
+
 # Initialization
 
 For macOS
