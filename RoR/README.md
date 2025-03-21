@@ -27,6 +27,27 @@ rails c  # or rails console
 - Test model associations
 - Execute arbitrary Ruby code in your app's environment
 
+```bash
+rails c
+user = User.new                   # Create a new User
+user.name = "Test User"          # Set the name of the User
+user.save                        # Save the User to the database
+user.id                          # Get the ID of the User
+user.auth_token                  # Get the auth_token of the User
+user.errors                      # Get the errors of the User
+user.errors.full_messages        # Get the full messages of the errors
+user.destroy                     # Destroy the User
+
+
+User.all                         # Get all Users
+User.first                       # Get the first User
+User.last                        # Get the last User
+User.count                       # Get the number of Users
+User.find(1)                     # Get the User with ID 1
+User.find_by(name: "Test User")  # Get the User with name "Test User"    
+User.take                        # Get a random User
+```
+
 ### Rails Logger
 
 ```ruby
@@ -56,11 +77,14 @@ Other useful database commands:
 ```bash
 rails db:migrate                                               # Run pending migrations
 rails db:rollback                                              # Rollback last migration
+rails db:rollback STEP=5                                       # Rollback last 5 migrations
+rails db:migrate:down VERSION=VERSION_NUMBER                   # Rollback to a specific version
 rails db:reset                                                 # Drop & recreate database
 rails db:setup                                                 # Create database, load schema, and initialize with seed data
 rails db:drop db:create db:migrate                             # Reset database by dropping, creating, and running migrations
 ActiveRecord::Base.connection.tables                           # List all database tables
 ActiveRecord::Base.connection.columns('users').map(&:name)     # List all column names of the 'users' table
+
 ```
 
 ## Code Quality Tools
