@@ -94,14 +94,14 @@ ActiveRecord::Base.connection.columns('users').map(&:name)     # List all column
 Basic usage:
 
 ```bash
-rubocop                         # Check code style
+bundle exec rubocop                         # Check code style
 ```
 
 Auto-correction options:
 
 ```bash
-rubocop -a                      # Safe auto-corrections (--auto-correct)
-rubocop -A                      # Safe + unsafe auto-corrections (--auto-correct-all)
+bundle exec rubocop -a                      # Safe auto-corrections (--auto-correct)
+bundle exec rubocop -A                      # Safe + unsafe auto-corrections (--auto-correct-all)
 ```
 
 Common RuboCop flags:
@@ -121,6 +121,12 @@ start_time = Time.now
 # Add at the end of the block
 end_time = Time.now
 Rails.logger.debug "Operation took #{end_time - start_time} seconds"
+```
+
+### RSpec
+
+```bash
+bundle exec rspec
 ```
 
 ----------------------------
