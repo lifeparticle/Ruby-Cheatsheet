@@ -29,7 +29,7 @@ rails c  # or rails console
 
 ```bash
 rails c
-user = User.new                   # Create a new User
+user = User.new                  # Create a new User
 user.name = "Test User"          # Set the name of the User
 user.save                        # Save the User to the database
 user.id                          # Get the ID of the User
