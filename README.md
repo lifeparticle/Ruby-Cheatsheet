@@ -175,6 +175,8 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 3.2.8 Released](https://www.ruby-lang.org/en/news/2025/03/26/ruby-3-2-8-released/) <br/> <sub>2025-03-26 04:45:01</sub>
+* [Ruby 3.1.7 Released](https://www.ruby-lang.org/en/news/2025/03/26/ruby-3-1-7-released/) <br/> <sub>2025-03-26 04:44:27</sub>
 * [Security advisories: CVE-2025-27219, CVE-2025-27220 and CVE-2025-27221](https://www.ruby-lang.org/en/news/2025/02/26/security-advisories/) <br/> <sub>2025-02-26 07:00:00</sub>
 * [Ruby 3.4.2 Released](https://www.ruby-lang.org/en/news/2025/02/14/ruby-3-4-2-released/) <br/> <sub>2025-02-14 21:55:17</sub>
 * [CVE-2025-25186: DoS vulnerability in net-imap](https://www.ruby-lang.org/en/news/2025/02/10/dos-net-imap-cve-2025-25186/) <br/> <sub>2025-02-10 03:00:00</sub>
@@ -183,8 +185,6 @@
 * [Ruby 3.4.1 Released](https://www.ruby-lang.org/en/news/2024/12/25/ruby-3-4-1-released/) <br/> <sub>2024-12-25 00:00:00</sub>
 * [Ruby 3.4.0 Released](https://www.ruby-lang.org/en/news/2024/12/25/ruby-3-4-0-released/) <br/> <sub>2024-12-25 00:00:00</sub>
 * [Ruby 3.4.0 rc1 Released](https://www.ruby-lang.org/en/news/2024/12/12/ruby-3-4-0-rc1-released/) <br/> <sub>2024-12-12 00:00:00</sub>
-* [Ruby 3.3.6 Released](https://www.ruby-lang.org/en/news/2024/11/05/ruby-3-3-6-released/) <br/> <sub>2024-11-05 04:25:00</sub>
-* [Ruby 3.2.6 Released](https://www.ruby-lang.org/en/news/2024/10/30/ruby-3-2-6-released/) <br/> <sub>2024-10-30 10:00:00</sub>
 <!-- news ends -->
 
 # Installation
