@@ -87,6 +87,56 @@ ActiveRecord::Base.connection.columns('users').map(&:name)     # List all column
 
 ```
 
+### Rails Migration File Naming Guide
+
+#### Location
+All migration files are stored in the `db/migrate/` directory.
+
+#### Filename Format
+
+`YYYYMMDDHHMMSS_migration_name.rb`
+
+**Examples**:
+- `20250402104500_create_users.rb`
+- `20250402110000_add_status_to_orders.rb`
+- `20250402113000_rename_email_in_customers.rb`
+
+#### Class Name Format
+The migration class name should match the CamelCased version of the file’s suffix.
+
+**Examples**:
+- `20250402104500_create_users.rb` → `class CreateUsers`
+- `20250402110000_add_status_to_orders.rb` → `class AddStatusToOrders`
+- `20250402113000_rename_email_in_customers.rb` → `class RenameEmailInCustomers`
+
+> ⚠️ **Important**: If you rename the migration file, you **must update the class name** inside the file to match, or Rails will raise a `NameError` about a missing class.
+
+#### Using the `change` Method
+
+Rails migrations often use the `change` method instead of `up` and `down` for simpler reversible actions.  
+Rails can **automatically reverse** the following methods:
+
+- `add_column`
+- `add_index`
+- `add_timestamps`
+- `create_table`
+- `remove_timestamps`
+- `rename_column`
+- `rename_index`
+- `rename_table`
+
+> For more complex migrations, use explicit `up` and `down` methods.
+
+### Model
+
+Student model represents a single student, so it's singular. The students table holds all of the students, so it's plural.
+
+Create a model
+
+```shell
+rails g model Student first_name:string last_name:string gender:string
+```
+
 ## Code Quality Tools
 
 ### RuboCop
@@ -134,68 +184,6 @@ bundle exec rspec
 
 ```
 annotate
-```
-
-# Initialization
-
-For macOS
-
-Postgresql setup
-```
-brew install postgresql
-brew services start postgresql
-```
-
-Create an app with postgresql
-
-```
-rails new app --database=postgresql
-bin/rails db:migrate
-```
-
-```
-rails g controller admin index
-```
-
-
-
-# Database
-
-Student model represents a single student, so it's singular. The students table holds all of the students, so it's plural.
-
-Create a model
-
-```
-rails g model Student first_name:string last_name:string gender:string
-```
-
-Model validations
-
-https://guides.rubyonrails.org/active_record_validations.html
-
-https://learn.co/lessons/activerecord-lifecycle-reading
-
-
-List all tables
-```
-ActiveRecord::Base.connection.tables
-```
-
-List all columns of a table
-```
-ActiveRecord::Base.connection.columns('student').map(&:name)
-```
-
-When creating a new database, the following command tends to be faster
-
-```
-bin/rails db:schema:load
-```
-
-Delete all records in a database table
-
-```
-Post.delete_all
 ```
 
 
