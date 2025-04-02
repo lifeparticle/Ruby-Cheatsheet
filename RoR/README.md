@@ -101,6 +101,10 @@ All migration files are stored in the `db/migrate/` directory.
 - `20250402110000_add_status_to_orders.rb`
 - `20250402113000_rename_email_in_customers.rb`
 
+```
+rails generate migration CreateUsers
+```
+
 #### Class Name Format
 The migration class name should match the CamelCased version of the file’s suffix.
 
