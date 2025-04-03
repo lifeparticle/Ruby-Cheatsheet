@@ -76,6 +76,7 @@ Other useful database commands:
 
 ```bash
 rails db:migrate                                               # Run pending migrations
+rails db:migrate:status                                        # todo
 rails db:rollback                                              # Rollback last migration
 rails db:rollback STEP=5                                       # Rollback last 5 migrations
 rails db:migrate:down VERSION=VERSION_NUMBER                   # Rollback to a specific version
