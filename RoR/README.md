@@ -46,6 +46,7 @@ User.count                       # Get the number of Users
 User.find(1)                     # Get the User with ID 1
 User.find_by(name: "Test User")  # Get the User with name "Test User"    
 User.take                        # Get a random User
+User.delete_all                  # todo
 ```
 
 ### Rails Logger
