@@ -64,6 +64,12 @@ Rails.logger.error "Error message"
 Rails.logger.fatal "Fatal message"
 ```
 
+### Removes old assets and compiles fresh ones
+
+```ruby
+rails assets:clean && rails assets:precompile
+```
+
 ## Database Commands
 
 ### Seeding Data
