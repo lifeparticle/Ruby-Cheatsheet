@@ -175,6 +175,7 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [CVE-2025-24294: Possible Denial of Service in resolv gem](https://www.ruby-lang.org/en/news/2025/07/08/dos-resolv-cve-2025-24294/) <br/> <sub>2025-07-08 07:00:00</sub>
 * [Ruby 3.4.4 Released](https://www.ruby-lang.org/en/news/2025/05/14/ruby-3-4-4-released/) <br/> <sub>2025-05-14 18:20:00</sub>
 * [CVE-2025-43857: DoS vulnerability in net-imap](https://www.ruby-lang.org/en/news/2025/04/28/dos-net-imap-cve-2025-43857/) <br/> <sub>2025-04-28 16:02:04</sub>
 * [Ruby 3.5.0 preview1 Released](https://www.ruby-lang.org/en/news/2025/04/18/ruby-3-5-0-preview1-released/) <br/> <sub>2025-04-18 00:00:00</sub>
@@ -184,7 +185,6 @@
 * [Ruby 3.1.7 Released](https://www.ruby-lang.org/en/news/2025/03/26/ruby-3-1-7-released/) <br/> <sub>2025-03-26 04:44:27</sub>
 * [Security advisories: CVE-2025-27219, CVE-2025-27220 and CVE-2025-27221](https://www.ruby-lang.org/en/news/2025/02/26/security-advisories/) <br/> <sub>2025-02-26 07:00:00</sub>
 * [Ruby 3.4.2 Released](https://www.ruby-lang.org/en/news/2025/02/14/ruby-3-4-2-released/) <br/> <sub>2025-02-14 21:55:17</sub>
-* [CVE-2025-25186: DoS vulnerability in net-imap](https://www.ruby-lang.org/en/news/2025/02/10/dos-net-imap-cve-2025-25186/) <br/> <sub>2025-02-10 03:00:00</sub>
 <!-- news ends -->
 
 # Installation
