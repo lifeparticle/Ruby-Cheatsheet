@@ -175,6 +175,8 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 3.3.9 Released](https://www.ruby-lang.org/en/news/2025/07/24/ruby-3-3-9-released/) <br/> <sub>2025-07-24 11:00:00</sub>
+* [Ruby 3.2.9 Released](https://www.ruby-lang.org/en/news/2025/07/24/ruby-3-2-9-released/) <br/> <sub>2025-07-24 08:51:53</sub>
 * [Ruby 3.4.5 Released](https://www.ruby-lang.org/en/news/2025/07/15/ruby-3-4-5-released/) <br/> <sub>2025-07-15 17:00:00</sub>
 * [CVE-2025-24294: Possible Denial of Service in resolv gem](https://www.ruby-lang.org/en/news/2025/07/08/dos-resolv-cve-2025-24294/) <br/> <sub>2025-07-08 07:00:00</sub>
 * [Ruby 3.4.4 Released](https://www.ruby-lang.org/en/news/2025/05/14/ruby-3-4-4-released/) <br/> <sub>2025-05-14 18:20:00</sub>
@@ -183,8 +185,6 @@
 * [Ruby 3.4.3 Released](https://www.ruby-lang.org/en/news/2025/04/14/ruby-3-4-3-released/) <br/> <sub>2025-04-14 08:06:57</sub>
 * [Ruby 3.3.8 Released](https://www.ruby-lang.org/en/news/2025/04/09/ruby-3-3-8-released/) <br/> <sub>2025-04-09 11:00:00</sub>
 * [Ruby 3.2.8 Released](https://www.ruby-lang.org/en/news/2025/03/26/ruby-3-2-8-released/) <br/> <sub>2025-03-26 04:45:01</sub>
-* [Ruby 3.1.7 Released](https://www.ruby-lang.org/en/news/2025/03/26/ruby-3-1-7-released/) <br/> <sub>2025-03-26 04:44:27</sub>
-* [Security advisories: CVE-2025-27219, CVE-2025-27220 and CVE-2025-27221](https://www.ruby-lang.org/en/news/2025/02/26/security-advisories/) <br/> <sub>2025-02-26 07:00:00</sub>
 <!-- news ends -->
 
 # Installation
