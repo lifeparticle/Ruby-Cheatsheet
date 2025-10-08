@@ -175,6 +175,8 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 3.4.7 Released](https://www.ruby-lang.org/en/news/2025/10/07/ruby-3-4-7-released/) <br/> <sub>2025-10-07 17:14:11</sub>
+* [CVE-2025-61594: URI Credential Leakage Bypass previous fixes](https://www.ruby-lang.org/en/news/2025/10/07/uri-cve-2025-61594/) <br/> <sub>2025-10-07 00:00:00</sub>
 * [CVE-2025-58767: DoS vulnerability in REXML](https://www.ruby-lang.org/en/news/2025/09/18/dos-rexml-cve-2025-58767/) <br/> <sub>2025-09-18 03:00:00</sub>
 * [Ruby 3.4.6 Released](https://www.ruby-lang.org/en/news/2025/09/16/ruby-3-4-6-released/) <br/> <sub>2025-09-16 00:00:00</sub>
 * [Ruby 3.3.9 Released](https://www.ruby-lang.org/en/news/2025/07/24/ruby-3-3-9-released/) <br/> <sub>2025-07-24 11:00:00</sub>
@@ -183,8 +185,6 @@
 * [CVE-2025-24294: Possible Denial of Service in resolv gem](https://www.ruby-lang.org/en/news/2025/07/08/dos-resolv-cve-2025-24294/) <br/> <sub>2025-07-08 07:00:00</sub>
 * [Ruby 3.4.4 Released](https://www.ruby-lang.org/en/news/2025/05/14/ruby-3-4-4-released/) <br/> <sub>2025-05-14 18:20:00</sub>
 * [CVE-2025-43857: DoS vulnerability in net-imap](https://www.ruby-lang.org/en/news/2025/04/28/dos-net-imap-cve-2025-43857/) <br/> <sub>2025-04-28 16:02:04</sub>
-* [Ruby 3.5.0 preview1 Released](https://www.ruby-lang.org/en/news/2025/04/18/ruby-3-5-0-preview1-released/) <br/> <sub>2025-04-18 00:00:00</sub>
-* [Ruby 3.4.3 Released](https://www.ruby-lang.org/en/news/2025/04/14/ruby-3-4-3-released/) <br/> <sub>2025-04-14 08:06:57</sub>
 <!-- news ends -->
 
 # Installation
