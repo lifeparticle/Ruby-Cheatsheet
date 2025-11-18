@@ -175,6 +175,7 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 4.0.0 preview2 Released](https://www.ruby-lang.org/en/news/2025/11/17/ruby-4-0-0-preview2-released/) <br/> <sub>2025-11-17 00:00:00</sub>
 * [Ruby 3.3.10 Released](https://www.ruby-lang.org/en/news/2025/10/23/ruby-3-3-10-released/) <br/> <sub>2025-10-23 11:00:00</sub>
 * [The Transition of RubyGems Repository Ownership](https://www.ruby-lang.org/en/news/2025/10/17/rubygems-repository-transition/) <br/> <sub>2025-10-17 12:00:00</sub>
 * [Ruby 3.4.7 Released](https://www.ruby-lang.org/en/news/2025/10/07/ruby-3-4-7-released/) <br/> <sub>2025-10-07 17:14:11</sub>
@@ -184,7 +185,6 @@
 * [Ruby 3.3.9 Released](https://www.ruby-lang.org/en/news/2025/07/24/ruby-3-3-9-released/) <br/> <sub>2025-07-24 11:00:00</sub>
 * [Ruby 3.2.9 Released](https://www.ruby-lang.org/en/news/2025/07/24/ruby-3-2-9-released/) <br/> <sub>2025-07-24 08:51:53</sub>
 * [Ruby 3.4.5 Released](https://www.ruby-lang.org/en/news/2025/07/15/ruby-3-4-5-released/) <br/> <sub>2025-07-15 17:00:00</sub>
-* [CVE-2025-24294: Possible Denial of Service in resolv gem](https://www.ruby-lang.org/en/news/2025/07/08/dos-resolv-cve-2025-24294/) <br/> <sub>2025-07-08 07:00:00</sub>
 <!-- news ends -->
 
 # Installation
