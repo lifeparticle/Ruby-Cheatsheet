@@ -3608,16 +3608,15 @@ words = sentence.split(/(?=[A-Z])/)
 # Books and other resources
 
 1. [Ruby doc](https://ruby-doc.org/)
-2. [How to use Ruby’s English and/or operators without going nuts](http://www.virtuouscode.com/2014/08/26/how-to-use-rubys-english-andor-operators-without-going-nuts/)
-3. [What is attr_accessor in Ruby?](https://stackoverflow.com/questions/4370960/what-is-attr-accessor-in-ruby)
-4. [Ruby Module Mixin Awesomeness](https://johnmcaliley.wordpress.com/2010/03/10/ruby-module-mixin-awesomeness/)
-5. [Tutorials](https://www.cosmiclearn.com/ruby/index.php)
-6. [Pattern matching - New feature in Ruby 2.7](https://speakerdeck.com/k_tsj/pattern-matching-new-feature-in-ruby-2-dot-7?slide=24)
-7. [Awesome Ruby Blogs](https://github.com/Yegorov/awesome-ruby-blogs)
-8. [Ruby Scripts](https://github.com/jakewmeyer/Ruby-Scripts)
-9. [Awesome Ruby](https://github.com/markets/awesome-ruby)
-10. [Ruby Bookmarks](https://github.com/dreikanter/ruby-bookmarks)
-11. [Code With Jason](https://www.codewithjason.com/articles/)
+2. [What is attr_accessor in Ruby?](https://stackoverflow.com/questions/4370960/what-is-attr-accessor-in-ruby)
+3. [Ruby Module Mixin Awesomeness](https://johnmcaliley.wordpress.com/2010/03/10/ruby-module-mixin-awesomeness/)
+4. [Tutorials](https://www.cosmiclearn.com/ruby/index.php)
+5. [Pattern matching - New feature in Ruby 2.7](https://speakerdeck.com/k_tsj/pattern-matching-new-feature-in-ruby-2-dot-7?slide=24)
+6. [Awesome Ruby Blogs](https://github.com/Yegorov/awesome-ruby-blogs)
+7. [Ruby Scripts](https://github.com/jakewmeyer/Ruby-Scripts)
+8. [Awesome Ruby](https://github.com/markets/awesome-ruby)
+9. [Ruby Bookmarks](https://github.com/dreikanter/ruby-bookmarks)
+10. [Code With Jason](https://www.codewithjason.com/articles/)
 
 # Bug Reports and Feature Requests
 
