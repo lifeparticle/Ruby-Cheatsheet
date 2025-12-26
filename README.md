@@ -175,6 +175,7 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 4.0.0 Released](https://www.ruby-lang.org/en/news/2025/12/25/ruby-4-0-0-released/) <br/> <sub>2025-12-25 00:00:00</sub>
 * [A New Look for Ruby's Documentation](https://www.ruby-lang.org/en/news/2025/12/23/new-look-for-ruby-documentation/) <br/> <sub>2025-12-23 00:00:00</sub>
 * [Redesign our Site Identity](https://www.ruby-lang.org/en/news/2025/12/22/redesign-site-identity/) <br/> <sub>2025-12-22 05:46:09</sub>
 * [Ruby 4.0.0 preview3 Released](https://www.ruby-lang.org/en/news/2025/12/18/ruby-4-0-0-preview3-released/) <br/> <sub>2025-12-18 00:00:00</sub>
@@ -184,7 +185,6 @@
 * [The Transition of RubyGems Repository Ownership](https://www.ruby-lang.org/en/news/2025/10/17/rubygems-repository-transition/) <br/> <sub>2025-10-17 12:00:00</sub>
 * [Ruby 3.4.7 Released](https://www.ruby-lang.org/en/news/2025/10/07/ruby-3-4-7-released/) <br/> <sub>2025-10-07 17:14:11</sub>
 * [CVE-2025-61594: URI Credential Leakage Bypass previous fixes](https://www.ruby-lang.org/en/news/2025/10/07/uri-cve-2025-61594/) <br/> <sub>2025-10-07 00:00:00</sub>
-* [CVE-2025-58767: DoS vulnerability in REXML](https://www.ruby-lang.org/en/news/2025/09/18/dos-rexml-cve-2025-58767/) <br/> <sub>2025-09-18 03:00:00</sub>
 <!-- news ends -->
 
 # Installation
