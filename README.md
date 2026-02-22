@@ -3592,7 +3592,6 @@ words = sentence.split(/(?=[A-Z])/)
 10. [Roda](https://roda.jeremyevans.net/documentation.html)
 11. [Volt](https://github.com/voltrb/volt)
 12. [Hobbit](https://github.com/patriciomacadden/hobbit)
-13. [Cramp](https://github.com/lifo/cramp)
 
 # My Ruby Articles
 
@@ -3616,7 +3615,6 @@ words = sentence.split(/(?=[A-Z])/)
 7. [Ruby Scripts](https://github.com/jakewmeyer/Ruby-Scripts)
 8. [Awesome Ruby](https://github.com/markets/awesome-ruby)
 9. [Ruby Bookmarks](https://github.com/dreikanter/ruby-bookmarks)
-10. [Code With Jason](https://www.codewithjason.com/articles/)
 
 # Bug Reports and Feature Requests
 
