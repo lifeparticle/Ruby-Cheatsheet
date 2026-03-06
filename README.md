@@ -175,6 +175,7 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [CVE-2026-27820: Buffer overflow vulnerability in Zlib::GzipReader](https://www.ruby-lang.org/en/news/2026/03/05/buffer-overflow-zlib-cve-2026-27820/) <br/> <sub>2026-03-05 00:00:00</sub>
 * [Ruby 3.2.10 Released](https://www.ruby-lang.org/en/news/2026/01/14/ruby-3-2-10-released/) <br/> <sub>2026-01-14 01:22:04</sub>
 * [Ruby 4.0.1 Released](https://www.ruby-lang.org/en/news/2026/01/13/ruby-4-0-1-released/) <br/> <sub>2026-01-13 02:28:48</sub>
 * [Ruby 4.0.0 Released](https://www.ruby-lang.org/en/news/2025/12/25/ruby-4-0-0-released/) <br/> <sub>2025-12-25 00:00:00</sub>
@@ -184,7 +185,6 @@
 * [Ruby 3.4.8 Released](https://www.ruby-lang.org/en/news/2025/12/17/ruby-3-4-8-released/) <br/> <sub>2025-12-17 00:24:30</sub>
 * [Ruby 4.0.0 preview2 Released](https://www.ruby-lang.org/en/news/2025/11/17/ruby-4-0-0-preview2-released/) <br/> <sub>2025-11-17 00:00:00</sub>
 * [Ruby 3.3.10 Released](https://www.ruby-lang.org/en/news/2025/10/23/ruby-3-3-10-released/) <br/> <sub>2025-10-23 11:00:00</sub>
-* [The Transition of RubyGems Repository Ownership](https://www.ruby-lang.org/en/news/2025/10/17/rubygems-repository-transition/) <br/> <sub>2025-10-17 12:00:00</sub>
 <!-- news ends -->
 
 # Installation
