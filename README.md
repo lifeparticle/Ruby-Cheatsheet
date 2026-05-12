@@ -175,6 +175,7 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 4.0.4 Released](https://www.ruby-lang.org/en/news/2026/05/11/ruby-4-0-4-released/) <br/> <sub>2026-05-11 21:41:38</sub>
 * [Ruby 4.0.3 Released](https://www.ruby-lang.org/en/news/2026/04/21/ruby-4-0-3-released/) <br/> <sub>2026-04-21 08:45:44</sub>
 * [CVE-2026-41316: ERB @_init deserialization guard bypass via def_module / def_method / def_class](https://www.ruby-lang.org/en/news/2026/04/21/erb-cve-2026-41316/) <br/> <sub>2026-04-21 07:51:00</sub>
 * [Ruby 3.2.11 Released](https://www.ruby-lang.org/en/news/2026/03/27/ruby-3-2-11-released/) <br/> <sub>2026-03-27 00:00:00</sub>
@@ -184,7 +185,6 @@
 * [CVE-2026-27820: Buffer overflow vulnerability in Zlib::GzipReader](https://www.ruby-lang.org/en/news/2026/03/05/buffer-overflow-zlib-cve-2026-27820/) <br/> <sub>2026-03-05 00:00:00</sub>
 * [Ruby 3.2.10 Released](https://www.ruby-lang.org/en/news/2026/01/14/ruby-3-2-10-released/) <br/> <sub>2026-01-14 01:22:04</sub>
 * [Ruby 4.0.1 Released](https://www.ruby-lang.org/en/news/2026/01/13/ruby-4-0-1-released/) <br/> <sub>2026-01-13 02:28:48</sub>
-* [Ruby 4.0.0 Released](https://www.ruby-lang.org/en/news/2025/12/25/ruby-4-0-0-released/) <br/> <sub>2025-12-25 00:00:00</sub>
 <!-- news ends -->
 
 # Installation
