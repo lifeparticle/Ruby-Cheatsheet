@@ -175,6 +175,7 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 4.0.6 Released](https://www.ruby-lang.org/en/news/2026/07/14/ruby-4-0-6-released/) <br/> <sub>2026-07-14 01:41:20</sub>
 * [Ruby 3.4.10 Released](https://www.ruby-lang.org/en/news/2026/06/30/ruby-3-4-10-released/) <br/> <sub>2026-06-30 12:00:00</sub>
 * [Ruby 4.0.5 Released](https://www.ruby-lang.org/en/news/2026/05/20/ruby-4-0-5-released/) <br/> <sub>2026-05-20 00:12:20</sub>
 * [CVE-2026-46727: Use-after-free in pthread-based getaddrinfo timeout handler](https://www.ruby-lang.org/en/news/2026/05/20/getaddrinfo-cve-2026-46727/) <br/> <sub>2026-05-20 00:00:00</sub>
@@ -184,7 +185,6 @@
 * [Ruby 3.2.11 Released](https://www.ruby-lang.org/en/news/2026/03/27/ruby-3-2-11-released/) <br/> <sub>2026-03-27 00:00:00</sub>
 * [Ruby 3.3.11 Released](https://www.ruby-lang.org/en/news/2026/03/26/ruby-3-3-11-released/) <br/> <sub>2026-03-26 00:00:00</sub>
 * [Ruby 4.0.2 Released](https://www.ruby-lang.org/en/news/2026/03/16/ruby-4-0-2-released/) <br/> <sub>2026-03-16 23:18:29</sub>
-* [Ruby 3.4.9 Released](https://www.ruby-lang.org/en/news/2026/03/11/ruby-3-4-9-released/) <br/> <sub>2026-03-11 11:00:00</sub>
 <!-- news ends -->
 
 # Installation
