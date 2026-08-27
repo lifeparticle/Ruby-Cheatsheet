@@ -175,6 +175,7 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Security advisories: CVE-2026-80212 and CVE-2026-80213](https://www.ruby-lang.org/en/news/2026/08/27/multiple-vulnerabilities-in-resolv/) <br/> <sub>2026-08-27 00:00:00</sub>
 * [Ruby 3.3.12 Released](https://www.ruby-lang.org/en/news/2026/07/16/ruby-3-3-12-released/) <br/> <sub>2026-07-16 05:08:11</sub>
 * [Ruby 4.0.6 Released](https://www.ruby-lang.org/en/news/2026/07/14/ruby-4-0-6-released/) <br/> <sub>2026-07-14 01:41:20</sub>
 * [Ruby 3.4.10 Released](https://www.ruby-lang.org/en/news/2026/06/30/ruby-3-4-10-released/) <br/> <sub>2026-06-30 12:00:00</sub>
@@ -184,7 +185,6 @@
 * [Ruby 4.0.3 Released](https://www.ruby-lang.org/en/news/2026/04/21/ruby-4-0-3-released/) <br/> <sub>2026-04-21 08:45:44</sub>
 * [CVE-2026-41316: ERB @_init deserialization guard bypass via def_module / def_method / def_class](https://www.ruby-lang.org/en/news/2026/04/21/erb-cve-2026-41316/) <br/> <sub>2026-04-21 07:51:00</sub>
 * [Ruby 3.2.11 Released](https://www.ruby-lang.org/en/news/2026/03/27/ruby-3-2-11-released/) <br/> <sub>2026-03-27 00:00:00</sub>
-* [Ruby 3.3.11 Released](https://www.ruby-lang.org/en/news/2026/03/26/ruby-3-3-11-released/) <br/> <sub>2026-03-26 00:00:00</sub>
 <!-- news ends -->
 
 # Installation
