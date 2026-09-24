@@ -175,6 +175,7 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 3.4.11 Released](https://www.ruby-lang.org/en/news/2026/09/23/ruby-3-4-11-released/) <br/> <sub>2026-09-23 06:10:50</sub>
 * [Ruby 4.0.7 Released](https://www.ruby-lang.org/en/news/2026/09/15/ruby-4-0-7-released/) <br/> <sub>2026-09-15 00:25:58</sub>
 * [Security advisories: CVE-2026-80212 and CVE-2026-80213](https://www.ruby-lang.org/en/news/2026/08/27/multiple-vulnerabilities-in-resolv/) <br/> <sub>2026-08-27 00:00:00</sub>
 * [Ruby 3.3.12 Released](https://www.ruby-lang.org/en/news/2026/07/16/ruby-3-3-12-released/) <br/> <sub>2026-07-16 05:08:11</sub>
@@ -184,7 +185,6 @@
 * [CVE-2026-46727: Use-after-free in pthread-based getaddrinfo timeout handler](https://www.ruby-lang.org/en/news/2026/05/20/getaddrinfo-cve-2026-46727/) <br/> <sub>2026-05-20 00:00:00</sub>
 * [Ruby 4.0.4 Released](https://www.ruby-lang.org/en/news/2026/05/11/ruby-4-0-4-released/) <br/> <sub>2026-05-11 21:41:38</sub>
 * [Ruby 4.0.3 Released](https://www.ruby-lang.org/en/news/2026/04/21/ruby-4-0-3-released/) <br/> <sub>2026-04-21 08:45:44</sub>
-* [CVE-2026-41316: ERB @_init deserialization guard bypass via def_module / def_method / def_class](https://www.ruby-lang.org/en/news/2026/04/21/erb-cve-2026-41316/) <br/> <sub>2026-04-21 07:51:00</sub>
 <!-- news ends -->
 
 # Installation
