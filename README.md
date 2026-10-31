@@ -175,16 +175,16 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 3.3.13 Released](https://www.ruby-lang.org/en/news/2026/10/23/ruby-3-3-13-released/) <br/> <sub>2026-10-23 04:24:46</sub>
+* [Ruby 3.4.12 Released](https://www.ruby-lang.org/en/news/2026/10/23/ruby-3-4-12-released/) <br/> <sub>2026-10-23 03:50:27</sub>
+* [Ruby 4.0.9 Released](https://www.ruby-lang.org/en/news/2026/10/23/ruby-4-0-9-released/) <br/> <sub>2026-10-23 03:11:22</sub>
+* [Regexp compilation fixes related to GitLab's CVE-2026-89078, CVE-2026-93577, CVE-2026-97229 and CVE-2026-110264](https://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-for-gitlab-cves/) <br/> <sub>2026-10-23 03:11:22</sub>
+* [Ruby 4.0.8 Released](https://www.ruby-lang.org/en/news/2026/10/22/ruby-4-0-8-released/) <br/> <sub>2026-10-22 06:54:51</sub>
 * [Ruby 4.1.0-preview1 Released](https://www.ruby-lang.org/en/news/2026/10/12/ruby-4-1-0-preview1-released/) <br/> <sub>2026-10-12 00:00:00</sub>
 * [Ruby 3.4.11 Released](https://www.ruby-lang.org/en/news/2026/09/23/ruby-3-4-11-released/) <br/> <sub>2026-09-23 06:10:50</sub>
 * [Ruby 4.0.7 Released](https://www.ruby-lang.org/en/news/2026/09/15/ruby-4-0-7-released/) <br/> <sub>2026-09-15 00:25:58</sub>
 * [Security advisories: CVE-2026-80212 and CVE-2026-80213](https://www.ruby-lang.org/en/news/2026/08/27/multiple-vulnerabilities-in-resolv/) <br/> <sub>2026-08-27 00:00:00</sub>
 * [Ruby 3.3.12 Released](https://www.ruby-lang.org/en/news/2026/07/16/ruby-3-3-12-released/) <br/> <sub>2026-07-16 05:08:11</sub>
-* [Ruby 4.0.6 Released](https://www.ruby-lang.org/en/news/2026/07/14/ruby-4-0-6-released/) <br/> <sub>2026-07-14 01:41:20</sub>
-* [Ruby 3.4.10 Released](https://www.ruby-lang.org/en/news/2026/06/30/ruby-3-4-10-released/) <br/> <sub>2026-06-30 12:00:00</sub>
-* [Ruby 4.0.5 Released](https://www.ruby-lang.org/en/news/2026/05/20/ruby-4-0-5-released/) <br/> <sub>2026-05-20 00:12:20</sub>
-* [CVE-2026-46727: Use-after-free in pthread-based getaddrinfo timeout handler](https://www.ruby-lang.org/en/news/2026/05/20/getaddrinfo-cve-2026-46727/) <br/> <sub>2026-05-20 00:00:00</sub>
-* [Ruby 4.0.4 Released](https://www.ruby-lang.org/en/news/2026/05/11/ruby-4-0-4-released/) <br/> <sub>2026-05-11 21:41:38</sub>
 <!-- news ends -->
 
 # Installation
