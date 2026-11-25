@@ -175,16 +175,16 @@
 # The latest news from ruby-lang.org
 
 <!-- news starts -->
+* [Ruby 4.0.10 Released](https://www.ruby-lang.org/en/news/2026/11/18/ruby-4-0-10-released/) <br/> <sub>2026-11-18 22:00:00</sub>
+* [Ruby 3.4.13 Released](https://www.ruby-lang.org/en/news/2026/11/18/ruby-3-4-13-released/) <br/> <sub>2026-11-18 22:00:00</sub>
+* [Ruby 3.3.14 Released](https://www.ruby-lang.org/en/news/2026/11/18/ruby-3-3-14-released/) <br/> <sub>2026-11-18 22:00:00</sub>
+* [Security advisories: multiple vulnerabilities in Regexp and String case conversion](https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string/) <br/> <sub>2026-11-18 22:00:00</sub>
 * [Ruby 3.3.13 Released](https://www.ruby-lang.org/en/news/2026/10/23/ruby-3-3-13-released/) <br/> <sub>2026-10-23 04:24:46</sub>
 * [Ruby 3.4.12 Released](https://www.ruby-lang.org/en/news/2026/10/23/ruby-3-4-12-released/) <br/> <sub>2026-10-23 03:50:27</sub>
 * [Ruby 4.0.9 Released](https://www.ruby-lang.org/en/news/2026/10/23/ruby-4-0-9-released/) <br/> <sub>2026-10-23 03:11:22</sub>
 * [Regexp compilation fixes related to GitLab's CVE-2026-89078, CVE-2026-93577, CVE-2026-97229 and CVE-2026-110264](https://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-for-gitlab-cves/) <br/> <sub>2026-10-23 03:11:22</sub>
 * [Ruby 4.0.8 Released](https://www.ruby-lang.org/en/news/2026/10/22/ruby-4-0-8-released/) <br/> <sub>2026-10-22 06:54:51</sub>
 * [Ruby 4.1.0-preview1 Released](https://www.ruby-lang.org/en/news/2026/10/12/ruby-4-1-0-preview1-released/) <br/> <sub>2026-10-12 00:00:00</sub>
-* [Ruby 3.4.11 Released](https://www.ruby-lang.org/en/news/2026/09/23/ruby-3-4-11-released/) <br/> <sub>2026-09-23 06:10:50</sub>
-* [Ruby 4.0.7 Released](https://www.ruby-lang.org/en/news/2026/09/15/ruby-4-0-7-released/) <br/> <sub>2026-09-15 00:25:58</sub>
-* [Security advisories: CVE-2026-80212 and CVE-2026-80213](https://www.ruby-lang.org/en/news/2026/08/27/multiple-vulnerabilities-in-resolv/) <br/> <sub>2026-08-27 00:00:00</sub>
-* [Ruby 3.3.12 Released](https://www.ruby-lang.org/en/news/2026/07/16/ruby-3-3-12-released/) <br/> <sub>2026-07-16 05:08:11</sub>
 <!-- news ends -->
 
 # Installation
